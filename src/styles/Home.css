@@ -1,0 +1,29 @@
+.container#hero {
+  background-color: #2c3a50;
+}
+
+section#hero {
+  /* height: 70vh; */
+  border-radius: 12px;
+}
+
+h1#title {
+  line-height: 150%;
+}
+
+.menu {
+  background-color: #cbddec;
+  box-shadow: 4px 4px #2c3a50;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #2c3a50;
+}
+
+.menu:hover {
+  background-color: #b6c7d4;
+}
+
+.menu-wrapper {
+  background-color: #f3f6fa;
+}

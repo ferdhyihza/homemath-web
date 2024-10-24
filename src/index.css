@@ -1,11 +1,16 @@
 @import 'bootstrap/dist/css/bootstrap.min.css';
 
-:root {
+body {
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-optical-sizing: auto;
+  color: #141414;
 }
 
-.text-bg-darkblue {
+.bg-darkblue {
   color: #fff;
   background-color: #142237;
+}
+
+#next-page-button:hover {
+  background-color: #2c3a50;
 }
