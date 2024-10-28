@@ -5,10 +5,12 @@ import '../styles/Home.css';
 export default function Home() {
   return (
     <>
-      <div className="container">
-        <Navbar />
+      <div className="sticky-top bg-white">
+        <div className="container">
+          <Navbar />
+        </div>
       </div>
-      <section className="container mt-5 bg-darkblue" id="hero">
+      <section className="container bg-darkblue" id="hero">
         <div className="row p-5">
           <div className="col-7 pe-4 d-flex flex-column justify-content-between">
             <h1 className="py-3 fw-bold lh-base" id="title">
