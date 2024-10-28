@@ -64,7 +64,7 @@ export default function SubjectMatter() {
         <h3 className="fw-bold py-3">Lainnya</h3>
         <div className="row">
           <div className="col">
-            <Link className="border d-flex rounded-3 mb-4 p-2 materi">
+            <Link to="/latihan-soal" className="border d-flex rounded-3 mb-4 p-2 materi">
               <div className="content p-2 w-100">
                 <h5 className="fw-bold p-2 d-inline-block">Latihan Soal</h5>
                 <hr className="my-0" />

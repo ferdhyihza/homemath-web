@@ -48,14 +48,14 @@ export default function NavbarContent() {
               </Link>
             </li>
             <li className="nav-item d-flex">
-              <a href="/materi" className="nav-link text-light fs-5">
+              <Link to="/materi" className="nav-link text-light fs-5">
                 <i className="bi bi-book me-3"></i>Materi
-              </a>
+              </Link>
             </li>
             <li className="nav-item d-flex">
-              <a className="nav-link text-light fs-5" href="#">
+              <Link to="/latihan-soal" className="nav-link text-light fs-5" href="#">
                 <i className="bi bi-journal-text me-3"></i> Latihan Soal
-              </a>
+              </Link>
             </li>
             <li className="nav-item d-flex">
               <a className="nav-link text-light fs-5" href="#">

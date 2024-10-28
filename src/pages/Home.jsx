@@ -46,7 +46,7 @@ export default function Home() {
             <Link to="/materi" className="col rounded-1 mx-3 menu d-flex justify-content-center align-items-center">
               <i className="bi bi-book me-2"></i>Materi
             </Link>
-            <Link to="" className="col rounded-1 mx-3 menu d-flex justify-content-center align-items-center">
+            <Link to="/latihan-soal" className="col rounded-1 mx-3 menu d-flex justify-content-center align-items-center">
               <i className="bi bi-journal-text me-2"></i> Latihan Soal
             </Link>
             <Link to="" className="col rounded-1 mx-3 menu d-flex justify-content-center align-items-center">

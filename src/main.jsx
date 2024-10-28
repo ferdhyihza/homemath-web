@@ -8,6 +8,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Home from './pages/Home.jsx';
 import MindMap from './pages/MindMap.jsx';
 import SubjectMatter from './pages/SubjectMatter.jsx';
+import Exercise from './pages/Exercise.jsx';
 
 const router = createBrowserRouter([
   {
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
   {
     path: '/materi',
     element: <SubjectMatter />,
+  },
+  {
+    path: '/latihan-soal',
+    element: <Exercise />,
   },
 ]);
 
