@@ -7,6 +7,7 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Home from './pages/Home.jsx';
 import MindMap from './pages/MindMap.jsx';
+import SubjectMatter from './pages/SubjectMatter.jsx';
 
 const router = createBrowserRouter([
   {
@@ -16,6 +17,10 @@ const router = createBrowserRouter([
   {
     path: '/peta-konsep',
     element: <MindMap />,
+  },
+  {
+    path: '/materi',
+    element: <SubjectMatter />,
   },
 ]);
 

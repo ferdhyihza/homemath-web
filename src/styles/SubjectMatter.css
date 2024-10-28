@@ -1,0 +1,22 @@
+.materi {
+  background-color: #f3f6fa;
+  box-shadow: 4px 4px #2c3a50;
+  font-weight: 900;
+  text-decoration: none;
+  color: #2c3a50;
+}
+
+.materi:hover {
+  background-color: #f3f6fa50;
+}
+
+li {
+  list-style: none;
+  font-weight: 500;
+  padding: 4px;
+}
+
+li a:hover,
+h5:hover {
+  text-decoration: underline;
+}

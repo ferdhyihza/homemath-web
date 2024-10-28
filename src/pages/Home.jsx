@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import NextButton from '../components/buttons/NextButton';
 import Navbar from '../components/layouts/Navbar';
 import '../styles/Home.css';
@@ -37,20 +38,20 @@ export default function Home() {
         <div className="p-5 pt-0">
           <div className="row p-4 menu-wrapper rounded-4 justify-content-around gap-3">
             <div className="col-1 ">
-              <NextButton link="/peta-konsep" />
+              <NextButton to="/peta-konsep" />
             </div>
-            <a href="/peta-konsep" className="col rounded-1 mx-3 menu d-flex justify-content-center align-items-center">
+            <Link to="/peta-konsep" className="col rounded-1 mx-3 menu d-flex justify-content-center align-items-center">
               <i className="bi bi-diagram-2 me-2"></i>Peta Konsep
-            </a>
-            <a href="" className="col rounded-1 mx-3 menu d-flex justify-content-center align-items-center">
+            </Link>
+            <Link to="/materi" className="col rounded-1 mx-3 menu d-flex justify-content-center align-items-center">
               <i className="bi bi-book me-2"></i>Materi
-            </a>
-            <a href="" className="col rounded-1 mx-3 menu d-flex justify-content-center align-items-center">
+            </Link>
+            <Link to="" className="col rounded-1 mx-3 menu d-flex justify-content-center align-items-center">
               <i className="bi bi-journal-text me-2"></i> Latihan Soal
-            </a>
-            <a href="" className="col rounded-1 mx-3 menu d-flex justify-content-center align-items-center">
+            </Link>
+            <Link to="" className="col rounded-1 mx-3 menu d-flex justify-content-center align-items-center">
               <i className="bi bi-journals me-2"></i> Tes Formatif
-            </a>
+            </Link>
           </div>
         </div>
       </section>

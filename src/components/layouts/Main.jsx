@@ -9,7 +9,8 @@ export default function Main(props) {
         </aside>
         <div className="main container-fluid">
           <Navbar />
-          <div className="p-5">{props.children}</div>
+          {/* eslint-disable-next-line react/prop-types */}
+          <div className="p-5 container">{props.children}</div>
         </div>
       </div>
     </>
