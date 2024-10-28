@@ -38,7 +38,7 @@ export default function Home() {
         <div className="p-5 pt-0">
           <div className="row p-4 menu-wrapper rounded-4 justify-content-around gap-3">
             <div className="col-1 ">
-              <NextButton to="/peta-konsep" />
+              <NextButton link="/peta-konsep" />
             </div>
             <Link to="/peta-konsep" className="col rounded-1 mx-3 menu d-flex justify-content-center align-items-center">
               <i className="bi bi-diagram-2 me-2"></i>Peta Konsep
