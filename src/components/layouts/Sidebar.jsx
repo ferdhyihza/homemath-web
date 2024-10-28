@@ -1,8 +1,19 @@
+import Navbar from './Navbar';
+
 export default function Sidebar(props) {
   return (
-    <div className="row p-0 m-0">
-      <div className="col-2 bg-darkblue p-5">{props.quotes}</div>
-      <div className="col-10 p-5">{props.children}</div>
-    </div>
+    <>
+      <div className="wrapper">
+        <aside id="sidebar">
+          <div className="sticky-top">{props.quotes}</div>
+        </aside>
+        <div className="main">
+          <div className="container-fluid">
+            <Navbar />
+          </div>
+          <div className="p-5">{props.children}</div>
+        </div>
+      </div>
+    </>
   );
 }
