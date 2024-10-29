@@ -22,3 +22,23 @@ body {
   color: #fff;
   background-color: #142237;
 }
+
+.bg-blue-subtle {
+  background-color: #cbddec;
+}
+
+.border-blue {
+  border-color: #142237 !important;
+}
+
+.persamaan button {
+  border-radius: 8px;
+  padding: 12px 20px;
+  margin: 4px;
+  background-color: #f3f6fa;
+  border: none;
+}
+
+.persamaan button:hover {
+  background-color: #fff;
+}

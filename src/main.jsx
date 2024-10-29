@@ -11,6 +11,7 @@ import SubjectMatter from './pages/SubjectMatter.jsx';
 import Exercise from './pages/Exercise.jsx';
 import PengantarSPLTV from './pages/SubjectMatter/PengantarSPLTV.jsx';
 import ErrorPage from './pages/404.jsx';
+import UnsurPadaSPLTV from './pages/SubjectMatter/UnsurPadaSPLTV.jsx';
 
 const router = createBrowserRouter([
   {
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
   {
     path: '/materi/pengantar-spltv',
     element: <PengantarSPLTV />,
+  },
+  {
+    path: '/materi/unsur-pada-spltv',
+    element: <UnsurPadaSPLTV />,
   },
 ]);
 
