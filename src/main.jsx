@@ -9,11 +9,14 @@ import Home from './pages/Home.jsx';
 import MindMap from './pages/MindMap.jsx';
 import SubjectMatter from './pages/SubjectMatter.jsx';
 import Exercise from './pages/Exercise.jsx';
+import PengantarSPLTV from './pages/SubjectMatter/PengantarSPLTV.jsx';
+import ErrorPage from './pages/404.jsx';
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <Home />,
+    errorElement: <ErrorPage />,
   },
   {
     path: '/peta-konsep',
@@ -26,6 +29,10 @@ const router = createBrowserRouter([
   {
     path: '/latihan-soal',
     element: <Exercise />,
+  },
+  {
+    path: '/materi/pengantar-spltv',
+    element: <PengantarSPLTV />,
   },
 ]);
 

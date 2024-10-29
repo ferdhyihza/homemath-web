@@ -1,7 +1,10 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import '../../styles/Navbar.css';
 
 export default function NavbarContent() {
+  const location = useLocation();
+  const isMateriPage = location.pathname.includes('/materi/');
+
   return (
     <>
       {/* Toggler */}
@@ -14,15 +17,24 @@ export default function NavbarContent() {
         HOMEMATH
       </h4>
       {/* User */}
-      <div className="d-flex">
-        <img className="me-2" src="/avatar-icon.png" width={50} alt="" />
-        <div className="d-none d-md-flex flex-column justify-content-center">
-          <h6 className="mb-0 fw-bold">Betty Agustina</h6>
-          <p className="mb-0" style={{ fontSize: '14px' }}>
-            Tadris Matematika
+      {isMateriPage ? (
+        <div className="d-flex flex-column justify-content-center">
+          <h6 className="mb-0 fw-bold text-end">SPLTV</h6>
+          <p className="mb-0 text-end" style={{ fontSize: '14px' }}>
+            Sistem Persamaan Linear Tiga Variabel
           </p>
         </div>
-      </div>
+      ) : (
+        <div className="d-flex">
+          <img className="me-2" src="/avatar-icon.png" width={50} alt="" />
+          <div className="d-none d-md-flex flex-column justify-content-center">
+            <h6 className="mb-0 fw-bold">Betty Agustina</h6>
+            <p className="mb-0" style={{ fontSize: '14px' }}>
+              Tadris Matematika
+            </p>
+          </div>
+        </div>
+      )}
 
       {/* Offcanvas */}
       <div className="offcanvas offcanvas-start bg-darkblue" data-bs-scroll="true" tabIndex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
