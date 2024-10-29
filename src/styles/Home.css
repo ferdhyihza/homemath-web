@@ -25,3 +25,7 @@ h1#title {
 .menu-wrapper {
   background-color: #f3f6fa;
 }
+
+#email:hover {
+  text-decoration: underline;
+}

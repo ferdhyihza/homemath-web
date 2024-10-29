@@ -37,16 +37,17 @@ export default function Home() {
               <NextButton link="/peta-konsep" />
             </div>
             <Link to="/peta-konsep" className="col rounded-1 mx-3 menu d-flex justify-content-center align-items-center">
-              <i className="bi bi-diagram-2 me-2"></i>Peta Konsep
+              <img src="../icon/icon-peta-konsep.png" alt="icon-peta-konsep" className="me-1" />
+              Peta Konsep
             </Link>
             <Link to="/materi" className="col rounded-1 mx-3 menu d-flex justify-content-center align-items-center">
-              <i className="bi bi-book me-2"></i>Materi
+              <img src="../icon/icon-materi.png" alt="icon-materi" className="me-1" /> Materi
             </Link>
             <Link to="/latihan-soal" className="col rounded-1 mx-3 menu d-flex justify-content-center align-items-center">
-              <i className="bi bi-journal-text me-2"></i> Latihan Soal
+              <img src="../icon/icon-latihan-soal.png" alt="icon-latihan-soal" className="me-1" /> Latihan Soal
             </Link>
             <Link to="" className="col rounded-1 mx-3 menu d-flex justify-content-center align-items-center">
-              <i className="bi bi-journals me-2"></i> Tes Formatif
+              <img src="../icon/icon-tes-formatif.png" alt="icon-tes-formatif" className="me-1" /> Tes Formatif
             </Link>
           </div>
         </div>

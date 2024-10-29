@@ -18,7 +18,12 @@ export default function Footer() {
       <h6 className="p-3 d-inline-block fw-bold mb-3" style={{ backgroundColor: '#cbddec', color: 'black' }}>
         Hubungi kami :
       </h6>
-      <p className="fw-light">e-mail : bettyagustina20@gmail.com</p>
+      <p className="fw-light">
+        <span>e-mail : </span>
+        <a id="email" href="mailto:bettyagustina20@gmail.com">
+          bettyagustina20@gmail.com
+        </a>
+      </p>
       <p className="fw-light">telepon : 085853456926</p>
       <p className="fw-light">
         alamat : Desa Bagelenan, Kec. Srengat, Kab. Blitar <br />
