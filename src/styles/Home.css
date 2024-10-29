@@ -5,11 +5,6 @@
   background-size: cover;
 }
 
-section#hero {
-  /* height: 70vh; */
-  border-radius: 12px;
-}
-
 h1#title {
   line-height: 150%;
 }

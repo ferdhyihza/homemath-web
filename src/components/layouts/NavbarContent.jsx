@@ -17,7 +17,7 @@ export default function NavbarContent() {
         </div>
         <div className="col-4 text-center">
           {/* Brand */}
-          <h4 className=" fw-bold" href="#" id="navbar-title">
+          <h4 className=" fw-bold" id="navbar-title">
             HOMEMATH
           </h4>
         </div>

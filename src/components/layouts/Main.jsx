@@ -10,7 +10,7 @@ export default function Main(props) {
       </div>
       <div className="main container">
         {/* eslint-disable-next-line react/prop-types */}
-        <div className="py-4">{props.children}</div>
+        <div className="pt-4">{props.children}</div>
       </div>
     </>
   );

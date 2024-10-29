@@ -2,11 +2,12 @@ import { Link } from 'react-router-dom';
 import NextButton from '../components/buttons/NextButton';
 import '../styles/Home.css';
 import Main from '../components/layouts/Main';
+import Footer from '../components/layouts/Footer';
 
 export default function Home() {
   return (
     <Main>
-      <section className=" bg-darkblue" id="hero">
+      <section className=" bg-darkblue rounded-4" id="hero">
         <div className="row p-5">
           <div className="col-7 pe-4 d-flex flex-column justify-content-between">
             <h1 className="py-3 fw-bold lh-base" id="title">
@@ -50,6 +51,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <Footer />
     </Main>
   );
 }

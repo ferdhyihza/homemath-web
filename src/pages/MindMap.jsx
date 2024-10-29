@@ -6,7 +6,7 @@ export default function MindMap() {
     <Main>
       <h3 className="fw-bold pb-3">Peta Konsep Materi</h3>
       <img src="peta-konsep.png" alt="Gambar Peta Konsep Materi" className="img-fluid w-100 border p-4 rounded-3" />
-      <div className="d-flex justify-content-center pt-4">
+      <div className="d-flex justify-content-center py-4">
         <NextButton link="/materi" />
       </div>
     </Main>
