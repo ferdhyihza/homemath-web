@@ -12,7 +12,7 @@ export default function SubjectMatter() {
           <Link to="pengantar-spltv">Pengantar SPLTV</Link>
         </li>
         <li>
-          <Link to="">Unsur pada SPLTV</Link>
+          <Link to="unsur-pada-spltv">Unsur pada SPLTV</Link>
         </li>
         <li>
           <Link to="">Bentuk Umum SPLTV</Link>
