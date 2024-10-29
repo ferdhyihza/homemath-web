@@ -1,5 +1,8 @@
-.container#hero {
-  background-color: #2c3a50;
+#hero {
+  background-image: url('hero-background.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 section#hero {

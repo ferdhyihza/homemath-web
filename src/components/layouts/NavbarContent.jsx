@@ -7,34 +7,42 @@ export default function NavbarContent() {
 
   return (
     <>
-      {/* Toggler */}
-      <button className="btn px-3 bg-darkblue" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions" aria-label="Toggle navigation">
-        {/* <span className="navbar-toggler-icon"></span> */}
-        <i className="bi bi-chevron-right"></i>
-      </button>
-      {/* Brand */}
-      <h4 className=" fw-bold" href="#" id="navbar-title">
-        HOMEMATH
-      </h4>
-      {/* User */}
-      {isMateriPage ? (
-        <div className="d-flex flex-column justify-content-center">
-          <h6 className="mb-0 fw-bold text-end">SPLTV</h6>
-          <p className="mb-0 text-end" style={{ fontSize: '14px' }}>
-            Sistem Persamaan Linear Tiga Variabel
-          </p>
+      <div className="row w-100">
+        <div className="col-4">
+          {/* Toggler */}
+          <button className="btn px-3 bg-darkblue" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions" aria-label="Toggle navigation">
+            {/* <span className="navbar-toggler-icon"></span> */}
+            <i className="bi bi-chevron-right"></i>
+          </button>
         </div>
-      ) : (
-        <div className="d-flex">
-          <img className="me-2" src="/avatar-icon.png" width={50} alt="" />
-          <div className="d-none d-md-flex flex-column justify-content-center">
-            <h6 className="mb-0 fw-bold">Betty Agustina</h6>
-            <p className="mb-0" style={{ fontSize: '14px' }}>
-              Tadris Matematika
-            </p>
-          </div>
+        <div className="col-4 text-center">
+          {/* Brand */}
+          <h4 className=" fw-bold" href="#" id="navbar-title">
+            HOMEMATH
+          </h4>
         </div>
-      )}
+        <div className="col-4 d-flex justify-content-end">
+          {/* User */}
+          {isMateriPage ? (
+            <div className="d-flex flex-column justify-content-center">
+              <h6 className="mb-0 fw-bold text-end">SPLTV</h6>
+              <p className="mb-0 text-end" style={{ fontSize: '14px' }}>
+                Sistem Persamaan Linear Tiga Variabel
+              </p>
+            </div>
+          ) : (
+            <div className="d-flex">
+              <img className="me-2" src="/avatar-icon.png" style={{ width: '40px', height: '40px' }} alt="" />
+              <div className="d-none d-md-flex flex-column justify-content-center">
+                <h6 className="mb-0 fw-bold">Betty Agustina</h6>
+                <p className="mb-0" style={{ fontSize: '14px' }}>
+                  Tadris Matematika
+                </p>
+              </div>
+            </div>
+          )}
+        </div>
+      </div>
 
       {/* Offcanvas */}
       <div className="offcanvas offcanvas-start bg-darkblue" data-bs-scroll="true" tabIndex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">

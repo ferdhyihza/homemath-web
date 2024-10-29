@@ -1,24 +1,19 @@
 import { Link } from 'react-router-dom';
 import NextButton from '../components/buttons/NextButton';
-import Navbar from '../components/layouts/Navbar';
 import '../styles/Home.css';
+import Main from '../components/layouts/Main';
 
 export default function Home() {
   return (
-    <>
-      <div className="sticky-top bg-white">
-        <div className="container">
-          <Navbar />
-        </div>
-      </div>
-      <section className="container bg-darkblue" id="hero">
+    <Main>
+      <section className=" bg-darkblue" id="hero">
         <div className="row p-5">
           <div className="col-7 pe-4 d-flex flex-column justify-content-between">
             <h1 className="py-3 fw-bold lh-base" id="title">
               SISTEM PERSAMAAN LINEAR TIGA VARIABEL <br />
               (SPLTV)
             </h1>
-            <p className="fw-light">
+            <p className="fw-light rounded-4 p-2" style={{ backgroundColor: '#14141450' }}>
               Ingatkah kalian pada materi program linear atau Sistem Persamaan Linear Dua Variabel yang telah kalian dapatkan pada jenjang SLTP? Pada materi tersebut, kalian telah mengenal variabel, koefisien, dan konstanta.
               <br />
               Pembelajaran kali ini, kalian akan diajak untuk mempelajari materi terkait dengan variabel yang tidak hanya terdiri satu atau dua variabel, melainkan tiga variabel...
@@ -36,8 +31,8 @@ export default function Home() {
           </div>
         </div>
         <div className="p-5 pt-0">
-          <div className="row p-4 menu-wrapper rounded-4 justify-content-around gap-3">
-            <div className="col-1 ">
+          <div className="row p-4 menu-wrapper rounded-4 justify-content-around gap-2">
+            <div className="col-auto">
               <NextButton link="/peta-konsep" />
             </div>
             <Link to="/peta-konsep" className="col rounded-1 mx-3 menu d-flex justify-content-center align-items-center">
@@ -55,6 +50,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-    </>
+    </Main>
   );
 }
