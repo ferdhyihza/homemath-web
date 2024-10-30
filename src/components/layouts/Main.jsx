@@ -1,6 +1,7 @@
 import Navbar from './Navbar';
 import { useLocation } from 'react-router-dom';
 import Quotes from './Quotes';
+import ScrollToTop from '../ScrollToTop';
 
 export default function Main(props) {
   const location = useLocation();
@@ -8,6 +9,7 @@ export default function Main(props) {
 
   return (
     <>
+      <ScrollToTop />
       <div className="sticky-top bg-white shadow-sm">
         <div className="container">
           <Navbar />
