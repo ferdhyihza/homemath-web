@@ -12,6 +12,7 @@ import Exercise from './pages/Exercise.jsx';
 import PengantarSPLTV from './pages/SubjectMatter/PengantarSPLTV.jsx';
 import ErrorPage from './pages/404.jsx';
 import UnsurPadaSPLTV from './pages/SubjectMatter/UnsurPadaSPLTV.jsx';
+import BentukUmumSPLTV from './pages/SubjectMatter/BentukUmumSPLTV.jsx';
 
 const router = createBrowserRouter([
   {
@@ -38,6 +39,10 @@ const router = createBrowserRouter([
   {
     path: '/materi/unsur-pada-spltv',
     element: <UnsurPadaSPLTV />,
+  },
+  {
+    path: '/materi/bentuk-umum-spltv',
+    element: <BentukUmumSPLTV />,
   },
 ]);
 

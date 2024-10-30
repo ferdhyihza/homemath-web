@@ -15,7 +15,7 @@ export default function SubjectMatter() {
           <Link to="unsur-pada-spltv">Unsur pada SPLTV</Link>
         </li>
         <li>
-          <Link to="">Bentuk Umum SPLTV</Link>
+          <Link to="bentuk-umum-spltv">Bentuk Umum SPLTV</Link>
         </li>
       </SubjectMatterCard>
       <SubjectMatterCard number="02" title="Metode Penyelesaian SPLTV" link="">

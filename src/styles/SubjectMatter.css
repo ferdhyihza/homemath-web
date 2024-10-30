@@ -17,6 +17,6 @@ li {
 }
 
 li a:hover,
-h5:hover {
+.hover-underline:hover {
   text-decoration: underline;
 }

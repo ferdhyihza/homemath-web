@@ -27,6 +27,10 @@ body {
   background-color: #cbddec;
 }
 
+.bg-lightblue {
+  background-color: #f3f6fa;
+}
+
 .border-blue {
   border-color: #142237 !important;
 }
