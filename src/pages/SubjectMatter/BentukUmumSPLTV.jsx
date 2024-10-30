@@ -91,7 +91,7 @@ export default function BentukUmumSPLTV() {
       </div>
 
       <div className="d-flex justify-content-center py-4">
-        <NextButton link="/materi" />
+        <NextButton link="/materi/bentuk-umum-spltv-2" />
       </div>
     </Main>
   );
