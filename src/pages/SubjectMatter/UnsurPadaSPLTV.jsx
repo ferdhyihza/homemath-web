@@ -4,7 +4,7 @@ import Main from '../../components/layouts/Main';
 export default function UnsurPadaSPLTV() {
   return (
     <Main>
-      <h3 className="fw-bold pb-3">Unsur pada SPLTV</h3>
+      <h3 className="fw-bold pb-5 my-3">Unsur pada SPLTV</h3>
       <p>
         Mari kita ingat sejenak, unsur-unsur yang terdapat pada sistem persamaan linear. <br />
         <b>Masih ingatkah unsur apa saja yang ada pada persamaan linear?</b>

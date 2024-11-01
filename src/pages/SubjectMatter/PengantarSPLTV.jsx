@@ -4,7 +4,7 @@ import Main from '../../components/layouts/Main';
 export default function PengantarSPLTV() {
   return (
     <Main>
-      <h3 className="fw-bold pb-3">Pengantar SPLTV</h3>
+      <h3 className="fw-bold pb-5 my-3">Pengantar SPLTV</h3>
       <p>Untuk mempelajari tentang Sistem Persamaan Linear Tiga Variabel (SPLTV), tentunya kita harus mengenal terlebih dahulu bentuk dari sistem persamaan linear tersebut. Coba kita perhatikan cerita berikut!</p>
       <div className="d-flex justify-content-center gap-5">
         <figure className="text-center">

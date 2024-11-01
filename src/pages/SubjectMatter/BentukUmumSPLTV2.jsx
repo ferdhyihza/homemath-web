@@ -4,7 +4,7 @@ import Main from '../../components/layouts/Main';
 export default function BentukUmumSPLTV2() {
   return (
     <Main>
-      <h3 className="fw-bold pb-3">Bentuk Umum SPLTV</h3>
+      <h3 className="fw-bold pb-5 my-3">Bentuk Umum SPLTV</h3>
       <p className="fw-bold">
         Ingatkah teman-teman pada cerita pada awal pembelajaran yang telah kalian pelajari kali ini? <br />
         Apakah dapat kita selesaikan dengan SPLTV?

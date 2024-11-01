@@ -4,7 +4,7 @@ import Main from '../../components/layouts/Main';
 export default function BentukUmumSPLTV() {
   return (
     <Main>
-      <h3 className="fw-bold pb-3">Bentuk Umum SPLTV</h3>
+      <h3 className="fw-bold pb-5 my-3">Bentuk Umum SPLTV</h3>
       <p>Jika kalian telah mengingat dan memahami unsur-unsur yang terdapat pada sistem persamaan linear, mari kita lanjutkan untuk memhami apa dan bagaimana Sistem Persamaan Linear Tiga Variabel (SPLTV).</p>
       <p>
         Sistem Persamaan Linear Tiga Variabel (SPLTV) merupakan Kumpulan dari tiga persamaan linear yang setiap persamaannya memiliki tiga variabel. SPLTV juga merupakan konsep ilmu matematika yang digunakan untuk menyelesaikan permasalahan
@@ -38,54 +38,54 @@ export default function BentukUmumSPLTV() {
         <div className="container bg-darkblue rounded-4 text-center p-4">
           <p className="">Mana saja yang tepat dari pernyataan di bawah ini?</p>
           <div className="row text-black gap-5 px-5 mb-4">
-            <div className="col bg-lightblue rounded-4 p-2 align-self-center">
+            <button className="col bg-lightblue rounded-4 p-2 align-self-center">
               <h5>x, y, dan z</h5>
               <p className="mb-0">merupakan variabel</p>
-            </div>
-            <div className="col bg-lightblue rounded-4 p-2 align-self-center">
+            </button>
+            <button className="col bg-lightblue rounded-4 p-2 align-self-center">
               <h5>
                 x, y, d<sub>1</sub>, d<sub>2</sub>
               </h5>
               <p className="mb-0">merupakan variabel</p>
-            </div>
-            <div className="col bg-lightblue rounded-4 p-2 align-self-center">
+            </button>
+            <button className="col bg-lightblue rounded-4 p-2 align-self-center">
               <h5>
                 d<sub>1</sub>, d<sub>2</sub>, d<sub>3</sub>
               </h5>
               <p className="mb-0">merupakan konstanta</p>
-            </div>
+            </button>
           </div>
           <div className="row text-black gap-5 px-5 mb-4">
-            <div className="col bg-lightblue rounded-4 p-2 ms-5 align-self-center">
+            <button className="col bg-lightblue rounded-4 p-2 ms-5 align-self-center">
               <p className="mb-0">terdapat 8 variabel, yaitu</p>
               <h5>
                 a<sub>1</sub>, b<sub>1</sub>, c<sub>1</sub>, a<sub>2</sub>, b<sub>2</sub>, c<sub>2</sub>, a<sub>3</sub>, b<sub>3</sub>, dan c<sub>3</sub>,
               </h5>
-            </div>
-            <div className="col bg-lightblue rounded-4 p-2 me-5 align-self-center">
+            </button>
+            <button className="col bg-lightblue rounded-4 p-2 me-5 align-self-center">
               <p className="mb-0">terdapat 3 konstanta, yaitu</p>
               <h5>x, y, dan z</h5>
-            </div>
+            </button>
           </div>
           <div className="row text-black gap-5 px-5 mb-4">
-            <div className="col bg-lightblue rounded-4 p-2 align-self-center">
+            <button className="col bg-lightblue rounded-4 p-2 align-self-center">
               <h5>
                 c<sub>3</sub>, z, a<sub>1</sub>, b<sub>1</sub>
               </h5>
               <p className="mb-0">merupakan koefisien</p>
-            </div>
-            <div className="col bg-lightblue rounded-4 p-2 align-self-center">
+            </button>
+            <button className="col bg-lightblue rounded-4 p-2 align-self-center">
               <h5>
                 a<sub>1</sub>, b<sub>1</sub>, c<sub>1</sub>, a<sub>2</sub>, b<sub>2</sub>, c<sub>2</sub>, a<sub>3</sub>, b<sub>3</sub>, dan c<sub>3</sub>,
               </h5>
               <p className="mb-0">merupakan koefisien</p>
-            </div>
-            <div className="col bg-lightblue rounded-4 p-2 align-self-center">
+            </button>
+            <button className="col bg-lightblue rounded-4 p-2 align-self-center">
               <h5>
                 a<sub>2</sub>, b<sub>2</sub>, c<sub>2</sub>
               </h5>
               <p className="mb-0">merupakan konstanta</p>
-            </div>
+            </button>
           </div>
         </div>
       </div>

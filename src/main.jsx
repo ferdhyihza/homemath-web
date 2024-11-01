@@ -14,6 +14,7 @@ import ErrorPage from './pages/404.jsx';
 import UnsurPadaSPLTV from './pages/SubjectMatter/UnsurPadaSPLTV.jsx';
 import BentukUmumSPLTV from './pages/SubjectMatter/BentukUmumSPLTV.jsx';
 import BentukUmumSPLTV2 from './pages/SubjectMatter/BentukUmumSPLTV2.jsx';
+import MetodePenyelesaianSPLTV from './pages/SubjectMatter/MetodePenyelesaianSPLTV.jsx';
 
 const router = createBrowserRouter([
   {
@@ -48,6 +49,10 @@ const router = createBrowserRouter([
   {
     path: '/materi/bentuk-umum-spltv-2',
     element: <BentukUmumSPLTV2 />,
+  },
+  {
+    path: '/materi/metode-penyelesaian-spltv',
+    element: <MetodePenyelesaianSPLTV />,
   },
 ]);
 
