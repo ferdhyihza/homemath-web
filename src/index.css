@@ -46,3 +46,38 @@ body {
 .persamaan button:hover {
   background-color: #fff;
 }
+
+.kurang::after {
+  content: '-';
+  position: absolute;
+  bottom: -10px;
+  right: -16px;
+}
+
+.tambah::after {
+  content: '+';
+  position: absolute;
+  bottom: -10px;
+  right: -16px;
+}
+
+.z-samadengan::after {
+  content: 'z =';
+  position: absolute;
+  bottom: -10px;
+  right: -24px;
+}
+
+.y-samadengan::after {
+  content: 'y =';
+  position: absolute;
+  bottom: -10px;
+  right: -24px;
+}
+
+.x::after {
+  content: 'x';
+  position: absolute;
+  bottom: -10px;
+  right: -16px;
+}

@@ -1,5 +1,6 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
+import '@popperjs/core/dist/umd/popper.min.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import './index.css';
@@ -15,6 +16,7 @@ import UnsurPadaSPLTV from './pages/SubjectMatter/UnsurPadaSPLTV.jsx';
 import BentukUmumSPLTV from './pages/SubjectMatter/BentukUmumSPLTV.jsx';
 import BentukUmumSPLTV2 from './pages/SubjectMatter/BentukUmumSPLTV2.jsx';
 import MetodePenyelesaianSPLTV from './pages/SubjectMatter/MetodePenyelesaianSPLTV.jsx';
+import MetodePenyelesaianEliminasi from './pages/SubjectMatter/MetodePenyelesaianEliminasi.jsx';
 
 const router = createBrowserRouter([
   {
@@ -53,6 +55,10 @@ const router = createBrowserRouter([
   {
     path: '/materi/metode-penyelesaian-spltv',
     element: <MetodePenyelesaianSPLTV />,
+  },
+  {
+    path: '/materi/metode-penyelesaian-spltv/eliminasi',
+    element: <MetodePenyelesaianEliminasi />,
   },
 ]);
 

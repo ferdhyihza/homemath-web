@@ -4,7 +4,7 @@ export default function NextButton(link) {
   return (
     <>
       <Link to={link.link} className="">
-        <img src="../next-page-icon.png" className="rounded img-fluid" alt="" />
+        <img src="../../next-page-icon.png" className="rounded img-fluid" alt="" />
       </Link>
     </>
   );

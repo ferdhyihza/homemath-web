@@ -59,27 +59,27 @@ export default function NavbarContent() {
           <ul className="navbar-nav justify-content-end flex-grow-1 pe-3 gap-2">
             <li className="nav-item d-flex">
               <Link to="/" className="nav-link fw-medium text-light fs-5">
-                <img src="../icon/icon-beranda.png" alt="icon-beranda" className="me-2" /> Beranda
+                <img src="../../icon/icon-beranda.png" alt="icon-beranda" className="me-2" /> Beranda
               </Link>
             </li>
             <li className="nav-item d-flex">
               <Link to="/peta-konsep" className="nav-link text-light fs-5">
-                <img src="../icon/icon-peta-konsep.png" alt="icon-peta-konsep" className="me-2" /> Peta Konsep
+                <img src="../../icon/icon-peta-konsep.png" alt="icon-peta-konsep" className="me-2" /> Peta Konsep
               </Link>
             </li>
             <li className="nav-item d-flex">
               <Link to="/materi" className="nav-link text-light fs-5">
-                <img src="../icon/icon-materi.png" alt="icon-materi" className="me-2" /> Materi
+                <img src="../../icon/icon-materi.png" alt="icon-materi" className="me-2" /> Materi
               </Link>
             </li>
             <li className="nav-item d-flex">
               <Link to="/latihan-soal" className="nav-link text-light fs-5" href="#">
-                <img src="../icon/icon-latihan-soal.png" alt="icon-latihan-soal" className="me-2" /> Latihan Soal
+                <img src="../../icon/icon-latihan-soal.png" alt="icon-latihan-soal" className="me-2" /> Latihan Soal
               </Link>
             </li>
             <li className="nav-item d-flex">
               <a className="nav-link text-light fs-5" href="#">
-                <img src="../icon/icon-tes-formatif.png" alt="icon-tes-formatif" className="me-2" /> Tes Formatif
+                <img src="../../icon/icon-tes-formatif.png" alt="icon-tes-formatif" className="me-2" /> Tes Formatif
               </a>
             </li>
           </ul>

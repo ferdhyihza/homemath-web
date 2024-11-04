@@ -20,13 +20,13 @@ export default function SubjectMatter() {
       </SubjectMatterCard>
       <SubjectMatterCard number="02" title="Metode Penyelesaian SPLTV" link="metode-penyelesaian-spltv">
         <li>
-          <Link to="">Metode Eliminasi</Link>
+          <Link to="metode-penyelesaian-spltv/eliminasi">Metode Eliminasi</Link>
         </li>
         <li>
-          <Link to="">Metode Substitusi</Link>
+          <Link to="metode-penyelesaian-spltv/substitusi">Metode Substitusi</Link>
         </li>
         <li>
-          <Link to="">Metode Campuran (Eliminasi & Substitusi)</Link>
+          <Link to="metode-penyelesaian-spltv/campuran">Metode Campuran (Eliminasi & Substitusi)</Link>
         </li>
       </SubjectMatterCard>
       <SubjectMatterCard number="03" title="Penggunaan SPLTV pada Kehidupan Sehari-hari" link="">
