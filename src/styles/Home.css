@@ -1,5 +1,5 @@
 #hero {
-  background-image: url('hero-background.png');
+  background-image: url('../../public/hero-background.png');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

@@ -17,6 +17,7 @@ import BentukUmumSPLTV from './pages/SubjectMatter/BentukUmumSPLTV.jsx';
 import BentukUmumSPLTV2 from './pages/SubjectMatter/BentukUmumSPLTV2.jsx';
 import MetodePenyelesaianSPLTV from './pages/SubjectMatter/MetodePenyelesaianSPLTV.jsx';
 import MetodePenyelesaianEliminasi from './pages/SubjectMatter/MetodePenyelesaianEliminasi.jsx';
+import MetodePenyelesaianSubstitusi from './pages/SubjectMatter/MetodePenyelesaianSubstitusi.jsx';
 
 const router = createBrowserRouter([
   {
@@ -59,6 +60,10 @@ const router = createBrowserRouter([
   {
     path: '/materi/metode-penyelesaian-spltv/eliminasi',
     element: <MetodePenyelesaianEliminasi />,
+  },
+  {
+    path: '/materi/metode-penyelesaian-spltv/substitusi',
+    element: <MetodePenyelesaianSubstitusi />,
   },
 ]);
 
