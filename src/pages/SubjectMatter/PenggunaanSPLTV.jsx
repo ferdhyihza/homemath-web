@@ -21,7 +21,7 @@ export default function PenggunaanSPLTV() {
       </p>
       <figure className="text-center">
         <img src="../img/ilustrasi-pengantar-spltv.png" alt="video ilustrasi" />
-        <figcaption className="fst-italic fw-light">Ilustrasi (video)</figcaption>
+        <figcaption className="fst-italic fw-light">Ilustrasi [video]</figcaption>
       </figure>
       <p>
         <b>Penyelesaian:</b> <br />
@@ -76,7 +76,7 @@ export default function PenggunaanSPLTV() {
       </div>
       <p>Eliminasi variabel x pada persamaan (1) dan (3)</p>
       <div className="row justify-content-center">
-        <div className="col-3">
+        <div className="col-2">
           <p>x + y + z = 16</p>
           <p>79x - 11y - 20z = 13</p>
         </div>
