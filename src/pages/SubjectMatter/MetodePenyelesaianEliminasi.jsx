@@ -24,7 +24,7 @@ export default function MetodePenyelesaianEliminasi() {
         1. Eliminasi salah satu variabel pada persamaan (1) dan (2), atau persamaan (2) dan (3), atau persamaan (1) dan (3) untuk membentuk persamaan linear dua variabel. Kali ini kita akan mencoba untuk mengeliminasi variabel x pada
         persamaan (1) dan (2).
       </p>
-      <div className="row px-5 justify-content-center">
+      <div className="row  justify-content-center">
         <div className="col-3">
           <p>4x + 6y + 3z = 20.700.000</p>
           <p>5x + 5y + 5z = 24.000.000</p>
@@ -40,7 +40,7 @@ export default function MetodePenyelesaianEliminasi() {
         </div>
       </div>
       <p>2. Selanjutnya, kita dapat mengulangi langkah tersebut untuk mengeliminasi variabel x pada persamaan (2) dan (3) seperti berikut.</p>
-      <div className="row px-5 justify-content-end">
+      <div className="row  justify-content-end">
         <div className="col-3">
           <p>5x + 5y + 5z = 24.000.000</p>
           <p>2x + 3y + 7z = 19.700.000</p>
@@ -67,7 +67,7 @@ export default function MetodePenyelesaianEliminasi() {
         </div>
       </div>
       <p>3. Dari langkah sebelumnya, kita mendapatkan dua persamaan baru, ya itu persamaan (4) dan (5) yang menyisakan dua variabel y dan z. Kita akan melakukan eliminasi pada kedua persamaan tersebut.</p>
-      <div className="row px-5 justify-content-center">
+      <div className="row  justify-content-center">
         <div className="col-3">
           <p>10y - 5z = 7.500.000</p>
           <p>-5y - 25z = -50.500.000</p>
@@ -98,7 +98,7 @@ export default function MetodePenyelesaianEliminasi() {
         </div>
       </div>
       <p>4. Dari langkah 3 kita mengetahui nilai z. Kemudian kita akan mengeliminasi variabel y, sehingga</p>
-      <div className="row px-5 justify-content-center">
+      <div className="row  justify-content-center">
         <div className="col-3">
           <p>10y - 5z = 7.500.000</p>
           <p>-5y - 25z = -50.500.000</p>
