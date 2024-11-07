@@ -19,6 +19,7 @@ import MetodePenyelesaianSPLTV from './pages/SubjectMatter/MetodePenyelesaianSPL
 import MetodePenyelesaianEliminasi from './pages/SubjectMatter/MetodePenyelesaianEliminasi.jsx';
 import MetodePenyelesaianSubstitusi from './pages/SubjectMatter/MetodePenyelesaianSubstitusi.jsx';
 import MetodePenyelesaianCampuran from './pages/SubjectMatter/MetodePenyelesaianCampuran.jsx';
+import PenggunaanSPLTV from './pages/SubjectMatter/PenggunaanSPLTV.jsx';
 
 const router = createBrowserRouter([
   {
@@ -69,6 +70,10 @@ const router = createBrowserRouter([
   {
     path: '/materi/metode-penyelesaian-spltv/campuran',
     element: <MetodePenyelesaianCampuran />,
+  },
+  {
+    path: '/materi/penggunaan-spltv',
+    element: <PenggunaanSPLTV />,
   },
 ]);
 

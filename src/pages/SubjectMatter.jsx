@@ -29,12 +29,12 @@ export default function SubjectMatter() {
           <Link to="metode-penyelesaian-spltv/campuran">Metode Campuran (Eliminasi & Substitusi)</Link>
         </li>
       </SubjectMatterCard>
-      <SubjectMatterCard number="03" title="Penggunaan SPLTV pada Kehidupan Sehari-hari" link="">
+      <SubjectMatterCard number="03" title="Penggunaan SPLTV pada Kehidupan Sehari-hari" link="penggunaan-spltv">
         <li>
-          <Link to="">Untuk apa kita mempelajari SPLTV?</Link>
+          <Link to="penggunaan-spltv">Untuk apa kita mempelajari SPLTV?</Link>
         </li>
         <li>
-          <Link to="">Sudahkah memahami untuk apa kita mempelajari SPLTV?</Link>
+          <Link to="penggunaan-spltv-2">Sudahkah memahami untuk apa kita mempelajari SPLTV?</Link>
         </li>
       </SubjectMatterCard>
       <h3 className="fw-bold py-3">Lainnya</h3>
