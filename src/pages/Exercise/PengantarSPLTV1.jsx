@@ -1,35 +1,18 @@
 import NextButton from '../../components/buttons/NextButton';
 import Main from '../../components/layouts/Main';
 
-export default function UnsurPadaSPLTV() {
+export default function PengantarSPLTV1() {
   return (
     <Main>
-      <h3 className="fw-bold pb-5 my-3">Unsur pada SPLTV</h3>
-      <p>
-        Mari kita ingat sejenak, unsur-unsur yang terdapat pada sistem persamaan linear. <br />
-        <b>Masih ingatkah unsur apa saja yang ada pada persamaan linear?</b>
-      </p>
-      <p>Jika sudah lupa, coba simak penjelasan berikut.</p>
-      <p>
-        <b>Variabel</b> <br />
-        Merupakan simbol atau huruf suatu nilai yang besarnya belum diketahui secara pasti. Variabel biasanya dilambangkan dengan huruf x,y,z atau lain sebagainya. Diberikan 2x+3y=7. Pada persamaan tersebut, yang merupakan variabel adalah x
-        dan y.
-      </p>
-      <p>
-        <b>Koefisien</b> <br />
-        Koefisien merupakan suatu bilangan yang menjelaskan banyaknya jumlah variabel. Contohnya 2x+3y=7. Pada contoh persamaan tersebut, yang merupakan koefisien adalah 2 dan 3.
-      </p>
-      <p>
-        <b>Konstanta</b> <br />
-        Konstanta merupakan nilai tetap atau konstan yang tidak diikuti oleh variabel di belakangnya. Pada persamaan 2x+3y=7, angka 7 merupakan konstanta dari persamaan tersebut.
-      </p>
-      <p>Untuk membantu kalian mengingat Kembali unsur-unsur di atas, coba lakukan kegiatan berikut ini.</p>
-      <p>
-        Diberikan persamaan: <br />
-        2x + 3y = 7 &ensp; ...(1) <br />
-        5x + y = 11 &ensp; ...(2) <br />
-        Mana saja yang merupakan variabel, konstanta, dan koefisien?
-      </p>
+      <h3 className="fw-bold pb-5 my-3">
+        Latihan Soal 1 <span className="text-muted fw-medium ms-2 fs-5">Unsur pada SPLTV: Menentukan variabel, konstanta, dan koefisien</span>
+      </h3>
+      <div className="text-center mb-5">
+        <p className=" fs-5">Diberikan Persamaan</p>
+        <p className="fw-medium fs-5">2x + 3y = 7 &ensp; ...(1)</p>
+        <p className="fw-medium fs-5">5x + y = 11 &ensp; ...(2)</p>
+        <p className=" fs-5">Mana saja yang merupakan variabel, konstanta, dan koefisien?</p>
+      </div>
       <div className="bg-blue-subtle mb-3 rounded-4 p-3 border border-blue border-2 text-center">
         <p className="bg-darkblue p-2 px-3 rounded-3 d-inline-block fw-semibold mb-0">Mana yang merupakan variabel?</p>
         <div className="row justify-content-between px-3">
@@ -119,7 +102,7 @@ export default function UnsurPadaSPLTV() {
       </div>
 
       <div className="d-flex justify-content-center py-4">
-        <NextButton link="/materi/bentuk-umum-spltv" />
+        <NextButton link="/latihan-soal" />
       </div>
     </Main>
   );

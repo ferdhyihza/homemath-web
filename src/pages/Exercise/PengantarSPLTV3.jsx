@@ -2,18 +2,13 @@ import NextButton from '../../components/buttons/NextButton';
 import Main from '../../components/layouts/Main';
 import Tips from '../../components/Tips';
 
-export default function BentukUmumSPLTV2() {
+export default function PengantarSPLTV3() {
   return (
     <Main>
-      <h3 className="fw-bold pb-5 my-3">Bentuk Umum SPLTV</h3>
-      <p className="fw-bold">
-        Ingatkah teman-teman pada cerita pada awal pembelajaran yang telah kalian pelajari kali ini? <br />
-        Apakah dapat kita selesaikan dengan SPLTV?
-      </p>
-      <p>
-        Setelah memahami bentuk umum SPLTV, teman-teman dapat mengubah cerita tersebut ke dalam bentuk SPLTV untuk diselesaikan. <br />
-        Yuk kita coba mengubahnya ke dalam bentuk SPLTV
-      </p>
+      <h3 className="fw-bold pb-5 my-3">
+        Latihan Soal 3 <span className="text-muted fw-medium ms-2 fs-5">Bentuk Umum SPLTV: Menyusun Sistem Persamaan Linear Tiga Variabel</span>
+      </h3>
+
       <p>
         Beberapa pengusaha konveksi di daerah Kota Blitar, akan memproduksi baju seragam sekolah pada masa awal tahun ajaran baru. Salah satu toko tekstil terkenal di Kota Blitar menjadi pilihan utama para pengusaha untuk membeli bahan
         baku. <br />
@@ -74,10 +69,7 @@ export default function BentukUmumSPLTV2() {
         Konveksi ketiga, yaitu Sportees menghabiskan Rp19.700.000 untuk membeli: <b>(19.700.000 merupakan konstanta)</b> <br />• 2 gulung kain warna putih <b>(2 merupakan koefisien)</b> <br />• 3 gulung kain warna abu-abu{' '}
         <b>(3 merupakan koefisien)</b> <br />• 7 gulung kain warna cokelat <b>(7 merupakan koefisien)</b> <br />
       </p>
-      <p>
-        Berdasarkan informasi di atas, kita telah mengetahui mana yang merupakan koefisien dan konstanta untuk kita ubah menjadi persamaan linear. Setelah mengetahui variabel dan koefisiennya,
-        <b> yuk ikuti bagaimana menyusunnya menjadi SPLTV yang dapat kita selesaikan dengan kegiatan berikut!</b>
-      </p>
+      <p>Berdasarkan informasi di atas, kita telah mengetahui mana yang merupakan koefisien dan konstanta untuk kita ubah menjadi persamaan linear. Selanjutnya, dapat kita susun SPLTV sebagai berikut.</p>
 
       <p className="text-center mt-4 mb-1">Misalkan uang yang dihabiskan oleh konveksi Roshima menjadi persamaan (1), maka</p>
       <div className="row justify-content-center align-items-center mb-4">
@@ -142,7 +134,7 @@ export default function BentukUmumSPLTV2() {
       </div>
 
       <div className="d-flex justify-content-center py-4">
-        <NextButton link="/materi" />
+        <NextButton link="/latihan-soal" />
       </div>
     </Main>
   );

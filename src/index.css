@@ -35,6 +35,10 @@ body {
   border-color: #142237 !important;
 }
 
+.border-green {
+  border-color: #5ce65c !important;
+}
+
 .persamaan button {
   border-radius: 8px;
   padding: 12px 20px;

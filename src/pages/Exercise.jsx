@@ -8,15 +8,15 @@ export default function Exercise() {
       <h3 className="fw-bold pb-3">Latihan Soal</h3>
       <div className="row">
         <div className="col">
-          <ExerciseCard title="Pengantar SPLTV Latihan Soal 1" link="">
+          <ExerciseCard title="Pengantar SPLTV Latihan Soal 1" link="pengantar-spltv/1-unsur-pada-spltv">
             Unsur pada SPLTV: <br />
             Menentukan variabel, koefisien, dan konstanta
           </ExerciseCard>
-          <ExerciseCard title="Pengantar SPLTV Latihan Soal 2" link="">
+          <ExerciseCard title="Pengantar SPLTV Latihan Soal 2" link="pengantar-spltv/2-bentuk-umum-spltv">
             Bentuk Umum SPLTV: <br />
             Menentukan variabel, koefisien, dan konstanta
           </ExerciseCard>
-          <ExerciseCard title="Pengantar SPLTV Latihan Soal 3" link="">
+          <ExerciseCard title="Pengantar SPLTV Latihan Soal 3" link="pengantar-spltv/3-bentuk-umum-spltv">
             Bentuk Umum SPLTV: <br />
             Menyusun Sistem Persamaan Linear Tiga Variabel
           </ExerciseCard>

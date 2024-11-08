@@ -21,6 +21,9 @@ import MetodePenyelesaianSubstitusi from './pages/SubjectMatter/MetodePenyelesai
 import MetodePenyelesaianCampuran from './pages/SubjectMatter/MetodePenyelesaianCampuran.jsx';
 import PenggunaanSPLTV from './pages/SubjectMatter/PenggunaanSPLTV.jsx';
 import PenggunaanSPLTV2 from './pages/SubjectMatter/PenggunaanSPLTV2.jsx';
+import PengantarSPLTV1 from './pages/Exercise/PengantarSPLTV1.jsx';
+import PengantarSPLTV2 from './pages/Exercise/PengantarSPLTV2.jsx';
+import PengantarSPLTV3 from './pages/Exercise/PengantarSPLTV3.jsx';
 
 const router = createBrowserRouter([
   {
@@ -79,6 +82,18 @@ const router = createBrowserRouter([
   {
     path: '/materi/penggunaan-spltv-2',
     element: <PenggunaanSPLTV2 />,
+  },
+  {
+    path: '/latihan-soal/pengantar-spltv/1-unsur-pada-spltv',
+    element: <PengantarSPLTV1 />,
+  },
+  {
+    path: '/latihan-soal/pengantar-spltv/2-bentuk-umum-spltv',
+    element: <PengantarSPLTV2 />,
+  },
+  {
+    path: '/latihan-soal/pengantar-spltv/3-bentuk-umum-spltv',
+    element: <PengantarSPLTV3 />,
   },
 ]);
 

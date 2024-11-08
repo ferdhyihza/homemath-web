@@ -4,6 +4,7 @@ import '../../styles/Navbar.css';
 export default function NavbarContent() {
   const location = useLocation();
   const isMateriPage = location.pathname.includes('/materi/');
+  const isLatsolPage = location.pathname.includes('/latihan-soal/');
 
   return (
     <>
@@ -23,7 +24,7 @@ export default function NavbarContent() {
         </div>
         <div className="col-4 d-flex justify-content-end">
           {/* User */}
-          {isMateriPage ? (
+          {isMateriPage || isLatsolPage ? (
             <div className="d-flex flex-column justify-content-center">
               <h6 className="mb-0 fw-bold text-end">SPLTV</h6>
               <p className="mb-0 text-end" style={{ fontSize: '14px' }}>
