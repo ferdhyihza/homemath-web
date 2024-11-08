@@ -9,16 +9,16 @@ export default function Exercise() {
       <div className="row">
         <div className="col">
           <ExerciseCard title="Pengantar SPLTV Latihan Soal 1" link="">
-            Unsur pada SPLTV <br />
+            Unsur pada SPLTV: <br />
             Menentukan variabel, koefisien, dan konstanta
           </ExerciseCard>
           <ExerciseCard title="Pengantar SPLTV Latihan Soal 2" link="">
-            Bentuk Umum SPLTV <br />
+            Bentuk Umum SPLTV: <br />
             Menentukan variabel, koefisien, dan konstanta
           </ExerciseCard>
           <ExerciseCard title="Pengantar SPLTV Latihan Soal 3" link="">
-            Bentuk Umum SPLTV <br />
-            Menentukan variabel, koefisien, dan konstanta
+            Bentuk Umum SPLTV: <br />
+            Menyusun Sistem Persamaan Linear Tiga Variabel
           </ExerciseCard>
           <ExerciseCard title="Metode Penyelesaian SPLTV Latihan Soal 1" link="">
             Penyelesaian SPLTV dengan Metode Eliminasi

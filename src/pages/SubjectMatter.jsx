@@ -33,9 +33,6 @@ export default function SubjectMatter() {
         <li>
           <Link to="penggunaan-spltv">Untuk apa kita mempelajari SPLTV?</Link>
         </li>
-        <li>
-          <Link to="penggunaan-spltv-2">Sudahkah memahami untuk apa kita mempelajari SPLTV?</Link>
-        </li>
       </SubjectMatterCard>
       <h3 className="fw-bold py-3">Lainnya</h3>
       <div className="row">
