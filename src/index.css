@@ -16,6 +16,7 @@ body {
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-optical-sizing: auto;
   color: #141414;
+  user-select: none;
 }
 
 .bg-darkblue {
@@ -49,6 +50,11 @@ body {
 
 .persamaan button:hover {
   background-color: #fff;
+}
+
+.persamaan button.disabled {
+  background-color: #f3f6fa80;
+  pointer-events: none;
 }
 
 .kurang::after {
@@ -88,4 +94,15 @@ body {
 
 .blur {
   filter: blur(4px);
+  user-select: none;
+}
+
+.blur button,
+.blur a {
+  pointer-events: none;
+}
+
+.disabled {
+  pointer-events: none;
+  user-select: none;
 }
