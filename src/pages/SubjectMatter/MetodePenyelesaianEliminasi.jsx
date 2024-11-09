@@ -1,5 +1,6 @@
 import NextButton from '../../components/buttons/NextButton';
 import Main from '../../components/layouts/Main';
+import Tips from '../../components/Tips';
 
 export default function MetodePenyelesaianEliminasi() {
   return (
@@ -19,6 +20,7 @@ export default function MetodePenyelesaianEliminasi() {
           <p className="mb-1">2x + 3y + 7z = 19.700.000 &ensp; ...(3)</p>
         </div>
       </div>
+
       <p className="fw-bold">Langkah penyelesaian dengan metode eliminasi:</p>
       <p>
         1. Eliminasi salah satu variabel pada persamaan (1) dan (2), atau persamaan (2) dan (3), atau persamaan (1) dan (3) untuk membentuk persamaan linear dua variabel. Kali ini kita akan mencoba untuk mengeliminasi variabel x pada
@@ -29,9 +31,9 @@ export default function MetodePenyelesaianEliminasi() {
           <p>4x + 6y + 3z = 20.700.000</p>
           <p>5x + 5y + 5z = 24.000.000</p>
         </div>
-        <div className="col-1">
-          <p>|×5|</p>
-          <p>|×4|</p>
+        <div className="col-1 text-center">
+          <p>| ×5 |</p>
+          <p>| ×4 |</p>
         </div>
         <div className="col-3">
           <p>20x + 30y + 15z = 103.500.000</p>
@@ -45,23 +47,23 @@ export default function MetodePenyelesaianEliminasi() {
           <p>5x + 5y + 5z = 24.000.000</p>
           <p>2x + 3y + 7z = 19.700.000</p>
         </div>
-        <div className="col-1">
-          <p>|×2|</p>
-          <p>|×5|</p>
+        <div className="col-1 text-center">
+          <p>| ×2 |</p>
+          <p>| ×5 |</p>
         </div>
         <div className="col-6">
-          <p className="d-inline-block">10x + 10y + 10z = </p>
-          <input className="form-control d-inline-block ms-2" type="text" placeholder="..." style={{ textAlign: 'center', width: '124px' }} />
-          <p className="d-inline-block ms-2" style={{ textAlign: 'center', fontSize: '12px' }}>
-            hasil perkalian 24.000.000 dengan 2
-          </p>
+          <div className="d-flex align-items-center gap-2">
+            <p className="mb-0">10x + 10y + 10z =</p>
+            <input className="form-control d-inline-block" type="text" placeholder="..." style={{ textAlign: 'center', width: '124px' }} />
+            <Tips>hasil perkalian 24.000.000 dengan 2</Tips>
+          </div>
           <p className="border-bottom d-inline-block border-black position-relative kurang pb-3">10x + 15y + 35z = 98.500.000</p>
           <div>
             <p className="ps-4 ms-3 d-inline-block">-5y - 25z =</p>
             <input className="form-control d-inline-block ms-2" type="text" placeholder="..." style={{ textAlign: 'center', width: '124px' }} />
             <p className="ps-2 d-inline-block">...(5)</p>
           </div>
-          <p className="d-inline-block ps-5 ms-5" style={{ textAlign: 'center', fontSize: '12px' }}>
+          <p className="d-inline-block ps-5 ms-5 fst-italic" style={{ textAlign: 'center', fontSize: '12px' }}>
             hitung hasil operasi tersebut
           </p>
         </div>
@@ -72,9 +74,9 @@ export default function MetodePenyelesaianEliminasi() {
           <p>10y - 5z = 7.500.000</p>
           <p>-5y - 25z = -50.500.000</p>
         </div>
-        <div className="col-1">
-          <p>|×1|</p>
-          <p>|×2|</p>
+        <div className="col-1 text-center">
+          <p>| ×1 |</p>
+          <p>| ×2 |</p>
         </div>
         <div className="col-4">
           <p>10y - 5z = 7.500.000</p>
@@ -92,7 +94,7 @@ export default function MetodePenyelesaianEliminasi() {
             <p className="ps-4 ms-3 d-inline-block">z =</p>
             <input className="form-control d-inline-block ms-2" type="text" placeholder="..." style={{ textAlign: 'center', width: '124px' }} />
           </div>
-          <p className="d-inline-block" style={{ textAlign: 'center', fontSize: '12px' }}>
+          <p className="d-inline-block fst-italic" style={{ textAlign: 'center', fontSize: '12px' }}>
             kedua ruas dibagi dengan -55 untuk mengetahui nilai z
           </p>
         </div>
@@ -103,11 +105,11 @@ export default function MetodePenyelesaianEliminasi() {
           <p>10y - 5z = 7.500.000</p>
           <p>-5y - 25z = -50.500.000</p>
         </div>
-        <div className="col-1">
-          <p className="d-inline-block">|×</p>
+        <div className="col-1 text-center">
+          <p className="d-inline-block">| ×</p>
           <input className="form-control d-inline-block " type="text" placeholder="..." style={{ textAlign: 'center', width: '40px' }} />
-          <p className="d-inline-block">|</p>
-          <p>|×1|</p>
+          <p className="d-inline-block ms-1"> |</p>
+          <p>| ×1 |</p>
         </div>
         <div className="col-4">
           <p>50y - 25z = 37.500.000</p>
@@ -125,7 +127,7 @@ export default function MetodePenyelesaianEliminasi() {
             <p className="ps-4 ms-3 d-inline-block">y =</p>
             <input className="form-control d-inline-block ms-2" type="text" placeholder="..." style={{ textAlign: 'center', width: '124px' }} />
           </div>
-          <p className="d-inline-block" style={{ textAlign: 'center', fontSize: '12px' }}>
+          <p className="d-inline-block fst-italic" style={{ textAlign: 'center', fontSize: '12px' }}>
             kedua ruas dibagi dengan 55 untuk mengetahui nilai y
           </p>
         </div>
@@ -166,7 +168,7 @@ export default function MetodePenyelesaianEliminasi() {
               <span>-</span>
               <input className="border-0" type="text" placeholder="..." style={{ textAlign: 'center' }} />
             </div>
-            <p className="mb-0" style={{ fontSize: '12px' }}>
+            <p className="mb-0 fst-italic" style={{ fontSize: '12px' }}>
               kurangi kedua ruas dengan 14.700.000
             </p>
           </div>
@@ -174,7 +176,7 @@ export default function MetodePenyelesaianEliminasi() {
             <div className="text-center p-2 border border rounded-2 d-flex">
               <input className="border-0" type="text" placeholder="..." style={{ textAlign: 'center' }} />
             </div>
-            <p className="mb-0" style={{ fontSize: '12px' }}>
+            <p className="mb-0 fst-italic" style={{ fontSize: '12px' }}>
               hitung hasil operasi pengurangan tersebut
             </p>
           </div>
@@ -183,7 +185,7 @@ export default function MetodePenyelesaianEliminasi() {
               <input className="border-0" type="text" placeholder="..." style={{ textAlign: 'center' }} />
               <span>/ 4</span>
             </div>
-            <p className="mb-0" style={{ fontSize: '12px' }}>
+            <p className="mb-0 fst-italic" style={{ fontSize: '12px' }}>
               masukkan hasil operasi pengurangan tersebut
             </p>
           </div>
@@ -191,7 +193,7 @@ export default function MetodePenyelesaianEliminasi() {
             <div className="text-center p-2 border border rounded-2 d-flex">
               <input className="border-0" type="text" placeholder="..." style={{ textAlign: 'center' }} />
             </div>
-            <p className="mb-0" style={{ fontSize: '12px' }}>
+            <p className="mb-0 fst-italic" style={{ fontSize: '12px' }}>
               kedua ruas dibagi dengan 4 untuk mengetahui nilai x
             </p>
           </div>

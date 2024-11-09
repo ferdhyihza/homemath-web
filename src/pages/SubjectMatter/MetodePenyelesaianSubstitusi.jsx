@@ -54,7 +54,7 @@ export default function MetodePenyelesaianSubstitusi() {
           <p>4x + 6y + 3z</p>
           <p>4(4.800.000 - y - z) + 6y + 3z</p>
           <div className="d-flex justify-content-end align-items-center gap-2 mb-2">
-            <p className="mb-0" style={{ textAlign: 'center', fontSize: '12px' }}>
+            <p className="mb-0 fst-italic" style={{ textAlign: 'center', fontSize: '12px' }}>
               hasil perkalian 4 dengan 4.800.000
             </p>
             <input className="form-control" type="text" placeholder="..." style={{ textAlign: 'center', width: '124px' }} />
@@ -77,7 +77,7 @@ export default function MetodePenyelesaianSubstitusi() {
           <div className="d-flex gap-2 align-items-center">
             <p className="mb-0">20.700.000 - </p>
             <input className="form-control" type="text" placeholder="..." style={{ textAlign: 'center', width: '124px' }} />
-            <p className="d-inline-block mb-0" style={{ textAlign: 'center', fontSize: '12px' }}>
+            <p className="d-inline-block mb-0 fst-italic" style={{ textAlign: 'center', fontSize: '12px' }}>
               kedua ruas dikurangi hasil perkalian 4 dengan 4.800.000
             </p>
           </div>
@@ -87,7 +87,7 @@ export default function MetodePenyelesaianSubstitusi() {
             </div>
             ........... (5)
           </div>
-          <p className="d-inline-block ms-2" style={{ textAlign: 'center', fontSize: '12px' }}>
+          <p className="d-inline-block ms-2 fst-italic" style={{ textAlign: 'center', fontSize: '12px' }}>
             hasil operasi pada ruas kanan
           </p>
         </div>
@@ -100,7 +100,7 @@ export default function MetodePenyelesaianSubstitusi() {
           <p>2x + 3y + 7z</p>
           <p>2(4.800.000 - y - z) + 3y + 7z</p>
           <div className="d-flex justify-content-end align-items-center gap-2 mb-2">
-            <p className="mb-0" style={{ textAlign: 'center', fontSize: '12px' }}>
+            <p className="mb-0 fst-italic" style={{ textAlign: 'center', fontSize: '12px' }}>
               hasil perkalian 2 dengan 4.800.000
             </p>
             <input className="form-control" type="text" placeholder="..." style={{ textAlign: 'center', width: '124px' }} />
@@ -123,7 +123,7 @@ export default function MetodePenyelesaianSubstitusi() {
           <div className="d-flex gap-2 align-items-center">
             <p className="mb-0">19.700.000 - </p>
             <input className="form-control" type="text" placeholder="..." style={{ textAlign: 'center', width: '124px' }} />
-            <p className="d-inline-block mb-0" style={{ textAlign: 'center', fontSize: '12px' }}>
+            <p className="d-inline-block mb-0 fst-italic" style={{ textAlign: 'center', fontSize: '12px' }}>
               kedua ruas dikurangi hasil perkalian 2 dengan 4.800.000
             </p>
           </div>
@@ -133,7 +133,7 @@ export default function MetodePenyelesaianSubstitusi() {
             </div>
             ........... (6)
           </div>
-          <p className="d-inline-block ms-2" style={{ textAlign: 'center', fontSize: '12px' }}>
+          <p className="d-inline-block ms-2 fst-italic" style={{ textAlign: 'center', fontSize: '12px' }}>
             hasil operasi pada ruas kanan
           </p>
         </div>
@@ -156,7 +156,7 @@ export default function MetodePenyelesaianSubstitusi() {
         <div className="col-8">
           <div className="d-flex gap-2 align-items-center">
             <input className="form-control" type="text" placeholder="..." style={{ textAlign: 'center', width: '124px' }} />
-            <p className="d-inline-block mb-0" style={{ textAlign: 'center', fontSize: '12px' }}>
+            <p className="d-inline-block mb-0 fst-italic" style={{ textAlign: 'center', fontSize: '12px' }}>
               konstanta persamaan (5)
             </p>
           </div>
@@ -165,7 +165,7 @@ export default function MetodePenyelesaianSubstitusi() {
               <input className="border-0" type="text" placeholder="..." style={{ textAlign: 'center', width: '124px' }} />
               <span>- 2y</span>
             </div>
-            <p className="d-inline-block mb-0" style={{ textAlign: 'center', fontSize: '12px' }}>
+            <p className="d-inline-block mb-0 fst-italic" style={{ textAlign: 'center', fontSize: '12px' }}>
               masukkan konstanta persamaan (5) kemudian kedua ruas dikurangi dengan 2y
             </p>
           </div>
@@ -176,7 +176,7 @@ export default function MetodePenyelesaianSubstitusi() {
             </div>
             ........... (6)
           </div>
-          <p className="d-inline-block ms-2" style={{ textAlign: 'center', fontSize: '12px' }}>
+          <p className="d-inline-block ms-2 fst-italic" style={{ textAlign: 'center', fontSize: '12px' }}>
             masukkan konstanta persamaan (5) kemudian kedua ruas dibagi dengan -1
           </p>
         </div>
@@ -193,7 +193,7 @@ export default function MetodePenyelesaianSubstitusi() {
           <p>y + 5z</p>
           <p>y + 5(2y - 1.500.000)</p>
           <div className="d-flex gap-2 align-items-center justify-content-end">
-            <p className="d-inline-block mb-0" style={{ textAlign: 'center', fontSize: '12px' }}>
+            <p className="d-inline-block mb-0 fst-italic" style={{ textAlign: 'center', fontSize: '12px' }}>
               hasil perkalian 5 dengan 1.500.000
             </p>
             <div className="text-center px-3 p-1 border border rounded-2 d-flex">
@@ -224,7 +224,7 @@ export default function MetodePenyelesaianSubstitusi() {
             <div className="text-center px-3 p-1 border border rounded-2 d-flex">
               <input className="border-0" type="text" placeholder="..." style={{ textAlign: 'center', width: '124px' }} />
             </div>
-            <p className="d-inline-block mb-0" style={{ textAlign: 'center', fontSize: '12px' }}>
+            <p className="d-inline-block mb-0 fst-italic" style={{ textAlign: 'center', fontSize: '12px' }}>
               kedua ruas dijumlah dengan hasil <br />
               perkalian 5 dengan 1.500.000
             </p>
@@ -233,7 +233,7 @@ export default function MetodePenyelesaianSubstitusi() {
             <div className="text-center px-3 p-1 border border rounded-2 d-flex">
               <input className="border-0" type="text" placeholder="..." style={{ textAlign: 'center', width: '124px' }} />
             </div>
-            <p className="d-inline-block mb-0" style={{ textAlign: 'center', fontSize: '12px' }}>
+            <p className="d-inline-block mb-0 fst-italic" style={{ textAlign: 'center', fontSize: '12px' }}>
               10.100.000 dikurangi dengan <br />
               hasil operasi sebelumnya
             </p>
@@ -243,7 +243,7 @@ export default function MetodePenyelesaianSubstitusi() {
               <input className="border-0" type="text" placeholder="..." style={{ textAlign: 'center', width: '124px' }} />
               <span>/11</span>
             </div>
-            <p className="d-inline-block mb-0" style={{ textAlign: 'center', fontSize: '12px' }}>
+            <p className="d-inline-block mb-0 fst-italic" style={{ textAlign: 'center', fontSize: '12px' }}>
               kedua ruas dibagi dengan 11
             </p>
           </div>
@@ -251,7 +251,7 @@ export default function MetodePenyelesaianSubstitusi() {
             <div className="text-center px-3 p-1 border border rounded-2 d-flex">
               <input className="border-0" type="text" placeholder="..." style={{ textAlign: 'center', width: '124px' }} />
             </div>
-            <p className="d-inline-block mb-0" style={{ textAlign: 'center', fontSize: '12px' }}>
+            <p className="d-inline-block mb-0 fst-italic" style={{ textAlign: 'center', fontSize: '12px' }}>
               didapatkan nilai variabel y
             </p>
           </div>
@@ -267,7 +267,7 @@ export default function MetodePenyelesaianSubstitusi() {
         <div className="col-5 text-end">
           <p>2y - z</p>
           <div className="d-flex gap-2 align-items-center justify-content-end mb-2">
-            <p className="d-inline-block mb-0" style={{ textAlign: 'center', fontSize: '12px' }}>
+            <p className="d-inline-block mb-0 fst-italic" style={{ textAlign: 'center', fontSize: '12px' }}>
               masukkan nilai variabel y
             </p>
             <div className="text-center px-3 p-1 border border rounded-2 d-flex">
@@ -278,7 +278,7 @@ export default function MetodePenyelesaianSubstitusi() {
             <p className="mb-0">-z</p>
           </div>
           <div className="d-flex gap-2 align-items-center justify-content-end">
-            <p className="d-inline-block mb-0" style={{ textAlign: 'center', fontSize: '12px' }}>
+            <p className="d-inline-block mb-0 fst-italic" style={{ textAlign: 'center', fontSize: '12px' }}>
               hasil perkalian 2 dengan <br />
               nilai variabel y
             </p>
@@ -308,7 +308,7 @@ export default function MetodePenyelesaianSubstitusi() {
             <div className="text-center px-3 p-1 border border rounded-2 d-flex">
               <input className="border-0" type="text" placeholder="..." style={{ textAlign: 'center', width: '124px' }} />
             </div>
-            <p className="d-inline-block mb-0" style={{ textAlign: 'center', fontSize: '12px' }}>
+            <p className="d-inline-block mb-0 fst-italic" style={{ textAlign: 'center', fontSize: '12px' }}>
               kedua ruas dikurangi dengan hasil <br />
               perkalian 2 dengan nilai variabel y
             </p>
@@ -322,7 +322,7 @@ export default function MetodePenyelesaianSubstitusi() {
             <div className="text-center px-3 p-1 border border rounded-2 d-flex">
               <input className="border-0" type="text" placeholder="..." style={{ textAlign: 'center', width: '124px' }} />
             </div>
-            <p className="d-inline-block mb-0" style={{ textAlign: 'center', fontSize: '12px' }}>
+            <p className="d-inline-block mb-0 fst-italic" style={{ textAlign: 'center', fontSize: '12px' }}>
               kedua ruas dibagi dengan -1
             </p>
           </div>
@@ -366,7 +366,7 @@ export default function MetodePenyelesaianSubstitusi() {
             <div className="text-center px-3 p-1 border border rounded-2 d-flex">
               <input className="border-0" type="text" placeholder="..." style={{ textAlign: 'center', width: '124px' }} />
             </div>
-            <p className="d-inline-block mb-0" style={{ textAlign: 'center', fontSize: '12px' }}>
+            <p className="d-inline-block mb-0 fst-italic" style={{ textAlign: 'center', fontSize: '12px' }}>
               hasil dari 24.000.000 dikurangi <br />
               dengan 16.500.000
             </p>
@@ -375,7 +375,7 @@ export default function MetodePenyelesaianSubstitusi() {
             <div className="text-center px-3 p-1 border border rounded-2 d-flex">
               <input className="border-0" type="text" placeholder="..." style={{ textAlign: 'center', width: '124px' }} />
             </div>
-            <p className="d-inline-block mb-0" style={{ textAlign: 'center', fontSize: '12px' }}>
+            <p className="d-inline-block mb-0 fst-italic" style={{ textAlign: 'center', fontSize: '12px' }}>
               kedua ruas dibagi dengan 5
             </p>
           </div>

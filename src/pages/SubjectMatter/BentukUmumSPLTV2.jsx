@@ -42,7 +42,7 @@ export default function BentukUmumSPLTV2() {
       </p>
       <p className="text-center fst-italic my-4">Lengkapi kotak kosong berikut dengan variabel yang mewakili harga satu gulung kain warna putih adalah x, warna abu-abu adalah y, dan warna cokelat adalah z</p>
       <div className="d-flex justify-content-center gap-3 align-items-center my-4">
-        <input className="form-control" type="text" placeholder="..." style={{ textAlign: 'center', width: '50px' }} />
+        <input className="form-control border-green " type="text" placeholder="..." style={{ textAlign: 'center', width: '50px' }} />
         <p className="bg-blue-subtle p-1 rounded-2 mb-0">sebagai</p>
         <p className="bg-darkblue mb-0 p-2 px-3 fw-light rounded-2">
           Harga satu gulung kain <br />

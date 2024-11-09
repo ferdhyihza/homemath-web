@@ -7,15 +7,10 @@ export default function PengantarSPLTV() {
       <h3 className="fw-bold pb-5 my-3">Pengantar SPLTV</h3>
       <p>Untuk mempelajari tentang Sistem Persamaan Linear Tiga Variabel (SPLTV), tentunya kita harus mengenal terlebih dahulu bentuk dari sistem persamaan linear tersebut. Coba kita perhatikan cerita berikut!</p>
       <div className="d-flex justify-content-center gap-5">
-        <figure className="text-center">
-          <img src="../img/ilustrasi-pengantar-spltv.png" alt="Gambar ilustrasi pembelian kain di toko oleh beberapa konveksi" />
-          <figcaption className="fst-italic fw-light">Ilustrasi pembelian kain di toko oleh beberapa konveksi</figcaption>
-        </figure>
-        <figure className="text-center">
-          <img src="../img/ilustrasi-pengantar-spltv.png" alt="Gambar ilustrasi pembelian kain di toko oleh beberapa konveksi" />
-          <figcaption className="fst-italic fw-light">Ilustrasi pembelian kain di toko oleh beberapa konveksi</figcaption>
-        </figure>
+        <img src="../../img/ilustrasi-pengantar-spltv-2.png" alt="Gambar ilustrasi pembelian kain di toko oleh beberapa konveksi" />
+        <img src="../../img/ilustrasi-pengantar-spltv.png" alt="Gambar ilustrasi pembelian kain di toko oleh beberapa konveksi" />
       </div>
+      <p className="text-center mt-2 fst-italic">Ilustrasi pembelian kain di toko oleh beberapa konveksi</p>
       <p>
         Beberapa pengusaha konveksi di daerah Kota Blitar, akan memproduksi baju seragam sekolah pada masa awal tahun ajaran baru. Salah satu toko tekstil terkenal di Kota Blitar menjadi pilihan utama para pengusaha untuk membeli bahan
         baku. <br />

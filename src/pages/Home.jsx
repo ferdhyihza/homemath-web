@@ -34,7 +34,7 @@ export default function Home() {
         <div className="p-5 pt-0">
           <div className="row p-4 menu-wrapper rounded-4 justify-content-around gap-2">
             <div className="col-auto">
-              <NextButton link="/peta-konsep" />
+              <NextButton link="/sesi/1-peta-konsep" />
             </div>
             <Link to="/peta-konsep" className="col rounded-1 mx-3 menu d-flex justify-content-center align-items-center">
               <img src="../icon/icon-peta-konsep.png" alt="icon-peta-konsep" className="me-1" />

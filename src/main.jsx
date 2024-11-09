@@ -95,6 +95,14 @@ const router = createBrowserRouter([
     path: '/latihan-soal/pengantar-spltv/3-bentuk-umum-spltv',
     element: <PengantarSPLTV3 />,
   },
+  {
+    path: '/sesi/1-peta-konsep',
+    element: <MindMap />,
+  },
+  {
+    path: '/sesi/2-pengantar-spltv',
+    element: <PengantarSPLTV />,
+  },
 ]);
 
 createRoot(document.getElementById('root')).render(

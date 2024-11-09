@@ -47,7 +47,7 @@ export default function NavbarContent() {
 
       {/* Offcanvas */}
       <div className="offcanvas offcanvas-start bg-darkblue" data-bs-scroll="true" tabIndex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
-        <div className="offcanvas-header">
+        <div className="offcanvas-header ">
           <button type="button" className="btn px-3 bg-white ms-auto mt-2" data-bs-dismiss="offcanvas" aria-label="Close">
             <i className="bi bi-chevron-left"></i>
           </button>
@@ -85,6 +85,11 @@ export default function NavbarContent() {
             </li>
           </ul>
         </div>
+        <li className="ps-5 ms-3 pb-5">
+          <Link to="/" className="nav-link fw-medium text-light fs-5">
+            <img src="../../icon/icon-petunjuk.png" alt="icon petunjuk penggunaan" className="me-2" /> Petunjuk Penggunaan
+          </Link>
+        </li>
       </div>
     </>
   );
