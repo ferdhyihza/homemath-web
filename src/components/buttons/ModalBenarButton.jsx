@@ -2,7 +2,7 @@
 import { useEffect, useState } from 'react';
 // import { v4 as uuidv4 } from 'uuid';
 
-export default function ModalBenarButton({ id, onButtonClick, children }) {
+export default function ModalBenarButton({ id, onButtonClick, children, className }) {
   const [isClicked, setIsClicked] = useState(false);
 
   useEffect(() => {
@@ -25,7 +25,7 @@ export default function ModalBenarButton({ id, onButtonClick, children }) {
 
   return (
     <>
-      <button type="button" className={` ${isClicked ? 'bg-success-subtle border-success border disabled' : ''}`} data-bs-toggle="modal" data-bs-target="#modalBenar" onClick={handleClick}>
+      <button type="button" className={` ${isClicked ? 'bg-success-subtle border-success border disabled' : ''} ${className}`} data-bs-toggle="modal" data-bs-target="#modalBenar" onClick={handleClick}>
         {children}
       </button>
     </>
