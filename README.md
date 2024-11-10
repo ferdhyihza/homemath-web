@@ -1,8 +1,13 @@
-# React + Vite
+# Homemath
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Homemath is an interactive learning website for learning math, especially the material of the system of linear equations of three variables (spltv).
 
-Currently, two official plugins are available:
+_p.s this is a freelance project_
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🛠 Development Tools
+
+This project is being developed using the vite & react.js frameworks. Using bootstrap to make it easier to build the UI. This project only contains client side by using localstorage to store data.
+
+## 🌐 Demo
+
+Visit: [https://www.homemath.ferdhyihza.my.id](https://www.homemath.ferdhyihza.my.id)
