@@ -56,7 +56,7 @@ export default function BentukUmumSPLTV() {
         Jika melihat dari bentuk umum tersebut, mana saja yang merupakan variabel, koefisien, dan konstanta? <br />
         Coba pilih mana pernyataan berikut yang tepat.
       </p>
-      <div className="bg-blue-subtle p-4 rounded-4 my-4" style={{ margin: '0 96px' }}>
+      <div className={`bg-blue-subtle p-4 rounded-4 my-4 ${removeBlurNextButton ? 'disabled' : ''}`} style={{ margin: '0 96px' }}>
         <div className="container bg-darkblue rounded-4 text-center p-4">
           <p className="">Mana saja yang tepat dari pernyataan di bawah ini?</p>
           <div className="row text-black gap-5 px-5 mb-4">
