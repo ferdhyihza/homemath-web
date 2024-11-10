@@ -108,7 +108,7 @@ export default function PengantarSPLTV2() {
           </div>
         </div>
       </div>
-      {isModalBenarOpen && <ModalBenar>Bagaimana, mudah bukan mengidentifikasinya? Jika kalian sudah memahami unsur-unsur dan bentuk umum SPLTV, akan mudah untuk mempelajari tahap selanjutnya...</ModalBenar>}
+      {isModalBenarOpen && <ModalBenar>Yuk lanjut ke latihan soal lainnya...</ModalBenar>}
 
       <ModalSalah>
         <b>Variabel</b> merupakan simbol atau huruf suatu nilai yang besarnya belum diketahui secara pasti <br />

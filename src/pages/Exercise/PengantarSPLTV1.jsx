@@ -222,7 +222,7 @@ export default function PengantarSPLTV1() {
         <b>Koefisien</b> <br />
         Koefisien merupakan suatu bilangan yang menjelaskan banyaknya jumlah variabel
       </ModalSalah>
-      {isModalBenarKoefisienOpen && <ModalBenar jenis="Koefisien">Yuk lanjut ke pembelajaran selanjutnya...</ModalBenar>}
+      {isModalBenarKoefisienOpen && <ModalBenar jenis="Koefisien">Yuk lanjut ke latihan soal lainnya...</ModalBenar>}
 
       <div className={`d-flex justify-content-center py-4 ${removeBlurNextButton ? '' : 'blur'}`}>
         <NextButton link="/latihan-soal" />
