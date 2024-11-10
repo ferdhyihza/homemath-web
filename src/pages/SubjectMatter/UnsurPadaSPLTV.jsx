@@ -10,14 +10,32 @@ export default function UnsurPadaSPLTV() {
   const [removeBlurKonstanta, setRemoveBlurKonstanta] = useState(false);
   const [removeBlurKoefisien, setRemoveBlurKoefisien] = useState(false);
   const [removeBlurNextButton, setRemoveBlurNextButton] = useState(false);
+  const [isModalBenarVariabelOpen, setIsModalBenarVariabelOpen] = useState(false);
+  const [isModalBenarKonstantaOpen, setIsModalBenarKonstantaOpen] = useState(false);
+  const [isModalBenarKoefisienOpen, setIsModalBenarKoefisienOpen] = useState(false);
 
   const handleButtonClick = () => {
     const buttonStates = JSON.parse(localStorage.getItem('buttonStatesTrue')) || {};
-    const shouldRemoveBlurKonstanta = buttonStates.button2 && buttonStates.button4 && buttonStates.button7 && buttonStates.button9;
-    const shouldRemoveBlurKoefisien = buttonStates.button15 && buttonStates.button20;
-    const shouldRemoveBlurNextButton = buttonStates.button21 && buttonStates.button23 && buttonStates.button26 && buttonStates.button28;
+    const trueButtonsCountVariabel = ['button2', 'button4', 'button7', 'button9'].filter(buttonId => buttonStates[buttonId]).length;
+    const trueButtonsCountKonstanta = ['button15', 'button20'].filter(buttonId => buttonStates[buttonId]).length;
+    const trueButtonsCountKoefisien = ['button21', 'button23', 'button26', 'button28'].filter(buttonId => buttonStates[buttonId]).length;
+
+    const shouldOpenModalBenarVariabel = trueButtonsCountVariabel == 3;
+    const shouldOpenModalBenarKonstanta = trueButtonsCountKonstanta == 1;
+    const shouldOpenModalBenarKoefisien = trueButtonsCountKoefisien == 3;
+
+    if (shouldOpenModalBenarVariabel) setIsModalBenarVariabelOpen(true);
+    if (shouldOpenModalBenarKonstanta) setIsModalBenarKonstantaOpen(true);
+    if (shouldOpenModalBenarKoefisien) setIsModalBenarKoefisienOpen(true);
+
+    const shouldRemoveBlurKonstanta = trueButtonsCountVariabel == 4;
+    const shouldRemoveBlurKoefisien = trueButtonsCountKonstanta == 2;
+    const shouldRemoveBlurNextButton = trueButtonsCountKoefisien == 4;
+
     if (shouldRemoveBlurKonstanta) setRemoveBlurKonstanta(true);
+
     if (shouldRemoveBlurKoefisien) setRemoveBlurKoefisien(true);
+
     if (shouldRemoveBlurNextButton) setRemoveBlurNextButton(true);
   };
 
@@ -62,14 +80,14 @@ export default function UnsurPadaSPLTV() {
               <ModalSalahButton id="button1" jenis="Variabel">
                 2
               </ModalSalahButton>
-              <ModalBenarButton onButtonClick={handleButtonClick} id="button2">
+              <ModalBenarButton onButtonClick={handleButtonClick} id="button2" jenis="Variabel">
                 x
               </ModalBenarButton>
               <button className="disabled">+</button>
               <ModalSalahButton id="button3" jenis="Variabel">
                 3
               </ModalSalahButton>
-              <ModalBenarButton onButtonClick={handleButtonClick} id="button4">
+              <ModalBenarButton onButtonClick={handleButtonClick} id="button4" jenis="Variabel">
                 y
               </ModalBenarButton>
               <button className="disabled">=</button>
@@ -84,14 +102,14 @@ export default function UnsurPadaSPLTV() {
               <ModalSalahButton id="button6" jenis="Variabel">
                 5
               </ModalSalahButton>
-              <ModalBenarButton onButtonClick={handleButtonClick} id="button7">
+              <ModalBenarButton onButtonClick={handleButtonClick} id="button7" jenis="Variabel">
                 x
               </ModalBenarButton>
               <button className="disabled">+</button>
               <ModalSalahButton id="button8" jenis="Variabel">
                 1
               </ModalSalahButton>
-              <ModalBenarButton onButtonClick={handleButtonClick} id="button9">
+              <ModalBenarButton onButtonClick={handleButtonClick} id="button9" jenis="Variabel">
                 y
               </ModalBenarButton>
               <button className="disabled">=</button>
@@ -106,7 +124,9 @@ export default function UnsurPadaSPLTV() {
         <b>Variabel</b> <br />
         Merupakan simbol atau huruf suatu nilai yang besarnya belum diketahui secara pasti
       </ModalSalah>
-      <div className={`bg-blue-subtle mb-3 rounded-4 p-3 border border-blue border-2 text-center ${removeBlurKonstanta ? '' : 'blur'}`}>
+      {isModalBenarVariabelOpen && <ModalBenar jenis="Variabel">Yuk lanjut ke pembelajaran selanjutnya...</ModalBenar>}
+
+      <div className={`bg-blue-subtle mb-3 rounded-4 p-3 border border-blue border-2 text-center ${removeBlurKonstanta ? '' : 'blur'} ${removeBlurKoefisien ? 'disabled' : ''}`}>
         <p className="bg-darkblue p-2 px-3 rounded-3 d-inline-block fw-semibold mb-0">Mana yang merupakan konstanta?</p>
         <div className="row justify-content-between px-3">
           <div className="col text-start">
@@ -126,7 +146,7 @@ export default function UnsurPadaSPLTV() {
                 y
               </ModalSalahButton>
               <button className="disabled">=</button>
-              <ModalBenarButton onButtonClick={handleButtonClick} id="button15">
+              <ModalBenarButton onButtonClick={handleButtonClick} id="button15" jenis="Konstanta">
                 7
               </ModalBenarButton>
             </div>
@@ -148,7 +168,7 @@ export default function UnsurPadaSPLTV() {
                 y
               </ModalSalahButton>
               <button className="disabled">=</button>
-              <ModalBenarButton onButtonClick={handleButtonClick} id="button20">
+              <ModalBenarButton onButtonClick={handleButtonClick} id="button20" jenis="Konstanta">
                 11
               </ModalBenarButton>
             </div>
@@ -159,20 +179,22 @@ export default function UnsurPadaSPLTV() {
         <b>Konstanta</b> <br />
         Konstanta merupakan nilai tetap yang tidak diikuti oleh variabel di belakangnya
       </ModalSalah>
-      <div className={`bg-blue-subtle mb-3 rounded-4 p-3 border border-blue border-2 text-center ${removeBlurKoefisien ? '' : 'blur'}`}>
+      {isModalBenarKonstantaOpen && <ModalBenar jenis="Konstanta">Yuk lanjut ke pembelajaran selanjutnya...</ModalBenar>}
+
+      <div className={`bg-blue-subtle mb-3 rounded-4 p-3 border border-blue border-2 text-center ${removeBlurKoefisien ? '' : 'blur'} ${removeBlurNextButton ? 'disabled' : ''}`}>
         <p className="bg-darkblue p-2 px-3 rounded-3 d-inline-block fw-semibold mb-0">Mana yang merupakan koefisien?</p>
         <div className="row justify-content-between px-3">
           <div className="col text-start">
             <p className="fw-semibold">Persamaan 1</p>
             <div className="persamaan">
-              <ModalBenarButton onButtonClick={handleButtonClick} id="button21">
+              <ModalBenarButton onButtonClick={handleButtonClick} id="button21" jenis="Koefisien">
                 2
               </ModalBenarButton>
               <ModalSalahButton id="button22" jenis="Koefisien">
                 x
               </ModalSalahButton>
               <button className="disabled">+</button>
-              <ModalBenarButton onButtonClick={handleButtonClick} id="button23">
+              <ModalBenarButton onButtonClick={handleButtonClick} id="button23" jenis="Koefisien">
                 3
               </ModalBenarButton>
               <ModalSalahButton id="button24" jenis="Koefisien">
@@ -187,14 +209,14 @@ export default function UnsurPadaSPLTV() {
           <div className="col text-end">
             <p className="fw-semibold">Persamaan 2</p>
             <div className="persamaan">
-              <ModalBenarButton onButtonClick={handleButtonClick} id="button26">
+              <ModalBenarButton onButtonClick={handleButtonClick} id="button26" jenis="Koefisien">
                 5
               </ModalBenarButton>
               <ModalSalahButton id="button27" jenis="Koefisien">
                 x
               </ModalSalahButton>
               <button className="disabled">+</button>
-              <ModalBenarButton onButtonClick={handleButtonClick} id="button28">
+              <ModalBenarButton onButtonClick={handleButtonClick} id="button28" jenis="Koefisien">
                 1
               </ModalBenarButton>
               <ModalSalahButton id="button29" jenis="Koefisien">
@@ -212,7 +234,7 @@ export default function UnsurPadaSPLTV() {
         <b>Koefisien</b> <br />
         Koefisien merupakan suatu bilangan yang menjelaskan banyaknya jumlah variabel
       </ModalSalah>
-      <ModalBenar>Yuk lanjut ke pembelajaran selanjutnya...</ModalBenar>
+      {isModalBenarKoefisienOpen && <ModalBenar jenis="Koefisien">Yuk lanjut ke pembelajaran selanjutnya...</ModalBenar>}
 
       <div className={`d-flex justify-content-center py-4 ${removeBlurNextButton ? '' : 'blur'}`}>
         <NextButton link="/materi/bentuk-umum-spltv" />

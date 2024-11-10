@@ -8,11 +8,16 @@ import ModalSalah from '../../components/modals/ModalSalah';
 
 export default function BentukUmumSPLTV() {
   const [removeBlurNextButton, setRemoveBlurNextButton] = useState(false);
+  const [isModalBenarOpen, setIsModalBenarOpen] = useState(false);
 
   const handleButtonClick = () => {
     const buttonStates = JSON.parse(localStorage.getItem('buttonStatesTrue')) || {};
-    const shouldRemoveBlurNextButton = buttonStates.button31 && buttonStates.button33 && buttonStates.button37;
+    const trueButtonsCount = ['button31', 'button33', 'button37'].filter(buttonId => buttonStates[buttonId]).length;
+    const shouldRemoveBlurNextButton = trueButtonsCount >= 3;
+    const shouldOpenModalBenar = trueButtonsCount >= 2;
+
     if (shouldRemoveBlurNextButton) setRemoveBlurNextButton(true);
+    if (shouldOpenModalBenar) setIsModalBenarOpen(true);
   };
 
   useEffect(() => {
@@ -106,7 +111,8 @@ export default function BentukUmumSPLTV() {
           </div>
         </div>
       </div>
-      <ModalBenar>Bagaimana, mudah bukan mengidentifikasinya? Jika kalian sudah memahami unsur-unsur dan bentuk umum SPLTV, akan mudah untuk mempelajari tahap selanjutnya...</ModalBenar>
+      {isModalBenarOpen && <ModalBenar>Bagaimana, mudah bukan mengidentifikasinya? Jika kalian sudah memahami unsur-unsur dan bentuk umum SPLTV, akan mudah untuk mempelajari tahap selanjutnya...</ModalBenar>}
+
       <ModalSalah>
         <b>Variabel</b> merupakan simbol atau huruf suatu nilai yang besarnya belum diketahui secara pasti <br />
         <b>Koefisien</b> merupakan suatu bilangan yang menjelaskan banyaknya jumlah variabel <br />

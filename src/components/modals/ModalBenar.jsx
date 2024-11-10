@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 export default function ModalBenar(props) {
   return (
-    <div className="modal fade" id="modalBenar" tabIndex="-1" aria-labelledby="modalBenarLabel" aria-hidden="true">
+    <div className="modal fade" id={`modalBenar${props.jenis}`} tabIndex="-1" aria-labelledby="modalBenarLabel" aria-hidden="true">
       <div className="modal-dialog modal-lg modal-dialog-centered">
         <div className="modal-content rounded-4">
           <div className="modal-body text-center bg-lightblue rounded-top-4">
