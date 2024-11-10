@@ -16,7 +16,10 @@ export default function BentukUmumSPLTV() {
     const shouldRemoveBlurNextButton = trueButtonsCount >= 3;
     const shouldOpenModalBenar = trueButtonsCount >= 2;
 
-    if (shouldRemoveBlurNextButton) setRemoveBlurNextButton(true);
+    if (shouldRemoveBlurNextButton) {
+      setRemoveBlurNextButton(true);
+      localStorage.removeItem('buttonStatesFalse');
+    }
     if (shouldOpenModalBenar) setIsModalBenarOpen(true);
   };
 
