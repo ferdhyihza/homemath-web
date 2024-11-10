@@ -51,13 +51,13 @@ export default function BentukUmumSPLTV2() {
       isValid = true;
     } else if (inputName === 'input3' && value === 'z') {
       isValid = true;
-    } else if (inputName === 'input4' && value == '24000000') {
+    } else if (inputName === 'input4' && value.replace(/\./g, '') == '24000000') {
       isValid = true;
     } else if (inputName === 'input5' && value == '2') {
       isValid = true;
     } else if (inputName === 'input6' && value == '7') {
       isValid = true;
-    } else if (inputName === 'input7' && value == '19700000') {
+    } else if (inputName === 'input7' && value.replace(/\./g, '') == '19700000') {
       isValid = true;
     }
 
@@ -229,7 +229,7 @@ export default function BentukUmumSPLTV2() {
               } ${inputStatuses.input5 && inputStatuses.input6 ? 'disabled' : ''}`}
             >
               <input
-                className={`border-0 fs-5 ${inputStatuses.input5 ? 'border-success bg-success-subtle' : ''} ${inputValues.input5 && !inputStatuses.input5 ? 'border-danger bg-danger-subtle ' : ''}`}
+                className={`border-1 rounded-1 mx-1 fs-5 ${inputStatuses.input5 ? 'border-success bg-success-subtle' : ''} ${inputValues.input5 && !inputStatuses.input5 ? 'border-danger bg-danger-subtle ' : ''}`}
                 type="text"
                 placeholder="..."
                 style={{ textAlign: 'center', width: '24px' }}
@@ -238,7 +238,7 @@ export default function BentukUmumSPLTV2() {
               />
               <span>x + 3y +</span>
               <input
-                className={`border-0 fs-5 ${inputStatuses.input6 ? 'border-success bg-success-subtle' : ''} ${inputValues.input6 && !inputStatuses.input6 ? 'border-danger bg-danger-subtle ' : ''}`}
+                className={`border-1 rounded-1 mx-1 fs-5 ${inputStatuses.input6 ? 'border-success bg-success-subtle' : ''} ${inputValues.input6 && !inputStatuses.input6 ? 'border-danger bg-danger-subtle ' : ''}`}
                 type="text"
                 placeholder="..."
                 style={{ textAlign: 'center', width: '24px' }}

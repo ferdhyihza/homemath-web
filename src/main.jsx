@@ -103,6 +103,10 @@ const router = createBrowserRouter([
     path: '/sesi/2-pengantar-spltv',
     element: <PengantarSPLTV />,
   },
+  {
+    path: '/sesi/3-unsur-pada-spltv',
+    element: <UnsurPadaSPLTV />,
+  },
 ]);
 
 createRoot(document.getElementById('root')).render(
