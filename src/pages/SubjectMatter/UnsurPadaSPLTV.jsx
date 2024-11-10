@@ -37,6 +37,10 @@ export default function UnsurPadaSPLTV() {
     if (shouldRemoveBlurKoefisien) setRemoveBlurKoefisien(true);
 
     if (shouldRemoveBlurNextButton) setRemoveBlurNextButton(true);
+
+    if (trueButtonsCountKoefisien == 4) {
+      localStorage.removeItem('buttonStatesFalse');
+    }
   };
 
   useEffect(() => {
