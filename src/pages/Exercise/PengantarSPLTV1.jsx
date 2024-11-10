@@ -15,7 +15,7 @@ export default function PengantarSPLTV1() {
   const [isModalBenarKoefisienOpen, setIsModalBenarKoefisienOpen] = useState(false);
 
   const handleButtonClick = () => {
-    const buttonStates = JSON.parse(localStorage.getItem('buttonStatesTrue')) || {};
+    const buttonStates = JSON.parse(localStorage.getItem('buttonStatesTrueLatsol')) || {};
     const trueButtonsCountVariabel = ['button2l', 'button4l', 'button7l', 'button9l'].filter(buttonId => buttonStates[buttonId]).length;
     const trueButtonsCountKonstanta = ['button15l', 'button20l'].filter(buttonId => buttonStates[buttonId]).length;
     const trueButtonsCountKoefisien = ['button21l', 'button23l', 'button26l', 'button28l'].filter(buttonId => buttonStates[buttonId]).length;
@@ -37,6 +37,11 @@ export default function PengantarSPLTV1() {
     if (shouldRemoveBlurKoefisien) setRemoveBlurKoefisien(true);
 
     if (shouldRemoveBlurNextButton) setRemoveBlurNextButton(true);
+
+    if (trueButtonsCountKoefisien == 4) {
+      localStorage.removeItem('buttonStatesTrueLatsol');
+      localStorage.removeItem('buttonStatesFalseLatsol');
+    }
   };
 
   useEffect(() => {

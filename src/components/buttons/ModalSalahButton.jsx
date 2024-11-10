@@ -1,12 +1,19 @@
 /* eslint-disable react/prop-types */
 import { useEffect, useState } from 'react';
+import { useLocation } from 'react-router-dom';
 
 export default function ModalSalahButton(props) {
+  const location = useLocation();
+  const isLatsol = location.pathname.includes('/latihan-soal/');
+
+  let item = 'buttonStatesFalse';
+  if (isLatsol) item = 'buttonStatesFalseLatsol';
+
   const [isClicked, setIsClicked] = useState(false);
 
   useEffect(() => {
     // Ambil data buttonStatesFalse dari localStorage saat komponen pertama kali dimuat
-    const savedButtonStates = JSON.parse(localStorage.getItem('buttonStatesFalse')) || {};
+    const savedButtonStates = JSON.parse(localStorage.getItem(item)) || {};
     if (savedButtonStates[props.id]) {
       setIsClicked(true);
     }
@@ -16,9 +23,9 @@ export default function ModalSalahButton(props) {
     setIsClicked(true);
 
     // Ambil data buttonStatesFalse dari localStorage, update sesuai id, lalu simpan kembali
-    const updatedButtonStates = JSON.parse(localStorage.getItem('buttonStatesFalse')) || {};
+    const updatedButtonStates = JSON.parse(localStorage.getItem(item)) || {};
     updatedButtonStates[props.id] = true;
-    localStorage.setItem('buttonStatesFalse', JSON.stringify(updatedButtonStates));
+    localStorage.setItem(item, JSON.stringify(updatedButtonStates));
   };
 
   return (

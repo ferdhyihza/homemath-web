@@ -1,13 +1,20 @@
 /* eslint-disable react/prop-types */
 import { useEffect, useState } from 'react';
+import { useLocation } from 'react-router-dom';
 // import { v4 as uuidv4 } from 'uuid';
 
 export default function ModalBenarButton({ id, onButtonClick, children, className, jenis }) {
+  const location = useLocation();
+  const isLatsol = location.pathname.includes('/latihan-soal/');
+
+  let item = 'buttonStatesTrue';
+  if (isLatsol) item = 'buttonStatesTrueLatsol';
+
   const [isClicked, setIsClicked] = useState(false);
 
   useEffect(() => {
     // Ambil data buttonStatesTrue dari localStorage saat komponen pertama kali dimuat
-    const savedButtonStates = JSON.parse(localStorage.getItem('buttonStatesTrue')) || {};
+    const savedButtonStates = JSON.parse(localStorage.getItem(item)) || {};
     if (savedButtonStates[id]) {
       setIsClicked(true);
     }
@@ -17,9 +24,9 @@ export default function ModalBenarButton({ id, onButtonClick, children, classNam
     setIsClicked(true);
 
     // Ambil data buttonStatesTrue dari localStorage, update sesuai id, lalu simpan kembali
-    const updatedButtonStates = JSON.parse(localStorage.getItem('buttonStatesTrue')) || {};
+    const updatedButtonStates = JSON.parse(localStorage.getItem(item)) || {};
     updatedButtonStates[id] = true;
-    localStorage.setItem('buttonStatesTrue', JSON.stringify(updatedButtonStates));
+    localStorage.setItem(item, JSON.stringify(updatedButtonStates));
     onButtonClick();
   };
 

@@ -27,16 +27,16 @@ export default function PengantarSPLTV3() {
 
   // Efek untuk memuat status dan nilai dari localStorage ketika komponen pertama kali dimuat
   useEffect(() => {
-    const savedStatus = JSON.parse(localStorage.getItem('inputStatuses'));
-    if (savedStatus) {
-      setInputValues(savedStatus.values);
-      setInputStatuses(savedStatus.statuses);
-      // Tentukan apakah kelas blur harus dihapus berdasarkan status validasi
-      const allValid = savedStatus.statuses.input1l && savedStatus.statuses.input2l && savedStatus.statuses.input3l;
-      setIsBlurred(!allValid);
-      const allValid2 = savedStatus.statuses.input4l && savedStatus.statuses.input5l && savedStatus.statuses.input6l && savedStatus.statuses.input7l;
-      setIsBlurred2(!allValid2);
-    }
+    // const savedStatus = JSON.parse(localStorage.getItem('inputStatusesLatsol'));
+    // if (savedStatus) {
+    //   setInputValues(savedStatus.values);
+    //   setInputStatuses(savedStatus.statuses);
+    //   // Tentukan apakah kelas blur harus dihapus berdasarkan status validasi
+    //   const allValid = savedStatus.statuses.input1l && savedStatus.statuses.input2l && savedStatus.statuses.input3l;
+    //   setIsBlurred(!allValid);
+    //   const allValid2 = savedStatus.statuses.input4l && savedStatus.statuses.input5l && savedStatus.statuses.input6l && savedStatus.statuses.input7l;
+    //   setIsBlurred2(!allValid2);
+    // }
   }, []);
 
   // Fungsi untuk menangani perubahan pada input
@@ -75,11 +75,11 @@ export default function PengantarSPLTV3() {
     setInputStatuses(updatedStatuses);
 
     // Simpan ke localStorage secara real-time
-    const updatedStatus = {
-      values: updatedValues,
-      statuses: updatedStatuses,
-    };
-    localStorage.setItem('inputStatuses', JSON.stringify(updatedStatus));
+    // const updatedStatus = {
+    //   values: updatedValues,
+    //   statuses: updatedStatuses,
+    // };
+    // localStorage.setItem('inputStatusesLatsol', JSON.stringify(updatedStatus));
 
     // Periksa apakah semua input sudah valid
     const allValid = updatedStatuses.input1l && updatedStatuses.input2l && updatedStatuses.input3l;

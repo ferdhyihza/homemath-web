@@ -11,12 +11,16 @@ export default function PengantarSPLTV2() {
   const [isModalBenarOpen, setIsModalBenarOpen] = useState(false);
 
   const handleButtonClick = () => {
-    const buttonStates = JSON.parse(localStorage.getItem('buttonStatesTrue')) || {};
+    const buttonStates = JSON.parse(localStorage.getItem('buttonStatesTrueLatsol')) || {};
     const trueButtonsCount = ['button31l', 'button33l', 'button37l'].filter(buttonId => buttonStates[buttonId]).length;
     const shouldRemoveBlurNextButton = trueButtonsCount >= 3;
     const shouldOpenModalBenar = trueButtonsCount >= 2;
 
-    if (shouldRemoveBlurNextButton) setRemoveBlurNextButton(true);
+    if (shouldRemoveBlurNextButton) {
+      localStorage.removeItem('buttonStatesTrueLatsol');
+      localStorage.removeItem('buttonStatesFalseLatsol');
+      setRemoveBlurNextButton(true);
+    }
     if (shouldOpenModalBenar) setIsModalBenarOpen(true);
   };
 
@@ -31,6 +35,25 @@ export default function PengantarSPLTV2() {
       </h3>
 
       <div className={`bg-blue-subtle p-4 rounded-4 my-4 ${removeBlurNextButton ? 'disabled' : ''}`} style={{ margin: '0 96px' }}>
+        <div className="row mb-4 justify-content-center align-items-center">
+          <div className="col-sm-4 ">
+            <p className="fs-5 text-center mb-sm-0">Diketahui Bentuk Umum SPLTV</p>
+          </div>
+          <div className="col-sm-4 text-center">
+            <p className="mb-0 fs-5">
+              a<sub>1</sub>x + b<sub>1</sub>y + c<sub>1</sub>z = d<sub>1</sub> <br />
+            </p>
+            <p className="mb-0 fs-5">
+              a<sub>2</sub>x + b<sub>2</sub>y + c<sub>2</sub>z = d<sub>2</sub> <br />
+            </p>
+            <p className="mb-0 fs-5">
+              a<sub>3</sub>x + b<sub>3</sub>y + c<sub>3</sub>z = d<sub>3</sub> <br />
+            </p>
+            <p className="mb-0 fs-5">
+              dengan a<sub>i</sub>,b<sub>i</sub>,c<sub>i</sub>,d<sub>i</sub>∈ R,i = 1,2,3
+            </p>
+          </div>
+        </div>
         <div className="container bg-darkblue rounded-4 text-center p-4">
           <p className="">Mana saja yang tepat dari pernyataan di bawah ini?</p>
           <div className="row text-black gap-5 px-5 mb-4">
