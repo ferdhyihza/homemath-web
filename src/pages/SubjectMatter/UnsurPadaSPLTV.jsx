@@ -10,8 +10,8 @@ export default function UnsurPadaSPLTV() {
   const [removeBlurKonstanta, setRemoveBlurKonstanta] = useState(false);
   const [removeBlurKoefisien, setRemoveBlurKoefisien] = useState(false);
   const [removeBlurNextButton, setRemoveBlurNextButton] = useState(false);
-  const [isModalBenarVariabelOpen, setIsModalBenarVariabelOpen] = useState(false);
-  const [isModalBenarKonstantaOpen, setIsModalBenarKonstantaOpen] = useState(false);
+  // const [isModalBenarVariabelOpen, setIsModalBenarVariabelOpen] = useState(false);
+  // const [isModalBenarKonstantaOpen, setIsModalBenarKonstantaOpen] = useState(false);
   const [isModalBenarKoefisienOpen, setIsModalBenarKoefisienOpen] = useState(false);
 
   const handleButtonClick = () => {
@@ -20,12 +20,12 @@ export default function UnsurPadaSPLTV() {
     const trueButtonsCountKonstanta = ['button15', 'button20'].filter(buttonId => buttonStates[buttonId]).length;
     const trueButtonsCountKoefisien = ['button21', 'button23', 'button26', 'button28'].filter(buttonId => buttonStates[buttonId]).length;
 
-    const shouldOpenModalBenarVariabel = trueButtonsCountVariabel == 3;
-    const shouldOpenModalBenarKonstanta = trueButtonsCountKonstanta == 1;
+    // const shouldOpenModalBenarVariabel = trueButtonsCountVariabel == 3;
+    // const shouldOpenModalBenarKonstanta = trueButtonsCountKonstanta == 1;
     const shouldOpenModalBenarKoefisien = trueButtonsCountKoefisien == 3;
 
-    if (shouldOpenModalBenarVariabel) setIsModalBenarVariabelOpen(true);
-    if (shouldOpenModalBenarKonstanta) setIsModalBenarKonstantaOpen(true);
+    // if (shouldOpenModalBenarVariabel) setIsModalBenarVariabelOpen(true);
+    // if (shouldOpenModalBenarKonstanta) setIsModalBenarKonstantaOpen(true);
     if (shouldOpenModalBenarKoefisien) setIsModalBenarKoefisienOpen(true);
 
     const shouldRemoveBlurKonstanta = trueButtonsCountVariabel == 4;
@@ -124,7 +124,7 @@ export default function UnsurPadaSPLTV() {
         <b>Variabel</b> <br />
         Merupakan simbol atau huruf suatu nilai yang besarnya belum diketahui secara pasti
       </ModalSalah>
-      {isModalBenarVariabelOpen && <ModalBenar jenis="Variabel">Yuk lanjut ke pembelajaran selanjutnya...</ModalBenar>}
+      {/* {isModalBenarVariabelOpen && <ModalBenar jenis="Variabel">Yuk lanjut ke pembelajaran selanjutnya...</ModalBenar>} */}
 
       <div className={`bg-blue-subtle mb-3 rounded-4 p-3 border border-blue border-2 text-center ${removeBlurKonstanta ? '' : 'blur'} ${removeBlurKoefisien ? 'disabled' : ''}`}>
         <p className="bg-darkblue p-2 px-3 rounded-3 d-inline-block fw-semibold mb-0">Mana yang merupakan konstanta?</p>
@@ -179,7 +179,7 @@ export default function UnsurPadaSPLTV() {
         <b>Konstanta</b> <br />
         Konstanta merupakan nilai tetap yang tidak diikuti oleh variabel di belakangnya
       </ModalSalah>
-      {isModalBenarKonstantaOpen && <ModalBenar jenis="Konstanta">Yuk lanjut ke pembelajaran selanjutnya...</ModalBenar>}
+      {/* {isModalBenarKonstantaOpen && <ModalBenar jenis="Konstanta">Yuk lanjut ke pembelajaran selanjutnya...</ModalBenar>} */}
 
       <div className={`bg-blue-subtle mb-3 rounded-4 p-3 border border-blue border-2 text-center ${removeBlurKoefisien ? '' : 'blur'} ${removeBlurNextButton ? 'disabled' : ''}`}>
         <p className="bg-darkblue p-2 px-3 rounded-3 d-inline-block fw-semibold mb-0">Mana yang merupakan koefisien?</p>
