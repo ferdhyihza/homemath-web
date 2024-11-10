@@ -74,14 +74,14 @@ export default function NavbarContent() {
               </Link>
             </li>
             <li className="nav-item d-flex">
-              <Link to="/latihan-soal" className="nav-link text-light fs-5" href="#">
+              <Link to="/latihan-soal" className="nav-link text-light fs-5">
                 <img src="../../icon/icon-latihan-soal.png" alt="icon-latihan-soal" className="me-2" /> Latihan Soal
               </Link>
             </li>
             <li className="nav-item d-flex">
-              <a className="nav-link text-light fs-5" href="#">
+              <Link to="/tes-formatif" className="nav-link text-light fs-5">
                 <img src="../../icon/icon-tes-formatif.png" alt="icon-tes-formatif" className="me-2" /> Tes Formatif
-              </a>
+              </Link>
             </li>
           </ul>
         </div>

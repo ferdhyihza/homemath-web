@@ -146,7 +146,7 @@ export default function PenggunaanSPLTV2() {
       </p>
 
       <div className="d-flex justify-content-center py-4">
-        <NextButton link="/materi" />
+        <NextButton link="/tes-formatif" />
       </div>
     </Main>
   );

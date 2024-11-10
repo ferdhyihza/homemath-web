@@ -34,7 +34,7 @@ export default function Home() {
         <div className="p-5 pt-0">
           <div className="row p-4 menu-wrapper rounded-4 justify-content-around gap-2">
             <div className="col-auto">
-              <NextButton link="/sesi/1-peta-konsep" />
+              <NextButton link="/peta-konsep" />
             </div>
             <Link to="/peta-konsep" className="col rounded-1 mx-3 menu d-flex justify-content-center align-items-center">
               <img src="../icon/icon-peta-konsep.png" alt="icon-peta-konsep" className="me-1" />
@@ -46,7 +46,7 @@ export default function Home() {
             <Link to="/latihan-soal" className="col rounded-1 mx-3 menu d-flex justify-content-center align-items-center">
               <img src="../icon/icon-latihan-soal.png" alt="icon-latihan-soal" className="me-1" /> Latihan Soal
             </Link>
-            <Link to="" className="col rounded-1 mx-3 menu d-flex justify-content-center align-items-center">
+            <Link to="/tes-formatif" className="col rounded-1 mx-3 menu d-flex justify-content-center align-items-center">
               <img src="../icon/icon-tes-formatif.png" alt="icon-tes-formatif" className="me-1" /> Tes Formatif
             </Link>
           </div>

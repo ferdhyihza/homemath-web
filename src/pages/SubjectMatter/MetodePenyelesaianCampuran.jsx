@@ -285,7 +285,7 @@ export default function MetodePenyelesaianCampuran() {
       </p>
 
       <div className="d-flex justify-content-center py-4">
-        <NextButton link="/materi" />
+        <NextButton link="/materi/penggunaan-spltv" />
       </div>
     </Main>
   );

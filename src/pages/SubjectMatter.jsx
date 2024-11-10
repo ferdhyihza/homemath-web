@@ -20,6 +20,9 @@ export default function SubjectMatter() {
       </SubjectMatterCard>
       <SubjectMatterCard number="02" title="Metode Penyelesaian SPLTV" link="metode-penyelesaian-spltv">
         <li>
+          <Link to="metode-penyelesaian-spltv">Macam-macam Metode Penyelesaian SPLTV</Link>
+        </li>
+        <li>
           <Link to="metode-penyelesaian-spltv/eliminasi">Metode Eliminasi</Link>
         </li>
         <li>

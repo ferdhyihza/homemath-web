@@ -292,7 +292,7 @@ export default function BentukUmumSPLTV2() {
       </div>
 
       <div className={`${isBlurred2 ? 'blur' : ''} d-flex justify-content-center py-4`}>
-        <NextButton link="/materi" />
+        <NextButton link="/materi/metode-penyelesaian-spltv" />
       </div>
     </Main>
   );
