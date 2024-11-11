@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import ModalBenarButton from '../../components/buttons/ModalBenarButton';
 import ModalSalahButton from '../../components/buttons/ModalSalahButton';
 import NextButton from '../../components/buttons/NextButton';
@@ -13,6 +13,12 @@ export default function UnsurPadaSPLTV() {
   // const [isModalBenarVariabelOpen, setIsModalBenarVariabelOpen] = useState(false);
   // const [isModalBenarKonstantaOpen, setIsModalBenarKonstantaOpen] = useState(false);
   const [isModalBenarKoefisienOpen, setIsModalBenarKoefisienOpen] = useState(false);
+
+  const konstantaSection = useRef(null);
+  const koefisienSection = useRef(null);
+
+  const [isKonstantaSectionFocus, setIsKonstantaSectionFocus] = useState(false);
+  const [isKoefisienSectionFocus, setIsKoefisienSectionFocus] = useState(false);
 
   const handleButtonClick = () => {
     const buttonStates = JSON.parse(localStorage.getItem('buttonStatesTrue')) || {};
@@ -32,11 +38,21 @@ export default function UnsurPadaSPLTV() {
     const shouldRemoveBlurKoefisien = trueButtonsCountKonstanta == 2;
     const shouldRemoveBlurNextButton = trueButtonsCountKoefisien == 4;
 
-    if (shouldRemoveBlurKonstanta) setRemoveBlurKonstanta(true);
+    if (shouldRemoveBlurKonstanta) {
+      setRemoveBlurKonstanta(true);
+      setIsKonstantaSectionFocus(true);
+    }
 
-    if (shouldRemoveBlurKoefisien) setRemoveBlurKoefisien(true);
+    if (shouldRemoveBlurKoefisien) {
+      setRemoveBlurKoefisien(true);
+      setIsKoefisienSectionFocus(true);
+    }
 
-    if (shouldRemoveBlurNextButton) setRemoveBlurNextButton(true);
+    if (shouldRemoveBlurNextButton) {
+      setRemoveBlurNextButton(true);
+      setIsKonstantaSectionFocus(false);
+      setIsKoefisienSectionFocus(false);
+    }
 
     if (trueButtonsCountKoefisien == 4) {
       localStorage.removeItem('buttonStatesFalse');
@@ -44,8 +60,16 @@ export default function UnsurPadaSPLTV() {
   };
 
   useEffect(() => {
+    if (isKonstantaSectionFocus && konstantaSection.current) {
+      konstantaSection.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      setIsKonstantaSectionFocus(false); // reset ke false setelah autoscroll
+    }
+    if (isKoefisienSectionFocus && koefisienSection.current) {
+      koefisienSection.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      setIsKoefisienSectionFocus(false); // reset ke false setelah autoscroll
+    }
     handleButtonClick(); // Check condition on component mount
-  }, []);
+  }, [isKonstantaSectionFocus, isKoefisienSectionFocus]);
 
   return (
     <Main>
@@ -75,7 +99,7 @@ export default function UnsurPadaSPLTV() {
         5x + y = 11 &ensp; ...(2) <br />
         Mana saja yang merupakan variabel, konstanta, dan koefisien?
       </p>
-      <div className={`bg-blue-subtle mb-3 rounded-4 p-3 border border-blue border-2 text-center ${removeBlurKonstanta ? 'disabled' : ''}`}>
+      <div className={`bg-blue-subtle mb-3 rounded-4 p-3 border border-blue border-2 text-center ${removeBlurKonstanta ? 'disabled mx-5' : ''}`}>
         <p className="bg-darkblue p-2 px-3 rounded-3 d-inline-block fw-semibold mb-0">Mana yang merupakan variabel?</p>
         <div className="row justify-content-between px-3">
           <div className="col text-start">
@@ -130,7 +154,7 @@ export default function UnsurPadaSPLTV() {
       </ModalSalah>
       {/* {isModalBenarVariabelOpen && <ModalBenar jenis="Variabel">Yuk lanjut ke pembelajaran selanjutnya...</ModalBenar>} */}
 
-      <div className={`bg-blue-subtle mb-3 rounded-4 p-3 border border-blue border-2 text-center ${removeBlurKonstanta ? '' : 'blur'} ${removeBlurKoefisien ? 'disabled' : ''}`}>
+      <div ref={konstantaSection} className={`bg-blue-subtle mb-3 rounded-4 p-3 border border-blue border-2 text-center ${removeBlurKonstanta ? '' : 'blur mx-5'} ${removeBlurKoefisien ? 'disabled mx-5' : ''}`}>
         <p className="bg-darkblue p-2 px-3 rounded-3 d-inline-block fw-semibold mb-0">Mana yang merupakan konstanta?</p>
         <div className="row justify-content-between px-3">
           <div className="col text-start">
@@ -185,7 +209,7 @@ export default function UnsurPadaSPLTV() {
       </ModalSalah>
       {/* {isModalBenarKonstantaOpen && <ModalBenar jenis="Konstanta">Yuk lanjut ke pembelajaran selanjutnya...</ModalBenar>} */}
 
-      <div className={`bg-blue-subtle mb-3 rounded-4 p-3 border border-blue border-2 text-center ${removeBlurKoefisien ? '' : 'blur'} ${removeBlurNextButton ? 'disabled' : ''}`}>
+      <div ref={koefisienSection} className={`bg-blue-subtle mb-3 rounded-4 p-3 border border-blue border-2 text-center ${removeBlurKoefisien ? '' : 'blur mx-5'} ${removeBlurNextButton ? 'disabled mx-5' : ''}`}>
         <p className="bg-darkblue p-2 px-3 rounded-3 d-inline-block fw-semibold mb-0">Mana yang merupakan koefisien?</p>
         <div className="row justify-content-between px-3">
           <div className="col text-start">

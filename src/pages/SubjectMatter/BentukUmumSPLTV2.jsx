@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import NextButton from '../../components/buttons/NextButton';
 import Main from '../../components/layouts/Main';
 import Tips from '../../components/Tips';
@@ -24,6 +24,8 @@ export default function BentukUmumSPLTV2() {
   });
   const [isBlurred, setIsBlurred] = useState(true); // Status untuk kelas blur
   const [isBlurred2, setIsBlurred2] = useState(true);
+  const section = useRef(null);
+  const section2 = useRef(null);
 
   // Efek untuk memuat status dan nilai dari localStorage ketika komponen pertama kali dimuat
   useEffect(() => {
@@ -37,7 +39,25 @@ export default function BentukUmumSPLTV2() {
       const allValid2 = savedStatus.statuses.input4 && savedStatus.statuses.input5 && savedStatus.statuses.input6 && savedStatus.statuses.input7;
       setIsBlurred2(!allValid2);
     }
-  }, []);
+
+    const sessionData = JSON.parse(localStorage.getItem('sessionData'));
+
+    if (!isBlurred && !isBlurred2 && sessionData?.BentukUmumSPLTV2) {
+      return;
+    } else {
+      if (!isBlurred && section.current) {
+        section.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+      if (!isBlurred2 && section2.current) {
+        section2.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        const newSessionData = {
+          ...sessionData,
+          BentukUmumSPLTV2: true,
+        };
+        localStorage.setItem('sessionData', JSON.stringify(newSessionData));
+      }
+    }
+  }, [isBlurred, isBlurred2]);
 
   // Fungsi untuk menangani perubahan pada input
   const handleChange = (inputName, event) => {
@@ -172,7 +192,7 @@ export default function BentukUmumSPLTV2() {
         </p>
       </div>
       <div className={`${isBlurred ? 'blur' : ''}`}>
-        <p>
+        <p ref={section}>
           Selanjutnya, kita dapat menentukan besaran koefisien dan konstanta untuk melengkapi persamaan tersebut. <br />
           Konveksi Roshima menghabiskan Rp20.700.000 untuk membeli: <b>(20.700.000 merupakan konstanta) </b> <br />• 4 gulung kain warna putih <b>(4 merupakan koefisien)</b> <br />• 6 gulung kain warna abu-abu <b>(6 merupakan koefisien)</b>
           <br />• 3 gulung kain warna cokelat <b>(3 merupakan koefisien)</b> <br />
@@ -271,7 +291,7 @@ export default function BentukUmumSPLTV2() {
           </div>
         </div>
       </div>
-      <div className={`${isBlurred2 ? 'blur' : ''}`}>
+      <div ref={section2} className={`${isBlurred2 ? 'blur' : ''}`}>
         <p>Dengan demikian, kita telah mengubah kalimat pada cerita tadi menjadi sebuah SPLTV yang dapat kita selesaikan, yaitu</p>
         <div className="d-flex justify-content-center mb-4">
           <div className="d-inline-block border border-blue rounded-2 border-2 p-2 px-4">
