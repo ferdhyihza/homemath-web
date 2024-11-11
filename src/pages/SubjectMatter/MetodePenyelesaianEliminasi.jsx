@@ -184,7 +184,7 @@ export default function MetodePenyelesaianEliminasi() {
             />
             <p className="ps-2 d-inline-block">...(5)</p>
           </div>
-          <p className="d-inline-block ps-5 ms-5 fst-italic" style={{ textAlign: 'center', fontSize: '12px' }}>
+          <p className="d-inline-block ps-5 ms-5 fst-italic text-muted" style={{ textAlign: 'center', fontSize: '12px' }}>
             hitung hasil operasi tersebut
           </p>
         </div>
@@ -223,7 +223,7 @@ export default function MetodePenyelesaianEliminasi() {
                 onChange={e => handleChange('input10', e)}
               />
             </div>
-            <p className="d-inline-block fst-italic" style={{ textAlign: 'center', fontSize: '12px' }}>
+            <p className="d-inline-block fst-italic text-muted" style={{ textAlign: 'center', fontSize: '12px' }}>
               kedua ruas dibagi dengan -55 untuk mengetahui nilai z
             </p>
           </div>
@@ -273,7 +273,7 @@ export default function MetodePenyelesaianEliminasi() {
                 onChange={e => handleChange('input12', e)}
               />
             </div>
-            <p className="d-inline-block fst-italic" style={{ textAlign: 'center', fontSize: '12px' }}>
+            <p className="d-inline-block fst-italic text-muted" style={{ textAlign: 'center', fontSize: '12px' }}>
               kedua ruas dibagi dengan 55 untuk mengetahui nilai y
             </p>
           </div>
@@ -330,7 +330,7 @@ export default function MetodePenyelesaianEliminasi() {
                 onChange={e => handleChange('input14', e)}
               />
 
-              <p className="mb-0 fst-italic" style={{ fontSize: '12px' }}>
+              <p className="mb-0 fst-italic text-muted" style={{ fontSize: '12px' }}>
                 kurangi kedua ruas dengan 14.700.000
               </p>
             </div>
@@ -344,7 +344,7 @@ export default function MetodePenyelesaianEliminasi() {
                 onChange={e => handleChange('input15', e)}
               />
 
-              <p className="mb-0 fst-italic" style={{ fontSize: '12px' }}>
+              <p className="mb-0 fst-italic text-muted" style={{ fontSize: '12px' }}>
                 hitung hasil operasi pengurangan tersebut
               </p>
             </div>
@@ -359,7 +359,7 @@ export default function MetodePenyelesaianEliminasi() {
               />
               <span>/ 4</span>
 
-              <p className="mb-0 fst-italic" style={{ fontSize: '12px' }}>
+              <p className="mb-0 fst-italic text-muted" style={{ fontSize: '12px' }}>
                 masukkan hasil operasi pengurangan tersebut
               </p>
             </div>
@@ -372,7 +372,7 @@ export default function MetodePenyelesaianEliminasi() {
                 value={inputValues.input17}
                 onChange={e => handleChange('input17', e)}
               />
-              <p className="mb-0 fst-italic" style={{ fontSize: '12px' }}>
+              <p className="mb-0 fst-italic text-muted" style={{ fontSize: '12px' }}>
                 kedua ruas dibagi dengan 4 untuk mengetahui nilai x
               </p>
             </div>

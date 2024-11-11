@@ -1,7 +1,168 @@
+import { useEffect, useState } from 'react';
 import NextButton from '../../components/buttons/NextButton';
 import Main from '../../components/layouts/Main';
 
 export default function MetodePenyelesaianSubstitusi() {
+  const [inputValues, setInputValues] = useState({
+    input18: '',
+    input19: '',
+    input20: '',
+    input21: '',
+    input22: '',
+    input23: '',
+    input24: '',
+    input25: '',
+    input26: '',
+    input27: '',
+    input28: '',
+    input29: '',
+    input30: '',
+    input31: '',
+    input32: '',
+    input33: '',
+    input34: '',
+    input35: '',
+    input36: '',
+    input37: '',
+    input38: '',
+  });
+  const [inputStatuses, setInputStatuses] = useState({
+    input18: false,
+    input19: false,
+    input20: false,
+    input21: false,
+    input22: false,
+    input23: false,
+    input24: false,
+    input25: false,
+    input26: false,
+    input27: false,
+    input28: false,
+    input29: false,
+    input30: false,
+    input31: false,
+    input32: false,
+    input33: false,
+    input34: false,
+    input35: false,
+    input36: false,
+    input37: false,
+    input38: false,
+  });
+  const [isBlurred, setIsBlurred] = useState(true); // Status untuk kelas blur
+  const [isBlurred2, setIsBlurred2] = useState(true);
+  const [isBlurred3, setIsBlurred3] = useState(true);
+  const [isBlurred4, setIsBlurred4] = useState(true);
+  const [isBlurred5, setIsBlurred5] = useState(true);
+  const [isBlurred6, setIsBlurred6] = useState(true);
+
+  // Efek untuk memuat status dan nilai dari localStorage ketika komponen pertama kali dimuat
+  useEffect(() => {
+    const savedStatus = JSON.parse(localStorage.getItem('inputStatuses'));
+    if (savedStatus) {
+      setInputValues(savedStatus.values);
+      setInputStatuses(savedStatus.statuses);
+      // Tentukan apakah kelas blur harus dihapus berdasarkan status validasi
+      const allValid = savedStatus.statuses.input18 && savedStatus.statuses.input19 && savedStatus.statuses.input20;
+      setIsBlurred(!allValid);
+      const allValid2 = savedStatus.statuses.input21 && savedStatus.statuses.input22 && savedStatus.statuses.input23;
+      setIsBlurred2(!allValid2);
+      const allValid3 = savedStatus.statuses.input24 && savedStatus.statuses.input25 && savedStatus.statuses.input26;
+      setIsBlurred3(!allValid3);
+      const allValid4 = savedStatus.statuses.input27 && savedStatus.statuses.input28 && savedStatus.statuses.input29 && savedStatus.statuses.input30 && savedStatus.statuses.input31;
+      setIsBlurred4(!allValid4);
+      const allValid5 = savedStatus.statuses.input32 && savedStatus.statuses.input33 && savedStatus.statuses.input34 && savedStatus.statuses.input35 && savedStatus.statuses.input36;
+      setIsBlurred5(!allValid5);
+      const allValid6 = savedStatus.statuses.input37 && savedStatus.statuses.input38;
+      setIsBlurred6(!allValid6);
+    }
+  }, []);
+
+  // Fungsi untuk menangani perubahan pada input
+  const handleChange = (inputName, event) => {
+    const value = event.target.value;
+    let isValid = false;
+
+    // Tentukan validasi berdasarkan nama input
+    if (inputName === 'input18' && value.replace(/\./g, '') == '19200000') {
+      isValid = true;
+    } else if (inputName === 'input19' && value.replace(/\./g, '') == '19200000') {
+      isValid = true;
+    } else if (inputName === 'input20' && value.replace(/\./g, '') == '1500000') {
+      isValid = true;
+    } else if (inputName === 'input21' && value.replace(/\./g, '') == '9600000') {
+      isValid = true;
+    } else if (inputName === 'input22' && value.replace(/\./g, '') == '9600000') {
+      isValid = true;
+    } else if (inputName === 'input23' && value.replace(/\./g, '') == '10100000') {
+      isValid = true;
+    } else if (inputName === 'input24' && value.replace(/\./g, '') == '1500000') {
+      isValid = true;
+    } else if (inputName === 'input25' && value.replace(/\./g, '') == '1500000') {
+      isValid = true;
+    } else if (inputName === 'input26' && value.replace(/\./g, '') == '1500000') {
+      isValid = true;
+    } else if (inputName === 'input27' && value.replace(/\./g, '') == '7500000') {
+      isValid = true;
+    } else if (inputName === 'input28' && value.replace(/\./g, '') == '7500000') {
+      isValid = true;
+    } else if (inputName === 'input29' && value.replace(/\./g, '') == '17600000') {
+      isValid = true;
+    } else if (inputName === 'input30' && value.replace(/\./g, '') == '17600000') {
+      isValid = true;
+    } else if (inputName === 'input31' && value.replace(/\./g, '') == '1600000') {
+      isValid = true;
+    } else if (inputName === 'input32' && value.replace(/\./g, '') == '1600000') {
+      isValid = true;
+    } else if (inputName === 'input33' && value.replace(/\./g, '') == '3200000') {
+      isValid = true;
+    } else if (inputName === 'input34' && value.replace(/\./g, '') == '3200000') {
+      isValid = true;
+    } else if (inputName === 'input35' && value.replace(/\./g, '') == '-1700000') {
+      isValid = true;
+    } else if (inputName === 'input36' && value.replace(/\./g, '') == '1700000') {
+      isValid = true;
+    } else if (inputName === 'input37' && value.replace(/\./g, '') == '7500000') {
+      isValid = true;
+    } else if (inputName === 'input38' && value.replace(/\./g, '') == '1500000') {
+      isValid = true;
+    }
+
+    // Update state untuk value dan status validasi input tertentu
+    const updatedValues = {
+      ...inputValues,
+      [inputName]: value,
+    };
+    const updatedStatuses = {
+      ...inputStatuses,
+      [inputName]: isValid,
+    };
+
+    setInputValues(updatedValues);
+    setInputStatuses(updatedStatuses);
+
+    // Simpan ke localStorage secara real-time
+    const updatedStatus = {
+      values: updatedValues,
+      statuses: updatedStatuses,
+    };
+    localStorage.setItem('inputStatuses', JSON.stringify(updatedStatus));
+
+    // Periksa apakah semua input sudah valid
+    const allValid = updatedStatus.statuses.input18 && updatedStatus.statuses.input19 && updatedStatus.statuses.input20;
+    setIsBlurred(!allValid); // Hapus kelas blur jika semua input valid
+    const allValid2 = updatedStatus.statuses.input21 && updatedStatus.statuses.input22 && updatedStatus.statuses.input23;
+    setIsBlurred2(!allValid2);
+    const allValid3 = updatedStatus.statuses.input24 && updatedStatus.statuses.input25 && updatedStatus.statuses.input26;
+    setIsBlurred3(!allValid3);
+    const allValid4 = updatedStatus.statuses.input27 && updatedStatus.statuses.input28 && updatedStatus.statuses.input29 && updatedStatus.statuses.input30 && updatedStatus.statuses.input31;
+    setIsBlurred4(!allValid4);
+    const allValid5 = updatedStatus.statuses.input32 && updatedStatus.statuses.input33 && updatedStatus.statuses.input34 && updatedStatus.statuses.input35 && updatedStatus.statuses.input36;
+    setIsBlurred5(!allValid5);
+    const allValid6 = updatedStatus.statuses.input37 && updatedStatus.statuses.input38;
+    setIsBlurred6(!allValid6);
+  };
+
   return (
     <Main>
       <h3 className="fw-bold pb-5 my-3">
@@ -54,10 +215,17 @@ export default function MetodePenyelesaianSubstitusi() {
           <p>4x + 6y + 3z</p>
           <p>4(4.800.000 - y - z) + 6y + 3z</p>
           <div className="d-flex justify-content-end align-items-center gap-2 mb-2">
-            <p className="mb-0 fst-italic" style={{ textAlign: 'center', fontSize: '12px' }}>
+            <p className="mb-0 fst-italic text-muted" style={{ textAlign: 'center', fontSize: '12px' }}>
               hasil perkalian 4 dengan 4.800.000
             </p>
-            <input className="form-control" type="text" placeholder="..." style={{ textAlign: 'center', width: '124px' }} />
+            <input
+              className={`form-control ${inputStatuses.input18 ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.input18 && !inputStatuses.input18 ? 'border-danger bg-danger-subtle' : ''}`}
+              type="text"
+              placeholder="..."
+              style={{ textAlign: 'center', width: '124px' }}
+              value={inputValues.input18}
+              onChange={e => handleChange('input18', e)}
+            />
             <p className="mb-0">- 4y - 4z + 6y + 3z</p>
           </div>
           <p className="pt-1">- 4y + 6y - 4z + 3z</p>
@@ -76,325 +244,469 @@ export default function MetodePenyelesaianSubstitusi() {
           <p className="pt-2">20.700.000</p>
           <div className="d-flex gap-2 align-items-center">
             <p className="mb-0">20.700.000 - </p>
-            <input className="form-control" type="text" placeholder="..." style={{ textAlign: 'center', width: '124px' }} />
-            <p className="d-inline-block mb-0 fst-italic" style={{ textAlign: 'center', fontSize: '12px' }}>
+            <input
+              className={`form-control ${inputStatuses.input19 ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.input19 && !inputStatuses.input19 ? 'border-danger bg-danger-subtle' : ''}`}
+              type="text"
+              placeholder="..."
+              style={{ textAlign: 'center', width: '124px' }}
+              value={inputValues.input19}
+              onChange={e => handleChange('input19', e)}
+            />
+            <p className="d-inline-block mb-0 fst-italic text-muted" style={{ textAlign: 'center', fontSize: '12px' }}>
               kedua ruas dikurangi hasil perkalian 4 dengan 4.800.000
             </p>
           </div>
           <div className="d-flex gap-2 align-items-center mt-2">
             <div>
-              <input className="form-control w-100" type="text" placeholder="..." style={{ textAlign: 'center', width: '124px' }} />
+              <input
+                className={`form-control w-100 ${inputStatuses.input20 ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.input20 && !inputStatuses.input20 ? 'border-danger bg-danger-subtle' : ''}`}
+                type="text"
+                placeholder="..."
+                style={{ textAlign: 'center', width: '124px' }}
+                value={inputValues.input20}
+                onChange={e => handleChange('input20', e)}
+              />
             </div>
             ........... (5)
           </div>
-          <p className="d-inline-block ms-2 fst-italic" style={{ textAlign: 'center', fontSize: '12px' }}>
+          <p className="d-inline-block ms-2 fst-italic text-muted" style={{ textAlign: 'center', fontSize: '12px' }}>
             hasil operasi pada ruas kanan
           </p>
         </div>
       </div>
-      <p>
-        <i className="text-muted">(substitusi persamaan (4) ke persamaan (3))</i>
-      </p>
-      <div className="row">
-        <div className="col-5 text-end">
-          <p>2x + 3y + 7z</p>
-          <p>2(4.800.000 - y - z) + 3y + 7z</p>
-          <div className="d-flex justify-content-end align-items-center gap-2 mb-2">
-            <p className="mb-0 fst-italic" style={{ textAlign: 'center', fontSize: '12px' }}>
-              hasil perkalian 2 dengan 4.800.000
-            </p>
-            <input className="form-control" type="text" placeholder="..." style={{ textAlign: 'center', width: '124px' }} />
-            <p className="mb-0">- 2y - 2z + 3y + 7z</p>
-          </div>
-          <p className="pt-1">- 2y + 3y - 2z + 7z</p>
-          <p className="pt-2">y + 5z</p>
-        </div>
-        <div className="col-1 text-center">
-          <p>=</p>
-          <p>=</p>
-          <p className="pt-2">=</p>
-          <p className="">=</p>
-          <p className="pt-2">=</p>
-        </div>
-        <div className="col-6">
-          <p>19.700.000</p>
-          <p>19.700.000</p>
-          <p className="pt-2">19.700.000</p>
-          <div className="d-flex gap-2 align-items-center">
-            <p className="mb-0">19.700.000 - </p>
-            <input className="form-control" type="text" placeholder="..." style={{ textAlign: 'center', width: '124px' }} />
-            <p className="d-inline-block mb-0 fst-italic" style={{ textAlign: 'center', fontSize: '12px' }}>
-              kedua ruas dikurangi hasil perkalian 2 dengan 4.800.000
-            </p>
-          </div>
-          <div className="d-flex gap-2 align-items-center mt-2">
-            <div>
-              <input className="form-control w-100" type="text" placeholder="..." style={{ textAlign: 'center', width: '124px' }} />
+      <div className={`${isBlurred ? 'blur' : ''}`}>
+        <p>
+          <i className="text-muted">(substitusi persamaan (4) ke persamaan (3))</i>
+        </p>
+        <div className="row">
+          <div className="col-5 text-end">
+            <p>2x + 3y + 7z</p>
+            <p>2(4.800.000 - y - z) + 3y + 7z</p>
+            <div className="d-flex justify-content-end align-items-center gap-2 mb-2">
+              <p className="mb-0 fst-italic text-muted" style={{ textAlign: 'center', fontSize: '12px' }}>
+                hasil perkalian 2 dengan 4.800.000
+              </p>
+              <input
+                className={`form-control ${inputStatuses.input21 ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.input21 && !inputStatuses.input21 ? 'border-danger bg-danger-subtle' : ''}`}
+                type="text"
+                placeholder="..."
+                style={{ textAlign: 'center', width: '124px' }}
+                value={inputValues.input21}
+                onChange={e => handleChange('input21', e)}
+              />
+              <p className="mb-0">- 2y - 2z + 3y + 7z</p>
             </div>
-            ........... (6)
+            <p className="pt-1">- 2y + 3y - 2z + 7z</p>
+            <p className="pt-2">y + 5z</p>
           </div>
-          <p className="d-inline-block ms-2 fst-italic" style={{ textAlign: 'center', fontSize: '12px' }}>
-            hasil operasi pada ruas kanan
-          </p>
-        </div>
-      </div>
-      <p>
-        3. Dari langkah sebelumnya, kita mendapatkan persamaan (5) dan (6). Selanjutnya, yang perlu kita lakukan adalah mengubah salah satu persamaan tersebut menjadi sebuah fungsi. Misalnya kita akan mengubah persamaan (5) ke dalam fungsi
-        y. Sehingga
-      </p>
-      <div className="row">
-        <div className="col-3 text-end">
-          <p>2y - z</p>
-          <p className="pt-2">- z</p>
-          <p className="pt-2">z</p>
-        </div>
-        <div className="col-1 text-center">
-          <p>=</p>
-          <p className="pt-2">=</p>
-          <p className="pt-2">=</p>
-        </div>
-        <div className="col-8">
-          <div className="d-flex gap-2 align-items-center">
-            <input className="form-control" type="text" placeholder="..." style={{ textAlign: 'center', width: '124px' }} />
-            <p className="d-inline-block mb-0 fst-italic" style={{ textAlign: 'center', fontSize: '12px' }}>
-              konstanta persamaan (5)
-            </p>
+          <div className="col-1 text-center">
+            <p>=</p>
+            <p>=</p>
+            <p className="pt-2">=</p>
+            <p className="">=</p>
+            <p className="pt-2">=</p>
           </div>
-          <div className="d-flex gap-2 align-items-center pt-2">
-            <div className="text-center px-5 p-1 border border rounded-2 d-flex">
-              <input className="border-0" type="text" placeholder="..." style={{ textAlign: 'center', width: '124px' }} />
-              <span>- 2y</span>
+          <div className="col-6">
+            <p>19.700.000</p>
+            <p>19.700.000</p>
+            <p className="pt-2">19.700.000</p>
+            <div className="d-flex gap-2 align-items-center">
+              <p className="mb-0">19.700.000 - </p>
+              <input
+                className={`form-control ${inputStatuses.input22 ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.input22 && !inputStatuses.input22 ? 'border-danger bg-danger-subtle' : ''}`}
+                type="text"
+                placeholder="..."
+                style={{ textAlign: 'center', width: '124px' }}
+                value={inputValues.input22}
+                onChange={e => handleChange('input22', e)}
+              />
+              <p className="d-inline-block mb-0 fst-italic text-muted" style={{ textAlign: 'center', fontSize: '12px' }}>
+                kedua ruas dikurangi hasil perkalian 2 dengan 4.800.000
+              </p>
             </div>
-            <p className="d-inline-block mb-0 fst-italic" style={{ textAlign: 'center', fontSize: '12px' }}>
-              masukkan konstanta persamaan (5) kemudian kedua ruas dikurangi dengan 2y
-            </p>
-          </div>
-          <div className="d-flex gap-2 align-items-center mt-2">
-            <div className="text-center px-5 p-1 border border rounded-2 d-flex">
-              <span>2y - </span>
-              <input className="border-0" type="text" placeholder="..." style={{ textAlign: 'center', width: '124px' }} />
+            <div className="d-flex gap-2 align-items-center mt-2">
+              <div>
+                <input
+                  className={`form-control w-100 ${inputStatuses.input23 ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.input23 && !inputStatuses.input23 ? 'border-danger bg-danger-subtle' : ''}`}
+                  type="text"
+                  placeholder="..."
+                  style={{ textAlign: 'center', width: '124px' }}
+                  value={inputValues.input23}
+                  onChange={e => handleChange('input23', e)}
+                />
+              </div>
+              ........... (6)
             </div>
-            ........... (6)
-          </div>
-          <p className="d-inline-block ms-2 fst-italic" style={{ textAlign: 'center', fontSize: '12px' }}>
-            masukkan konstanta persamaan (5) kemudian kedua ruas dibagi dengan -1
-          </p>
-        </div>
-      </div>
-      <p>4. Selanjutnya, kita dapat menyubtitusikan fungsi y atau persamaan (7) ke dalam persamaan (6)</p>
-      <p>
-        Persamaan (6) <br />
-        y + 5z = 10.100.000 <br />
-        Persamaan (7) <br />z = 2y - 1.500.000
-      </p>
-      <p>sehingga,</p>
-      <div className="row">
-        <div className="col-5 text-end">
-          <p>y + 5z</p>
-          <p>y + 5(2y - 1.500.000)</p>
-          <div className="d-flex gap-2 align-items-center justify-content-end">
-            <p className="d-inline-block mb-0 fst-italic" style={{ textAlign: 'center', fontSize: '12px' }}>
-              hasil perkalian 5 dengan 1.500.000
-            </p>
-            <div className="text-center px-3 p-1 border border rounded-2 d-flex">
-              <span>y + 10y - </span>
-              <input className="border-0" type="text" placeholder="..." style={{ textAlign: 'center', width: '124px' }} />
-            </div>
-          </div>
-          <p className="pt-3">11y</p>
-          <p className="pt-1">11y</p>
-          <p className="pt-1">y</p>
-          <p className="pt-1">y</p>
-        </div>
-        <div className="col-1 text-center">
-          <p>=</p>
-          <p>=</p>
-          <p className="pt-2">=</p>
-          <p className="">=</p>
-          <p className="pt-2">=</p>
-          <p className="pt-1">=</p>
-          <p className="pt-1">=</p>
-        </div>
-        <div className="col-6">
-          <p>10.100.000</p>
-          <p>10.100.000</p>
-          <p className="pt-2">10.100.000</p>
-          <div className="d-flex gap-2 align-items-center mb-2">
-            <p className="mb-0">10.100.000 + </p>
-            <div className="text-center px-3 p-1 border border rounded-2 d-flex">
-              <input className="border-0" type="text" placeholder="..." style={{ textAlign: 'center', width: '124px' }} />
-            </div>
-            <p className="d-inline-block mb-0 fst-italic" style={{ textAlign: 'center', fontSize: '12px' }}>
-              kedua ruas dijumlah dengan hasil <br />
-              perkalian 5 dengan 1.500.000
-            </p>
-          </div>
-          <div className="d-flex gap-2 align-items-center mb-2">
-            <div className="text-center px-3 p-1 border border rounded-2 d-flex">
-              <input className="border-0" type="text" placeholder="..." style={{ textAlign: 'center', width: '124px' }} />
-            </div>
-            <p className="d-inline-block mb-0 fst-italic" style={{ textAlign: 'center', fontSize: '12px' }}>
-              10.100.000 dikurangi dengan <br />
-              hasil operasi sebelumnya
-            </p>
-          </div>
-          <div className="d-flex gap-2 align-items-center mb-2">
-            <div className="text-center px-3 p-1 border border rounded-2 d-flex">
-              <input className="border-0" type="text" placeholder="..." style={{ textAlign: 'center', width: '124px' }} />
-              <span>/11</span>
-            </div>
-            <p className="d-inline-block mb-0 fst-italic" style={{ textAlign: 'center', fontSize: '12px' }}>
-              kedua ruas dibagi dengan 11
-            </p>
-          </div>
-          <div className="d-flex gap-2 align-items-center">
-            <div className="text-center px-3 p-1 border border rounded-2 d-flex">
-              <input className="border-0" type="text" placeholder="..." style={{ textAlign: 'center', width: '124px' }} />
-            </div>
-            <p className="d-inline-block mb-0 fst-italic" style={{ textAlign: 'center', fontSize: '12px' }}>
-              didapatkan nilai variabel y
+            <p className="d-inline-block ms-2 fst-italic text-muted" style={{ textAlign: 'center', fontSize: '12px' }}>
+              hasil operasi pada ruas kanan
             </p>
           </div>
         </div>
       </div>
-      <p>5. Setelah kita mengetahui besar nilai variabel y, kita dapat mensubstitusikannya ke dalam persamaan (5), (6) atau (7) untuk mengetahui besar nilai variabel z. Misalnya substitusi ke persamaan (5)</p>
-      <p>
-        Persamaan (5) <br />
-        2y - z = 1.500.000
-      </p>
-      <p>sehingga, </p>
-      <div className="row">
-        <div className="col-5 text-end">
-          <p>2y - z</p>
-          <div className="d-flex gap-2 align-items-center justify-content-end mb-2">
-            <p className="d-inline-block mb-0 fst-italic" style={{ textAlign: 'center', fontSize: '12px' }}>
-              masukkan nilai variabel y
-            </p>
-            <div className="text-center px-3 p-1 border border rounded-2 d-flex">
-              <span>2(</span>
-              <input className="border-0" type="text" placeholder="...................................." style={{ textAlign: 'center', width: '124px' }} />
-              <span>)</span>
-            </div>
-            <p className="mb-0">-z</p>
-          </div>
-          <div className="d-flex gap-2 align-items-center justify-content-end">
-            <p className="d-inline-block mb-0 fst-italic" style={{ textAlign: 'center', fontSize: '12px' }}>
-              hasil perkalian 2 dengan <br />
-              nilai variabel y
-            </p>
-            <div className="text-center px-3 p-1 border border rounded-2 d-flex">
-              <input className="border-0" type="text" placeholder="..." style={{ textAlign: 'center', width: '124px' }} />
-            </div>
-            <p className="mb-0">-z</p>
-          </div>
-          <p className="pt-3">-z</p>
-          <p className="pt-1">-z</p>
-          <p className="pt-1">z</p>
-        </div>
-        <div className="col-1 text-center">
-          <p>=</p>
-          <p className="pt-2">=</p>
-          <p className="">=</p>
-          <p className="pt-2">=</p>
-          <p className="pt-1">=</p>
-          <p className="pt-1">=</p>
-        </div>
-        <div className="col-6">
-          <p>1.500.000</p>
-          <p className="pt-2">1.500.000</p>
-          <p className="">1.500.000</p>
-          <div className="d-flex gap-2 align-items-center mb-2">
-            <p className="mb-0">1.500.000 - </p>
-            <div className="text-center px-3 p-1 border border rounded-2 d-flex">
-              <input className="border-0" type="text" placeholder="..." style={{ textAlign: 'center', width: '124px' }} />
-            </div>
-            <p className="d-inline-block mb-0 fst-italic" style={{ textAlign: 'center', fontSize: '12px' }}>
-              kedua ruas dikurangi dengan hasil <br />
-              perkalian 2 dengan nilai variabel y
-            </p>
-          </div>
-          <div className="d-flex gap-2 align-items-center mb-2">
-            <div className="text-center px-3 p-1 border border rounded-2 d-flex">
-              <input className="border-0" type="text" placeholder="..." style={{ textAlign: 'center', width: '124px' }} />
-            </div>
-          </div>
-          <div className="d-flex gap-2 align-items-center">
-            <div className="text-center px-3 p-1 border border rounded-2 d-flex">
-              <input className="border-0" type="text" placeholder="..." style={{ textAlign: 'center', width: '124px' }} />
-            </div>
-            <p className="d-inline-block mb-0 fst-italic" style={{ textAlign: 'center', fontSize: '12px' }}>
-              kedua ruas dibagi dengan -1
-            </p>
-          </div>
-        </div>
-      </div>
-      <p>
-        6. Dari langkah-langkah di atas, kita telah mengetahui besar nilai variabel y dan z. Untuk mengetahui besar nilai variabel x, langkah terakhir adalah menyubstitusikan nilai variabel y dan z ke persamaan (1), (2), atau (3). Misalnya
-        kita akan substitusi ke persamaan (2)
-      </p>
-      <p>
-        Persamaan (2) <br />
-        5x + 5y + 5z = 24.000.000
-      </p>
-      <p>sehingga,</p>
-      <div className="row">
-        <div className="col-5 text-end">
-          <p>5x + 5y + 5z</p>
-          <p>5x + 5(1.600.000) + 5(1.700.000)</p>
-          <p>5x + 8.000.000 + 8.500.000</p>
-          <p>5x + 16.500.000</p>
-          <p>5x</p>
-          <p className="pt-1">5x</p>
-          <p className="pt-1">x</p>
-        </div>
-        <div className="col-1 text-center">
-          <p>=</p>
-          <p>=</p>
-          <p>=</p>
-          <p>=</p>
-          <p>=</p>
-          <p className="pt-1">=</p>
-          <p className="pt-1">=</p>
-        </div>
-        <div className="col-6">
-          <p>24.000.000</p>
-          <p>24.000.000</p>
-          <p>24.000.000</p>
-          <p>24.000.000</p>
-          <p>24.000.000 - 16.500.000</p>
-          <div className="d-flex gap-2 align-items-center mb-2">
-            <div className="text-center px-3 p-1 border border rounded-2 d-flex">
-              <input className="border-0" type="text" placeholder="..." style={{ textAlign: 'center', width: '124px' }} />
-            </div>
-            <p className="d-inline-block mb-0 fst-italic" style={{ textAlign: 'center', fontSize: '12px' }}>
-              hasil dari 24.000.000 dikurangi <br />
-              dengan 16.500.000
-            </p>
-          </div>
-          <div className="d-flex gap-2 align-items-center mb-2">
-            <div className="text-center px-3 p-1 border border rounded-2 d-flex">
-              <input className="border-0" type="text" placeholder="..." style={{ textAlign: 'center', width: '124px' }} />
-            </div>
-            <p className="d-inline-block mb-0 fst-italic" style={{ textAlign: 'center', fontSize: '12px' }}>
-              kedua ruas dibagi dengan 5
-            </p>
-          </div>
-        </div>
-      </div>
-      <p>Dari seluruh langkah yang telah kita kerjakan tersebut, kita telah mengetahui besar nilai variabel x = 1.500.000, nilai variabel y = 1.600.000 dan nilai variabel z = 1.700.000.</p>
-      <p>
-        Kita ingat kembali bahwa: <br />
-        • variabel x mewakili harga satu gulung kain warna putih <br />
-        • variabel y mewakili harga satu gulung kain warna abu-abu <br />• variabel z mewakili harga satu gulung kain warna cokelat
-      </p>
-      <p>Jadi, harga satu gulung kain warna putih adalah Rp1.500.000, harga satu gulung kain warna abu-abu adalah Rp1.600.000, dan harga satu gulung kain warna cokelat adalah Rp1.700.000.</p>
-      <p>
-        <b> Bagaimana? Lebih mudah menggunakan metode eliminasi atau substitusi?</b> <br />
-        Jika kalian ingin menggunakan cara yang lebih praktis atau cepat, kalian dapat menggunakan kedua metode tersebut secara bersamaan. Coba perhatikan alternatif penyelesaian berikut ini!
-      </p>
 
-      <div className="d-flex justify-content-center py-4">
-        <NextButton link="/materi/metode-penyelesaian-spltv/campuran" />
+      <div className={`${isBlurred2 ? 'blur' : ''}`}>
+        <p>
+          3. Dari langkah sebelumnya, kita mendapatkan persamaan (5) dan (6). Selanjutnya, yang perlu kita lakukan adalah mengubah salah satu persamaan tersebut menjadi sebuah fungsi. Misalnya kita akan mengubah persamaan (5) ke dalam
+          fungsi y. Sehingga
+        </p>
+        <div className="row">
+          <div className="col-3 text-end">
+            <p>2y - z</p>
+            <p className="pt-2">- z</p>
+            <p className="pt-2">z</p>
+          </div>
+          <div className="col-1 text-center">
+            <p>=</p>
+            <p className="pt-2">=</p>
+            <p className="pt-2">=</p>
+          </div>
+          <div className="col-8">
+            <div className="d-flex gap-2 align-items-center">
+              <input
+                className={`form-control ${inputStatuses.input24 ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.input24 && !inputStatuses.input24 ? 'border-danger bg-danger-subtle' : ''}`}
+                type="text"
+                placeholder="..."
+                style={{ textAlign: 'center', width: '124px' }}
+                value={inputValues.input24}
+                onChange={e => handleChange('input24', e)}
+              />
+              <p className="d-inline-block mb-0 fst-italic text-muted" style={{ textAlign: 'center', fontSize: '12px' }}>
+                konstanta persamaan (5)
+              </p>
+            </div>
+            <div className="d-flex gap-2 align-items-center pt-2">
+              <input
+                className={`form-control ${inputStatuses.input25 ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.input25 && !inputStatuses.input25 ? 'border-danger bg-danger-subtle' : ''}`}
+                type="text"
+                placeholder="..."
+                style={{ textAlign: 'center', width: '124px' }}
+                value={inputValues.input25}
+                onChange={e => handleChange('input25', e)}
+              />
+              <span>- 2y</span>
+
+              <p className="d-inline-block mb-0 fst-italic text-muted" style={{ textAlign: 'center', fontSize: '12px' }}>
+                masukkan konstanta persamaan (5) kemudian kedua ruas dikurangi dengan 2y
+              </p>
+            </div>
+            <div className="d-flex gap-2 align-items-center mt-2">
+              <span>2y - </span>
+              <input
+                className={`form-control ${inputStatuses.input26 ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.input26 && !inputStatuses.input26 ? 'border-danger bg-danger-subtle' : ''}`}
+                type="text"
+                placeholder="..."
+                style={{ textAlign: 'center', width: '124px' }}
+                value={inputValues.input26}
+                onChange={e => handleChange('input26', e)}
+              />
+              ........... (6)
+            </div>
+            <p className="d-inline-block ms-2 fst-italic text-muted" style={{ textAlign: 'center', fontSize: '12px' }}>
+              masukkan konstanta persamaan (5) kemudian kedua ruas dibagi dengan -1
+            </p>
+          </div>
+        </div>
+      </div>
+      <div className={`${isBlurred3 ? 'blur' : ''}`}>
+        <p>4. Selanjutnya, kita dapat menyubtitusikan fungsi y atau persamaan (7) ke dalam persamaan (6)</p>
+        <p>
+          Persamaan (6) <br />
+          y + 5z = 10.100.000 <br />
+          Persamaan (7) <br />z = 2y - 1.500.000
+        </p>
+        <p>sehingga,</p>
+        <div className="row">
+          <div className="col-5 text-end">
+            <p>y + 5z</p>
+            <p>y + 5(2y - 1.500.000)</p>
+            <div className="d-flex gap-2 align-items-center justify-content-end">
+              <p className="d-inline-block mb-0 fst-italic text-muted" style={{ textAlign: 'center', fontSize: '12px' }}>
+                hasil perkalian 5 dengan 1.500.000
+              </p>
+
+              <span>y + 10y - </span>
+              <input
+                className={`form-control ${inputStatuses.input27 ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.input27 && !inputStatuses.input27 ? 'border-danger bg-danger-subtle' : ''}`}
+                type="text"
+                placeholder="..."
+                style={{ textAlign: 'center', width: '124px' }}
+                value={inputValues.input27}
+                onChange={e => handleChange('input27', e)}
+              />
+            </div>
+            <p className="pt-3">11y</p>
+            <p className="pt-1">11y</p>
+            <p className="pt-1">y</p>
+            <p className="pt-2">y</p>
+          </div>
+          <div className="col-1 text-center">
+            <p>=</p>
+            <p>=</p>
+            <p className="pt-2">=</p>
+            <p className="pt-1">=</p>
+            <p className="pt-1">=</p>
+            <p className="pt-2">=</p>
+            <p className="pt-2">=</p>
+          </div>
+          <div className="col-6">
+            <p>10.100.000</p>
+            <p>10.100.000</p>
+            <p className="pt-2">10.100.000</p>
+            <div className="d-flex gap-2 align-items-center mb-2">
+              <p className="mb-0">10.100.000 + </p>
+
+              <input
+                className={`form-control ${inputStatuses.input28 ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.input28 && !inputStatuses.input28 ? 'border-danger bg-danger-subtle' : ''}`}
+                type="text"
+                placeholder="..."
+                style={{ textAlign: 'center', width: '124px' }}
+                value={inputValues.input28}
+                onChange={e => handleChange('input28', e)}
+              />
+
+              <p className="d-inline-block mb-0 fst-italic text-muted" style={{ textAlign: 'center', fontSize: '12px' }}>
+                kedua ruas dijumlah dengan hasil <br />
+                perkalian 5 dengan 1.500.000
+              </p>
+            </div>
+            <div className="d-flex gap-2 align-items-center mb-2">
+              <input
+                className={`form-control ${inputStatuses.input29 ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.input29 && !inputStatuses.input29 ? 'border-danger bg-danger-subtle' : ''}`}
+                type="text"
+                placeholder="..."
+                style={{ textAlign: 'center', width: '124px' }}
+                value={inputValues.input29}
+                onChange={e => handleChange('input29', e)}
+              />
+
+              <p className="d-inline-block mb-0 fst-italic text-muted" style={{ textAlign: 'center', fontSize: '12px' }}>
+                10.100.000 ditambah dengan <br />
+                hasil operasi sebelumnya
+              </p>
+            </div>
+            <div className="d-flex gap-2 align-items-center mb-2">
+              <input
+                className={`form-control ${inputStatuses.input30 ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.input30 && !inputStatuses.input30 ? 'border-danger bg-danger-subtle' : ''}`}
+                type="text"
+                placeholder="..."
+                style={{ textAlign: 'center', width: '124px' }}
+                value={inputValues.input30}
+                onChange={e => handleChange('input30', e)}
+              />
+              <span>/ 11</span>
+
+              <p className="d-inline-block mb-0 fst-italic text-muted" style={{ textAlign: 'center', fontSize: '12px' }}>
+                kedua ruas dibagi dengan 11
+              </p>
+            </div>
+            <div className="d-flex gap-2 align-items-center mb-2">
+              <input
+                className={`form-control ${inputStatuses.input31 ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.input31 && !inputStatuses.input31 ? 'border-danger bg-danger-subtle' : ''}`}
+                type="text"
+                placeholder="..."
+                style={{ textAlign: 'center', width: '124px' }}
+                value={inputValues.input31}
+                onChange={e => handleChange('input31', e)}
+              />
+
+              <p className="d-inline-block mb-0 fst-italic text-muted" style={{ textAlign: 'center', fontSize: '12px' }}>
+                didapatkan nilai variabel y
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className={`${isBlurred4 ? 'blur' : ''}`}>
+        <p>5. Setelah kita mengetahui besar nilai variabel y, kita dapat mensubstitusikannya ke dalam persamaan (5), (6) atau (7) untuk mengetahui besar nilai variabel z. Misalnya substitusi ke persamaan (5)</p>
+        <p>
+          Persamaan (5) <br />
+          2y - z = 1.500.000
+        </p>
+        <p>sehingga, </p>
+        <div className="row">
+          <div className="col-5 text-end">
+            <p>2y - z</p>
+            <div className="d-flex align-items-center justify-content-end mb-2">
+              <p className="d-inline-block mb-0 me-2 fst-italic text-muted" style={{ textAlign: 'center', fontSize: '12px' }}>
+                masukkan nilai variabel y
+              </p>
+
+              <span>2(</span>
+              <input
+                className={`form-control ${inputStatuses.input32 ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.input32 && !inputStatuses.input32 ? 'border-danger bg-danger-subtle' : ''}`}
+                type="text"
+                placeholder="...................................."
+                style={{ textAlign: 'center', width: '124px' }}
+                value={inputValues.input32}
+                onChange={e => handleChange('input32', e)}
+              />
+              <span>)</span>
+
+              <p className="mb-0 ms-2">- z</p>
+            </div>
+            <div className="d-flex gap-2 align-items-center justify-content-end">
+              <p className="d-inline-block mb-0 fst-italic text-muted" style={{ textAlign: 'center', fontSize: '12px' }}>
+                hasil perkalian 2 dengan <br />
+                nilai variabel y
+              </p>
+
+              <input
+                className={`form-control ${inputStatuses.input33 ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.input33 && !inputStatuses.input33 ? 'border-danger bg-danger-subtle' : ''}`}
+                type="text"
+                placeholder="..."
+                style={{ textAlign: 'center', width: '124px' }}
+                value={inputValues.input33}
+                onChange={e => handleChange('input33', e)}
+              />
+
+              <p className="mb-0">-z</p>
+            </div>
+            <p className="pt-2">-z</p>
+            <p className="pt-1">-z</p>
+            <p className="pt-1">z</p>
+          </div>
+          <div className="col-1 text-center">
+            <p>=</p>
+            <p className="pt-2">=</p>
+            <p className="">=</p>
+            <p className="pt-2">=</p>
+            <p className="pt-1">=</p>
+            <p className="pt-1">=</p>
+          </div>
+          <div className="col-6">
+            <p>1.500.000</p>
+            <p className="pt-2">1.500.000</p>
+            <p className="">1.500.000</p>
+            <div className="d-flex gap-2 align-items-center mb-2">
+              <p className="mb-0">1.500.000 - </p>
+
+              <input
+                className={`form-control ${inputStatuses.input34 ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.input34 && !inputStatuses.input34 ? 'border-danger bg-danger-subtle' : ''}`}
+                type="text"
+                placeholder="..."
+                style={{ textAlign: 'center', width: '124px' }}
+                value={inputValues.input34}
+                onChange={e => handleChange('input34', e)}
+              />
+
+              <p className="d-inline-block mb-0 fst-italic text-muted" style={{ textAlign: 'center', fontSize: '12px' }}>
+                kedua ruas dikurangi dengan hasil <br />
+                perkalian 2 dengan nilai variabel y
+              </p>
+            </div>
+            <div className="d-flex gap-2 align-items-center mb-2">
+              <input
+                className={`form-control ${inputStatuses.input35 ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.input35 && !inputStatuses.input35 ? 'border-danger bg-danger-subtle' : ''}`}
+                type="text"
+                placeholder="..."
+                style={{ textAlign: 'center', width: '124px' }}
+                value={inputValues.input35}
+                onChange={e => handleChange('input35', e)}
+              />
+            </div>
+            <div className="d-flex gap-2 align-items-center">
+              <input
+                className={`form-control ${inputStatuses.input36 ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.input36 && !inputStatuses.input36 ? 'border-danger bg-danger-subtle' : ''}`}
+                type="text"
+                placeholder="..."
+                style={{ textAlign: 'center', width: '124px' }}
+                value={inputValues.input36}
+                onChange={e => handleChange('input36', e)}
+              />
+
+              <p className="d-inline-block mb-0 fst-italic text-muted" style={{ textAlign: 'center', fontSize: '12px' }}>
+                kedua ruas dibagi dengan -1
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className={`${isBlurred5 ? 'blur' : ''}`}>
+        <p>
+          6. Dari langkah-langkah di atas, kita telah mengetahui besar nilai variabel y dan z. Untuk mengetahui besar nilai variabel x, langkah terakhir adalah menyubstitusikan nilai variabel y dan z ke persamaan (1), (2), atau (3).
+          Misalnya kita akan substitusi ke persamaan (2)
+        </p>
+        <p>
+          Persamaan (2) <br />
+          5x + 5y + 5z = 24.000.000
+        </p>
+        <p>sehingga,</p>
+        <div className="row">
+          <div className="col-5 text-end">
+            <p>5x + 5y + 5z</p>
+            <p>5x + 5(1.600.000) + 5(1.700.000)</p>
+            <p>5x + 8.000.000 + 8.500.000</p>
+            <p>5x + 16.500.000</p>
+            <p>5x</p>
+            <p className="pt-1">5x</p>
+            <p className="pt-1">x</p>
+          </div>
+          <div className="col-1 text-center">
+            <p>=</p>
+            <p>=</p>
+            <p>=</p>
+            <p>=</p>
+            <p>=</p>
+            <p className="pt-1">=</p>
+            <p className="pt-1">=</p>
+          </div>
+          <div className="col-6">
+            <p>24.000.000</p>
+            <p>24.000.000</p>
+            <p>24.000.000</p>
+            <p>24.000.000</p>
+            <p>24.000.000 - 16.500.000</p>
+            <div className="d-flex gap-2 align-items-center mb-2">
+              <input
+                className={`form-control ${inputStatuses.input37 ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.input37 && !inputStatuses.input37 ? 'border-danger bg-danger-subtle' : ''}`}
+                type="text"
+                placeholder="..."
+                style={{ textAlign: 'center', width: '124px' }}
+                value={inputValues.input37}
+                onChange={e => handleChange('input37', e)}
+              />
+
+              <p className="d-inline-block mb-0 fst-italic text-muted" style={{ textAlign: 'center', fontSize: '12px' }}>
+                hasil dari 24.000.000 dikurangi <br />
+                dengan 16.500.000
+              </p>
+            </div>
+            <div className="d-flex gap-2 align-items-center mb-2">
+              <input
+                className={`form-control ${inputStatuses.input38 ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.input38 && !inputStatuses.input38 ? 'border-danger bg-danger-subtle' : ''}`}
+                type="text"
+                placeholder="..."
+                style={{ textAlign: 'center', width: '124px' }}
+                value={inputValues.input38}
+                onChange={e => handleChange('input38', e)}
+              />
+
+              <p className="d-inline-block mb-0 fst-italic text-muted" style={{ textAlign: 'center', fontSize: '12px' }}>
+                kedua ruas dibagi dengan 5
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className={`${isBlurred6 ? 'blur' : ''}`}>
+        <p>Dari seluruh langkah yang telah kita kerjakan tersebut, kita telah mengetahui besar nilai variabel x = 1.500.000, nilai variabel y = 1.600.000 dan nilai variabel z = 1.700.000.</p>
+        <p>
+          Kita ingat kembali bahwa: <br />
+          • variabel x mewakili harga satu gulung kain warna putih <br />
+          • variabel y mewakili harga satu gulung kain warna abu-abu <br />• variabel z mewakili harga satu gulung kain warna cokelat
+        </p>
+        <p>Jadi, harga satu gulung kain warna putih adalah Rp1.500.000, harga satu gulung kain warna abu-abu adalah Rp1.600.000, dan harga satu gulung kain warna cokelat adalah Rp1.700.000.</p>
+        <p>
+          <b> Bagaimana? Lebih mudah menggunakan metode eliminasi atau substitusi?</b> <br />
+          Jika kalian ingin menggunakan cara yang lebih praktis atau cepat, kalian dapat menggunakan kedua metode tersebut secara bersamaan. Coba perhatikan alternatif penyelesaian berikut ini!
+        </p>
+
+        <div className="d-flex justify-content-center py-4">
+          <NextButton link="/materi/metode-penyelesaian-spltv/campuran" />
+        </div>
       </div>
     </Main>
   );
