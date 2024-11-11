@@ -1,8 +1,91 @@
 import NextButton from '../../components/buttons/NextButton';
 import Main from '../../components/layouts/Main';
 import Tips from '../../components/Tips';
+import { useEffect, useState } from 'react';
 
 export default function PenggunaanSPLTV() {
+  const [inputValues, setInputValues] = useState({
+    input61: '',
+    input62: '',
+    input63: '',
+    input64: '',
+  });
+  const [inputStatuses, setInputStatuses] = useState({
+    input61: false,
+    input62: false,
+    input63: false,
+    input64: false,
+  });
+  const [isBlurred, setIsBlurred] = useState(true); // Status untuk kelas blur
+  const [isBlurred2, setIsBlurred2] = useState(true);
+  const [isBlurred3, setIsBlurred3] = useState(true);
+  const [isBlurred4, setIsBlurred4] = useState(true);
+
+  // Efek untuk memuat status dan nilai dari localStorage ketika komponen pertama kali dimuat
+  useEffect(() => {
+    const savedStatus = JSON.parse(localStorage.getItem('inputStatuses'));
+    if (savedStatus) {
+      setInputValues(savedStatus.values);
+      setInputStatuses(savedStatus.statuses);
+      // Tentukan apakah kelas blur harus dihapus berdasarkan status validasi
+      const allValid = savedStatus.statuses.input61;
+      setIsBlurred(!allValid);
+      const allValid2 = savedStatus.statuses.input62;
+      setIsBlurred2(!allValid2);
+      const allValid3 = savedStatus.statuses.input63;
+      setIsBlurred3(!allValid3);
+      const allValid4 = savedStatus.statuses.input64;
+      setIsBlurred4(!allValid4);
+    }
+  }, []);
+
+  // Fungsi untuk menangani perubahan pada input
+  const handleChange = (inputName, event) => {
+    const value = event.target.value;
+    let isValid = false;
+
+    // Tentukan validasi berdasarkan nama input
+    if (inputName === 'input61' && value.replace(/\.|\s/g, '') == '9') {
+      isValid = true;
+    } else if (inputName === 'input62' && value.replace(/\.|\s/g, '') == '189') {
+      isValid = true;
+    } else if (inputName === 'input63' && value.replace(/\.|\s/g, '') == '3') {
+      isValid = true;
+    } else if (inputName === 'input64' && value.replace(/\.|\s/g, '') == '5') {
+      isValid = true;
+    }
+
+    // Update state untuk value dan status validasi input tertentu
+    const updatedValues = {
+      ...inputValues,
+      [inputName]: value,
+    };
+    const updatedStatuses = {
+      ...inputStatuses,
+      [inputName]: isValid,
+    };
+
+    setInputValues(updatedValues);
+    setInputStatuses(updatedStatuses);
+
+    // Simpan ke localStorage secara real-time
+    const updatedStatus = {
+      values: updatedValues,
+      statuses: updatedStatuses,
+    };
+    localStorage.setItem('inputStatuses', JSON.stringify(updatedStatus));
+
+    // Periksa apakah semua input sudah valid
+    const allValid = updatedStatus.statuses.input61;
+    setIsBlurred(!allValid); // Hapus kelas blur jika semua input valid
+    const allValid2 = updatedStatus.statuses.input62;
+    setIsBlurred2(!allValid2);
+    const allValid3 = updatedStatus.statuses.input63;
+    setIsBlurred3(!allValid3);
+    const allValid4 = updatedStatus.statuses.input64;
+    setIsBlurred4(!allValid4);
+  };
+
   return (
     <Main>
       <h3 className="fw-bold pb-5 my-3">
@@ -69,104 +152,140 @@ export default function PenggunaanSPLTV() {
       <div className="d-inline-block mb-2">
         <div className="d-flex gap-2 align-items-center">
           <p className="mb-0 ps-4 ms-3">z =</p>
-          <input type="text" className="form-control" placeholder="..." style={{ width: '48px', textAlign: 'center' }} />
+          <input
+            type="text"
+            className={`form-control ${inputStatuses.input61 ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.input61 && !inputStatuses.input61 ? 'border-danger bg-danger-subtle' : ''}`}
+            placeholder="..."
+            style={{ width: '48px', textAlign: 'center' }}
+            value={inputValues.input61}
+            onChange={e => handleChange('input61', e)}
+          />
           <p className="mb-0 ">............(4)</p>
         </div>
         <Tips>kedua ruas dibagi dengan 2</Tips>
       </div>
-      <p>Eliminasi variabel x pada persamaan (1) dan (3)</p>
-      <div className="row justify-content-center">
-        <div className="col-2">
-          <p>x + y + z = 16</p>
-          <p>79x - 11y - 20z = 13</p>
-        </div>
-        <div className="col-1 text-center">
-          <p>| ×11 |</p>
-          <p>| ×1 |</p>
-        </div>
-        <div className="col-6">
-          <p>11x + 11y + 11z = 176</p>
-          <p className="d-inline-block mb-1 pb-3 border-bottom border-black tambah position-relative pe-5">79x - 11y - 20z = 13</p>
-          <div className="d-flex gap-2 align-items-center">
+      <div className={`${isBlurred ? 'blur' : ''}`}>
+        <p>Eliminasi variabel x pada persamaan (1) dan (3)</p>
+        <div className="row justify-content-center">
+          <div className="col-2">
+            <p>x + y + z = 16</p>
+            <p>79x - 11y - 20z = 13</p>
+          </div>
+          <div className="col-1 text-center">
+            <p>| ×11 |</p>
+            <p>| ×1 |</p>
+          </div>
+          <div className="col-6">
+            <p>11x + 11y + 11z = 176</p>
+            <p className="d-inline-block mb-1 pb-3 border-bottom border-black tambah position-relative pe-5">79x - 11y - 20z = 13</p>
             <div className="d-flex gap-2 align-items-center">
-              <p className="mb-0 ps-4 ms-3">90x - 9z =</p>
-              <input type="text" className="form-control" placeholder="..." style={{ width: '64px', textAlign: 'center' }} />
-              <p className="mb-0 ">............(5)</p>
+              <div className="d-flex gap-2 align-items-center">
+                <p className="mb-0 ps-4 ms-3">90x - 9z =</p>
+                <input
+                  type="text"
+                  className={`form-control ${inputStatuses.input62 ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.input62 && !inputStatuses.input62 ? 'border-danger bg-danger-subtle' : ''}`}
+                  placeholder="..."
+                  style={{ width: '64px', textAlign: 'center' }}
+                  value={inputValues.input62}
+                  onChange={e => handleChange('input62', e)}
+                />
+                <p className="mb-0 ">............(5)</p>
+              </div>
+              <Tips>hasil operasi pada ruas kanan</Tips>
             </div>
-            <Tips>hasil operasi pada ruas kanan</Tips>
           </div>
         </div>
       </div>
-      <p>Substitusikan nilai variabel z atau persamaan (4) ke persamaan (5), sehingga</p>
-      <div className="row justify-content-center">
-        <div className="col-2 text-end">
-          <p>90x - 9z</p>
-          <p>90x - 9(9)</p>
-          <p>90x - 81</p>
-          <p>90x</p>
-          <p>90x</p>
-          <p className="pt-2">x</p>
-          <p className="pt-2">x</p>
-        </div>
-        <div className="col-1 text-center">
-          <p>=</p>
-          <p>=</p>
-          <p>=</p>
-          <p>=</p>
-          <p>=</p>
-          <p className="pt-2">=</p>
-          <p className="pt-2">=</p>
-        </div>
-        <div className="col-3">
-          <p>189</p>
-          <p>189</p>
-          <p>189</p>
-          <p>189 - 81</p>
-          <p>270</p>
-          <p className="mb-0 d-inline-block border-bottom border-black">270</p>
-          <p className="mb-0">&nbsp;&nbsp;90</p>
-          <div className="d-inline-block mb-2">
-            <div className="d-flex gap-2 align-items-center">
-              <input type="text" className="form-control" placeholder="..." style={{ width: '64px', textAlign: 'center' }} />
-              <p className="mb-0 ">............(6)</p>
+      <div className={`${isBlurred2 ? 'blur' : ''}`}>
+        <p>Substitusikan nilai variabel z atau persamaan (4) ke persamaan (5), sehingga</p>
+        <div className="row justify-content-center">
+          <div className="col-2 text-end">
+            <p>90x - 9z</p>
+            <p>90x - 9(9)</p>
+            <p>90x - 81</p>
+            <p>90x</p>
+            <p>90x</p>
+            <p className="pt-2">x</p>
+            <p className="pt-2">x</p>
+          </div>
+          <div className="col-1 text-center">
+            <p>=</p>
+            <p>=</p>
+            <p>=</p>
+            <p>=</p>
+            <p>=</p>
+            <p className="pt-2">=</p>
+            <p className="pt-2">=</p>
+          </div>
+          <div className="col-3">
+            <p>189</p>
+            <p>189</p>
+            <p>189</p>
+            <p>189 - 81</p>
+            <p>270</p>
+            <p className="mb-0 d-inline-block border-bottom border-black">270</p>
+            <p className="mb-0">&nbsp;&nbsp;90</p>
+            <div className="d-inline-block mb-2">
+              <div className="d-flex gap-2 align-items-center">
+                <input
+                  type="text"
+                  className={`form-control ${inputStatuses.input63 ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.input63 && !inputStatuses.input63 ? 'border-danger bg-danger-subtle' : ''}`}
+                  placeholder="..."
+                  style={{ width: '64px', textAlign: 'center' }}
+                  value={inputValues.input63}
+                  onChange={e => handleChange('input63', e)}
+                />
+                <p className="mb-0 ">............(6)</p>
+              </div>
+              <Tips>hasil operasi pada ruas kanan</Tips>
             </div>
-            <Tips>hasil operasi pada ruas kanan</Tips>
           </div>
         </div>
       </div>
-      <p>Setelah kita mengetahui nilai variabel x dan z, kita dapat mensubstitusikannya ke salah satu persamaan (1), (2), atau (3) untuk mengetahui nilai variabel y. Di sini kita substitusikan ke persamaan (1), maka</p>
-      <div className="row justify-content-center">
-        <div className="col-2 text-end">
-          <p>x + y + z</p>
-          <p>3 + y + 9</p>
-          <p>31 + y</p>
-          <p>y</p>
-          <p className="pt-2">y</p>
-        </div>
-        <div className="col-1 text-center">
-          <p>=</p>
-          <p>=</p>
-          <p>=</p>
-          <p>=</p>
-          <p className="pt-2">=</p>
-        </div>
-        <div className="col-3">
-          <p>16</p>
-          <p>16</p>
-          <p>16</p>
-          <p>16 - 11</p>
-          <div className="d-inline-block mb-2">
-            <div className="d-flex gap-2 align-items-center">
-              <input type="text" className="form-control" placeholder="..." style={{ width: '64px', textAlign: 'center' }} />
+      <div className={`${isBlurred3 ? 'blur' : ''}`}>
+        <p>Setelah kita mengetahui nilai variabel x dan z, kita dapat mensubstitusikannya ke salah satu persamaan (1), (2), atau (3) untuk mengetahui nilai variabel y. Di sini kita substitusikan ke persamaan (1), maka</p>
+        <div className="row justify-content-center">
+          <div className="col-2 text-end">
+            <p>x + y + z</p>
+            <p>3 + y + 9</p>
+            <p>31 + y</p>
+            <p>y</p>
+            <p className="pt-2">y</p>
+          </div>
+          <div className="col-1 text-center">
+            <p>=</p>
+            <p>=</p>
+            <p>=</p>
+            <p>=</p>
+            <p className="pt-2">=</p>
+          </div>
+          <div className="col-3">
+            <p>16</p>
+            <p>16</p>
+            <p>16</p>
+            <p>16 - 11</p>
+            <div className="d-inline-block mb-2">
+              <div className="d-flex gap-2 align-items-center">
+                <input
+                  type="text"
+                  className={`form-control ${inputStatuses.input64 ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.input64 && !inputStatuses.input64 ? 'border-danger bg-danger-subtle' : ''}`}
+                  placeholder="..."
+                  style={{ width: '64px', textAlign: 'center' }}
+                  value={inputValues.input64}
+                  onChange={e => handleChange('input64', e)}
+                />
+              </div>
+              <Tips>hasil operasi pada ruas kanan</Tips>
             </div>
-            <Tips>hasil operasi pada ruas kanan</Tips>
           </div>
         </div>
       </div>
-      <p>Setelah kita menyelesaikan langkah-langkah tersebut, kita telah mengetahui nilai variabel x=3,y=4, dan z=9. Jadi, bilangan tersebut adalah 349.</p>
+      <div className={`${isBlurred4 ? 'blur' : ''}`}>
+        <p>Setelah kita menyelesaikan langkah-langkah tersebut, kita telah mengetahui nilai variabel x=3,y=4, dan z=9. Jadi, bilangan tersebut adalah 349.</p>
 
-      <div className="d-flex justify-content-center py-4">
-        <NextButton link="/materi/penggunaan-spltv-2" />
+        <div className="d-flex justify-content-center py-4">
+          <NextButton link="/materi/penggunaan-spltv-2" />
+        </div>
       </div>
     </Main>
   );
