@@ -1,7 +1,19 @@
+import { useEffect } from 'react';
 import NextButton from '../../components/buttons/NextButton';
 import Main from '../../components/layouts/Main';
 
 export default function PengantarSPLTV() {
+  useEffect(() => {
+    const sessionData = JSON.parse(localStorage.getItem('sessionData'));
+
+    if (sessionData?.PengantarSPLTV) return;
+    const newSessionData = {
+      ...sessionData,
+      PengantarSPLTV: true,
+    };
+    localStorage.setItem('sessionData', JSON.stringify(newSessionData));
+  }, []);
+
   return (
     <Main>
       <h3 className="fw-bold pb-5 my-3">Pengantar SPLTV</h3>
