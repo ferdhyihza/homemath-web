@@ -28,10 +28,10 @@ export default function BentukUmumSPLTV() {
   };
 
   useEffect(() => {
-    if (isNextButtonSectionFocus && nextButtonSection.current) {
+    const sessionData = JSON.parse(localStorage.getItem('sessionData'));
+    if (isNextButtonSectionFocus && nextButtonSection.current && !sessionData.BentukUmumSPLTV) {
       nextButtonSection.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
       setIsNextButtonSectionFocus(false); // reset ke false setelah autoscroll
-      const sessionData = JSON.parse(localStorage.getItem('sessionData'));
       const newSessionData = {
         ...sessionData,
         BentukUmumSPLTV: true,
