@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import ModalBenarButton from '../../components/buttons/ModalBenarButton';
 import ModalSalahButton from '../../components/buttons/ModalSalahButton';
 import NextButton from '../../components/buttons/NextButton';
@@ -10,6 +10,9 @@ export default function BentukUmumSPLTV() {
   const [removeBlurNextButton, setRemoveBlurNextButton] = useState(false);
   const [isModalBenarOpen, setIsModalBenarOpen] = useState(false);
 
+  const nextButtonSection = useRef(null);
+  const [isNextButtonSectionFocus, setIsNextButtonSectionFocus] = useState(false);
+
   const handleButtonClick = () => {
     const buttonStates = JSON.parse(localStorage.getItem('buttonStatesTrue')) || {};
     const trueButtonsCount = ['button31', 'button33', 'button37'].filter(buttonId => buttonStates[buttonId]).length;
@@ -18,14 +21,25 @@ export default function BentukUmumSPLTV() {
 
     if (shouldRemoveBlurNextButton) {
       setRemoveBlurNextButton(true);
+      setIsNextButtonSectionFocus(true);
       localStorage.removeItem('buttonStatesFalse');
     }
     if (shouldOpenModalBenar) setIsModalBenarOpen(true);
   };
 
   useEffect(() => {
+    if (isNextButtonSectionFocus && nextButtonSection.current) {
+      nextButtonSection.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      setIsNextButtonSectionFocus(false); // reset ke false setelah autoscroll
+      const sessionData = JSON.parse(localStorage.getItem('sessionData'));
+      const newSessionData = {
+        ...sessionData,
+        BentukUmumSPLTV: true,
+      };
+      localStorage.setItem('sessionData', JSON.stringify(newSessionData));
+    }
     handleButtonClick(); // Check condition on component mount
-  }, []);
+  }, [isNextButtonSectionFocus]);
 
   return (
     <Main>
@@ -122,7 +136,7 @@ export default function BentukUmumSPLTV() {
         <b>Konstanta</b> merupakan nilai tetap yang tidak diikuti oleh variabel di belakangnya
       </ModalSalah>
 
-      <div className={`d-flex justify-content-center py-4 ${removeBlurNextButton ? '' : 'blur'}`}>
+      <div ref={nextButtonSection} className={`d-flex justify-content-center py-4 ${removeBlurNextButton ? '' : 'blur'}`}>
         <NextButton link="/materi/bentuk-umum-spltv-2" />
       </div>
     </Main>

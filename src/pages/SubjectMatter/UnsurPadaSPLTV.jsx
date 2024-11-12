@@ -16,9 +16,11 @@ export default function UnsurPadaSPLTV() {
 
   const konstantaSection = useRef(null);
   const koefisienSection = useRef(null);
+  const nextButtonSection = useRef(null);
 
   const [isKonstantaSectionFocus, setIsKonstantaSectionFocus] = useState(false);
   const [isKoefisienSectionFocus, setIsKoefisienSectionFocus] = useState(false);
+  const [isNextButtonSectionFocus, setIsNextButtonSectionFocus] = useState(false);
 
   const handleButtonClick = () => {
     const buttonStates = JSON.parse(localStorage.getItem('buttonStatesTrue')) || {};
@@ -50,11 +52,9 @@ export default function UnsurPadaSPLTV() {
 
     if (shouldRemoveBlurNextButton) {
       setRemoveBlurNextButton(true);
+      setIsNextButtonSectionFocus(true);
       setIsKonstantaSectionFocus(false);
       setIsKoefisienSectionFocus(false);
-    }
-
-    if (trueButtonsCountKoefisien == 4) {
       localStorage.removeItem('buttonStatesFalse');
     }
   };
@@ -68,8 +68,23 @@ export default function UnsurPadaSPLTV() {
       koefisienSection.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
       setIsKoefisienSectionFocus(false); // reset ke false setelah autoscroll
     }
+
+    const sessionData = JSON.parse(localStorage.getItem('sessionData'));
+
+    if (isNextButtonSectionFocus && sessionData?.UnsurPadaSPLTV) {
+      return;
+    } else {
+      if (isNextButtonSectionFocus && nextButtonSection.current) {
+        nextButtonSection.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        const newSessionData = {
+          ...sessionData,
+          UnsurPadaSPLTV: true,
+        };
+        localStorage.setItem('sessionData', JSON.stringify(newSessionData));
+      }
+    }
     handleButtonClick(); // Check condition on component mount
-  }, [isKonstantaSectionFocus, isKoefisienSectionFocus]);
+  }, [isKonstantaSectionFocus, isKoefisienSectionFocus, isNextButtonSectionFocus]);
 
   return (
     <Main>
@@ -264,7 +279,7 @@ export default function UnsurPadaSPLTV() {
       </ModalSalah>
       {isModalBenarKoefisienOpen && <ModalBenar jenis="Koefisien">Yuk lanjut ke pembelajaran selanjutnya...</ModalBenar>}
 
-      <div className={`d-flex justify-content-center py-4 ${removeBlurNextButton ? '' : 'blur'}`}>
+      <div ref={nextButtonSection} className={`d-flex justify-content-center py-4 ${removeBlurNextButton ? '' : 'blur'}`}>
         <NextButton link="/materi/bentuk-umum-spltv" />
       </div>
     </Main>

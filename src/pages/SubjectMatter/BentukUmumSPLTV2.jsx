@@ -192,8 +192,8 @@ export default function BentukUmumSPLTV2() {
         </p>
       </div>
       <div className={`${isBlurred ? 'blur' : ''}`}>
-        <p ref={section}>
-          Selanjutnya, kita dapat menentukan besaran koefisien dan konstanta untuk melengkapi persamaan tersebut. <br />
+        <p ref={section}>Selanjutnya, kita dapat menentukan besaran koefisien dan konstanta untuk melengkapi persamaan tersebut.</p>
+        <p>
           Konveksi Roshima menghabiskan Rp20.700.000 untuk membeli: <b>(20.700.000 merupakan konstanta) </b> <br />• 4 gulung kain warna putih <b>(4 merupakan koefisien)</b> <br />• 6 gulung kain warna abu-abu <b>(6 merupakan koefisien)</b>
           <br />• 3 gulung kain warna cokelat <b>(3 merupakan koefisien)</b> <br />
           Sedangkan SM Bordir menghabiskan Rp24.000.000 untuk membeli: <b>(24.000.000 merupakan konstanta)</b> <br />• 5 gulung kain warna putih <b>(5 merupakan koefisien)</b> <br />• 5 gulung kain warna abu-abu{' '}
