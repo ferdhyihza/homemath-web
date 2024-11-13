@@ -7,7 +7,7 @@ export default function ModalAlertTesFormatif() {
             <div className="bg-blue-subtle p-2 rounded-4">
               <img src="../../icon/icon-salah.png" alt="icon salah" className="py-3" />
               <h5 className="fw-bold mb-2">Belum bisa diakses</h5>
-              <p className="">Selesaikan rangkaian sesi materi terlebih dahulu!</p>
+              <p className="">Selesaikan seluruh rangkaian sesi materi terlebih dahulu!</p>
             </div>
           </div>
           <div className="d-flex justify-content-center bg-lightblue rounded-bottom-4">

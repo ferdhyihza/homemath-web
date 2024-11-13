@@ -3,6 +3,7 @@ import { useLocation } from 'react-router-dom';
 import Quotes from './Quotes';
 import ScrollToTop from '../ScrollToTop';
 import { useMemo } from 'react';
+import ModalAlertTesFormatif from '../modals/ModalAlertTesFormatif';
 
 export default function Main(props) {
   const location = useLocation();
@@ -25,6 +26,7 @@ export default function Main(props) {
         <div className="pt-4">{props.children}</div>
         {memoizedQuotes}
       </div>
+      <ModalAlertTesFormatif />
     </>
   );
 }

@@ -63,7 +63,7 @@ export default function SubjectMatter() {
           )}
         </li>
       </SubjectMatterCard>
-      <SubjectMatterCard number="02" title="Metode Penyelesaian SPLTV" link="metode-penyelesaian-spltv">
+      <SubjectMatterCard number="02" title="Metode Penyelesaian SPLTV" link="metode-penyelesaian-spltv" className={isBentukUmumSPLTV2Done ? '' : 'disabled text-secondary'}>
         <li>
           {isBentukUmumSPLTVDone && isBentukUmumSPLTV2Done ? (
             <>
@@ -105,7 +105,7 @@ export default function SubjectMatter() {
           )}
         </li>
       </SubjectMatterCard>
-      <SubjectMatterCard number="03" title="Penggunaan SPLTV pada Kehidupan Sehari-hari" link="penggunaan-spltv">
+      <SubjectMatterCard number="03" title="Penggunaan SPLTV pada Kehidupan Sehari-hari" link="penggunaan-spltv" className={isMetodePenyelesaianCampuranDone ? '' : 'disabled text-secondary'}>
         <li>
           {isMetodePenyelesaianCampuranDone ? (
             <>
@@ -127,8 +127,8 @@ export default function SubjectMatter() {
           </SubjectMatterCard>
         </div>
         <div className="col">
-          <SubjectMatterCard title="Tes Formatif" link="">
-            <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti, odit!</li>
+          <SubjectMatterCard title="Tes Formatif" link="/tes-formatif" className={isPenggunaanSPLTV2Done ? '' : 'disabled text-secondary'}>
+            <li>Kerjakan tes berikut sebagai evaluasi pemahamanmu terhadap SPLTV</li>
           </SubjectMatterCard>
         </div>
       </div>

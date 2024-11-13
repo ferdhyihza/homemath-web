@@ -7,6 +7,9 @@ export default function NavbarContent() {
   const isLatsolPage = location.pathname.includes('/latihan-soal/');
   const isTesFormatifPage = location.pathname.includes('/tes-formatif');
 
+  const sessionData = JSON.parse(localStorage.getItem('sessionData') || '{}');
+  const isDoTest = sessionData?.PenggunaanSPLTV2;
+
   return (
     <>
       <div className="row w-100">
@@ -80,9 +83,15 @@ export default function NavbarContent() {
               </Link>
             </li>
             <li className="nav-item d-flex">
-              <Link to="/tes-formatif" className="nav-link text-light fs-5">
-                <img src="../../icon/icon-tes-formatif.png" alt="icon-tes-formatif" className="me-2" /> Tes Formatif
-              </Link>
+              {isDoTest ? (
+                <Link to="/tes-formatif" className="nav-link text-light fs-5">
+                  <img src="../../icon/icon-tes-formatif.png" alt="icon-tes-formatif" className="me-2" /> Tes Formatif
+                </Link>
+              ) : (
+                <a type="button" className={`nav-link text-light fs-5`} data-bs-toggle="modal" data-bs-target={`#modalAlert`}>
+                  <img src="../icon/icon-tes-formatif.png" alt="icon-tes-formatif" className="me-1" /> Tes Formatif
+                </a>
+              )}
             </li>
           </ul>
         </div>

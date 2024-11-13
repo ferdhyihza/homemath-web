@@ -3,7 +3,6 @@ import NextButton from '../components/buttons/NextButton';
 import '../styles/Home.css';
 import Main from '../components/layouts/Main';
 import Footer from '../components/layouts/Footer';
-import ModalAlertTesFormatif from '../components/modals/ModalAlertTesFormatif';
 
 export default function Home() {
   const sessionData = JSON.parse(localStorage.getItem('sessionData') || '{}');
@@ -61,7 +60,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <ModalAlertTesFormatif />
       <Footer />
     </Main>
   );
