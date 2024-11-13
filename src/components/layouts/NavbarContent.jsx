@@ -12,7 +12,7 @@ export default function NavbarContent() {
 
   return (
     <>
-      <div className="row w-100">
+      <div className="row w-100 align-items-center">
         <div className="col-4">
           {/* Toggler */}
           <button className="btn px-3 bg-darkblue" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions" aria-label="Toggle navigation">
@@ -22,7 +22,7 @@ export default function NavbarContent() {
         </div>
         <div className="col-4 text-center">
           {/* Brand */}
-          <h4 className=" fw-bold" id="navbar-title">
+          <h4 className="text-center fw-bold" id="navbar-title">
             HOMEMATH
           </h4>
         </div>
