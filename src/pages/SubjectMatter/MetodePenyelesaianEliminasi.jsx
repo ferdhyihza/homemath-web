@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import NextButton from '../../components/buttons/NextButton';
 import Main from '../../components/layouts/Main';
 import Tips from '../../components/Tips';
@@ -32,6 +32,10 @@ export default function MetodePenyelesaianEliminasi() {
   const [isBlurred2, setIsBlurred2] = useState(true);
   const [isBlurred3, setIsBlurred3] = useState(true);
   const [isBlurred4, setIsBlurred4] = useState(true);
+  const section = useRef(null);
+  const section2 = useRef(null);
+  const section3 = useRef(null);
+  const section4 = useRef(null);
 
   // Efek untuk memuat status dan nilai dari localStorage ketika komponen pertama kali dimuat
   useEffect(() => {
@@ -49,7 +53,30 @@ export default function MetodePenyelesaianEliminasi() {
       const allValid4 = savedStatus.statuses.input13 && savedStatus.statuses.input14 && savedStatus.statuses.input15 && savedStatus.statuses.input16 && savedStatus.statuses.input17;
       setIsBlurred4(!allValid4);
     }
-  }, []);
+
+    const sessionData = JSON.parse(localStorage.getItem('sessionData'));
+    if (!isBlurred && !isBlurred2 && !isBlurred3 && !isBlurred4 && sessionData?.MetodePenyelesaianEliminasi) {
+      return;
+    } else {
+      if (!isBlurred && section.current) {
+        section.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+      if (!isBlurred2 && section2.current) {
+        section2.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+      if (!isBlurred3 && section3.current) {
+        section3.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+      if (!isBlurred4 && section4.current) {
+        section4.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        const newSessionData = {
+          ...sessionData,
+          MetodePenyelesaianEliminasi: true,
+        };
+        localStorage.setItem('sessionData', JSON.stringify(newSessionData));
+      }
+    }
+  }, [isBlurred, isBlurred2, isBlurred3, isBlurred4]);
 
   // Fungsi untuk menangani perubahan pada input
   const handleChange = (inputName, event) => {
@@ -189,7 +216,7 @@ export default function MetodePenyelesaianEliminasi() {
           </p>
         </div>
       </div>
-      <div className={`${isBlurred ? 'blur' : ''}`}>
+      <div ref={section} className={`${isBlurred ? 'blur' : ''}`}>
         <p>3. Dari langkah sebelumnya, kita mendapatkan dua persamaan baru, ya itu persamaan (4) dan (5) yang menyisakan dua variabel y dan z. Kita akan melakukan eliminasi pada kedua persamaan tersebut.</p>
         <div className="row  justify-content-center">
           <div className="col-3">
@@ -203,13 +230,13 @@ export default function MetodePenyelesaianEliminasi() {
           <div className="col-4">
             <p>10y - 5z = 7.500.000</p>
             <p className="border-bottom d-inline-block border-black position-relative tambah pb-3">-10y - 50z = -101.000.000</p>
-            <p className="ps-4">-55z = -108.500.000</p>
+            <p className="ps-4">-55z = -93.500.000</p>
             <div className="d-inline-block">
               <p className="ms-4 mb-0 d-inline-block border-bottom border-black position-relative z-samadengan">-55</p>
               <p className="ms-4">-55</p>
             </div>
             <div className="d-inline-block">
-              <p className="ms-4 mb-0 d-inline-block border-bottom border-black position-relative">-108.500.000</p>
+              <p className="ms-4 mb-0 d-inline-block border-bottom border-black position-relative">-93.500.000</p>
               <p className="ms-4 text-center">-55</p>
             </div>
             <div>
@@ -230,7 +257,7 @@ export default function MetodePenyelesaianEliminasi() {
         </div>
       </div>
 
-      <div className={`${isBlurred2 ? 'blur' : ''}`}>
+      <div ref={section2} className={`${isBlurred2 ? 'blur' : ''}`}>
         <p>4. Dari langkah 3 kita mengetahui nilai z. Kemudian kita akan mengeliminasi variabel y, sehingga</p>
         <div className="row  justify-content-center">
           <div className="col-3">
@@ -280,7 +307,7 @@ export default function MetodePenyelesaianEliminasi() {
         </div>
       </div>
 
-      <div className={`${isBlurred3 ? 'blur' : ''}`}>
+      <div ref={section3} className={`${isBlurred3 ? 'blur' : ''}`}>
         <p>5. Setelah kita melakukan eliminasi dan mendapatkan nilai dari variabel z dan y, maka nilai x dapat kita tentukan dari salah satu persamaan, misal persamaan (1), sehingga</p>
         <div className="row">
           <div className="col-4 text-end">
@@ -380,7 +407,7 @@ export default function MetodePenyelesaianEliminasi() {
         </div>
       </div>
 
-      <div className={`${isBlurred4 ? 'blur' : ''}`}>
+      <div ref={section4} className={`${isBlurred4 ? 'blur' : ''}`}>
         <p>Jika teman-teman sudah menyelesaikan langkah-langkah di atas, kita mendapatkan nilai variabel x = 1.500.000, nilai variabel y = 1.600.000, dan nilai variabel z = 1.700.000.</p>
         <p>
           Kita ingat kembali bahwa: <br />

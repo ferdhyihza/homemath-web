@@ -1,7 +1,7 @@
 import NextButton from '../../components/buttons/NextButton';
 import Main from '../../components/layouts/Main';
 import Tips from '../../components/Tips';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 export default function MetodePenyelesaianCampuran() {
   const [inputValues, setInputValues] = useState({
@@ -57,6 +57,11 @@ export default function MetodePenyelesaianCampuran() {
   const [isBlurred3, setIsBlurred3] = useState(true);
   const [isBlurred4, setIsBlurred4] = useState(true);
   const [isBlurred5, setIsBlurred5] = useState(true);
+  const section = useRef(null);
+  const section2 = useRef(null);
+  const section3 = useRef(null);
+  const section4 = useRef(null);
+  const section5 = useRef(null);
 
   // Efek untuk memuat status dan nilai dari localStorage ketika komponen pertama kali dimuat
   useEffect(() => {
@@ -77,7 +82,33 @@ export default function MetodePenyelesaianCampuran() {
       const allValid5 = savedStatus.statuses.input56 && savedStatus.statuses.input57 && savedStatus.statuses.input58 && savedStatus.statuses.input59 && savedStatus.statuses.input60;
       setIsBlurred5(!allValid5);
     }
-  }, []);
+
+    const sessionData = JSON.parse(localStorage.getItem('sessionData'));
+    if (!isBlurred && !isBlurred2 && !isBlurred3 && !isBlurred4 && !isBlurred5 && sessionData?.MetodePenyelesaianCampuran) {
+      return;
+    } else {
+      if (!isBlurred && section.current) {
+        section.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+      if (!isBlurred2 && section2.current) {
+        section2.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+      if (!isBlurred3 && section3.current) {
+        section3.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+      if (!isBlurred4 && section4.current) {
+        section4.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+      if (!isBlurred5 && section5.current) {
+        section5.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        const newSessionData = {
+          ...sessionData,
+          MetodePenyelesaianCampuran: true,
+        };
+        localStorage.setItem('sessionData', JSON.stringify(newSessionData));
+      }
+    }
+  }, [isBlurred, isBlurred2, isBlurred3, isBlurred4, isBlurred5]);
 
   // Fungsi untuk menangani perubahan pada input
   const handleChange = (inputName, event) => {
@@ -107,7 +138,7 @@ export default function MetodePenyelesaianCampuran() {
       isValid = true;
     } else if (inputName === 'input49' && value.replace(/\.|\s/g, '') == '-55z') {
       isValid = true;
-    } else if (inputName === 'input50' && value.replace(/\.|\s/g, '') == '-108500000') {
+    } else if (inputName === 'input50' && value.replace(/\.|\s/g, '') == '-93500000') {
       isValid = true;
     } else if (inputName === 'input51' && value.replace(/\.|\s/g, '') == '1700000') {
       isValid = true;
@@ -260,7 +291,7 @@ export default function MetodePenyelesaianCampuran() {
           </div>
         </div>
       </div>
-      <div className={`${isBlurred ? 'blur' : ''}`}>
+      <div ref={section} className={`${isBlurred ? 'blur' : ''}`}>
         <p>2. Selanjutnya, kita dapat mengulangi langkah tersebut untuk mengeliminasi variabel x pada persamaan (2) dan (3) seperti berikut.</p>
         <div className="row justify-content-center">
           <div className="col-3 text-end">
@@ -303,7 +334,7 @@ export default function MetodePenyelesaianCampuran() {
           </div>
         </div>
       </div>
-      <div className={`${isBlurred2 ? 'blur' : ''}`}>
+      <div ref={section2} className={`${isBlurred2 ? 'blur' : ''}`}>
         <p>3. Dari langkah sebelumnya, kita mendapatkan dua persamaan baru, yaitu persamaan (4) dan (5) yang menyisakan dua variabel y dan z. Kita akan melakukan eliminasi pada kedua persamaan tersebut.</p>
         <div className="row justify-content-center">
           <div className="col-3 text-end">
@@ -409,7 +440,7 @@ export default function MetodePenyelesaianCampuran() {
           </div>
         </div>
       </div>
-      <div className={`${isBlurred3 ? 'blur' : ''}`}>
+      <div ref={section3} className={`${isBlurred3 ? 'blur' : ''}`}>
         <p>4. Kita telah mengetahui besar nilai variabel z. Selanjutnya kita dapat mensubstitusikan nilai tersebut ke persamaan (4) atau (5) untuk mengetahui nilai variabel y.</p>
         <p>Persamaan (4)</p>
         <div className="d-flex align-items-center gap-2 mb-2">
@@ -458,7 +489,7 @@ export default function MetodePenyelesaianCampuran() {
       </div>
 
       <div className={`${isBlurred4 ? 'blur' : ''}`}>
-        <p>Misal akan kita substitusikan ke persamaan (4), maka</p>
+        <p ref={section4}>Misal akan kita substitusikan ke persamaan (4), maka</p>
         <div className="row justify-content-center">
           <div className="col-2 text-end">
             <p>10y - 5z</p>
@@ -514,7 +545,7 @@ export default function MetodePenyelesaianCampuran() {
 
         <p>5. Selanjutnya, kita mensubstitusikan lagi nilai variabel y dan z yang sudah diketahui ke persamaan (1), (2), atau (3). Misalnya ke persamaan (2), sehingga</p>
         <div className="row justify-content-center">
-          <div className="col-4 text-end">
+          <div className="col-5 text-end">
             <p>5x + 5y + 5z</p>
             <div className="d-flex justify-content-end align-items-center gap-2 mb-2">
               <p className="mb-0">5x + </p>
@@ -563,7 +594,7 @@ export default function MetodePenyelesaianCampuran() {
             <p className="pt-2">=</p>
             <p className="">=</p>
           </div>
-          <div className="col-5">
+          <div className="col-6">
             <div className="d-flex gap-5">
               <p>24.000.000</p>
               <Tips>persamaan (2)</Tips>
@@ -610,7 +641,7 @@ export default function MetodePenyelesaianCampuran() {
           </div>
         </div>
       </div>
-      <div className={`${isBlurred5 ? 'blur' : ''}`}>
+      <div ref={section5} className={`${isBlurred5 ? 'blur' : ''}`}>
         <p>
           Setelah menyelesaikan langkah tersebut, kita tahu bahwa dengan menggunakan ketiga metode yang sudah kalian coba, mendapatkan hasil yang sama. Yaitu kita mengetahui besar nilai variabel x = 1.500.000, nilai variabel y = 1.600.000
           dan nilai variabel z = 1.700.000.

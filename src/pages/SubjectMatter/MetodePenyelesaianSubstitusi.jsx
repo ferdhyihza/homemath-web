@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import NextButton from '../../components/buttons/NextButton';
 import Main from '../../components/layouts/Main';
 
@@ -55,6 +55,12 @@ export default function MetodePenyelesaianSubstitusi() {
   const [isBlurred4, setIsBlurred4] = useState(true);
   const [isBlurred5, setIsBlurred5] = useState(true);
   const [isBlurred6, setIsBlurred6] = useState(true);
+  const section = useRef(null);
+  const section2 = useRef(null);
+  const section3 = useRef(null);
+  const section4 = useRef(null);
+  const section5 = useRef(null);
+  const section6 = useRef(null);
 
   // Efek untuk memuat status dan nilai dari localStorage ketika komponen pertama kali dimuat
   useEffect(() => {
@@ -76,7 +82,36 @@ export default function MetodePenyelesaianSubstitusi() {
       const allValid6 = savedStatus.statuses.input37 && savedStatus.statuses.input38;
       setIsBlurred6(!allValid6);
     }
-  }, []);
+
+    const sessionData = JSON.parse(localStorage.getItem('sessionData'));
+    if (!isBlurred && !isBlurred2 && !isBlurred3 && !isBlurred4 && !isBlurred5 && !isBlurred6 && sessionData?.MetodePenyelesaianSubstitusi) {
+      return;
+    } else {
+      if (!isBlurred && section.current) {
+        section.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+      if (!isBlurred2 && section2.current) {
+        section2.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+      if (!isBlurred3 && section3.current) {
+        section3.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+      if (!isBlurred4 && section4.current) {
+        section4.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+      if (!isBlurred5 && section5.current) {
+        section5.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+      if (!isBlurred6 && section6.current) {
+        section6.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        const newSessionData = {
+          ...sessionData,
+          MetodePenyelesaianSubstitusi: true,
+        };
+        localStorage.setItem('sessionData', JSON.stringify(newSessionData));
+      }
+    }
+  }, [isBlurred, isBlurred2, isBlurred3, isBlurred4, isBlurred5, isBlurred6]);
 
   // Fungsi untuk menangani perubahan pada input
   const handleChange = (inputName, event) => {
@@ -274,7 +309,7 @@ export default function MetodePenyelesaianSubstitusi() {
           </p>
         </div>
       </div>
-      <div className={`${isBlurred ? 'blur' : ''}`}>
+      <div ref={section} className={`${isBlurred ? 'blur' : ''}`}>
         <p>
           <i className="text-muted">(substitusi persamaan (4) ke persamaan (3))</i>
         </p>
@@ -344,7 +379,7 @@ export default function MetodePenyelesaianSubstitusi() {
         </div>
       </div>
 
-      <div className={`${isBlurred2 ? 'blur' : ''}`}>
+      <div ref={section2} className={`${isBlurred2 ? 'blur' : ''}`}>
         <p>
           3. Dari langkah sebelumnya, kita mendapatkan persamaan (5) dan (6). Selanjutnya, yang perlu kita lakukan adalah mengubah salah satu persamaan tersebut menjadi sebuah fungsi. Misalnya kita akan mengubah persamaan (5) ke dalam
           fungsi y. Sehingga
@@ -407,7 +442,7 @@ export default function MetodePenyelesaianSubstitusi() {
           </div>
         </div>
       </div>
-      <div className={`${isBlurred3 ? 'blur' : ''}`}>
+      <div ref={section3} className={`${isBlurred3 ? 'blur' : ''}`}>
         <p>4. Selanjutnya, kita dapat menyubtitusikan fungsi y atau persamaan (7) ke dalam persamaan (6)</p>
         <p>
           Persamaan (6) <br />
@@ -517,7 +552,7 @@ export default function MetodePenyelesaianSubstitusi() {
         </div>
       </div>
 
-      <div className={`${isBlurred4 ? 'blur' : ''}`}>
+      <div ref={section4} className={`${isBlurred4 ? 'blur' : ''}`}>
         <p>5. Setelah kita mengetahui besar nilai variabel y, kita dapat mensubstitusikannya ke dalam persamaan (5), (6) atau (7) untuk mengetahui besar nilai variabel z. Misalnya substitusi ke persamaan (5)</p>
         <p>
           Persamaan (5) <br />
@@ -623,7 +658,7 @@ export default function MetodePenyelesaianSubstitusi() {
         </div>
       </div>
 
-      <div className={`${isBlurred5 ? 'blur' : ''}`}>
+      <div ref={section5} className={`${isBlurred5 ? 'blur' : ''}`}>
         <p>
           6. Dari langkah-langkah di atas, kita telah mengetahui besar nilai variabel y dan z. Untuk mengetahui besar nilai variabel x, langkah terakhir adalah menyubstitusikan nilai variabel y dan z ke persamaan (1), (2), atau (3).
           Misalnya kita akan substitusi ke persamaan (2)
@@ -691,7 +726,7 @@ export default function MetodePenyelesaianSubstitusi() {
         </div>
       </div>
 
-      <div className={`${isBlurred6 ? 'blur' : ''}`}>
+      <div ref={section6} className={`${isBlurred6 ? 'blur' : ''}`}>
         <p>Dari seluruh langkah yang telah kita kerjakan tersebut, kita telah mengetahui besar nilai variabel x = 1.500.000, nilai variabel y = 1.600.000 dan nilai variabel z = 1.700.000.</p>
         <p>
           Kita ingat kembali bahwa: <br />

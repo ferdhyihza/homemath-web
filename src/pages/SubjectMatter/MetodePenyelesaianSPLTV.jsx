@@ -1,7 +1,19 @@
+import { useEffect } from 'react';
 import NextButton from '../../components/buttons/NextButton';
 import Main from '../../components/layouts/Main';
 
 export default function MetodePenyelesaianSPLTV() {
+  useEffect(() => {
+    const sessionData = JSON.parse(localStorage.getItem('sessionData'));
+
+    if (sessionData?.MetodePenyelesaianSPLTV) return;
+    const newSessionData = {
+      ...sessionData,
+      MetodePenyelesaianSPLTV: true,
+    };
+    localStorage.setItem('sessionData', JSON.stringify(newSessionData));
+  }, []);
+
   return (
     <Main>
       <h3 className="fw-bold pb-5 my-3">
