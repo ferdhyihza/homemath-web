@@ -3,8 +3,11 @@ import NextButton from '../components/buttons/NextButton';
 import '../styles/Home.css';
 import Main from '../components/layouts/Main';
 import Footer from '../components/layouts/Footer';
+import ModalAlertTesFormatif from '../components/modals/ModalAlertTesFormatif';
 
 export default function Home() {
+  const sessionData = JSON.parse(localStorage.getItem('sessionData') || '{}');
+  const isDoTest = sessionData?.PenggunaanSPLTV2;
   return (
     <Main>
       <section className=" bg-darkblue rounded-4" id="hero">
@@ -46,12 +49,19 @@ export default function Home() {
             <Link to="/latihan-soal" className="col rounded-1 mx-3 menu d-flex justify-content-center align-items-center">
               <img src="../icon/icon-latihan-soal.png" alt="icon-latihan-soal" className="me-1" /> Latihan Soal
             </Link>
-            <Link to="/tes-formatif" className="col rounded-1 mx-3 menu d-flex justify-content-center align-items-center">
-              <img src="../icon/icon-tes-formatif.png" alt="icon-tes-formatif" className="me-1" /> Tes Formatif
-            </Link>
+            {isDoTest ? (
+              <Link to="/tes-formatif" className="col rounded-1 mx-3 menu d-flex justify-content-center align-items-center">
+                <img src="../icon/icon-tes-formatif.png" alt="icon-tes-formatif" className="me-1" /> Tes Formatif
+              </Link>
+            ) : (
+              <a type="button" className={` col rounded-1 mx-3 menu d-flex justify-content-center align-items-center`} data-bs-toggle="modal" data-bs-target={`#modalAlert`}>
+                <img src="../icon/icon-tes-formatif.png" alt="icon-tes-formatif" className="me-1" /> Tes Formatif
+              </a>
+            )}
           </div>
         </div>
       </section>
+      <ModalAlertTesFormatif />
       <Footer />
     </Main>
   );
