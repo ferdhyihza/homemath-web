@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import NextButton from '../../components/buttons/NextButton';
 import Main from '../../components/layouts/Main';
 import Tips from '../../components/Tips';
@@ -29,6 +29,11 @@ export default function PenggunaanSPLTV2() {
   const [isBlurred3, setIsBlurred3] = useState(true);
   const [isBlurred4, setIsBlurred4] = useState(true);
   const [isBlurred5, setIsBlurred5] = useState(true);
+  const section = useRef(null);
+  const section2 = useRef(null);
+  const section3 = useRef(null);
+  const section4 = useRef(null);
+  const section5 = useRef(null);
 
   // Efek untuk memuat status dan nilai dari localStorage ketika komponen pertama kali dimuat
   useEffect(() => {
@@ -47,8 +52,34 @@ export default function PenggunaanSPLTV2() {
       setIsBlurred4(!allValid4);
       const allValid5 = savedStatus.statuses.input69 && savedStatus.statuses.input70 && savedStatus.statuses.input71 && savedStatus.statuses.input72;
       setIsBlurred5(!allValid5);
+
+      const sessionData = JSON.parse(localStorage.getItem('sessionData'));
+      if (!isBlurred && !isBlurred2 && !isBlurred3 && !isBlurred4 && !isBlurred5 && sessionData?.PenggunaanSPLTV2) {
+        return;
+      } else {
+        if (!isBlurred && section.current) {
+          section.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+        if (!isBlurred2 && section2.current) {
+          section2.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+        if (!isBlurred3 && section3.current) {
+          section3.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+        if (!isBlurred4 && section4.current) {
+          section4.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+        if (!isBlurred5 && section5.current) {
+          section5.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          const newSessionData = {
+            ...sessionData,
+            PenggunaanSPLTV2: true,
+          };
+          localStorage.setItem('sessionData', JSON.stringify(newSessionData));
+        }
+      }
     }
-  }, []);
+  }, [isBlurred, isBlurred2, isBlurred3, isBlurred4, isBlurred5]);
 
   // Fungsi untuk menangani perubahan pada input
   const handleChange = (inputName, event) => {
@@ -148,7 +179,7 @@ export default function PenggunaanSPLTV2() {
         Berat gelang rose gold = r ½
       </p>
       <div className={isBlurred ? 'blur' : ''}>
-        <p>
+        <p ref={section}>
           <b>Diketahui:</b> <br />
           Jumlah berat seluruh gelang adalah 32 gram, sehingga
         </p>
@@ -207,7 +238,7 @@ export default function PenggunaanSPLTV2() {
           </div>
         </div>
       </div>
-      <div className={isBlurred2 ? 'blur' : ''}>
+      <div ref={section2} className={isBlurred2 ? 'blur' : ''}>
         <p>Eliminasi variabel e pada persamaan (1) dan (3)</p>
         <p>e + s + r = 32</p>
         <p className="d-inline-block mb-1 pb-3 border-bottom border-black kurang position-relative pe-5">e + 2s + r = 40</p>
@@ -226,7 +257,7 @@ export default function PenggunaanSPLTV2() {
         </div>
       </div>
 
-      <div className={isBlurred3 ? 'blur' : ''}>
+      <div ref={section3} className={isBlurred3 ? 'blur' : ''}>
         <p>Substitusi nilai variabel s ke persamaan (4)</p>
         <p>4r - s = 64</p>
         <p>4r - 8 = 64</p>
@@ -246,7 +277,7 @@ export default function PenggunaanSPLTV2() {
         </div>
       </div>
 
-      <div className={isBlurred4 ? 'blur' : ''}>
+      <div ref={section4} className={isBlurred4 ? 'blur' : ''}>
         <p>Kita telah mengetahui nilai variabel s dan r, substitusikan nilai tersebut ke persamaan (1)</p>
         <p>e + s + r = 32</p>
 
@@ -312,7 +343,7 @@ export default function PenggunaanSPLTV2() {
         </div>
       </div>
 
-      <div className={isBlurred5 ? 'blur' : ''}>
+      <div ref={section5} className={isBlurred5 ? 'blur' : ''}>
         <p>Maka, kita telah mengetahu bahwa nilai variabel e=6,s=8, dan r=18. Jadi, berat gelang emas adalah 6 gram, berat gelang silver adalah 8 gram, dan berat gelang rose gold adalah 18 gram.</p>
         <p>
           <b>Bagaimana? Mudah bukan mempelajari SPLTV.</b> Perbanyaklah Latihan untuk memudahkan kalian mengubah suatu persoalan ke dalam bentuk persamaan linear untuk diselesaikan.

@@ -1,7 +1,7 @@
 import NextButton from '../../components/buttons/NextButton';
 import Main from '../../components/layouts/Main';
 import Tips from '../../components/Tips';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 export default function PenggunaanSPLTV() {
   const [inputValues, setInputValues] = useState({
@@ -20,6 +20,10 @@ export default function PenggunaanSPLTV() {
   const [isBlurred2, setIsBlurred2] = useState(true);
   const [isBlurred3, setIsBlurred3] = useState(true);
   const [isBlurred4, setIsBlurred4] = useState(true);
+  const section = useRef(null);
+  const section2 = useRef(null);
+  const section3 = useRef(null);
+  const section4 = useRef(null);
 
   // Efek untuk memuat status dan nilai dari localStorage ketika komponen pertama kali dimuat
   useEffect(() => {
@@ -37,7 +41,30 @@ export default function PenggunaanSPLTV() {
       const allValid4 = savedStatus.statuses.input64;
       setIsBlurred4(!allValid4);
     }
-  }, []);
+
+    const sessionData = JSON.parse(localStorage.getItem('sessionData'));
+    if (!isBlurred && !isBlurred2 && !isBlurred3 && !isBlurred4 && sessionData?.PenggunaanSPLTV) {
+      return;
+    } else {
+      if (!isBlurred && section.current) {
+        section.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+      if (!isBlurred2 && section2.current) {
+        section2.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+      if (!isBlurred3 && section3.current) {
+        section3.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+      if (!isBlurred4 && section4.current) {
+        section4.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        const newSessionData = {
+          ...sessionData,
+          PenggunaanSPLTV: true,
+        };
+        localStorage.setItem('sessionData', JSON.stringify(newSessionData));
+      }
+    }
+  }, [isBlurred, isBlurred2, isBlurred3, isBlurred4]);
 
   // Fungsi untuk menangani perubahan pada input
   const handleChange = (inputName, event) => {
@@ -164,7 +191,7 @@ export default function PenggunaanSPLTV() {
         </div>
         <Tips>kedua ruas dibagi dengan 2</Tips>
       </div>
-      <div className={`${isBlurred ? 'blur' : ''}`}>
+      <div ref={section} className={`${isBlurred ? 'blur' : ''}`}>
         <p>Eliminasi variabel x pada persamaan (1) dan (3)</p>
         <div className="row justify-content-center">
           <div className="col-2">
@@ -196,7 +223,7 @@ export default function PenggunaanSPLTV() {
           </div>
         </div>
       </div>
-      <div className={`${isBlurred2 ? 'blur' : ''}`}>
+      <div ref={section2} className={`${isBlurred2 ? 'blur' : ''}`}>
         <p>Substitusikan nilai variabel z atau persamaan (4) ke persamaan (5), sehingga</p>
         <div className="row justify-content-center">
           <div className="col-2 text-end">
@@ -242,7 +269,7 @@ export default function PenggunaanSPLTV() {
           </div>
         </div>
       </div>
-      <div className={`${isBlurred3 ? 'blur' : ''}`}>
+      <div ref={section3} className={`${isBlurred3 ? 'blur' : ''}`}>
         <p>Setelah kita mengetahui nilai variabel x dan z, kita dapat mensubstitusikannya ke salah satu persamaan (1), (2), atau (3) untuk mengetahui nilai variabel y. Di sini kita substitusikan ke persamaan (1), maka</p>
         <div className="row justify-content-center">
           <div className="col-2 text-end">
@@ -280,7 +307,7 @@ export default function PenggunaanSPLTV() {
           </div>
         </div>
       </div>
-      <div className={`${isBlurred4 ? 'blur' : ''}`}>
+      <div ref={section4} className={`${isBlurred4 ? 'blur' : ''}`}>
         <p>Setelah kita menyelesaikan langkah-langkah tersebut, kita telah mengetahui nilai variabel x=3,y=4, dan z=9. Jadi, bilangan tersebut adalah 349.</p>
 
         <div className="d-flex justify-content-center py-4">
