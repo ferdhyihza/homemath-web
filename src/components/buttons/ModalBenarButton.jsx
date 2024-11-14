@@ -32,7 +32,7 @@ export default function ModalBenarButton({ id, onButtonClick, children, classNam
 
   return (
     <>
-      <button type="button" className={` ${isClicked ? 'bg-success-subtle border-success border disabled' : ''} ${className}`} data-bs-toggle="modal" data-bs-target={`#modalBenar${jenis}`} onClick={handleClick}>
+      <button type="button" className={`m-1 py-2 px-3 ${isClicked ? 'bg-success-subtle border-success border disabled' : ''} ${className}`} data-bs-toggle="modal" data-bs-target={`#modalBenar${jenis}`} onClick={handleClick}>
         {children}
       </button>
     </>

@@ -30,7 +30,7 @@ export default function ModalSalahButton(props) {
 
   return (
     <>
-      <button type="button" className={` ${isClicked ? 'bg-danger-subtle border-danger border disabled' : ''} ${props.className}`} data-bs-toggle="modal" data-bs-target={`#modalSalah${props.jenis}`} onClick={handleClick}>
+      <button type="button" className={` m-1 py-2 px-3 ${isClicked ? 'bg-danger-subtle border-danger border disabled' : ''} ${props.className}`} data-bs-toggle="modal" data-bs-target={`#modalSalah${props.jenis}`} onClick={handleClick}>
         {props.children}
       </button>
     </>

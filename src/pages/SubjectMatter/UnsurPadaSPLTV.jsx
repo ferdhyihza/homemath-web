@@ -114,11 +114,11 @@ export default function UnsurPadaSPLTV() {
         5x + y = 11 &ensp; ...(2) <br />
         Mana saja yang merupakan variabel, konstanta, dan koefisien?
       </p>
-      <div className={`bg-blue-subtle mb-3 rounded-4 p-3 border border-blue border-2 text-center ${removeBlurKonstanta ? 'disabled mx-5' : ''}`}>
-        <p className="bg-darkblue p-2 px-3 rounded-3 d-inline-block fw-semibold mb-0">Mana yang merupakan variabel?</p>
-        <div className="row justify-content-between px-3">
-          <div className="col text-start">
-            <p className="fw-semibold">Persamaan 1</p>
+      <div className={`bg-blue-subtle mb-3 rounded-4 p-2  pb-sm-0 border border-blue border-2 text-center ${removeBlurKonstanta ? 'disabled mx-2 mx-sm-5' : ''}`}>
+        <p className="bg-darkblue p-2 px-3 rounded-3 d-inline-block fw-semibold mb-0 mt-2">Mana yang merupakan variabel?</p>
+        <div className="row justify-content-between px-sm-3 py-4 pt-sm-0 gap-4 gap-sm-0">
+          <div className="col-sm-6 text-sm-start px-0">
+            <p className="fw-semibold m-2">Persamaan 1</p>
             <div className="persamaan">
               <ModalSalahButton id="button1" jenis="Variabel">
                 2
@@ -126,21 +126,21 @@ export default function UnsurPadaSPLTV() {
               <ModalBenarButton onButtonClick={handleButtonClick} id="button2" jenis="Variabel">
                 x
               </ModalBenarButton>
-              <button className="disabled">+</button>
+              <button className="disabled px-1 m-1 py-sm-2 px-sm-3">+</button>
               <ModalSalahButton id="button3" jenis="Variabel">
                 3
               </ModalSalahButton>
               <ModalBenarButton onButtonClick={handleButtonClick} id="button4" jenis="Variabel">
                 y
               </ModalBenarButton>
-              <button className="disabled">=</button>
+              <button className="disabled px-1 m-1 py-sm-2 px-sm-3">=</button>
               <ModalSalahButton id="button5" jenis="Variabel">
                 7
               </ModalSalahButton>
             </div>
           </div>
-          <div className="col text-end">
-            <p className="fw-semibold">Persamaan 2</p>
+          <div className="col-sm-6 text-sm-end px-0">
+            <p className="fw-semibold m-2">Persamaan 2</p>
             <div className="persamaan">
               <ModalSalahButton id="button6" jenis="Variabel">
                 5
@@ -148,14 +148,14 @@ export default function UnsurPadaSPLTV() {
               <ModalBenarButton onButtonClick={handleButtonClick} id="button7" jenis="Variabel">
                 x
               </ModalBenarButton>
-              <button className="disabled">+</button>
+              <button className="disabled px-1 m-1 py-sm-2 px-sm-3">+</button>
               <ModalSalahButton id="button8" jenis="Variabel">
                 1
               </ModalSalahButton>
               <ModalBenarButton onButtonClick={handleButtonClick} id="button9" jenis="Variabel">
                 y
               </ModalBenarButton>
-              <button className="disabled">=</button>
+              <button className="disabled px-1 m-1 py-sm-2 px-sm-3">=</button>
               <ModalSalahButton id="button10" jenis="Variabel">
                 11
               </ModalSalahButton>
@@ -169,11 +169,11 @@ export default function UnsurPadaSPLTV() {
       </ModalSalah>
       {/* {isModalBenarVariabelOpen && <ModalBenar jenis="Variabel">Yuk lanjut ke pembelajaran selanjutnya...</ModalBenar>} */}
 
-      <div ref={konstantaSection} className={`bg-blue-subtle mb-3 rounded-4 p-3 border border-blue border-2 text-center ${removeBlurKonstanta ? '' : 'blur mx-5'} ${removeBlurKoefisien ? 'disabled mx-5' : ''}`}>
-        <p className="bg-darkblue p-2 px-3 rounded-3 d-inline-block fw-semibold mb-0">Mana yang merupakan konstanta?</p>
-        <div className="row justify-content-between px-3">
-          <div className="col text-start">
-            <p className="fw-semibold">Persamaan 1</p>
+      <div ref={konstantaSection} className={`bg-blue-subtle mb-3 rounded-4 p-2  pb-sm-0 border border-blue border-2 text-center ${removeBlurKonstanta ? '' : 'blur mx-4 mx-sm-5'} ${removeBlurKoefisien ? 'disabled mx-2 mx-sm-5' : ''}`}>
+        <p className="bg-darkblue p-2 px-3 rounded-3 d-inline-block fw-semibold mb-0 mt-2">Mana yang merupakan konstanta?</p>
+        <div className="row justify-content-between px-sm-3 py-4 pt-sm-0 gap-4 gap-sm-0">
+          <div className="col-sm-6 text-sm-start px-0">
+            <p className="fw-semibold m-2">Persamaan 1</p>
             <div className="persamaan">
               <ModalSalahButton id="button11" jenis="Konstanta">
                 2
@@ -181,21 +181,21 @@ export default function UnsurPadaSPLTV() {
               <ModalSalahButton id="button12" jenis="Konstanta">
                 x
               </ModalSalahButton>
-              <button className="disabled">+</button>
+              <button className="disabled px-1 m-1 py-sm-2 px-sm-3">+</button>
               <ModalSalahButton id="button13" jenis="Konstanta">
                 3
               </ModalSalahButton>
               <ModalSalahButton id="button14" jenis="Konstanta">
                 y
               </ModalSalahButton>
-              <button className="disabled">=</button>
+              <button className="disabled px-1 m-1 py-sm-2 px-sm-3">=</button>
               <ModalBenarButton onButtonClick={handleButtonClick} id="button15" jenis="Konstanta">
                 7
               </ModalBenarButton>
             </div>
           </div>
-          <div className="col text-end">
-            <p className="fw-semibold">Persamaan 2</p>
+          <div className="col-sm-6 text-sm-end px-0">
+            <p className="fw-semibold m-2">Persamaan 2</p>
             <div className="persamaan">
               <ModalSalahButton id="button16" jenis="Konstanta">
                 5
@@ -203,14 +203,14 @@ export default function UnsurPadaSPLTV() {
               <ModalSalahButton id="button17" jenis="Konstanta">
                 x
               </ModalSalahButton>
-              <button className="disabled">+</button>
+              <button className="disabled px-1 m-1 py-sm-2 px-sm-3">+</button>
               <ModalSalahButton id="button18" jenis="Konstanta">
                 1
               </ModalSalahButton>
               <ModalSalahButton id="button19" jenis="Konstanta">
                 y
               </ModalSalahButton>
-              <button className="disabled">=</button>
+              <button className="disabled px-1 m-1 py-sm-2 px-sm-3">=</button>
               <ModalBenarButton onButtonClick={handleButtonClick} id="button20" jenis="Konstanta">
                 11
               </ModalBenarButton>
@@ -224,11 +224,11 @@ export default function UnsurPadaSPLTV() {
       </ModalSalah>
       {/* {isModalBenarKonstantaOpen && <ModalBenar jenis="Konstanta">Yuk lanjut ke pembelajaran selanjutnya...</ModalBenar>} */}
 
-      <div ref={koefisienSection} className={`bg-blue-subtle mb-3 rounded-4 p-3 border border-blue border-2 text-center ${removeBlurKoefisien ? '' : 'blur mx-5'} ${removeBlurNextButton ? 'disabled mx-5' : ''}`}>
-        <p className="bg-darkblue p-2 px-3 rounded-3 d-inline-block fw-semibold mb-0">Mana yang merupakan koefisien?</p>
-        <div className="row justify-content-between px-3">
-          <div className="col text-start">
-            <p className="fw-semibold">Persamaan 1</p>
+      <div ref={koefisienSection} className={`bg-blue-subtle mb-3 rounded-4 p-2  pb-sm-0 border border-blue border-2 text-center ${removeBlurKoefisien ? '' : 'blur mx-4 mx-sm-5'} ${removeBlurNextButton ? 'disabled mx-2 mx-sm-5' : ''}`}>
+        <p className="bg-darkblue p-2 px-3 rounded-3 d-inline-block fw-semibold mb-0 mt-2">Mana yang merupakan koefisien?</p>
+        <div className="row justify-content-between px-sm-3 py-4 pt-sm-0 gap-4 gap-sm-0">
+          <div className="col-sm-6 text-sm-start px-0">
+            <p className="fw-semibold m-2">Persamaan 1</p>
             <div className="persamaan">
               <ModalBenarButton onButtonClick={handleButtonClick} id="button21" jenis="Koefisien">
                 2
@@ -236,21 +236,21 @@ export default function UnsurPadaSPLTV() {
               <ModalSalahButton id="button22" jenis="Koefisien">
                 x
               </ModalSalahButton>
-              <button className="disabled">+</button>
+              <button className="disabled px-1 m-1 py-sm-2 px-sm-3">+</button>
               <ModalBenarButton onButtonClick={handleButtonClick} id="button23" jenis="Koefisien">
                 3
               </ModalBenarButton>
               <ModalSalahButton id="button24" jenis="Koefisien">
                 y
               </ModalSalahButton>
-              <button className="disabled">=</button>
+              <button className="disabled px-1 m-1 py-sm-2 px-sm-3">=</button>
               <ModalSalahButton id="button25" jenis="Koefisien">
                 7
               </ModalSalahButton>
             </div>
           </div>
-          <div className="col text-end">
-            <p className="fw-semibold">Persamaan 2</p>
+          <div className="col-sm-6 text-sm-end px-0">
+            <p className="fw-semibold m-2">Persamaan 2</p>
             <div className="persamaan">
               <ModalBenarButton onButtonClick={handleButtonClick} id="button26" jenis="Koefisien">
                 5
@@ -258,14 +258,14 @@ export default function UnsurPadaSPLTV() {
               <ModalSalahButton id="button27" jenis="Koefisien">
                 x
               </ModalSalahButton>
-              <button className="disabled">+</button>
+              <button className="disabled px-1 m-1 py-sm-2 px-sm-3">+</button>
               <ModalBenarButton onButtonClick={handleButtonClick} id="button28" jenis="Koefisien">
                 1
               </ModalBenarButton>
               <ModalSalahButton id="button29" jenis="Koefisien">
                 y
               </ModalSalahButton>
-              <button className="disabled">=</button>
+              <button className="disabled px-1 m-1 py-sm-2 px-sm-3">=</button>
               <ModalSalahButton id="button30" jenis="Koefisien">
                 11
               </ModalSalahButton>

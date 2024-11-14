@@ -192,46 +192,43 @@ export default function BentukUmumSPLTV2() {
         </p>
       </div>
       <div className={`${isBlurred ? 'blur' : ''}`}>
-        <div ref={section}>
-          <p>Selanjutnya, kita dapat menentukan besaran koefisien dan konstanta untuk melengkapi persamaan tersebut.</p>
-          <p>
-            Konveksi Roshima menghabiskan Rp20.700.000 untuk membeli: <b>(20.700.000 merupakan konstanta) </b> <br />• 4 gulung kain warna putih <b>(4 merupakan koefisien)</b> <br />• 6 gulung kain warna abu-abu{' '}
-            <b>(6 merupakan koefisien)</b>
-            <br />• 3 gulung kain warna cokelat <b>(3 merupakan koefisien)</b> <br />
-            Sedangkan SM Bordir menghabiskan Rp24.000.000 untuk membeli: <b>(24.000.000 merupakan konstanta)</b> <br />• 5 gulung kain warna putih <b>(5 merupakan koefisien)</b> <br />• 5 gulung kain warna abu-abu{' '}
-            <b>(5 merupakan koefisien)</b> <br />• 5 gulung kain warna cokelat <b>(5 merupakan koefisien)</b> <br />
-            Konveksi ketiga, yaitu Sportees menghabiskan Rp19.700.000 untuk membeli: <b>(19.700.000 merupakan konstanta)</b> <br />• 2 gulung kain warna putih <b>(2 merupakan koefisien)</b> <br />• 3 gulung kain warna abu-abu{' '}
-            <b>(3 merupakan koefisien)</b> <br />• 7 gulung kain warna cokelat <b>(7 merupakan koefisien)</b> <br />
-          </p>
-          <p>
-            Berdasarkan informasi di atas, kita telah mengetahui mana yang merupakan koefisien dan konstanta untuk kita ubah menjadi persamaan linear. Setelah mengetahui variabel dan koefisiennya,
-            <b> yuk ikuti bagaimana menyusunnya menjadi SPLTV yang dapat kita selesaikan dengan kegiatan berikut!</b>
-          </p>
-        </div>
+        <p ref={section}>Selanjutnya, kita dapat menentukan besaran koefisien dan konstanta untuk melengkapi persamaan tersebut.</p>
+        <p>
+          Konveksi Roshima menghabiskan Rp20.700.000 untuk membeli: <b>(20.700.000 merupakan konstanta) </b> <br />• 4 gulung kain warna putih <b>(4 merupakan koefisien)</b> <br />• 6 gulung kain warna abu-abu <b>(6 merupakan koefisien)</b>
+          <br />• 3 gulung kain warna cokelat <b>(3 merupakan koefisien)</b> <br />
+          Sedangkan SM Bordir menghabiskan Rp24.000.000 untuk membeli: <b>(24.000.000 merupakan konstanta)</b> <br />• 5 gulung kain warna putih <b>(5 merupakan koefisien)</b> <br />• 5 gulung kain warna abu-abu{' '}
+          <b>(5 merupakan koefisien)</b> <br />• 5 gulung kain warna cokelat <b>(5 merupakan koefisien)</b> <br />
+          Konveksi ketiga, yaitu Sportees menghabiskan Rp19.700.000 untuk membeli: <b>(19.700.000 merupakan konstanta)</b> <br />• 2 gulung kain warna putih <b>(2 merupakan koefisien)</b> <br />• 3 gulung kain warna abu-abu{' '}
+          <b>(3 merupakan koefisien)</b> <br />• 7 gulung kain warna cokelat <b>(7 merupakan koefisien)</b> <br />
+        </p>
+        <p>
+          Berdasarkan informasi di atas, kita telah mengetahui mana yang merupakan koefisien dan konstanta untuk kita ubah menjadi persamaan linear. Setelah mengetahui variabel dan koefisiennya,
+          <b> yuk ikuti bagaimana menyusunnya menjadi SPLTV yang dapat kita selesaikan dengan kegiatan berikut!</b>
+        </p>
 
         <p className="text-center mt-4 mb-1">Misalkan uang yang dihabiskan oleh konveksi Roshima menjadi persamaan (1), maka</p>
-        <div className="row justify-content-center align-items-center mb-4">
-          <div className="col-3 text-center p-2 border border-2 border-blue rounded-2 fs-5">4x + 6y + 3z</div>
-          <div className="col-1 text-center">
-            <p className="bg-blue-subtle d-inline-block py-1 px-2 rounded-2 mb-0">=</p>
+        <div className="row justify-content-center align-items-center mb-4 gap-1">
+          <div className="col-5 col-sm-3 text-center p-2 border border-2 border-blue rounded-2 ">4x + 6y + 3z</div>
+          <div className="col-1 justify-content-center d-flex justify-content-center p-0">
+            <p className="bg-blue-subtle  text-center py-1 px-2 rounded-2 mb-0">=</p>
           </div>
-          <div className="col-3 text-center p-2 border border-2 border-blue rounded-2 fs-5">20.700.000</div>
+          <div className="col-5 col-sm-3 text-center p-2 border border-2 border-blue rounded-2 ">20.700.000</div>
         </div>
 
         <p className="text-center mt-4 mb-1">Misalkan uang yang dihabiskan oleh konveksi SM Bordir menjadi persamaan (2), maka</p>
-        <div className="row justify-content-center align-items-start mb-2">
-          <div className="col-3 text-center p-2 border border-2 border-blue rounded-2 fs-5">5x + 5y + 5z</div>
-          <div className="col-1 text-center">
-            <p className="bg-blue-subtle d-inline-block py-1 px-2 rounded-2 mb-0 mt-2">=</p>
+        <div className="row justify-content-center align-items-start mb-2 gap-1">
+          <div className="col-5 col-sm-3 text-center p-2 border border-2 border-blue rounded-2 ">5x + 5y + 5z</div>
+          <div className="col-1 justify-content-center d-flex justify-content-center p-0">
+            <p className="bg-blue-subtle  text-center py-1 px-2 rounded-2 mb-0 mt-2">=</p>
           </div>
-          <div className="col-3 px-0">
+          <div className="col-5 col-sm-3 px-0">
             <div
               className={`text-center p-2 border border-2 border-blue rounded-2 ${inputStatuses.input4 ? 'border-success bg-success-subtle disabled' : ''} ${
                 inputValues.input4 && !inputStatuses.input4 ? 'border-danger bg-danger-subtle' : ''
               }`}
             >
               <input
-                className={`border-0 w-100 fs-5 ${inputStatuses.input4 ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.input4 && !inputStatuses.input4 ? 'border-danger bg-danger-subtle' : ''}`}
+                className={`border-0 w-100  ${inputStatuses.input4 ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.input4 && !inputStatuses.input4 ? 'border-danger bg-danger-subtle' : ''}`}
                 type="text"
                 placeholder="..."
                 style={{ textAlign: 'center' }}
@@ -244,27 +241,27 @@ export default function BentukUmumSPLTV2() {
         </div>
 
         <p className="text-center mt-4 mb-1">Misalkan uang yang dihabiskan oleh konveksi SM Bordir menjadi persamaan (3), maka</p>
-        <div className="row justify-content-center align-items-start mb-4">
-          <div className="col-3 px-0 text-center ">
+        <div className="row justify-content-center align-items-start mb-4 gap-1">
+          <div className="col-5 col-sm-3 px-0 text-center ">
             <div
-              className={`d-flex p-2 border border-2 border-blue rounded-2 fs-5 justify-content-center ${inputStatuses.input5 || inputStatuses.input6 ? 'border-success bg-success-subtle' : ''} ${
+              className={`d-flex p-2 border border-2 border-blue rounded-2  justify-content-center ${inputStatuses.input5 || inputStatuses.input6 ? 'border-success bg-success-subtle' : ''} ${
                 (inputValues.input5 && !inputStatuses.input5) || (inputValues.input6 && !inputStatuses.input6) ? 'border-danger bg-danger-subtle' : ''
               } ${inputStatuses.input5 && inputStatuses.input6 ? 'disabled' : ''}`}
             >
               <input
-                className={`border-1 rounded-1 mx-1 fs-5 ${inputStatuses.input5 ? 'border-success bg-success-subtle' : ''} ${inputValues.input5 && !inputStatuses.input5 ? 'border-danger bg-danger-subtle ' : ''}`}
+                className={`border-1 rounded-1 mx-1 px-0  ${inputStatuses.input5 ? 'border-success bg-success-subtle' : ''} ${inputValues.input5 && !inputStatuses.input5 ? 'border-danger bg-danger-subtle ' : ''}`}
                 type="text"
                 placeholder="..."
-                style={{ textAlign: 'center', width: '24px' }}
+                style={{ textAlign: 'center', width: '32px' }}
                 value={inputValues.input5}
                 onChange={e => handleChange('input5', e)}
               />
               <span>x + 3y +</span>
               <input
-                className={`border-1 rounded-1 mx-1 fs-5 ${inputStatuses.input6 ? 'border-success bg-success-subtle' : ''} ${inputValues.input6 && !inputStatuses.input6 ? 'border-danger bg-danger-subtle ' : ''}`}
+                className={`border-1 rounded-1 mx-1 px-0  ${inputStatuses.input6 ? 'border-success bg-success-subtle' : ''} ${inputValues.input6 && !inputStatuses.input6 ? 'border-danger bg-danger-subtle ' : ''}`}
                 type="text"
                 placeholder="..."
-                style={{ textAlign: 'center', width: '24px' }}
+                style={{ textAlign: 'center', width: '32px' }}
                 value={inputValues.input6}
                 onChange={e => handleChange('input6', e)}
               />
@@ -272,17 +269,17 @@ export default function BentukUmumSPLTV2() {
             </div>
             <Tips>isikan koefisien yang diketahui</Tips>
           </div>
-          <div className="col-1 text-center">
-            <p className="bg-blue-subtle d-inline-block py-1 px-2 rounded-2 mb-0 mt-2">=</p>
+          <div className="col-1 justify-content-center d-flex justify-content-center p-0">
+            <p className="bg-blue-subtle  text-center py-1 px-2 rounded-2 mb-0 mt-2">=</p>
           </div>
-          <div className="col-3 px-0">
+          <div className="col-5 col-sm-3 px-0">
             <div
               className={`text-center p-2 border border-2 border-blue rounded-2 ${inputStatuses.input7 ? 'border-success bg-success-subtle disabled' : ''} ${
                 inputValues.input7 && !inputStatuses.input7 ? 'border-danger bg-danger-subtle' : ''
               }`}
             >
               <input
-                className={`border-0 w-100 fs-5 ${inputStatuses.input7 ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.input7 && !inputStatuses.input7 ? 'border-danger bg-danger-subtle' : ''}`}
+                className={`border-0 w-100  ${inputStatuses.input7 ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.input7 && !inputStatuses.input7 ? 'border-danger bg-danger-subtle' : ''}`}
                 type="text"
                 placeholder="..."
                 style={{ textAlign: 'center' }}

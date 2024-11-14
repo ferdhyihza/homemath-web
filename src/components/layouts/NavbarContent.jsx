@@ -12,7 +12,7 @@ export default function NavbarContent() {
 
   return (
     <>
-      <div className="row w-100 align-items-center">
+      <div className="row w-100 align-items-center justify-content-between">
         <div className="col-4">
           {/* Toggler */}
           <button className="btn px-3 bg-darkblue" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions" aria-label="Toggle navigation">
@@ -20,24 +20,24 @@ export default function NavbarContent() {
             <i className="bi bi-chevron-right"></i>
           </button>
         </div>
-        <div className="col-4 text-center">
+        <div className="col-4 px-0 text-center d-flex justify-content-center">
           {/* Brand */}
-          <h4 className="text-center fw-bold" id="navbar-title">
+          <h4 className="text-end text-lg-center fw-bold mb-0" id="navbar-title">
             HOMEMATH
           </h4>
         </div>
-        <div className="col-4 d-flex justify-content-end">
+        <div className="col-4 justify-content-end">
           {/* User */}
           {isMateriPage || isLatsolPage || isTesFormatifPage ? (
             <div className="d-flex flex-column justify-content-center">
-              <h6 className="mb-0 fw-bold text-end">SPLTV</h6>
-              <p className="mb-0 text-end" style={{ fontSize: '14px' }}>
+              <h6 className="mb-0 text-end">SPLTV</h6>
+              <p className="mb-0 d-none d-sm-block text-end" style={{ fontSize: '14px' }}>
                 Sistem Persamaan Linear Tiga Variabel
               </p>
             </div>
           ) : (
-            <div className="d-flex">
-              <img className="me-2" src="/avatar-icon.png" style={{ width: '40px', height: '40px' }} alt="" />
+            <div className="d-flex justify-content-end gap-sm-2">
+              <img className="" src="/avatar-icon.png" style={{ width: '40px', height: '40px' }} alt="" />
               <div className="d-none d-md-flex flex-column justify-content-center">
                 <h6 className="mb-0 fw-bold">Betty Agustina</h6>
                 <p className="mb-0" style={{ fontSize: '14px' }}>

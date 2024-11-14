@@ -72,7 +72,6 @@ export default function SubjectMatter() {
       <h3 className="fw-bold pb-4 my-1">Materi</h3>
       <SubjectMatterCard number="01" title="Pengantar SPLTV" link="pengantar-spltv" progress={progressPengantarSPLTV}>
         <li>
-          {' '}
           <span>
             <Link to="pengantar-spltv">Pengantar SPLTV </Link>
           </span>
@@ -109,14 +108,14 @@ export default function SubjectMatter() {
       </SubjectMatterCard>
       <h3 className="fw-bold py-3">Lainnya</h3>
       <div className="row mb-2">
-        <div className="col-6">
+        <div className="col-sm-6">
           <SubjectMatterCard title="Latihan Soal" link="/latihan-soal">
             <li>Latihan Soal Materi 1</li>
             <li>Latihan Soal Materi 2</li>
             <li>Latihan Soal Materi 3</li>
           </SubjectMatterCard>
         </div>
-        <div className="col-6">
+        <div className="col-sm-6">
           <SubjectMatterCard title="Tes Formatif" link="/tes-formatif" className={isPenggunaanSPLTV2Done ? '' : 'disabled text-secondary'}>
             <li>Kerjakan tes berikut sebagai evaluasi pemahamanmu terhadap SPLTV</li>
           </SubjectMatterCard>

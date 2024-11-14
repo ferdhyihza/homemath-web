@@ -50,7 +50,7 @@ export default function Exercise() {
     <Main>
       <h3 className="fw-bold pb-4 my-1">Latihan Soal</h3>
       <div className="row">
-        <div className="col">
+        <div className="col-sm-6">
           <ExerciseCard className={isUnsurPadaSPLTVDone ? '' : 'disabled text-secondary'} title="Pengantar SPLTV Latihan Soal 1" link="pengantar-spltv/1-unsur-pada-spltv">
             Unsur pada SPLTV: <br />
             Menentukan variabel, koefisien, dan konstanta
@@ -67,7 +67,7 @@ export default function Exercise() {
             Penyelesaian SPLTV dengan Metode Eliminasi
           </ExerciseCard>
         </div>
-        <div className="col">
+        <div className="col-sm-6">
           <ExerciseCard className={isMetodePenyelesaianSubstitusiDone ? '' : 'disabled text-secondary'} title="Metode Penyelesaian SPLTV Latihan Soal 2" link="">
             Penyelesaian SPLTV dengan Metode Substitusi
           </ExerciseCard>

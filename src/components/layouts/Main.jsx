@@ -21,9 +21,10 @@ export default function Main(props) {
           <Navbar />
         </div>
       </div>
-      <div className="main container">
+      <div className="main container pt-4 overflow-x-visible">
         {/* eslint-disable-next-line react/prop-types */}
-        <div className="pt-4">{props.children}</div>
+        {props.children}
+        {/* <div className="pt-4"></div> */}
         {memoizedQuotes}
       </div>
       <ModalAlertTesFormatif />

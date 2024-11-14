@@ -50,11 +50,11 @@ export default function BentukUmumSPLTV() {
         yang tidak dapat diselesaikan dengan persamaan linear satu variabel maupun dua variabel.
       </p>
       <p>Berdasarkan penjelasan di atas, kalian dapat mengetahui bahwa sistem persamaan linear tiga variabel (SPLTV) memiliki bentuk umum sebagai berikut:</p>
-      <div className="bg-darkblue p-4 rounded-4 my-4" style={{ margin: '0 96px' }}>
-        <div className="bg-blue-subtle p-4 rounded-4">
-          <div className="container text-black bg-lightblue rounded-4 text-center p-4">
+      <div className="bg-darkblue p-3 p-sm-4 rounded-4 my-4 mx-sm-5">
+        <div className="bg-blue-subtle p-3 p-sm-4 rounded-4">
+          <div className="container text-black bg-lightblue rounded-4 text-center p-3 p-sm-4">
             <h6 className="fw-bold">Bentuk Umum SPLTV</h6>
-            <p className="mb-0">
+            <p className="mb-0 d-inline-block">
               a<sub>1</sub>x + b<sub>1</sub>y + c<sub>1</sub>z = d<sub>1</sub> <br />
             </p>
             <p className="mb-0">
@@ -73,57 +73,57 @@ export default function BentukUmumSPLTV() {
         Jika melihat dari bentuk umum tersebut, mana saja yang merupakan variabel, koefisien, dan konstanta? <br />
         Coba pilih mana pernyataan berikut yang tepat.
       </p>
-      <div className={`bg-blue-subtle p-4 rounded-4 my-4 ${removeBlurNextButton ? 'disabled' : ''}`} style={{ margin: '0 96px' }}>
-        <div className="container bg-darkblue rounded-4 text-center p-4">
+      <div className={`bg-blue-subtle p-3 p-sm-4 rounded-4 my-4 mx-sm-5 ${removeBlurNextButton ? 'disabled' : ''}`}>
+        <div className="container bg-darkblue rounded-4 text-center p-3 p-sm-4">
           <p className="">Mana saja yang tepat dari pernyataan di bawah ini?</p>
-          <div className="row text-black gap-5 px-5 mb-4">
-            <ModalBenarButton onButtonClick={handleButtonClick} id="button31" className="col bg-lightblue rounded-4 p-2 align-self-center">
-              <h5>x, y, dan z</h5>
-              <p className="mb-0">merupakan variabel</p>
+          <div className="row text-black gap-sm-5 mb-sm-4 justify-content-center">
+            <ModalBenarButton onButtonClick={handleButtonClick} id="button31" className="col-11 col-sm-3 bg-lightblue rounded-4 p-2 align-self-center">
+              <h6 className="fw-bold mb-0">x, y, dan z</h6>
+              <p className="mb-0 fw-light">merupakan variabel</p>
             </ModalBenarButton>
-            <ModalSalahButton id="button32" className="col bg-lightblue rounded-4 p-2 align-self-center">
-              <h5>
+            <ModalSalahButton id="button32" className="col-11 col-sm-3 bg-lightblue rounded-4 p-2 align-self-center">
+              <h6 className="fw-bold mb-0">
                 x, y, d<sub>1</sub>, d<sub>2</sub>
-              </h5>
-              <p className="mb-0">merupakan variabel</p>
+              </h6>
+              <p className="mb-0 fw-light">merupakan variabel</p>
             </ModalSalahButton>
-            <ModalBenarButton onButtonClick={handleButtonClick} id="button33" className="col bg-lightblue rounded-4 p-2 align-self-center">
-              <h5>
+            <ModalBenarButton onButtonClick={handleButtonClick} id="button33" className="col-11 col-sm-3 bg-lightblue rounded-4 p-2 align-self-center">
+              <h6 className="fw-bold mb-0">
                 d<sub>1</sub>, d<sub>2</sub>, d<sub>3</sub>
-              </h5>
-              <p className="mb-0">merupakan konstanta</p>
+              </h6>
+              <p className="mb-0 fw-light">merupakan konstanta</p>
             </ModalBenarButton>
           </div>
-          <div className="row text-black gap-5 px-5 mb-4">
-            <ModalSalahButton id="button34" className="col bg-lightblue rounded-4 p-2 ms-5 align-self-center">
-              <p className="mb-0">terdapat 8 variabel, yaitu</p>
-              <h5>
+          <div className="row text-black gap-sm-5 mb-sm-4 justify-content-center">
+            <ModalSalahButton id="button34" className="col-11 col-sm-4 bg-lightblue rounded-4 p-2 align-self-center">
+              <p className="mb-0 fw-light">terdapat 8 variabel, yaitu</p>
+              <h6 className="fw-bold mb-0">
                 a<sub>1</sub>, b<sub>1</sub>, c<sub>1</sub>, a<sub>2</sub>, b<sub>2</sub>, c<sub>2</sub>, a<sub>3</sub>, b<sub>3</sub>, dan c<sub>3</sub>,
-              </h5>
+              </h6>
             </ModalSalahButton>
-            <ModalSalahButton id="button35" className="col bg-lightblue rounded-4 p-2 me-5 align-self-center">
-              <p className="mb-0">terdapat 3 konstanta, yaitu</p>
-              <h5>x, y, dan z</h5>
+            <ModalSalahButton id="button35" className="col-11 col-sm-4 bg-lightblue rounded-4 p-2  align-self-center">
+              <p className="mb-0 fw-light">terdapat 3 konstanta, yaitu</p>
+              <h6 className="fw-bold mb-0">x, y, dan z</h6>
             </ModalSalahButton>
           </div>
-          <div className="row text-black gap-5 px-5 mb-4">
-            <ModalSalahButton id="button36" className="col bg-lightblue rounded-4 p-2 align-self-center">
-              <h5>
+          <div className="row text-black gap-sm-5 justify-content-center">
+            <ModalSalahButton id="button36" className="col-11 col-sm-3 bg-lightblue rounded-4 p-2 align-self-center">
+              <h6 className="fw-bold mb-0">
                 c<sub>3</sub>, z, a<sub>1</sub>, b<sub>1</sub>
-              </h5>
-              <p className="mb-0">merupakan koefisien</p>
+              </h6>
+              <p className="mb-0 fw-light">merupakan koefisien</p>
             </ModalSalahButton>
-            <ModalBenarButton onButtonClick={handleButtonClick} id="button37" className="col bg-lightblue rounded-4 p-2 align-self-center">
-              <h5>
+            <ModalBenarButton onButtonClick={handleButtonClick} id="button37" className="col-11 col-sm-3 bg-lightblue rounded-4 p-2 align-self-center">
+              <h6 className="fw-bold mb-0">
                 a<sub>1</sub>, b<sub>1</sub>, c<sub>1</sub>, a<sub>2</sub>, b<sub>2</sub>, c<sub>2</sub>, a<sub>3</sub>, b<sub>3</sub>, dan c<sub>3</sub>,
-              </h5>
-              <p className="mb-0">merupakan koefisien</p>
+              </h6>
+              <p className="mb-0 fw-light">merupakan koefisien</p>
             </ModalBenarButton>
-            <ModalSalahButton id="button38" className="col bg-lightblue rounded-4 p-2 align-self-center">
-              <h5>
+            <ModalSalahButton id="button38" className="col-11 col-sm-3 bg-lightblue rounded-4 p-2 align-self-center">
+              <h6 className="fw-bold mb-0">
                 a<sub>2</sub>, b<sub>2</sub>, c<sub>2</sub>
-              </h5>
-              <p className="mb-0">merupakan konstanta</p>
+              </h6>
+              <p className="mb-0 fw-light">merupakan konstanta</p>
             </ModalSalahButton>
           </div>
         </div>

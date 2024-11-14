@@ -17,7 +17,7 @@ export default function MetodePenyelesaianSPLTV() {
   return (
     <Main>
       <h3 className="fw-bold pb-4 my-1">
-        Metode Penyelesaian SPLTV <span className="text-muted fw-medium ms-2 fs-5">Eliminasi, Substitusi, dan Campuran (Eliminasi & Substitusi)</span>
+        Metode Penyelesaian SPLTV <span className="text-muted fw-medium ms-sm-2 fs-5">Eliminasi, Substitusi, dan Campuran (Eliminasi & Substitusi)</span>
       </h3>
       <p className="fw-bold">
         Sudah dapat menyusun soal cerita menjadi bentuk SPLTV? <br />

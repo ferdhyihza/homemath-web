@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="bg-darkblue mt-4 rounded-top-4 p-5">
+    <footer className="bg-darkblue mt-4 rounded-top-4 p-4">
       <div className="d-flex justify-content-between mb-4">
         <h4 className=" fw-bold" href="#" id="navbar-title">
           HOMEMATH
@@ -15,7 +15,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <h6 className="p-3 d-inline-block fw-bold mb-3" style={{ backgroundColor: '#cbddec', color: 'black' }}>
+      <h6 className="p-2 d-inline-block fw-bold mb-3" style={{ backgroundColor: '#cbddec', color: 'black' }}>
         Hubungi kami :
       </h6>
       <p className="fw-light">

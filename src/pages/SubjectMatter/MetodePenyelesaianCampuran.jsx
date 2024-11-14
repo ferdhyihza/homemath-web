@@ -205,7 +205,7 @@ export default function MetodePenyelesaianCampuran() {
   return (
     <Main>
       <h3 className="fw-bold pb-4 my-1">
-        Metode Penyelesaian SPLTV <span className="text-muted fw-medium ms-2 fs-5">Metode Campuran (Eliminasi & Substitusi)</span>
+        Metode Penyelesaian SPLTV <span className="text-muted fw-medium ms-sm-2 fs-5">Metode Campuran (Eliminasi & Substitusi)</span>
       </h3>
       <h5 className="fw-bold">C. Metode Campuran (Eliminasi & Substitusi)</h5>
       <p>

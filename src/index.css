@@ -7,6 +7,11 @@
   padding: 0;
 }
 
+button {
+  text-decoration: none;
+  color: #142237;
+}
+
 a {
   text-decoration: none;
   color: inherit;
@@ -17,6 +22,10 @@ body {
   font-optical-sizing: auto;
   color: #141414;
   user-select: none;
+}
+
+.fs-7 {
+  font-size: smaller;
 }
 
 .bg-darkblue {
@@ -46,8 +55,8 @@ body {
 
 .persamaan button {
   border-radius: 8px;
-  padding: 12px 20px;
-  margin: 4px;
+  /* padding: 12px 20px;
+  margin: 4px; */
   background-color: #f3f6fa;
   border: none;
 }
