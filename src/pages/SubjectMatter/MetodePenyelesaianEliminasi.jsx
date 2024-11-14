@@ -139,7 +139,7 @@ export default function MetodePenyelesaianEliminasi() {
 
   return (
     <Main>
-      <h3 className="fw-bold pb-5 my-3">
+      <h3 className="fw-bold pb-4 my-1">
         Metode Penyelesaian SPLTV <span className="text-muted fw-medium ms-2 fs-5">Metode Eliminasi</span>
       </h3>
       <h5 className="fw-bold">A. Metode Eliminasi</h5>
@@ -192,7 +192,7 @@ export default function MetodePenyelesaianEliminasi() {
               className={`form-control d-inline-block ${inputStatuses.input8 ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.input8 && !inputStatuses.input8 ? 'border-danger bg-danger-subtle' : ''}`}
               type="text"
               placeholder="..."
-              style={{ textAlign: 'center', width: '124px' }}
+              style={{ textAlign: 'center', width: '148px' }}
               value={inputValues.input8}
               onChange={e => handleChange('input8', e)}
             />
@@ -205,7 +205,7 @@ export default function MetodePenyelesaianEliminasi() {
               className={`form-control d-inline-block ms-2 ${inputStatuses.input9 ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.input9 && !inputStatuses.input9 ? 'border-danger bg-danger-subtle' : ''}`}
               type="text"
               placeholder="..."
-              style={{ textAlign: 'center', width: '124px' }}
+              style={{ textAlign: 'center', width: '148px' }}
               value={inputValues.input9}
               onChange={e => handleChange('input9', e)}
             />

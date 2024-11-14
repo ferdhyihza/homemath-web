@@ -48,7 +48,7 @@ export default function Exercise() {
 
   return (
     <Main>
-      <h3 className="fw-bold pb-3">Latihan Soal</h3>
+      <h3 className="fw-bold pb-4 my-1">Latihan Soal</h3>
       <div className="row">
         <div className="col">
           <ExerciseCard className={isUnsurPadaSPLTVDone ? '' : 'disabled text-secondary'} title="Pengantar SPLTV Latihan Soal 1" link="pengantar-spltv/1-unsur-pada-spltv">

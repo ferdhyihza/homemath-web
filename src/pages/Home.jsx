@@ -10,11 +10,10 @@ export default function Home() {
   return (
     <Main>
       <section className=" bg-darkblue rounded-4" id="hero">
-        <div className="row p-5">
-          <div className="col-7 pe-4 d-flex flex-column justify-content-between">
+        <div className="row p-4 justify-content-between">
+          <div className="col-8 pe-4 d-flex flex-column justify-content-between">
             <h1 className="py-3 fw-bold lh-base" id="title">
-              SISTEM PERSAMAAN LINEAR TIGA VARIABEL <br />
-              (SPLTV)
+              SISTEM PERSAMAAN LINEAR TIGA VARIABEL (SPLTV)
             </h1>
             <p className="fw-light rounded-4 p-2" style={{ backgroundColor: '#14141450' }}>
               Ingatkah kalian pada materi program linear atau Sistem Persamaan Linear Dua Variabel yang telah kalian dapatkan pada jenjang SLTP? Pada materi tersebut, kalian telah mengenal variabel, koefisien, dan konstanta.
@@ -26,14 +25,16 @@ export default function Home() {
               Sistem Persamaan Linear Tiga Variabel (SPLTV)
             </p>
           </div>
-          <div className="col-3 p-0 pe-3">
-            <img className="rounded-4 img-fluid w-100 h-100 object-fit-cover" src="hero1.png" alt="" />
-          </div>
-          <div className="col-2 ps-3">
-            <img className="rounded-4 img-fluid w-100 h-100 object-fit-cover" src="hero2.png" alt="" />
+          <div className="col-4 d-flex row">
+            <div className="col-8">
+              <img className="rounded-4 img-fluid w-100 h-100 object-fit-cover" src="hero1.png" alt="" />
+            </div>
+            <div className="col-4">
+              <img className="rounded-4 img-fluid w-100 h-100 object-fit-cover" src="hero2.png" alt="" />
+            </div>
           </div>
         </div>
-        <div className="p-5 pt-0">
+        <div className="px-5 pt-0 py-4">
           <div className="row p-4 menu-wrapper rounded-4 justify-content-around gap-2">
             <div className="col-auto">
               <NextButton link="/peta-konsep" />

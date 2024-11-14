@@ -69,13 +69,32 @@ export default function SubjectMatter() {
 
   return (
     <Main>
-      <h3 className="fw-bold pb-3">Materi</h3>
+      <h3 className="fw-bold pb-4 my-1">Materi</h3>
       <SubjectMatterCard number="01" title="Pengantar SPLTV" link="pengantar-spltv" progress={progressPengantarSPLTV}>
         <li>
-          <Link to="pengantar-spltv">Pengantar SPLTV </Link>
+          {' '}
+          <span>
+            <Link to="pengantar-spltv">Pengantar SPLTV </Link>
+          </span>
         </li>
-        <li>{isPengantarSPLTVDone ? <Link to="unsur-pada-spltv">Unsur pada SPLTV</Link> : <span className="text-secondary fw-light">Unsur pada SPLTV</span>}</li>
-        <li>{isUnsurPadaSPLTVDone ? <Link to="bentuk-umum-spltv">Bentuk Umum SPLTV </Link> : <span className="text-secondary fw-light">Bentuk Umum SPLTV</span>}</li>
+        <li>
+          {isPengantarSPLTVDone ? (
+            <span>
+              <Link to="unsur-pada-spltv">Unsur pada SPLTV</Link>{' '}
+            </span>
+          ) : (
+            <span className="text-secondary fw-light">Unsur pada SPLTV</span>
+          )}
+        </li>
+        <li>
+          {isUnsurPadaSPLTVDone ? (
+            <span>
+              <Link to="bentuk-umum-spltv">Bentuk Umum SPLTV </Link>{' '}
+            </span>
+          ) : (
+            <span className="text-secondary fw-light">Bentuk Umum SPLTV</span>
+          )}
+        </li>
       </SubjectMatterCard>
       <SubjectMatterCard number="02" title="Metode Penyelesaian SPLTV" link="metode-penyelesaian-spltv" progress={progressMetodePenyelesaianSPLTV} className={isBentukUmumSPLTV2Done ? '' : 'disabled text-secondary'}>
         <li>{isBentukUmumSPLTV2Done ? <Link to="metode-penyelesaian-spltv">Macam-macam Metode Penyelesaian SPLTV</Link> : <span className="text-secondary fw-light">Macam-macam Metode Penyelesaian SPLTV</span>}</li>
@@ -89,15 +108,15 @@ export default function SubjectMatter() {
         <li>{isMetodePenyelesaianCampuranDone ? <Link to="penggunaan-spltv">Untuk apa kita mempelajari SPLTV?</Link> : <span className="text-secondary fw-light">Untuk apa kita mempelajari SPLTV?</span>}</li>
       </SubjectMatterCard>
       <h3 className="fw-bold py-3">Lainnya</h3>
-      <div className="row">
-        <div className="col">
+      <div className="row mb-2">
+        <div className="col-6">
           <SubjectMatterCard title="Latihan Soal" link="/latihan-soal">
             <li>Latihan Soal Materi 1</li>
             <li>Latihan Soal Materi 2</li>
             <li>Latihan Soal Materi 3</li>
           </SubjectMatterCard>
         </div>
-        <div className="col">
+        <div className="col-6">
           <SubjectMatterCard title="Tes Formatif" link="/tes-formatif" className={isPenggunaanSPLTV2Done ? '' : 'disabled text-secondary'}>
             <li>Kerjakan tes berikut sebagai evaluasi pemahamanmu terhadap SPLTV</li>
           </SubjectMatterCard>

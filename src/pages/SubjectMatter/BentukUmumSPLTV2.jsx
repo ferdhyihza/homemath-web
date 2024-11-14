@@ -110,7 +110,7 @@ export default function BentukUmumSPLTV2() {
 
   return (
     <Main>
-      <h3 className="fw-bold pb-5 my-3">Bentuk Umum SPLTV</h3>
+      <h3 className="fw-bold pb-4 my-1">Bentuk Umum SPLTV</h3>
       <p className="fw-bold">
         Ingatkah teman-teman pada cerita pada awal pembelajaran yang telah kalian pelajari kali ini? <br />
         Apakah dapat kita selesaikan dengan SPLTV?
@@ -192,19 +192,22 @@ export default function BentukUmumSPLTV2() {
         </p>
       </div>
       <div className={`${isBlurred ? 'blur' : ''}`}>
-        <p ref={section}>Selanjutnya, kita dapat menentukan besaran koefisien dan konstanta untuk melengkapi persamaan tersebut.</p>
-        <p>
-          Konveksi Roshima menghabiskan Rp20.700.000 untuk membeli: <b>(20.700.000 merupakan konstanta) </b> <br />• 4 gulung kain warna putih <b>(4 merupakan koefisien)</b> <br />• 6 gulung kain warna abu-abu <b>(6 merupakan koefisien)</b>
-          <br />• 3 gulung kain warna cokelat <b>(3 merupakan koefisien)</b> <br />
-          Sedangkan SM Bordir menghabiskan Rp24.000.000 untuk membeli: <b>(24.000.000 merupakan konstanta)</b> <br />• 5 gulung kain warna putih <b>(5 merupakan koefisien)</b> <br />• 5 gulung kain warna abu-abu{' '}
-          <b>(5 merupakan koefisien)</b> <br />• 5 gulung kain warna cokelat <b>(5 merupakan koefisien)</b> <br />
-          Konveksi ketiga, yaitu Sportees menghabiskan Rp19.700.000 untuk membeli: <b>(19.700.000 merupakan konstanta)</b> <br />• 2 gulung kain warna putih <b>(2 merupakan koefisien)</b> <br />• 3 gulung kain warna abu-abu{' '}
-          <b>(3 merupakan koefisien)</b> <br />• 7 gulung kain warna cokelat <b>(7 merupakan koefisien)</b> <br />
-        </p>
-        <p>
-          Berdasarkan informasi di atas, kita telah mengetahui mana yang merupakan koefisien dan konstanta untuk kita ubah menjadi persamaan linear. Setelah mengetahui variabel dan koefisiennya,
-          <b> yuk ikuti bagaimana menyusunnya menjadi SPLTV yang dapat kita selesaikan dengan kegiatan berikut!</b>
-        </p>
+        <div ref={section}>
+          <p>Selanjutnya, kita dapat menentukan besaran koefisien dan konstanta untuk melengkapi persamaan tersebut.</p>
+          <p>
+            Konveksi Roshima menghabiskan Rp20.700.000 untuk membeli: <b>(20.700.000 merupakan konstanta) </b> <br />• 4 gulung kain warna putih <b>(4 merupakan koefisien)</b> <br />• 6 gulung kain warna abu-abu{' '}
+            <b>(6 merupakan koefisien)</b>
+            <br />• 3 gulung kain warna cokelat <b>(3 merupakan koefisien)</b> <br />
+            Sedangkan SM Bordir menghabiskan Rp24.000.000 untuk membeli: <b>(24.000.000 merupakan konstanta)</b> <br />• 5 gulung kain warna putih <b>(5 merupakan koefisien)</b> <br />• 5 gulung kain warna abu-abu{' '}
+            <b>(5 merupakan koefisien)</b> <br />• 5 gulung kain warna cokelat <b>(5 merupakan koefisien)</b> <br />
+            Konveksi ketiga, yaitu Sportees menghabiskan Rp19.700.000 untuk membeli: <b>(19.700.000 merupakan konstanta)</b> <br />• 2 gulung kain warna putih <b>(2 merupakan koefisien)</b> <br />• 3 gulung kain warna abu-abu{' '}
+            <b>(3 merupakan koefisien)</b> <br />• 7 gulung kain warna cokelat <b>(7 merupakan koefisien)</b> <br />
+          </p>
+          <p>
+            Berdasarkan informasi di atas, kita telah mengetahui mana yang merupakan koefisien dan konstanta untuk kita ubah menjadi persamaan linear. Setelah mengetahui variabel dan koefisiennya,
+            <b> yuk ikuti bagaimana menyusunnya menjadi SPLTV yang dapat kita selesaikan dengan kegiatan berikut!</b>
+          </p>
+        </div>
 
         <p className="text-center mt-4 mb-1">Misalkan uang yang dihabiskan oleh konveksi Roshima menjadi persamaan (1), maka</p>
         <div className="row justify-content-center align-items-center mb-4">

@@ -16,7 +16,7 @@ export default function MetodePenyelesaianSPLTV() {
 
   return (
     <Main>
-      <h3 className="fw-bold pb-5 my-3">
+      <h3 className="fw-bold pb-4 my-1">
         Metode Penyelesaian SPLTV <span className="text-muted fw-medium ms-2 fs-5">Eliminasi, Substitusi, dan Campuran (Eliminasi & Substitusi)</span>
       </h3>
       <p className="fw-bold">

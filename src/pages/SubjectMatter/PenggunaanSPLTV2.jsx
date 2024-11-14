@@ -140,7 +140,7 @@ export default function PenggunaanSPLTV2() {
 
   return (
     <Main>
-      <h3 className="fw-bold pb-5 my-3">
+      <h3 className="fw-bold pb-4 my-1">
         Penggunaan SPLTV <span className="text-muted fw-medium ms-2 fs-5">Pada Kehidupan Sehari-hari</span>
       </h3>
       <p>

@@ -58,46 +58,46 @@ export default function NavbarContent() {
         </div>
         <div className="offcanvas-body pt-0 ps-5 ms-3">
           <div className="mb-5">
-            <h3 className="fw-bold">HomeMath</h3>
-            <p className="fs-5">Materi Belajar</p>
+            <h4 className="fw-bold">HomeMath</h4>
+            <p className="">Materi Belajar</p>
           </div>
-          <ul className="navbar-nav justify-content-end flex-grow-1 pe-3 gap-2">
+          <ul className="navbar-nav justify-content-end flex-grow-1 pe-3 gap-1">
             <li className="nav-item d-flex">
-              <Link to="/" className="nav-link fw-medium text-light fs-5">
-                <img src="../../icon/icon-beranda.png" alt="icon-beranda" className="me-2" /> Beranda
+              <Link to="/" className="nav-link fw-medium text-light ">
+                <img src="../../icon/icon-beranda.png" width={32} alt="icon-beranda" className="me-2" /> Beranda
               </Link>
             </li>
             <li className="nav-item d-flex">
-              <Link to="/peta-konsep" className="nav-link text-light fs-5">
-                <img src="../../icon/icon-peta-konsep.png" alt="icon-peta-konsep" className="me-2" /> Peta Konsep
+              <Link to="/peta-konsep" className="nav-link text-light ">
+                <img src="../../icon/icon-peta-konsep.png" width={32} alt="icon-peta-konsep" className="me-2" /> Peta Konsep
               </Link>
             </li>
             <li className="nav-item d-flex">
-              <Link to="/materi" className="nav-link text-light fs-5">
-                <img src="../../icon/icon-materi.png" alt="icon-materi" className="me-2" /> Materi
+              <Link to="/materi" className="nav-link text-light ">
+                <img src="../../icon/icon-materi.png" width={32} alt="icon-materi" className="me-2" /> Materi
               </Link>
             </li>
             <li className="nav-item d-flex">
-              <Link to="/latihan-soal" className="nav-link text-light fs-5">
-                <img src="../../icon/icon-latihan-soal.png" alt="icon-latihan-soal" className="me-2" /> Latihan Soal
+              <Link to="/latihan-soal" className="nav-link text-light ">
+                <img src="../../icon/icon-latihan-soal.png" width={32} alt="icon-latihan-soal" className="me-2" /> Latihan Soal
               </Link>
             </li>
             <li className="nav-item d-flex">
               {isDoTest ? (
-                <Link to="/tes-formatif" className="nav-link text-light fs-5">
-                  <img src="../../icon/icon-tes-formatif.png" alt="icon-tes-formatif" className="me-2" /> Tes Formatif
+                <Link to="/tes-formatif" className="nav-link text-light ">
+                  <img src="../../icon/icon-tes-formatif.png" width={32} alt="icon-tes-formatif" className="me-2" /> Tes Formatif
                 </Link>
               ) : (
-                <a type="button" className={`nav-link text-light fs-5`} data-bs-toggle="modal" data-bs-target={`#modalAlert`}>
-                  <img src="../icon/icon-tes-formatif.png" alt="icon-tes-formatif" className="me-1" /> Tes Formatif
+                <a type="button" className={`nav-link text-light `} data-bs-toggle="modal" data-bs-target={`#modalAlert`}>
+                  <img src="../icon/icon-tes-formatif.png" width={32} alt="icon-tes-formatif" className="me-2" /> Tes Formatif
                 </a>
               )}
             </li>
           </ul>
         </div>
         <li className="ps-5 ms-3 pb-5">
-          <Link to="/" className="nav-link fw-medium text-light fs-5">
-            <img src="../../icon/icon-petunjuk.png" alt="icon petunjuk penggunaan" className="me-2" /> Petunjuk Penggunaan
+          <Link to="/" className="nav-link fw-medium text-light ">
+            <img src="../../icon/icon-petunjuk.png" width={32} alt="icon petunjuk penggunaan" className="me-2" /> Petunjuk Penggunaan
           </Link>
         </li>
       </div>

@@ -43,7 +43,7 @@ export default function BentukUmumSPLTV() {
 
   return (
     <Main>
-      <h3 className="fw-bold pb-5 my-3">Bentuk Umum SPLTV</h3>
+      <h3 className="fw-bold pb-4 my-1">Bentuk Umum SPLTV</h3>
       <p>Jika kalian telah mengingat dan memahami unsur-unsur yang terdapat pada sistem persamaan linear, mari kita lanjutkan untuk memhami apa dan bagaimana Sistem Persamaan Linear Tiga Variabel (SPLTV).</p>
       <p>
         Sistem Persamaan Linear Tiga Variabel (SPLTV) merupakan Kumpulan dari tiga persamaan linear yang setiap persamaannya memiliki tiga variabel. SPLTV juga merupakan konsep ilmu matematika yang digunakan untuk menyelesaikan permasalahan

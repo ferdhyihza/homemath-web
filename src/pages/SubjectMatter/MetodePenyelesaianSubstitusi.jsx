@@ -200,7 +200,7 @@ export default function MetodePenyelesaianSubstitusi() {
 
   return (
     <Main>
-      <h3 className="fw-bold pb-5 my-3">
+      <h3 className="fw-bold pb-4 my-1">
         Metode Penyelesaian SPLTV <span className="text-muted fw-medium ms-2 fs-5">Metode Substitusi</span>
       </h3>
       <h5 className="fw-bold">B. Metode Substitusi</h5>
