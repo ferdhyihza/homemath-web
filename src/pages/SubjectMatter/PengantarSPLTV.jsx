@@ -25,18 +25,25 @@ export default function PengantarSPLTV() {
       <p className="text-center mt-2 fst-italic">Ilustrasi pembelian kain di toko oleh beberapa konveksi</p>
       <p>
         Beberapa pengusaha konveksi di daerah Kota Blitar, akan memproduksi baju seragam sekolah pada masa awal tahun ajaran baru. Salah satu toko tekstil terkenal di Kota Blitar menjadi pilihan utama para pengusaha untuk membeli bahan
-        baku. <br />
-        Konveksi Roshima menghabiskan Rp20.700.000 untuk membeli: <br />
-        • 4 gulung kain warna putih <br />
-        • 6 gulung kain warna abu-abu <br />
-        • 3 gulung kain warna cokelat <br />
-        Sedangkan SM Bordir menghabiskan Rp24.000.000 untuk membeli: <br />
-        • 5 gulung kain warna putih <br />
-        • 5 gulung kain warna abu-abu <br />
-        • 5 gulung kain warna cokelat <br />
-        Konveksi ketiga, yaitu Sportees menghabiskan Rp19.700.000 untuk membeli: <br />• 2 gulung kain warna putih <br />
-        • 3 gulung kain warna abu-abu <br />
-        • 7 gulung kain warna cokelat <br />
+        baku.
+      </p>
+      <ul className="list-group mb-2">
+        <li className="list-group-item">
+          Konveksi Roshima menghabiskan Rp20.700.000 untuk membeli: <br />
+          • 4 gulung kain warna putih <br />
+          • 6 gulung kain warna abu-abu <br />• 3 gulung kain warna cokelat
+        </li>
+        <li className="list-group-item">
+          Sedangkan SM Bordir menghabiskan Rp24.000.000 untuk membeli: <br />
+          • 5 gulung kain warna putih <br />
+          • 5 gulung kain warna abu-abu <br />• 5 gulung kain warna cokelat
+        </li>
+        <li className="list-group-item">
+          Konveksi ketiga, yaitu Sportees menghabiskan Rp19.700.000 untuk membeli: <br />• 2 gulung kain warna putih <br />
+          • 3 gulung kain warna abu-abu <br />• 7 gulung kain warna cokelat
+        </li>
+      </ul>
+      <p>
         Di sisi lain, konveksi Berkarya ingin merintis usahanya dengan memulai membeli bahan kain di toko tersebut. Namun, ia hanya memiliki informasi total harga kain dari konveksi Roshima dan SM Bordir. Bagaimana ia akan mengetahui harga
         setiap gulung warna kain?
       </p>

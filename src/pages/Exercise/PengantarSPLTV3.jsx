@@ -119,7 +119,7 @@ export default function PengantarSPLTV3() {
       <p>Berdasarkan informasi tersebut, berapakah nilai rata-rata masing-masing mata pelajaran ketiga siswa tersebut?</p>
       <p>
         <b>Penyelesaian:</b> <br />
-        Di sini kita akan berlatih menentukan variabel terlebih dahulu. Ingat, nilai rata-rata setiap mata pelajaran ketiga siswa tersebut saman, sehingga dari informasi yang disebutkan, kita bisa memisalkan nilai rata-ratanya menjadi
+        Di sini kita akan berlatih menentukan variabel terlebih dahulu. Ingat, nilai rata-rata setiap mata pelajaran ketiga siswa tersebut sama, sehingga dari informasi yang disebutkan, kita bisa memisalkan nilai rata-ratanya menjadi
         variabel.
       </p>
 
@@ -171,15 +171,24 @@ export default function PengantarSPLTV3() {
         <ul className="list-group mb-2">
           <li className="list-group-item">
             2 kali nilai rata-rata mata pelajaran Matematika Ilham dijumlahkan dengan nilai rata-rata mata pelajaran Bahasa Indonesia Ilham kemudian dikurangi dengan nilai rata-rata mata pelajaran Bahasa Inggris Ilham adalah 177 <br />
-            <b>Kalimat tersebut bisa kita ubah menjadi 2x + y - z = 177</b>
+            <b className="d-none d-sm-block">Kalimat tersebut bisa kita ubah menjadi 2x + y - z = 177</b>
+            <b className="d-block d-sm-none">
+              Kalimat tersebut bisa kita ubah menjadi: <br /> 2x + y - z = 177
+            </b>
           </li>
           <li className="list-group-item">
             Nilai rata-rata mata pelajaran Matematika Yaqin dijumlahkan dengan nilai rata-rata mata pelajaran Bahasa Indonesia Yaqin dan dijumlahkan lagi dengan nilai rata-rata mata pelajaran Bahasa Inggris Yaqin adalah 269 <br />
-            <b>Kalimat tersebut bisa kita ubah menjadi x + y + z = 269</b>
+            <b className="d-none d-sm-block">Kalimat tersebut bisa kita ubah menjadi x + y + z = 269</b>
+            <b className="d-block d-sm-none">
+              Kalimat tersebut bisa kita ubah menjadi: <br /> x + y + z = 269
+            </b>
           </li>
           <li className="list-group-item">
             Nilai rata-rata mata pelajaran Matematika Ulay dikurangi dengan nilai rata-rata Bahasa Indonesia Ulay kemudian dijumlahkan dengan nilai rata-rata mata pelajaran Bahasa Inggris adalah 87 <br />
-            <b>Kalimat tersebut bisa kita ubah menjadi x - y + z = 87</b>
+            <b className="d-none d-sm-block">Kalimat tersebut bisa kita ubah menjadi x - y + z = 87</b>
+            <b className="d-block d-sm-none">
+              Kalimat tersebut bisa kita ubah menjadi: <br /> x - y + z = 87
+            </b>
           </li>
         </ul>
 
@@ -229,7 +238,7 @@ export default function PengantarSPLTV3() {
         <div className="row justify-content-center align-items-start mb-4 gap-1">
           <div className="col-5 col-sm-3 px-0 text-center ">
             <div
-              className={`d-flex p-2 border border-2 border-blue rounded-2  justify-content-center ${inputStatuses.input5l || inputStatuses.input6l ? 'border-success bg-success-subtle' : ''} ${
+              className={`d-flex p-2 border border-2 border-blue rounded-2 align-items-center justify-content-center ${inputStatuses.input5l || inputStatuses.input6l ? 'border-success bg-success-subtle' : ''} ${
                 (inputValues.input5l && !inputStatuses.input5l) || (inputValues.input6l && !inputStatuses.input6l) ? 'border-danger bg-danger-subtle' : ''
               } ${inputStatuses.input5l && inputStatuses.input6l ? 'disabled' : ''}`}
             >

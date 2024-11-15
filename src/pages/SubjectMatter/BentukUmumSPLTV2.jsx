@@ -121,18 +121,25 @@ export default function BentukUmumSPLTV2() {
       </p>
       <p>
         Beberapa pengusaha konveksi di daerah Kota Blitar, akan memproduksi baju seragam sekolah pada masa awal tahun ajaran baru. Salah satu toko tekstil terkenal di Kota Blitar menjadi pilihan utama para pengusaha untuk membeli bahan
-        baku. <br />
-        Konveksi Roshima menghabiskan Rp20.700.000 untuk membeli: <br />
-        • 4 gulung kain warna putih <br />
-        • 6 gulung kain warna abu-abu <br />
-        • 3 gulung kain warna cokelat <br />
-        Sedangkan SM Bordir menghabiskan Rp24.000.000 untuk membeli: <br />
-        • 5 gulung kain warna putih <br />
-        • 5 gulung kain warna abu-abu <br />
-        • 5 gulung kain warna cokelat <br />
-        Konveksi ketiga, yaitu Sportees menghabiskan Rp19.700.000 untuk membeli: <br />• 2 gulung kain warna putih <br />
-        • 3 gulung kain warna abu-abu <br />
-        • 7 gulung kain warna cokelat <br />
+        baku.
+      </p>
+      <ul className="list-group mb-2">
+        <li className="list-group-item">
+          Konveksi Roshima menghabiskan Rp20.700.000 untuk membeli: <br />
+          • 4 gulung kain warna putih <br />
+          • 6 gulung kain warna abu-abu <br />• 3 gulung kain warna cokelat
+        </li>
+        <li className="list-group-item">
+          Sedangkan SM Bordir menghabiskan Rp24.000.000 untuk membeli: <br />
+          • 5 gulung kain warna putih <br />
+          • 5 gulung kain warna abu-abu <br />• 5 gulung kain warna cokelat
+        </li>
+        <li className="list-group-item">
+          Konveksi ketiga, yaitu Sportees menghabiskan Rp19.700.000 untuk membeli: <br />• 2 gulung kain warna putih <br />
+          • 3 gulung kain warna abu-abu <br />• 7 gulung kain warna cokelat
+        </li>
+      </ul>
+      <p>
         Di sisi lain, konveksi Berkarya ingin merintis usahanya dengan memulai membeli bahan kain di toko tersebut. Namun, ia hanya memiliki informasi total harga kain dari konveksi Roshima dan SM Bordir. Bagaimana ia akan mengetahui harga
         setiap gulung warna kain?
       </p>
@@ -193,14 +200,74 @@ export default function BentukUmumSPLTV2() {
       </div>
       <div className={`${isBlurred ? 'blur' : ''}`}>
         <p ref={section}>Selanjutnya, kita dapat menentukan besaran koefisien dan konstanta untuk melengkapi persamaan tersebut.</p>
-        <p>
-          Konveksi Roshima menghabiskan Rp20.700.000 untuk membeli: <b>(20.700.000 merupakan konstanta) </b> <br />• 4 gulung kain warna putih <b>(4 merupakan koefisien)</b> <br />• 6 gulung kain warna abu-abu <b>(6 merupakan koefisien)</b>
-          <br />• 3 gulung kain warna cokelat <b>(3 merupakan koefisien)</b> <br />
-          Sedangkan SM Bordir menghabiskan Rp24.000.000 untuk membeli: <b>(24.000.000 merupakan konstanta)</b> <br />• 5 gulung kain warna putih <b>(5 merupakan koefisien)</b> <br />• 5 gulung kain warna abu-abu{' '}
-          <b>(5 merupakan koefisien)</b> <br />• 5 gulung kain warna cokelat <b>(5 merupakan koefisien)</b> <br />
-          Konveksi ketiga, yaitu Sportees menghabiskan Rp19.700.000 untuk membeli: <b>(19.700.000 merupakan konstanta)</b> <br />• 2 gulung kain warna putih <b>(2 merupakan koefisien)</b> <br />• 3 gulung kain warna abu-abu{' '}
-          <b>(3 merupakan koefisien)</b> <br />• 7 gulung kain warna cokelat <b>(7 merupakan koefisien)</b> <br />
-        </p>
+        <ul className="list-group mb-2">
+          <li className="list-group-item">
+            Konveksi Roshima menghabiskan Rp20.700.000 untuk membeli:{' '}
+            <span className="d-inline d-sm-none">
+              <br />
+            </span>
+            <b>(20.700.000 merupakan konstanta) </b>
+            <br />• 4 gulung kain warna putih
+            <span className="d-inline d-sm-none">
+              <br />
+            </span>
+            <b className="ms-2 ps-1 ms-sm-0">(4 merupakan koefisien)</b>
+            <br />• 6 gulung kain warna abu-abu
+            <span className="d-inline d-sm-none">
+              <br />
+            </span>
+            <b className="ms-2 ps-1 ms-sm-0">(6 merupakan koefisien)</b>
+            <br />• 3 gulung kain warna cokelat
+            <span className="d-inline d-sm-none">
+              <br />
+            </span>
+            <b className="ms-2 ps-1 ms-sm-0">(3 merupakan koefisien)</b>
+          </li>
+          <li className="list-group-item">
+            Sedangkan SM Bordir menghabiskan Rp24.000.000 untuk membeli:{' '}
+            <span className="d-inline d-sm-none">
+              <br />
+            </span>
+            <b>(24.000.000 merupakan konstanta)</b>
+            <br />• 5 gulung kain warna putih
+            <span className="d-inline d-sm-none">
+              <br />
+            </span>
+            <b className="ms-2 ps-1 ms-sm-0">(5 merupakan koefisien)</b>
+            <br />• 5 gulung kain warna abu-abu
+            <span className="d-inline d-sm-none">
+              <br />
+            </span>
+            <b className="ms-2 ps-1 ms-sm-0">(5 merupakan koefisien)</b>
+            <br />• 5 gulung kain warna cokelat
+            <span className="d-inline d-sm-none">
+              <br />
+            </span>
+            <b className="ms-2 ps-1 ms-sm-0">(5 merupakan koefisien)</b>
+          </li>
+          <li className="list-group-item">
+            Konveksi ketiga, yaitu Sportees menghabiskan Rp19.700.000 untuk membeli:{' '}
+            <span className="d-inline d-sm-none">
+              <br />
+            </span>
+            <b>(19.700.000 merupakan konstanta)</b>
+            <br />• 2 gulung kain warna putih
+            <span className="d-inline d-sm-none">
+              <br />
+            </span>
+            <b className="ms-2 ps-1 ms-sm-0">(2 merupakan koefisien)</b>
+            <br />• 3 gulung kain warna abu-abu
+            <span className="d-inline d-sm-none">
+              <br />
+            </span>
+            <b className="ms-2 ps-1 ms-sm-0">(3 merupakan koefisien)</b>
+            <br />• 7 gulung kain warna cokelat
+            <span className="d-inline d-sm-none">
+              <br />
+            </span>
+            <b className="ms-2 ps-1 ms-sm-0">(7 merupakan koefisien)</b>
+          </li>
+        </ul>
         <p>
           Berdasarkan informasi di atas, kita telah mengetahui mana yang merupakan koefisien dan konstanta untuk kita ubah menjadi persamaan linear. Setelah mengetahui variabel dan koefisiennya,
           <b> yuk ikuti bagaimana menyusunnya menjadi SPLTV yang dapat kita selesaikan dengan kegiatan berikut!</b>
@@ -244,7 +311,7 @@ export default function BentukUmumSPLTV2() {
         <div className="row justify-content-center align-items-start mb-4 gap-1">
           <div className="col-5 col-sm-3 px-0 text-center ">
             <div
-              className={`d-flex p-2 border border-2 border-blue rounded-2  justify-content-center ${inputStatuses.input5 || inputStatuses.input6 ? 'border-success bg-success-subtle' : ''} ${
+              className={`d-flex p-2 border border-2 border-blue rounded-2 align-items-center justify-content-center ${inputStatuses.input5 || inputStatuses.input6 ? 'border-success bg-success-subtle' : ''} ${
                 (inputValues.input5 && !inputStatuses.input5) || (inputValues.input6 && !inputStatuses.input6) ? 'border-danger bg-danger-subtle' : ''
               } ${inputStatuses.input5 && inputStatuses.input6 ? 'disabled' : ''}`}
             >
