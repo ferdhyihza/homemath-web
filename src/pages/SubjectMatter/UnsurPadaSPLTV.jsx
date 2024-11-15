@@ -107,7 +107,7 @@ export default function UnsurPadaSPLTV() {
         <b>Konstanta</b> <br />
         Konstanta merupakan nilai tetap atau konstan yang tidak diikuti oleh variabel di belakangnya. Pada persamaan 2x+3y=7, angka 7 merupakan konstanta dari persamaan tersebut.
       </p>
-      <p>Untuk membantu kalian mengingat Kembali unsur-unsur di atas, coba lakukan kegiatan berikut ini.</p>
+      <p>Untuk membantu kalian mengingat kembali unsur-unsur di atas, coba lakukan kegiatan berikut ini.</p>
       <p>
         Diberikan persamaan: <br />
         2x + 3y = 7 &ensp; ...(1) <br />

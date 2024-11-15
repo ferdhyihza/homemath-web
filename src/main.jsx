@@ -95,15 +95,15 @@ const router = createBrowserRouter([
   },
   {
     path: '/latihan-soal/pengantar-spltv/1-unsur-pada-spltv',
-    element: <PengantarSPLTV1 />,
+    element: <AuthorizedRoute element={<PengantarSPLTV1 />} requiredKey="UnsurPadaSPLTV" />,
   },
   {
     path: '/latihan-soal/pengantar-spltv/2-bentuk-umum-spltv',
-    element: <PengantarSPLTV2 />,
+    element: <AuthorizedRoute element={<PengantarSPLTV2 />} requiredKey="BentukUmumSPLTV" />,
   },
   {
     path: '/latihan-soal/pengantar-spltv/3-bentuk-umum-spltv',
-    element: <PengantarSPLTV3 />,
+    element: <AuthorizedRoute element={<PengantarSPLTV3 />} requiredKey="BentukUmum2SPLTV" />,
   },
 ]);
 
