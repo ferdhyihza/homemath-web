@@ -222,220 +222,226 @@ export default function MetodePenyelesaianCampuran() {
       </div>
       <p className="fw-bold">Langkah penyelesaian dengan metode campuran:</p>
       <p>1. Langkah pertama, kita akan menggunakan metode eliminasi untuk mengeliminasi salah satu variabel dari salah satu persamaan tersebut. Misalnya variabel x pada persamaan (1) dan (2).</p>
-      <div className="row justify-content-center">
-        <div className="col-3 text-end">
-          <p className="pt-2">4x + 6y + 3z = 20.700.000</p>
-          <p>5x + 5y + 5z = 24.000.000</p>
-        </div>
-        <div className="col-1 text-center">
-          <p className="pt-2">| ×5 |</p>
-          <p className="d-inline-block"> | ×</p>
-          <input
-            className={`form-control d-inline-block me-1 ${inputStatuses.input39 ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.input39 && !inputStatuses.input39 ? 'border-danger bg-danger-subtle' : ''}`}
-            type="text"
-            placeholder="..."
-            style={{ textAlign: 'center', width: '40px' }}
-            value={inputValues.input39}
-            onChange={e => handleChange('input39', e)}
-          />
-          <p className="d-inline-block"> |</p>
-        </div>
-        <div className="col-6">
-          <div className="d-flex align-items-center gap-2 mb-2">
-            <p className="d-inline-block mb-0">20x + 30y + 15z = </p>
+      <div className="overflow-x-auto">
+        <div className="row justify-content-center mx-0" style={{ minWidth: '900px' }}>
+          <div className=" text-end" style={{ width: '250px' }}>
+            <p className="pt-2">4x + 6y + 3z = 20.700.000</p>
+            <p className="pt-2">5x + 5y + 5z = 24.000.000</p>
+          </div>
+          <div className=" text-center px-0" style={{ width: '100px' }}>
+            <p className="pt-2">| ×5 |</p>
+            <p className="d-inline-block"> | ×</p>
             <input
-              className={`form-control d-inline-block ${inputStatuses.input40 ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.input40 && !inputStatuses.input40 ? 'border-danger bg-danger-subtle' : ''}`}
+              className={`form-control d-inline-block me-1 ${inputStatuses.input39 ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.input39 && !inputStatuses.input39 ? 'border-danger bg-danger-subtle' : ''}`}
               type="text"
               placeholder="..."
-              style={{ textAlign: 'center', width: '148px' }}
-              value={inputValues.input40}
-              onChange={e => handleChange('input40', e)}
+              style={{ textAlign: 'center', width: '40px' }}
+              value={inputValues.input39}
+              onChange={e => handleChange('input39', e)}
             />
-            <p className="d-inline-block fst-italic text-muted mb-0" style={{ textAlign: 'center', fontSize: '12px' }}>
-              hasil dari 20.700.000 dikalikan dengan 5
-            </p>
+            <p className="d-inline-block"> |</p>
           </div>
-          <div className="d-flex align-items-center gap-2 mb-2">
-            <div className="border-bottom border-black position-relative kurang pb-3">
-              <p className="d-inline-block mb-0 me-2">20x + 30y + 15z = </p>
+          <div className="" style={{ width: '550px' }}>
+            <div className="d-flex align-items-center gap-2 mb-2">
+              <p className="d-inline-block mb-0">20x + 30y + 15z = </p>
               <input
-                className={`form-control d-inline-block ${inputStatuses.input41 ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.input41 && !inputStatuses.input41 ? 'border-danger bg-danger-subtle' : ''}`}
+                className={`form-control d-inline-block ${inputStatuses.input40 ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.input40 && !inputStatuses.input40 ? 'border-danger bg-danger-subtle' : ''}`}
                 type="text"
                 placeholder="..."
                 style={{ textAlign: 'center', width: '148px' }}
-                value={inputValues.input41}
-                onChange={e => handleChange('input41', e)}
+                value={inputValues.input40}
+                onChange={e => handleChange('input40', e)}
               />
+              <p className="d-inline-block fst-italic text-muted mb-0" style={{ textAlign: 'center', fontSize: '12px' }}>
+                hasil dari 20.700.000 dikalikan dengan 5
+              </p>
             </div>
-            <p className="d-inline-block pb-3 mb-0 fst-italic text-muted" style={{ textAlign: 'center', fontSize: '12px' }}>
-              hasil dari 24.000.000 dikalikan <br /> dengan angka pada operator
-            </p>
-          </div>
-          <div className="ps-4 ms-2 d-flex gap-2 mt-3">
-            <p className="ps-4 pt-1">10y - 5z =</p>
-            <div className="pb-3">
-              <input
-                className={`form-control ${inputStatuses.input42 ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.input42 && !inputStatuses.input42 ? 'border-danger bg-danger-subtle' : ''}`}
-                type="text"
-                placeholder="..."
-                style={{ textAlign: 'center' }}
-                value={inputValues.input42}
-                onChange={e => handleChange('input42', e)}
-              />
-              <Tips>
-                hasil pengurangan konstanta <br />
-                persamaan (1) dengan persamaan (2)
-              </Tips>
+            <div className="d-flex align-items-center gap-2 mb-2">
+              <div className="border-bottom border-black position-relative kurang pb-3">
+                <p className="d-inline-block mb-0 me-2">20x + 30y + 15z = </p>
+                <input
+                  className={`form-control d-inline-block ${inputStatuses.input41 ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.input41 && !inputStatuses.input41 ? 'border-danger bg-danger-subtle' : ''}`}
+                  type="text"
+                  placeholder="..."
+                  style={{ textAlign: 'center', width: '148px' }}
+                  value={inputValues.input41}
+                  onChange={e => handleChange('input41', e)}
+                />
+              </div>
+              <p className="d-inline-block pb-3 mb-0 fst-italic text-muted" style={{ textAlign: 'center', fontSize: '12px' }}>
+                hasil dari 24.000.000 dikalikan <br /> dengan angka pada operator
+              </p>
             </div>
-            <p className=" pt-1">... (4)</p>
+            <div className="ps-4 ms-2 d-flex gap-2 mt-3">
+              <p className="ps-4 pt-1">10y - 5z =</p>
+              <div className="pb-3">
+                <input
+                  className={`form-control ${inputStatuses.input42 ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.input42 && !inputStatuses.input42 ? 'border-danger bg-danger-subtle' : ''}`}
+                  type="text"
+                  placeholder="..."
+                  style={{ textAlign: 'center' }}
+                  value={inputValues.input42}
+                  onChange={e => handleChange('input42', e)}
+                />
+                <Tips>
+                  hasil pengurangan konstanta <br />
+                  persamaan (1) dengan persamaan (2)
+                </Tips>
+              </div>
+              <p className=" pt-1">... (4)</p>
+            </div>
           </div>
         </div>
       </div>
       <div ref={section} className={`${isBlurred ? 'blur' : ''}`}>
         <p>2. Selanjutnya, kita dapat mengulangi langkah tersebut untuk mengeliminasi variabel x pada persamaan (2) dan (3) seperti berikut.</p>
-        <div className="row justify-content-center">
-          <div className="col-3 text-end">
-            <p>5x + 5y + 5z = 24.000.000</p>
-            <p>2x + 3y + 7z = 19.700.000</p>
-          </div>
-          <div className="col-1 text-center">
-            <p className="">| ×2 |</p>
-            <p className="">| ×5 |</p>
-          </div>
-          <div className="col-6">
-            <p>10x + 10y + 10z = 48.000.000</p>
-            <div className="">
-              <p className="border-bottom d-inline-block border-black position-relative kurang pb-3">10x + 15y + 35z = 98.500.000</p>
+        <div className="overflow-x-auto">
+          <div className="row justify-content-center mx-0" style={{ minWidth: '700px' }}>
+            <div className=" text-end" style={{ width: '250px' }}>
+              <p>5x + 5y + 5z = 24.000.000</p>
+              <p>2x + 3y + 7z = 19.700.000</p>
             </div>
-
-            <div className="d-inline-block mb-2">
-              <div className="text-center d-flex gap-2 align-items-center">
-                <input
-                  className={`form-control ${inputStatuses.input43 ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.input43 && !inputStatuses.input43 ? 'border-danger bg-danger-subtle' : ''}`}
-                  type="text"
-                  placeholder="... ... ..."
-                  style={{ textAlign: 'center', width: '100px' }}
-                  value={inputValues.input43}
-                  onChange={e => handleChange('input43', e)}
-                />
-                <span>=</span>
-                <input
-                  className={`form-control ${inputStatuses.input44 ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.input44 && !inputStatuses.input44 ? 'border-danger bg-danger-subtle' : ''}`}
-                  type="text"
-                  placeholder="..."
-                  style={{ textAlign: 'center', width: '148px' }}
-                  value={inputValues.input44}
-                  onChange={e => handleChange('input44', e)}
-                />
-                <p className="mb-0">... (5)</p>
+            <div className=" text-center " style={{ width: '100px' }}>
+              <p className="">| ×2 |</p>
+              <p className="">| ×5 |</p>
+            </div>
+            <div className="" style={{ width: '350px' }}>
+              <p>10x + 10y + 10z = 48.000.000</p>
+              <div className="">
+                <p className="border-bottom d-inline-block border-black position-relative kurang pb-3">10x + 15y + 35z = 98.500.000</p>
               </div>
-              <Tips>hasil eliminasi pada kedua ruas</Tips>
+
+              <div className="d-inline-block mb-2">
+                <div className="text-center d-flex gap-2 align-items-center">
+                  <input
+                    className={`form-control ${inputStatuses.input43 ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.input43 && !inputStatuses.input43 ? 'border-danger bg-danger-subtle' : ''}`}
+                    type="text"
+                    placeholder="... ... ..."
+                    style={{ textAlign: 'center', width: '100px' }}
+                    value={inputValues.input43}
+                    onChange={e => handleChange('input43', e)}
+                  />
+                  <span>=</span>
+                  <input
+                    className={`form-control ${inputStatuses.input44 ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.input44 && !inputStatuses.input44 ? 'border-danger bg-danger-subtle' : ''}`}
+                    type="text"
+                    placeholder="..."
+                    style={{ textAlign: 'center', width: '148px' }}
+                    value={inputValues.input44}
+                    onChange={e => handleChange('input44', e)}
+                  />
+                  <p className="mb-0">... (5)</p>
+                </div>
+                <Tips>hasil eliminasi pada kedua ruas</Tips>
+              </div>
             </div>
           </div>
         </div>
       </div>
       <div ref={section2} className={`${isBlurred2 ? 'blur' : ''}`}>
         <p>3. Dari langkah sebelumnya, kita mendapatkan dua persamaan baru, yaitu persamaan (4) dan (5) yang menyisakan dua variabel y dan z. Kita akan melakukan eliminasi pada kedua persamaan tersebut.</p>
-        <div className="row justify-content-center">
-          <div className="col-3 text-end">
-            <p>10y - 5z = 7.500.000</p>
-            <div className="d-flex justify-content-end">
-              <div className=" mb-2 text-center">
-                <div className="d-flex gap-2 align-items-center mb-1">
-                  <input
-                    className={`form-control ${inputStatuses.input45 ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.input45 && !inputStatuses.input45 ? 'border-danger bg-danger-subtle' : ''}`}
-                    type="text"
-                    placeholder="... ... ..."
-                    style={{ textAlign: 'center', width: '100px' }}
-                    value={inputValues.input45}
-                    onChange={e => handleChange('input45', e)}
-                  />
-                  <span>=</span>
-                  <input
-                    className={`form-control ${inputStatuses.input46 ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.input46 && !inputStatuses.input46 ? 'border-danger bg-danger-subtle' : ''}`}
-                    type="text"
-                    placeholder="..."
-                    style={{ textAlign: 'center', width: '148px' }}
-                    value={inputValues.input46}
-                    onChange={e => handleChange('input46', e)}
-                  />
-                </div>
-                <Tips>persamaan (5)</Tips>
-              </div>
-            </div>
-          </div>
-          <div className="col-1 text-center">
-            <p className="">| ×1 |</p>
-            <p className="pt-2">| ×2 |</p>
-          </div>
-          <div className="col-6">
-            <p>10y - 5z = 7.500.000</p>
-            <div className="d-flex">
-              <div className="d-flex mb-2 text-center border-bottom border-black position-relative tambah pb-3">
-                <div className="d-flex gap-2 align-items-center">
-                  <input
-                    className={`form-control ${inputStatuses.input47 ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.input47 && !inputStatuses.input47 ? 'border-danger bg-danger-subtle' : ''}`}
-                    type="text"
-                    placeholder="... ... ..."
-                    style={{ textAlign: 'center', width: '100px' }}
-                    value={inputValues.input47}
-                    onChange={e => handleChange('input47', e)}
-                  />
-                  <span>=</span>
-                  <input
-                    className={`form-control ${inputStatuses.input48 ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.input48 && !inputStatuses.input48 ? 'border-danger bg-danger-subtle' : ''}`}
-                    type="text"
-                    placeholder="..."
-                    style={{ textAlign: 'center', width: '148px' }}
-                    value={inputValues.input48}
-                    onChange={e => handleChange('input48', e)}
-                  />
+        <div className="overflow-x-auto">
+          <div className="row justify-content-center mx-0" style={{ minWidth: '950px' }}>
+            <div className=" text-end" style={{ width: '300px' }}>
+              <p>10y - 5z = 7.500.000</p>
+              <div className="d-flex justify-content-end">
+                <div className=" mb-2 text-center">
+                  <div className="d-flex gap-2 align-items-center mb-1">
+                    <input
+                      className={`form-control ${inputStatuses.input45 ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.input45 && !inputStatuses.input45 ? 'border-danger bg-danger-subtle' : ''}`}
+                      type="text"
+                      placeholder="... ... ..."
+                      style={{ textAlign: 'center', width: '100px' }}
+                      value={inputValues.input45}
+                      onChange={e => handleChange('input45', e)}
+                    />
+                    <span>=</span>
+                    <input
+                      className={`form-control ${inputStatuses.input46 ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.input46 && !inputStatuses.input46 ? 'border-danger bg-danger-subtle' : ''}`}
+                      type="text"
+                      placeholder="..."
+                      style={{ textAlign: 'center', width: '148px' }}
+                      value={inputValues.input46}
+                      onChange={e => handleChange('input46', e)}
+                    />
+                  </div>
+                  <Tips>persamaan (5)</Tips>
                 </div>
               </div>
             </div>
-            <div className="d-flex mb-2 gap-2 align-items-center">
-              <div className="text-center">
-                <div className="d-flex gap-2 align-items-center">
-                  <input
-                    className={`form-control ${inputStatuses.input49 ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.input49 && !inputStatuses.input49 ? 'border-danger bg-danger-subtle' : ''}`}
-                    type="text"
-                    placeholder="..."
-                    style={{ textAlign: 'center', width: '100px' }}
-                    value={inputValues.input49}
-                    onChange={e => handleChange('input49', e)}
-                  />
-                  <span>=</span>
-                  <input
-                    className={`form-control ${inputStatuses.input50 ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.input50 && !inputStatuses.input50 ? 'border-danger bg-danger-subtle' : ''}`}
-                    type="text"
-                    placeholder="..."
-                    style={{ textAlign: 'center', width: '148px' }}
-                    value={inputValues.input50}
-                    onChange={e => handleChange('input50', e)}
-                  />
-                </div>
-              </div>
-              <Tips>hasil dari eliminasi pada kedua ruas</Tips>
+            <div className=" text-center px-0" style={{ width: '100px' }}>
+              <p className="">| ×1 |</p>
+              <p className="pt-2">| ×2 |</p>
             </div>
-            <div className="d-flex mb-2 gap-2 align-items-center">
-              <div className="text-center">
-                <div className="d-flex gap-2 align-items-center">
-                  <span className="px-5">z</span>
-                  <span>=</span>
-                  <input
-                    className={`form-control ${inputStatuses.input51 ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.input51 && !inputStatuses.input51 ? 'border-danger bg-danger-subtle' : ''}`}
-                    type="text"
-                    placeholder="..."
-                    style={{ textAlign: 'center', width: '128px' }}
-                    value={inputValues.input51}
-                    onChange={e => handleChange('input51', e)}
-                  />
+            <div className="" style={{ width: '550px' }}>
+              <p>10y - 5z = 7.500.000</p>
+              <div className="d-flex">
+                <div className="d-flex mb-2 text-center border-bottom border-black position-relative tambah pb-3">
+                  <div className="d-flex gap-2 align-items-center">
+                    <input
+                      className={`form-control ${inputStatuses.input47 ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.input47 && !inputStatuses.input47 ? 'border-danger bg-danger-subtle' : ''}`}
+                      type="text"
+                      placeholder="... ... ..."
+                      style={{ textAlign: 'center', width: '100px' }}
+                      value={inputValues.input47}
+                      onChange={e => handleChange('input47', e)}
+                    />
+                    <span>=</span>
+                    <input
+                      className={`form-control ${inputStatuses.input48 ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.input48 && !inputStatuses.input48 ? 'border-danger bg-danger-subtle' : ''}`}
+                      type="text"
+                      placeholder="..."
+                      style={{ textAlign: 'center', width: '148px' }}
+                      value={inputValues.input48}
+                      onChange={e => handleChange('input48', e)}
+                    />
+                  </div>
                 </div>
               </div>
-              <Tips>
-                kedua ruas dibagi dengan angka yang <br />
-                dapat menyisakan variabel z saja
-              </Tips>
+              <div className="d-flex mb-2 gap-2 align-items-center">
+                <div className="text-center">
+                  <div className="d-flex gap-2 align-items-center">
+                    <input
+                      className={`form-control ${inputStatuses.input49 ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.input49 && !inputStatuses.input49 ? 'border-danger bg-danger-subtle' : ''}`}
+                      type="text"
+                      placeholder="..."
+                      style={{ textAlign: 'center', width: '100px' }}
+                      value={inputValues.input49}
+                      onChange={e => handleChange('input49', e)}
+                    />
+                    <span>=</span>
+                    <input
+                      className={`form-control ${inputStatuses.input50 ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.input50 && !inputStatuses.input50 ? 'border-danger bg-danger-subtle' : ''}`}
+                      type="text"
+                      placeholder="..."
+                      style={{ textAlign: 'center', width: '148px' }}
+                      value={inputValues.input50}
+                      onChange={e => handleChange('input50', e)}
+                    />
+                  </div>
+                </div>
+                <Tips>hasil dari eliminasi pada kedua ruas</Tips>
+              </div>
+              <div className="d-flex mb-2 gap-2 align-items-center">
+                <div className="text-center">
+                  <div className="d-flex gap-2 align-items-center">
+                    <span className="px-5">z</span>
+                    <span>=</span>
+                    <input
+                      className={`form-control ${inputStatuses.input51 ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.input51 && !inputStatuses.input51 ? 'border-danger bg-danger-subtle' : ''}`}
+                      type="text"
+                      placeholder="..."
+                      style={{ textAlign: 'center', width: '128px' }}
+                      value={inputValues.input51}
+                      onChange={e => handleChange('input51', e)}
+                    />
+                  </div>
+                </div>
+                <Tips>
+                  kedua ruas dibagi dengan angka yang <br />
+                  dapat menyisakan variabel z saja
+                </Tips>
+              </div>
             </div>
           </div>
         </div>
@@ -490,154 +496,158 @@ export default function MetodePenyelesaianCampuran() {
 
       <div className={`${isBlurred4 ? 'blur' : ''}`}>
         <p ref={section4}>Misal akan kita substitusikan ke persamaan (4), maka</p>
-        <div className="row justify-content-center">
-          <div className="col-2 text-end">
-            <p>10y - 5z</p>
-            <p>10y - 5(1.700.000)</p>
-            <p>10y - 8.500.000</p>
-            <p>10y</p>
-            <p>10y</p>
-            <p className="pt-2">y</p>
-            <p className="pt-3">y</p>
-          </div>
-          <div className="col-1 text-center">
-            <p>=</p>
-            <p>=</p>
-            <p>=</p>
-            <p>=</p>
-            <p>=</p>
-            <p className="pt-2">=</p>
-            <p className="pt-3">=</p>
-          </div>
-          <div className="col-2">
-            <p>7.500.000</p>
-            <p>7.500.000</p>
-            <p>7.500.000</p>
-            <p>7.500.000 + 8.500.000</p>
-            <p>16.000.000</p>
-            <div className="d-inline-block">
-              <p className="border-bottom border-black mb-0 d-inline-block">16.000.000</p>
-              <p className="text-center">10</p>
+        <div className="overflow-x-auto">
+          <div className="row justify-content-center mx-0" style={{ minWidth: '850px' }}>
+            <div className=" text-end" style={{ width: '200px' }}>
+              <p>10y - 5z</p>
+              <p>10y - 5(1.700.000)</p>
+              <p>10y - 8.500.000</p>
+              <p>10y</p>
+              <p>10y</p>
+              <p className="pt-2">y</p>
+              <p className="pt-3">y</p>
             </div>
-            <p>1.600.000</p>
-          </div>
-          <div className="col-3">
-            <p className="fst-italic text-muted mb-4" style={{ fontSize: '12px' }}>
-              persamaan (4)
-            </p>
-            <p className="fst-italic text-muted mb-4" style={{ fontSize: '12px' }}>
-              substitusi nilai z ke persamaan (4)
-            </p>
-            <p className="fst-italic text-muted mb-4" style={{ fontSize: '12px' }}>
-              hasil substitusi nilai z ke persamaan (4)
-            </p>
-            <p className="fst-italic text-muted mb-5" style={{ fontSize: '12px' }}>
-              kedua ruas dijumlahkan dengan 8.500.000
-            </p>
-            <p className="fst-italic text-muted mb-4 mt-5 pt-4" style={{ fontSize: '12px' }}>
-              kedua ruas dibagi dengan 10
-            </p>
-            <p className="fst-italic text-muted pt-2 " style={{ fontSize: '12px' }}>
-              diketahui nilai variabel y
-            </p>
+            <div className=" text-center" style={{ width: '50px' }}>
+              <p>=</p>
+              <p>=</p>
+              <p>=</p>
+              <p>=</p>
+              <p>=</p>
+              <p className="pt-2">=</p>
+              <p className="pt-3">=</p>
+            </div>
+            <div className="" style={{ width: '250px' }}>
+              <p>7.500.000</p>
+              <p>7.500.000</p>
+              <p>7.500.000</p>
+              <p>7.500.000 + 8.500.000</p>
+              <p>16.000.000</p>
+              <div className="d-inline-block">
+                <p className="border-bottom border-black mb-0 d-inline-block">16.000.000</p>
+                <p className="text-center">10</p>
+              </div>
+              <p>1.600.000</p>
+            </div>
+            <div className="" style={{ width: '300px' }}>
+              <p className="fst-italic text-muted mb-4" style={{ fontSize: '12px' }}>
+                persamaan (4)
+              </p>
+              <p className="fst-italic text-muted mb-4" style={{ fontSize: '12px' }}>
+                substitusi nilai z ke persamaan (4)
+              </p>
+              <p className="fst-italic text-muted mb-4" style={{ fontSize: '12px' }}>
+                hasil substitusi nilai z ke persamaan (4)
+              </p>
+              <p className="fst-italic text-muted mb-5" style={{ fontSize: '12px' }}>
+                kedua ruas dijumlahkan dengan 8.500.000
+              </p>
+              <p className="fst-italic text-muted mb-4 mt-5 pt-4" style={{ fontSize: '12px' }}>
+                kedua ruas dibagi dengan 10
+              </p>
+              <p className="fst-italic text-muted pt-2 " style={{ fontSize: '12px' }}>
+                diketahui nilai variabel y
+              </p>
+            </div>
           </div>
         </div>
 
         <p>5. Selanjutnya, kita mensubstitusikan lagi nilai variabel y dan z yang sudah diketahui ke persamaan (1), (2), atau (3). Misalnya ke persamaan (2), sehingga</p>
-        <div className="row justify-content-center">
-          <div className="col-5 text-end">
-            <p>5x + 5y + 5z</p>
-            <div className="d-flex justify-content-end align-items-center gap-2 mb-2">
-              <p className="mb-0">5x + </p>
-              <div className="d-flex align-items-center gap-2">
-                <div className="d-flex align-items-center">
-                  <span>5(</span>
-                  <input
-                    className={`form-control ${inputStatuses.input56 ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.input56 && !inputStatuses.input56 ? 'border-danger bg-danger-subtle' : ''}`}
-                    type="text"
-                    placeholder="............................"
-                    style={{ textAlign: 'center', width: '128px' }}
-                    value={inputValues.input56}
-                    onChange={e => handleChange('input56', e)}
-                  />
-                  <span>)</span>
-                </div>
-                <span>+</span>
-                <div className="d-flex align-items-center">
-                  <span>5(</span>
-                  <input
-                    className={`form-control ${inputStatuses.input57 ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.input57 && !inputStatuses.input57 ? 'border-danger bg-danger-subtle' : ''}`}
-                    type="text"
-                    placeholder="............................"
-                    style={{ textAlign: 'center', width: '128px' }}
-                    value={inputValues.input57}
-                    onChange={e => handleChange('input57', e)}
-                  />
-                  <span>)</span>
+        <div className="overflow-x-auto">
+          <div className="row justify-content-center mx-0" style={{ minWidth: '1000px' }}>
+            <div className=" text-end" style={{ width: '400px' }}>
+              <p>5x + 5y + 5z</p>
+              <div className="d-flex justify-content-end align-items-center gap-2 mb-2">
+                <p className="mb-0">5x + </p>
+                <div className="d-flex align-items-center gap-2">
+                  <div className="d-flex align-items-center">
+                    <span>5(</span>
+                    <input
+                      className={`form-control ${inputStatuses.input56 ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.input56 && !inputStatuses.input56 ? 'border-danger bg-danger-subtle' : ''}`}
+                      type="text"
+                      placeholder="............................"
+                      style={{ textAlign: 'center', width: '128px' }}
+                      value={inputValues.input56}
+                      onChange={e => handleChange('input56', e)}
+                    />
+                    <span>)</span>
+                  </div>
+                  <span>+</span>
+                  <div className="d-flex align-items-center">
+                    <span>5(</span>
+                    <input
+                      className={`form-control ${inputStatuses.input57 ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.input57 && !inputStatuses.input57 ? 'border-danger bg-danger-subtle' : ''}`}
+                      type="text"
+                      placeholder="............................"
+                      style={{ textAlign: 'center', width: '128px' }}
+                      value={inputValues.input57}
+                      onChange={e => handleChange('input57', e)}
+                    />
+                    <span>)</span>
+                  </div>
                 </div>
               </div>
+              <p>5x + 8.000.000 + 8.500.000</p>
+              <p>5x + 16.500.000</p>
+              <p>5x</p>
+              <p className="pt-2">5x</p>
+              <p className="pt-2">x</p>
+              <p className="">x</p>
             </div>
-            <p>5x + 8.000.000 + 8.500.000</p>
-            <p>5x + 16.500.000</p>
-            <p>5x</p>
-            <p className="pt-2">5x</p>
-            <p className="pt-2">x</p>
-            <p className="">x</p>
-          </div>
-          <div className="col-1 text-center">
-            <p>=</p>
-            <p className="pt-1">=</p>
-            <p className="">=</p>
-            <p className="">=</p>
-            <p className="">=</p>
-            <p className="pt-2">=</p>
-            <p className="pt-2">=</p>
-            <p className="">=</p>
-          </div>
-          <div className="col-6">
-            <div className="d-flex gap-5">
-              <p>24.000.000</p>
-              <Tips>persamaan (2)</Tips>
+            <div className=" text-center" style={{ width: '50px' }}>
+              <p>=</p>
+              <p className="pt-1">=</p>
+              <p className="">=</p>
+              <p className="">=</p>
+              <p className="">=</p>
+              <p className="pt-2">=</p>
+              <p className="pt-2">=</p>
+              <p className="">=</p>
             </div>
-            <p className="pt-1">24.000.000</p>
-            <p className="">24.000.000</p>
-            <p className="">24.000.000</p>
-            <div className="d-flex align-items-center gap-2 mb-2">
-              <p className="mb-0">24.000.000 - </p>
-              <input
-                className={`form-control d-inline-block ${inputStatuses.input58 ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.input58 && !inputStatuses.input58 ? 'border-danger bg-danger-subtle' : ''}`}
-                type="text"
-                placeholder="..."
-                style={{ textAlign: 'center', width: '148px' }}
-                value={inputValues.input58}
-                onChange={e => handleChange('input58', e)}
-              />
-              <Tips>kedua ruas dikurangi dengan 16.500.000</Tips>
+            <div className="" style={{ width: '550px' }}>
+              <div className="d-flex gap-5">
+                <p>24.000.000</p>
+                <Tips>persamaan (2)</Tips>
+              </div>
+              <p className="pt-1">24.000.000</p>
+              <p className="">24.000.000</p>
+              <p className="">24.000.000</p>
+              <div className="d-flex align-items-center gap-2 mb-2">
+                <p className="mb-0">24.000.000 - </p>
+                <input
+                  className={`form-control d-inline-block ${inputStatuses.input58 ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.input58 && !inputStatuses.input58 ? 'border-danger bg-danger-subtle' : ''}`}
+                  type="text"
+                  placeholder="..."
+                  style={{ textAlign: 'center', width: '148px' }}
+                  value={inputValues.input58}
+                  onChange={e => handleChange('input58', e)}
+                />
+                <Tips>kedua ruas dikurangi dengan 16.500.000</Tips>
+              </div>
+              <div className="d-flex align-items-center gap-2 mb-2">
+                <input
+                  className={`form-control d-inline-block ${inputStatuses.input59 ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.input59 && !inputStatuses.input59 ? 'border-danger bg-danger-subtle' : ''}`}
+                  type="text"
+                  placeholder="..."
+                  style={{ textAlign: 'center', width: '148px' }}
+                  value={inputValues.input59}
+                  onChange={e => handleChange('input59', e)}
+                />
+                <Tips>hasil operasi pada ruas kanan</Tips>
+              </div>
+              <div className="d-flex align-items-center gap-2 mb-2">
+                <input
+                  className={`form-control d-inline-block ${inputStatuses.input60 ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.input60 && !inputStatuses.input60 ? 'border-danger bg-danger-subtle' : ''}`}
+                  type="text"
+                  placeholder="..."
+                  style={{ textAlign: 'center', width: '148px' }}
+                  value={inputValues.input60}
+                  onChange={e => handleChange('input60', e)}
+                />
+                <span>/ 5</span>
+                <Tips>kedua ruas dibagi dengan 5</Tips>
+              </div>
+              <p>1.500.000</p>
             </div>
-            <div className="d-flex align-items-center gap-2 mb-2">
-              <input
-                className={`form-control d-inline-block ${inputStatuses.input59 ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.input59 && !inputStatuses.input59 ? 'border-danger bg-danger-subtle' : ''}`}
-                type="text"
-                placeholder="..."
-                style={{ textAlign: 'center', width: '148px' }}
-                value={inputValues.input59}
-                onChange={e => handleChange('input59', e)}
-              />
-              <Tips>hasil operasi pada ruas kanan</Tips>
-            </div>
-            <div className="d-flex align-items-center gap-2 mb-2">
-              <input
-                className={`form-control d-inline-block ${inputStatuses.input60 ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.input60 && !inputStatuses.input60 ? 'border-danger bg-danger-subtle' : ''}`}
-                type="text"
-                placeholder="..."
-                style={{ textAlign: 'center', width: '148px' }}
-                value={inputValues.input60}
-                onChange={e => handleChange('input60', e)}
-              />
-              <span>/ 5</span>
-              <Tips>kedua ruas dibagi dengan 5</Tips>
-            </div>
-            <p>1.500.000</p>
           </div>
         </div>
       </div>

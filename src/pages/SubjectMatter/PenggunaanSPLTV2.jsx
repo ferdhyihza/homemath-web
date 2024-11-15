@@ -141,14 +141,14 @@ export default function PenggunaanSPLTV2() {
   return (
     <Main>
       <h3 className="fw-bold pb-4 my-1">
-        Penggunaan SPLTV <span className="text-muted fw-medium ms-2 fs-5">Pada Kehidupan Sehari-hari</span>
+        Penggunaan SPLTV <span className="text-muted fw-medium ms-sm-2 fs-5">Pada Kehidupan Sehari-hari</span>
       </h3>
       <p>
         <b>Sudahkah memahami untuk ap akita mempelajari SPLTV?</b> <br />
         Untuk melatih kalian menerjemahkan soal cerita ke dalam bentuk sistem persamaan linear, mari kita coba lagi contoh berikut ini!
       </p>
       <figure className="text-center">
-        <img src="../img/ilustrasi-pengantar-spltv.png" alt="video ilustrasi" />
+        <img className="img-fluid" src="../img/ilustrasi-pengantar-spltv.png" alt="video ilustrasi" />
         <figcaption className="fst-italic fw-light">Ilustrasi [video]</figcaption>
       </figure>
       <p>
@@ -202,6 +202,9 @@ export default function PenggunaanSPLTV2() {
         <p>2e - 2r + s = 0 &emsp;&emsp;&emsp;............(2)</p>
         <p>e + 2s + r = 40 &emsp;&emsp;&emsp;............(3)</p>
         <p>Setelah kita mengubahnya dalam bentuk SPLTV, kita dapat menyelesaikannya dengan metode yang telah kita pelajari. Mari kita selesaikan dengan metode campuran (eliminasi & substitusi)</p>
+        <div className="d-inline-block ms-4">
+          <Tips>variabel yang dieliminasi pada langkah berikut</Tips>
+        </div>
         <p className="mb-0">
           Eliminasi variabel
           <span>
@@ -218,23 +221,21 @@ export default function PenggunaanSPLTV2() {
           </span>
           pada persamaan (1) dan (2)
         </p>
-
-        <div className="d-inline-block ms-4">
-          <Tips>variabel yang dieliminasi pada langkah berikut</Tips>
-        </div>
-        <div className="row justify-content-center">
-          <div className="col-2">
-            <p>e + s + r = 32</p>
-            <p>2e - 2r + s = 0</p>
-          </div>
-          <div className="col-1 text-center">
-            <p>| ×2 |</p>
-            <p>| ×1 |</p>
-          </div>
-          <div className="col-6">
-            <p>2e + 2s + 2r = 64</p>
-            <p className="d-inline-block mb-1 pb-3 border-bottom border-black kurang position-relative pe-5">2e - 2r + s = 0</p>
-            <p className="ps-4 ms-2 pt-2">4r - s = 64 &emsp;&emsp;&emsp;............(4)</p>
+        <div className="overflow-x-auto">
+          <div className="row justify-content-center mx-0" style={{ minWidth: '550px' }}>
+            <div className="" style={{ width: '150px' }}>
+              <p>e + s + r = 32</p>
+              <p>2e - 2r + s = 0</p>
+            </div>
+            <div className=" text-center" style={{ width: '100px' }}>
+              <p>| ×2 |</p>
+              <p>| ×1 |</p>
+            </div>
+            <div className="" style={{ width: '300px' }}>
+              <p>2e + 2s + 2r = 64</p>
+              <p className="d-inline-block mb-1 pb-3 border-bottom border-black kurang position-relative pe-5">2e - 2r + s = 0</p>
+              <p className="ps-4 ms-2 pt-2">4r - s = 64 &emsp;&emsp;&emsp;............(4)</p>
+            </div>
           </div>
         </div>
       </div>

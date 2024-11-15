@@ -574,7 +574,7 @@ export default function MetodePenyelesaianSubstitusi() {
         <div className="overflow-x-auto">
           <div className="row justify-content-center mx-0" style={{ minWidth: '950px' }}>
             <div className=" text-end" style={{ width: '350px' }}>
-              <p>2y - z</p>
+              <p className="mb-2">2y - z</p>
               <div className="d-flex align-items-center justify-content-end mb-2">
                 <p className="d-inline-block mb-0 me-2 fst-italic text-muted" style={{ textAlign: 'center', fontSize: '12px' }}>
                   masukkan nilai variabel y
@@ -616,16 +616,16 @@ export default function MetodePenyelesaianSubstitusi() {
             </div>
             <div className=" text-center" style={{ width: '50px' }}>
               <p>=</p>
-              <p className="pt-2">=</p>
               <p className="">=</p>
-              <p className="pt-2">=</p>
+              <p className="pt-1">=</p>
+              <p className="pt-1">=</p>
               <p className="pt-1">=</p>
               <p className="pt-1">=</p>
             </div>
             <div className="" style={{ width: '450px' }}>
               <p>1.500.000</p>
-              <p className="pt-2">1.500.000</p>
               <p className="">1.500.000</p>
+              <p className="pt-1 mb-2 pb-1">1.500.000</p>
               <div className="d-flex gap-2 align-items-center mb-2">
                 <p className="mb-0">1.500.000 - </p>
 

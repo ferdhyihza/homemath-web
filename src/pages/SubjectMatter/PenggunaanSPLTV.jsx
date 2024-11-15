@@ -116,7 +116,7 @@ export default function PenggunaanSPLTV() {
   return (
     <Main>
       <h3 className="fw-bold pb-4 my-1">
-        Penggunaan SPLTV <span className="text-muted fw-medium ms-2 fs-5">Pada Kehidupan Sehari-hari</span>
+        Penggunaan SPLTV <span className="text-muted fw-medium ms-sm-2 fs-5">Pada Kehidupan Sehari-hari</span>
       </h3>
       <p>
         <b>Untuk apa kita mempelajari SPLTV?</b> <br />
@@ -130,7 +130,7 @@ export default function PenggunaanSPLTV() {
         dengan jumlah ketiga angkanya kemudian dijumlahkan dengan 13. Berapa besar nilai bilangan tersebut?
       </p>
       <figure className="text-center">
-        <img src="../img/ilustrasi-pengantar-spltv.png" alt="video ilustrasi" />
+        <img className="img-fluid" src="../img/ilustrasi-pengantar-spltv.png" alt="video ilustrasi" />
         <figcaption className="fst-italic fw-light">Ilustrasi [video]</figcaption>
       </figure>
       <p>
@@ -193,116 +193,122 @@ export default function PenggunaanSPLTV() {
       </div>
       <div ref={section} className={`${isBlurred ? 'blur' : ''}`}>
         <p>Eliminasi variabel x pada persamaan (1) dan (3)</p>
-        <div className="row justify-content-center">
-          <div className="col-2">
-            <p>x + y + z = 16</p>
-            <p>79x - 11y - 20z = 13</p>
-          </div>
-          <div className="col-1 text-center">
-            <p>| ×11 |</p>
-            <p>| ×1 |</p>
-          </div>
-          <div className="col-6">
-            <p>11x + 11y + 11z = 176</p>
-            <p className="d-inline-block mb-1 pb-3 border-bottom border-black tambah position-relative pe-5">79x - 11y - 20z = 13</p>
-            <div className="d-flex gap-2 align-items-center">
+        <div className="overflow-x-auto">
+          <div className="row justify-content-center mx-0" style={{ minWidth: '800px' }}>
+            <div className="" style={{ width: '200px' }}>
+              <p>x + y + z = 16</p>
+              <p>79x - 11y - 20z = 13</p>
+            </div>
+            <div className=" text-center" style={{ width: '100px' }}>
+              <p>| ×11 |</p>
+              <p>| ×1 |</p>
+            </div>
+            <div className="" style={{ width: '500px' }}>
+              <p>11x + 11y + 11z = 176</p>
+              <p className="d-inline-block mb-1 pb-3 border-bottom border-black tambah position-relative pe-5">79x - 11y - 20z = 13</p>
               <div className="d-flex gap-2 align-items-center">
-                <p className="mb-0 ps-4 ms-3">90x - 9z =</p>
-                <input
-                  type="text"
-                  className={`form-control ${inputStatuses.input62 ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.input62 && !inputStatuses.input62 ? 'border-danger bg-danger-subtle' : ''}`}
-                  placeholder="..."
-                  style={{ width: '64px', textAlign: 'center' }}
-                  value={inputValues.input62}
-                  onChange={e => handleChange('input62', e)}
-                />
-                <p className="mb-0 ">............(5)</p>
+                <div className="d-flex gap-2 align-items-center">
+                  <p className="mb-0 ps-4 ms-3">90x - 9z =</p>
+                  <input
+                    type="text"
+                    className={`form-control ${inputStatuses.input62 ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.input62 && !inputStatuses.input62 ? 'border-danger bg-danger-subtle' : ''}`}
+                    placeholder="..."
+                    style={{ width: '64px', textAlign: 'center' }}
+                    value={inputValues.input62}
+                    onChange={e => handleChange('input62', e)}
+                  />
+                  <p className="mb-0 ">............(5)</p>
+                </div>
+                <Tips>hasil operasi pada ruas kanan</Tips>
               </div>
-              <Tips>hasil operasi pada ruas kanan</Tips>
             </div>
           </div>
         </div>
       </div>
       <div ref={section2} className={`${isBlurred2 ? 'blur' : ''}`}>
         <p>Substitusikan nilai variabel z atau persamaan (4) ke persamaan (5), sehingga</p>
-        <div className="row justify-content-center">
-          <div className="col-2 text-end">
-            <p>90x - 9z</p>
-            <p>90x - 9(9)</p>
-            <p>90x - 81</p>
-            <p>90x</p>
-            <p>90x</p>
-            <p className="pt-2">x</p>
-            <p className="pt-2">x</p>
-          </div>
-          <div className="col-1 text-center">
-            <p>=</p>
-            <p>=</p>
-            <p>=</p>
-            <p>=</p>
-            <p>=</p>
-            <p className="pt-2">=</p>
-            <p className="pt-2">=</p>
-          </div>
-          <div className="col-3">
-            <p>189</p>
-            <p>189</p>
-            <p>189</p>
-            <p>189 - 81</p>
-            <p>270</p>
-            <p className="mb-0 d-inline-block border-bottom border-black">270</p>
-            <p className="mb-0">&nbsp;&nbsp;90</p>
-            <div className="d-inline-block mb-2">
-              <div className="d-flex gap-2 align-items-center">
-                <input
-                  type="text"
-                  className={`form-control ${inputStatuses.input63 ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.input63 && !inputStatuses.input63 ? 'border-danger bg-danger-subtle' : ''}`}
-                  placeholder="..."
-                  style={{ width: '64px', textAlign: 'center' }}
-                  value={inputValues.input63}
-                  onChange={e => handleChange('input63', e)}
-                />
-                <p className="mb-0 ">............(6)</p>
+        <div className="overflow-x-auto">
+          <div className="row justify-content-center mx-0" style={{ minWidth: '350px' }}>
+            <div className=" text-end" style={{ width: '100px' }}>
+              <p>90x - 9z</p>
+              <p>90x - 9(9)</p>
+              <p>90x - 81</p>
+              <p>90x</p>
+              <p>90x</p>
+              <p className="pt-2">x</p>
+              <p className="pt-2">x</p>
+            </div>
+            <div className=" text-center" style={{ width: '50px' }}>
+              <p>=</p>
+              <p>=</p>
+              <p>=</p>
+              <p>=</p>
+              <p>=</p>
+              <p className="pt-2">=</p>
+              <p className="pt-2">=</p>
+            </div>
+            <div className="" style={{ width: '200px' }}>
+              <p>189</p>
+              <p>189</p>
+              <p>189</p>
+              <p>189 - 81</p>
+              <p>270</p>
+              <p className="mb-0 d-inline-block border-bottom border-black">270</p>
+              <p className="mb-0">&nbsp;&nbsp;90</p>
+              <div className="d-inline-block mb-2">
+                <div className="d-flex gap-2 align-items-center">
+                  <input
+                    type="text"
+                    className={`form-control ${inputStatuses.input63 ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.input63 && !inputStatuses.input63 ? 'border-danger bg-danger-subtle' : ''}`}
+                    placeholder="..."
+                    style={{ width: '64px', textAlign: 'center' }}
+                    value={inputValues.input63}
+                    onChange={e => handleChange('input63', e)}
+                  />
+                  <p className="mb-0 ">............(6)</p>
+                </div>
+                <Tips>hasil operasi pada ruas kanan</Tips>
               </div>
-              <Tips>hasil operasi pada ruas kanan</Tips>
             </div>
           </div>
         </div>
       </div>
       <div ref={section3} className={`${isBlurred3 ? 'blur' : ''}`}>
         <p>Setelah kita mengetahui nilai variabel x dan z, kita dapat mensubstitusikannya ke salah satu persamaan (1), (2), atau (3) untuk mengetahui nilai variabel y. Di sini kita substitusikan ke persamaan (1), maka</p>
-        <div className="row justify-content-center">
-          <div className="col-2 text-end">
-            <p>x + y + z</p>
-            <p>3 + y + 9</p>
-            <p>31 + y</p>
-            <p>y</p>
-            <p className="pt-2">y</p>
-          </div>
-          <div className="col-1 text-center">
-            <p>=</p>
-            <p>=</p>
-            <p>=</p>
-            <p>=</p>
-            <p className="pt-2">=</p>
-          </div>
-          <div className="col-3">
-            <p>16</p>
-            <p>16</p>
-            <p>16</p>
-            <p>16 - 11</p>
-            <div className="d-inline-block mb-2">
-              <div className="d-flex gap-2 align-items-center">
-                <input
-                  type="text"
-                  className={`form-control ${inputStatuses.input64 ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.input64 && !inputStatuses.input64 ? 'border-danger bg-danger-subtle' : ''}`}
-                  placeholder="..."
-                  style={{ width: '64px', textAlign: 'center' }}
-                  value={inputValues.input64}
-                  onChange={e => handleChange('input64', e)}
-                />
+        <div className="overflow-x-auto">
+          <div className="row justify-content-center mx-0" style={{ minWidth: '250px' }}>
+            <div className=" text-end" style={{ width: '100px' }}>
+              <p>x + y + z</p>
+              <p>3 + y + 9</p>
+              <p>31 + y</p>
+              <p>y</p>
+              <p className="pt-2">y</p>
+            </div>
+            <div className=" text-center" style={{ width: '50px' }}>
+              <p>=</p>
+              <p>=</p>
+              <p>=</p>
+              <p>=</p>
+              <p className="pt-2">=</p>
+            </div>
+            <div className="" style={{ width: '100px' }}>
+              <p>16</p>
+              <p>16</p>
+              <p>16</p>
+              <p>16 - 11</p>
+              <div className="d-inline-block mb-2">
+                <div className="d-flex gap-2 align-items-center">
+                  <input
+                    type="text"
+                    className={`form-control ${inputStatuses.input64 ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.input64 && !inputStatuses.input64 ? 'border-danger bg-danger-subtle' : ''}`}
+                    placeholder="..."
+                    style={{ width: '64px', textAlign: 'center' }}
+                    value={inputValues.input64}
+                    onChange={e => handleChange('input64', e)}
+                  />
+                </div>
+                <Tips>hasil operasi pada ruas kanan</Tips>
               </div>
-              <Tips>hasil operasi pada ruas kanan</Tips>
             </div>
           </div>
         </div>

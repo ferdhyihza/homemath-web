@@ -224,7 +224,7 @@ export default function MetodePenyelesaianEliminasi() {
       <div ref={section} className={`${isBlurred ? 'blur' : ''}`}>
         <p>3. Dari langkah sebelumnya, kita mendapatkan dua persamaan baru, ya itu persamaan (4) dan (5) yang menyisakan dua variabel y dan z. Kita akan melakukan eliminasi pada kedua persamaan tersebut.</p>
         <div className="overflow-x-auto">
-          <div className="row justify-content-center mx-0" style={{ minWidth: '850px' }}>
+          <div className="row justify-content-center mx-0" style={{ minWidth: '550px' }}>
             <div className="" style={{ width: '250px' }}>
               <p>10y - 5z = 7.500.000</p>
               <p>-5y - 25z = -50.500.000</p>
@@ -233,7 +233,7 @@ export default function MetodePenyelesaianEliminasi() {
               <p>| ×1 |</p>
               <p>| ×2 |</p>
             </div>
-            <div className="" style={{ width: '550px' }}>
+            <div className="" style={{ width: '250px' }}>
               <p>10y - 5z = 7.500.000</p>
               <p className="border-bottom d-inline-block border-black position-relative tambah pb-3">-10y - 50z = -101.000.000</p>
               <p className="ps-4">-55z = -93.500.000</p>
