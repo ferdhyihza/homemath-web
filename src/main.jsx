@@ -103,7 +103,7 @@ const router = createBrowserRouter([
   },
   {
     path: '/latihan-soal/pengantar-spltv/3-bentuk-umum-spltv',
-    element: <AuthorizedRoute element={<PengantarSPLTV3 />} requiredKey="BentukUmum2SPLTV" />,
+    element: <AuthorizedRoute element={<PengantarSPLTV3 />} requiredKey="BentukUmumSPLTV2" />,
   },
 ]);
 
