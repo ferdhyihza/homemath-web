@@ -239,8 +239,8 @@ export default function PenggunaanSPLTV2() {
           </div>
         </div>
       </div>
-      <div ref={section2} className={isBlurred2 ? 'blur' : ''}>
-        <p>Eliminasi variabel e pada persamaan (1) dan (3)</p>
+      <div className={isBlurred2 ? 'blur' : ''}>
+        <p ref={section2}>Eliminasi variabel e pada persamaan (1) dan (3)</p>
         <p>e + s + r = 32</p>
         <p className="d-inline-block mb-1 pb-3 border-bottom border-black kurang position-relative pe-5">e + 2s + r = 40</p>
         <p className="ps-4 ms-2 pt-2">- s = -8 </p>
@@ -258,8 +258,8 @@ export default function PenggunaanSPLTV2() {
         </div>
       </div>
 
-      <div ref={section3} className={isBlurred3 ? 'blur' : ''}>
-        <p>Substitusi nilai variabel s ke persamaan (4)</p>
+      <div className={isBlurred3 ? 'blur' : ''}>
+        <p ref={section3}>Substitusi nilai variabel s ke persamaan (4)</p>
         <p>4r - s = 64</p>
         <p>4r - 8 = 64</p>
         <p className="ps-4">4r = 64 + 8</p>
@@ -278,8 +278,8 @@ export default function PenggunaanSPLTV2() {
         </div>
       </div>
 
-      <div ref={section4} className={isBlurred4 ? 'blur' : ''}>
-        <p>Kita telah mengetahui nilai variabel s dan r, substitusikan nilai tersebut ke persamaan (1)</p>
+      <div className={isBlurred4 ? 'blur' : ''}>
+        <p ref={section4}>Kita telah mengetahui nilai variabel s dan r, substitusikan nilai tersebut ke persamaan (1)</p>
         <p>e + s + r = 32</p>
 
         <p className="mb-0">

@@ -204,8 +204,8 @@ export default function MetodePenyelesaianSPLTV3() {
           </div>
         </div>
       </div>
-      <div ref={section} className={`${isBlurred ? 'blur' : ''}`}>
-        <p>
+      <div className={`${isBlurred ? 'blur' : ''}`}>
+        <p ref={section}>
           2. Karena kita telah mengetahui nilai variabel y pada langkah pertama, kita dapat melakukan eliminasi pada persamaan yang menyisakan dua variabel, namun pastikan terdapat variabel y pada persamaan baru yang terbentuk. Misalnya
           kita akan mengeliminasi persamaan (1) dan (3). Sehingga,
         </p>
@@ -254,8 +254,8 @@ export default function MetodePenyelesaianSPLTV3() {
           </div>
         </div>
       </div>
-      <div ref={section2} className={`${isBlurred2 ? 'blur' : ''}`}>
-        <p>3. Setelah mendapatkan persamaan (4), kita langsung mensubstitusikan nilai variabel y ke dalam persamaan (4) untuk mengetahui nilai variabel z. Sehingga,</p>
+      <div className={`${isBlurred2 ? 'blur' : ''}`}>
+        <p ref={section2}>3. Setelah mendapatkan persamaan (4), kita langsung mensubstitusikan nilai variabel y ke dalam persamaan (4) untuk mengetahui nilai variabel z. Sehingga,</p>
         <div className="overflow-x-auto">
           <div className="row justify-content-center mx-0" style={{ minWidth: '600px' }}>
             <div className=" text-end" style={{ width: '200px' }}>

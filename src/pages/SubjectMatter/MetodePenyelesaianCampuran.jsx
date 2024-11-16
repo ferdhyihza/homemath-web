@@ -293,8 +293,8 @@ export default function MetodePenyelesaianCampuran() {
           </div>
         </div>
       </div>
-      <div ref={section} className={`${isBlurred ? 'blur' : ''}`}>
-        <p>2. Selanjutnya, kita dapat mengulangi langkah tersebut untuk mengeliminasi variabel x pada persamaan (2) dan (3) seperti berikut.</p>
+      <div className={`${isBlurred ? 'blur' : ''}`}>
+        <p ref={section}>2. Selanjutnya, kita dapat mengulangi langkah tersebut untuk mengeliminasi variabel x pada persamaan (2) dan (3) seperti berikut.</p>
         <div className="overflow-x-auto">
           <div className="row justify-content-center mx-0" style={{ minWidth: '700px' }}>
             <div className=" text-end" style={{ width: '250px' }}>
@@ -338,8 +338,8 @@ export default function MetodePenyelesaianCampuran() {
           </div>
         </div>
       </div>
-      <div ref={section2} className={`${isBlurred2 ? 'blur' : ''}`}>
-        <p>3. Dari langkah sebelumnya, kita mendapatkan dua persamaan baru, yaitu persamaan (4) dan (5) yang menyisakan dua variabel y dan z. Kita akan melakukan eliminasi pada kedua persamaan tersebut.</p>
+      <div className={`${isBlurred2 ? 'blur' : ''}`}>
+        <p ref={section2}>3. Dari langkah sebelumnya, kita mendapatkan dua persamaan baru, yaitu persamaan (4) dan (5) yang menyisakan dua variabel y dan z. Kita akan melakukan eliminasi pada kedua persamaan tersebut.</p>
         <div className="overflow-x-auto">
           <div className="row justify-content-center mx-0" style={{ minWidth: '950px' }}>
             <div className=" text-end" style={{ width: '300px' }}>
@@ -446,8 +446,8 @@ export default function MetodePenyelesaianCampuran() {
           </div>
         </div>
       </div>
-      <div ref={section3} className={`${isBlurred3 ? 'blur' : ''}`}>
-        <p>4. Kita telah mengetahui besar nilai variabel z. Selanjutnya kita dapat mensubstitusikan nilai tersebut ke persamaan (4) atau (5) untuk mengetahui nilai variabel y.</p>
+      <div className={`${isBlurred3 ? 'blur' : ''}`}>
+        <p ref={section3}>4. Kita telah mengetahui besar nilai variabel z. Selanjutnya kita dapat mensubstitusikan nilai tersebut ke persamaan (4) atau (5) untuk mengetahui nilai variabel y.</p>
         <p>Persamaan (4)</p>
         <div className="d-flex align-items-center gap-2 mb-2">
           <p className="mb-0">10y - 5z = </p>
@@ -651,8 +651,8 @@ export default function MetodePenyelesaianCampuran() {
           </div>
         </div>
       </div>
-      <div ref={section5} className={`${isBlurred5 ? 'blur' : ''}`}>
-        <p>
+      <div className={`${isBlurred5 ? 'blur' : ''}`}>
+        <p ref={section5}>
           Setelah menyelesaikan langkah tersebut, kita tahu bahwa dengan menggunakan ketiga metode yang sudah kalian coba, mendapatkan hasil yang sama. Yaitu kita mengetahui besar nilai variabel x = 1.500.000, nilai variabel y = 1.600.000
           dan nilai variabel z = 1.700.000.
         </p>

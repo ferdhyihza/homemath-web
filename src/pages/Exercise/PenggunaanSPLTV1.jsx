@@ -164,8 +164,8 @@ export default function PenggunaanSPLTV1() {
           </div>
         </div>
       </div>
-      <div ref={section} className={`${isBlurred ? 'blur' : ''}`}>
-        <p>2. Eliminasi variabel a dan c pada persamaan (1) dan (3)</p>
+      <div className={`${isBlurred ? 'blur' : ''}`}>
+        <p ref={section}>2. Eliminasi variabel a dan c pada persamaan (1) dan (3)</p>
         <div className="overflow-x-auto">
           <div className="row justify-content-start mb-2 ps-4 mx-0" style={{ minWidth: '200px' }}>
             <div className="" style={{ width: '200px' }}>
@@ -187,8 +187,8 @@ export default function PenggunaanSPLTV1() {
           </div>
         </div>
       </div>
-      <div ref={section2} className={`${isBlurred2 ? 'blur' : ''}`}>
-        <p>3. Dari langkah sebelumnya, kita mengetahui nilai variabel b, sehingga kita bisa melakukan substitusi nilai tersebut ke persamaan (4) seperti berikut</p>
+      <div className={`${isBlurred2 ? 'blur' : ''}`}>
+        <p ref={section2}>3. Dari langkah sebelumnya, kita mengetahui nilai variabel b, sehingga kita bisa melakukan substitusi nilai tersebut ke persamaan (4) seperti berikut</p>
         <div className="overflow-x-auto">
           <div className="row justify-content-start mb-2 ps-4 mx-0" style={{ minWidth: '300px' }}>
             <div className=" text-end" style={{ width: '100px' }}>
@@ -229,8 +229,10 @@ export default function PenggunaanSPLTV1() {
           </div>
         </div>
       </div>
-      <div ref={section3} className={`${isBlurred3 ? 'blur' : ''}`}>
-        <p>4. Kita telah mengetahui nilai variabel b dan c, maka kita bisa mensubstitusikan nilai tersebut ke persamaan pada SPLTV yang kita identifikasi untuk mengetahui nilai variabel a. Misalkan substitusi ke persamaan (1), sehingga</p>
+      <div className={`${isBlurred3 ? 'blur' : ''}`}>
+        <p ref={section3}>
+          4. Kita telah mengetahui nilai variabel b dan c, maka kita bisa mensubstitusikan nilai tersebut ke persamaan pada SPLTV yang kita identifikasi untuk mengetahui nilai variabel a. Misalkan substitusi ke persamaan (1), sehingga
+        </p>
         <div className="overflow-x-auto">
           <div className="row justify-content-start ps-4 mx-0" style={{ minWidth: '250px' }}>
             <div className=" text-end" style={{ width: '100px' }}>

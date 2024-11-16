@@ -221,8 +221,8 @@ export default function MetodePenyelesaianEliminasi() {
           </div>
         </div>
       </div>
-      <div ref={section} className={`${isBlurred ? 'blur' : ''}`}>
-        <p>3. Dari langkah sebelumnya, kita mendapatkan dua persamaan baru, ya itu persamaan (4) dan (5) yang menyisakan dua variabel y dan z. Kita akan melakukan eliminasi pada kedua persamaan tersebut.</p>
+      <div className={`${isBlurred ? 'blur' : ''}`}>
+        <p ref={section}>3. Dari langkah sebelumnya, kita mendapatkan dua persamaan baru, ya itu persamaan (4) dan (5) yang menyisakan dua variabel y dan z. Kita akan melakukan eliminasi pada kedua persamaan tersebut.</p>
         <div className="overflow-x-auto">
           <div className="row justify-content-center mx-0" style={{ minWidth: '550px' }}>
             <div className="" style={{ width: '250px' }}>
@@ -264,8 +264,8 @@ export default function MetodePenyelesaianEliminasi() {
         </div>
       </div>
 
-      <div ref={section2} className={`${isBlurred2 ? 'blur' : ''}`}>
-        <p>4. Dari langkah 3 kita mengetahui nilai z. Kemudian kita akan mengeliminasi variabel y, sehingga</p>
+      <div className={`${isBlurred2 ? 'blur' : ''}`}>
+        <p ref={section2}>4. Dari langkah 3 kita mengetahui nilai z. Kemudian kita akan mengeliminasi variabel y, sehingga</p>
         <div className="overflow-x-auto">
           <div className="row justify-content-center mx-0" style={{ minWidth: '600px' }}>
             <div className="" style={{ width: '250px' }}>
@@ -316,8 +316,8 @@ export default function MetodePenyelesaianEliminasi() {
         </div>
       </div>
 
-      <div ref={section3} className={`${isBlurred3 ? 'blur' : ''}`}>
-        <p>5. Setelah kita melakukan eliminasi dan mendapatkan nilai dari variabel z dan y, maka nilai x dapat kita tentukan dari salah satu persamaan, misal persamaan (1), sehingga</p>
+      <div className={`${isBlurred3 ? 'blur' : ''}`}>
+        <p ref={section3}>5. Setelah kita melakukan eliminasi dan mendapatkan nilai dari variabel z dan y, maka nilai x dapat kita tentukan dari salah satu persamaan, misal persamaan (1), sehingga</p>
         <div className="overflow-x-auto">
           <div className="row justify-content-center mx-0" style={{ minWidth: '850px' }}>
             <div className=" text-end" style={{ width: '300px' }}>
@@ -418,8 +418,8 @@ export default function MetodePenyelesaianEliminasi() {
         </div>
       </div>
 
-      <div ref={section4} className={`${isBlurred4 ? 'blur' : ''}`}>
-        <p>Jika teman-teman sudah menyelesaikan langkah-langkah di atas, kita mendapatkan nilai variabel x = 1.500.000, nilai variabel y = 1.600.000, dan nilai variabel z = 1.700.000.</p>
+      <div className={`${isBlurred4 ? 'blur' : ''}`}>
+        <p ref={section4}>Jika teman-teman sudah menyelesaikan langkah-langkah di atas, kita mendapatkan nilai variabel x = 1.500.000, nilai variabel y = 1.600.000, dan nilai variabel z = 1.700.000.</p>
         <p>
           Kita ingat kembali bahwa: <br />
           • Variabel x mewakili harga satu gulung kain warna putih <br />

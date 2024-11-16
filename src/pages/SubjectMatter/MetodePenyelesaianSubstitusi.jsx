@@ -315,8 +315,8 @@ export default function MetodePenyelesaianSubstitusi() {
         </div>
       </div>
 
-      <div ref={section} className={`${isBlurred ? 'blur' : ''}`}>
-        <p>
+      <div className={`${isBlurred ? 'blur' : ''}`}>
+        <p ref={section}>
           <i className="text-muted">(substitusi persamaan (4) ke persamaan (3))</i>
         </p>
         <div className="overflow-x-auto">
@@ -387,8 +387,8 @@ export default function MetodePenyelesaianSubstitusi() {
         </div>
       </div>
 
-      <div ref={section2} className={`${isBlurred2 ? 'blur' : ''}`}>
-        <p>
+      <div className={`${isBlurred2 ? 'blur' : ''}`}>
+        <p ref={section2}>
           3. Dari langkah sebelumnya, kita mendapatkan persamaan (5) dan (6). Selanjutnya, yang perlu kita lakukan adalah mengubah salah satu persamaan tersebut menjadi sebuah fungsi. Misalnya kita akan mengubah persamaan (5) ke dalam
           fungsi y. Sehingga
         </p>
@@ -452,8 +452,8 @@ export default function MetodePenyelesaianSubstitusi() {
           </div>
         </div>
       </div>
-      <div ref={section3} className={`${isBlurred3 ? 'blur' : ''}`}>
-        <p>4. Selanjutnya, kita dapat menyubtitusikan fungsi y atau persamaan (7) ke dalam persamaan (6)</p>
+      <div className={`${isBlurred3 ? 'blur' : ''}`}>
+        <p ref={section3}>4. Selanjutnya, kita dapat menyubtitusikan fungsi y atau persamaan (7) ke dalam persamaan (6)</p>
         <p>
           Persamaan (6) <br />
           y + 5z = 10.100.000 <br />
@@ -564,8 +564,8 @@ export default function MetodePenyelesaianSubstitusi() {
         </div>
       </div>
 
-      <div ref={section4} className={`${isBlurred4 ? 'blur' : ''}`}>
-        <p>5. Setelah kita mengetahui besar nilai variabel y, kita dapat mensubstitusikannya ke dalam persamaan (5), (6) atau (7) untuk mengetahui besar nilai variabel z. Misalnya substitusi ke persamaan (5)</p>
+      <div className={`${isBlurred4 ? 'blur' : ''}`}>
+        <p ref={section4}>5. Setelah kita mengetahui besar nilai variabel y, kita dapat mensubstitusikannya ke dalam persamaan (5), (6) atau (7) untuk mengetahui besar nilai variabel z. Misalnya substitusi ke persamaan (5)</p>
         <p>
           Persamaan (5) <br />
           2y - z = 1.500.000
@@ -672,8 +672,8 @@ export default function MetodePenyelesaianSubstitusi() {
         </div>
       </div>
 
-      <div ref={section5} className={`${isBlurred5 ? 'blur' : ''}`}>
-        <p>
+      <div className={`${isBlurred5 ? 'blur' : ''}`}>
+        <p ref={section5}>
           6. Dari langkah-langkah di atas, kita telah mengetahui besar nilai variabel y dan z. Untuk mengetahui besar nilai variabel x, langkah terakhir adalah menyubstitusikan nilai variabel y dan z ke persamaan (1), (2), atau (3).
           Misalnya kita akan substitusi ke persamaan (2)
         </p>
@@ -742,8 +742,8 @@ export default function MetodePenyelesaianSubstitusi() {
         </div>
       </div>
 
-      <div ref={section6} className={`${isBlurred6 ? 'blur' : ''}`}>
-        <p>Dari seluruh langkah yang telah kita kerjakan tersebut, kita telah mengetahui besar nilai variabel x = 1.500.000, nilai variabel y = 1.600.000 dan nilai variabel z = 1.700.000.</p>
+      <div className={`${isBlurred6 ? 'blur' : ''}`}>
+        <p ref={section6}>Dari seluruh langkah yang telah kita kerjakan tersebut, kita telah mengetahui besar nilai variabel x = 1.500.000, nilai variabel y = 1.600.000 dan nilai variabel z = 1.700.000.</p>
         <p>
           Kita ingat kembali bahwa: <br />
           • variabel x mewakili harga satu gulung kain warna putih <br />

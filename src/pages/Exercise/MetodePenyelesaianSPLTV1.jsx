@@ -214,8 +214,8 @@ export default function MetodePenyelesaianSPLTV1() {
           </div>
         </div>
       </div>
-      <div ref={section} className={`${isBlurred ? 'blur' : ''}`}>
-        <p>3. Dari langkah sebelumnya, kita mendapatkan dua persamaan baru, ya itu persamaan (4) dan (5) yang menyisakan dua variabel x dan z. Kita akan melakukan eliminasi pada kedua persamaan tersebut.</p>
+      <div className={`${isBlurred ? 'blur' : ''}`}>
+        <p ref={section}>3. Dari langkah sebelumnya, kita mendapatkan dua persamaan baru, ya itu persamaan (4) dan (5) yang menyisakan dua variabel x dan z. Kita akan melakukan eliminasi pada kedua persamaan tersebut.</p>
         <div className="overflow-x-auto">
           <div className="row justify-content-center mx-0" style={{ minWidth: '250px' }}>
             <div className="" style={{ width: '250px' }}>
@@ -241,8 +241,8 @@ export default function MetodePenyelesaianSPLTV1() {
         </div>
       </div>
 
-      <div ref={section2} className={`${isBlurred2 ? 'blur' : ''}`}>
-        <p>4. Dari langkah 3 kita mengetahui nilai x. Kemudian kita eliminasi lagi variabel lainnya, sehingga</p>
+      <div className={`${isBlurred2 ? 'blur' : ''}`}>
+        <p ref={section2}>4. Dari langkah 3 kita mengetahui nilai x. Kemudian kita eliminasi lagi variabel lainnya, sehingga</p>
         <div className="overflow-x-auto">
           <div className="row justify-content-center mx-0" style={{ minWidth: '500px' }}>
             <div className="" style={{ width: '150px' }}>
@@ -285,8 +285,8 @@ export default function MetodePenyelesaianSPLTV1() {
         </div>
       </div>
 
-      <div ref={section3} className={`${isBlurred3 ? 'blur' : ''}`}>
-        <p>5. Setelah kita melakukan eliminasi dan mendapatkan nilai dari variabel x dan z, maka nilai y dapat kita tentukan dari salah satu persamaan, misal persamaan (3), sehingga</p>
+      <div className={`${isBlurred3 ? 'blur' : ''}`}>
+        <p ref={section3}>5. Setelah kita melakukan eliminasi dan mendapatkan nilai dari variabel x dan z, maka nilai y dapat kita tentukan dari salah satu persamaan, misal persamaan (3), sehingga</p>
         <div className="overflow-x-auto">
           <div className="row justify-content-center mx-0" style={{ minWidth: '700px' }}>
             <div className=" text-end" style={{ width: '150px' }}>
@@ -366,8 +366,8 @@ export default function MetodePenyelesaianSPLTV1() {
         </div>
       </div>
 
-      <div ref={section4} className={`${isBlurred4 ? 'blur' : ''}`}>
-        <p>
+      <div className={`${isBlurred4 ? 'blur' : ''}`}>
+        <p ref={section4}>
           6. Sehingga kita ketahui nilai variabel x = 88, variabel y = 91, dan variabel z = 90. Kita ingat Kembali bahwa:
           <br />• Variabel x mewakili nilai rata-rata mata pelajaran Matematika
           <br />• Variabel y mewakili nilai rata-rata mata pelajaran Bahasa Indonesia

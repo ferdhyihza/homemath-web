@@ -249,8 +249,8 @@ export default function MetodePenyelesaianSPLTV2() {
         </div>
       </div>
 
-      <div ref={section} className={`${isBlurred ? 'blur' : ''}`}>
-        <p>
+      <div className={`${isBlurred ? 'blur' : ''}`}>
+        <p ref={section}>
           <i className="text-muted">(substitusi persamaan (4) ke persamaan (2))</i>
         </p>
         <div className="overflow-x-auto">
@@ -318,8 +318,8 @@ export default function MetodePenyelesaianSPLTV2() {
         </div>
       </div>
 
-      <div ref={section2} className={`${isBlurred2 ? 'blur' : ''}`}>
-        <p>3. Dari langkah sebelumnya, kita mendapatkan persamaan (5) dan nilai variabel y. Sehingga, kita dapat langsung mensubstitusikan nilai variabel y ke dalam persamaan (5) seperti berikut</p>
+      <div className={`${isBlurred2 ? 'blur' : ''}`}>
+        <p ref={section2}>3. Dari langkah sebelumnya, kita mendapatkan persamaan (5) dan nilai variabel y. Sehingga, kita dapat langsung mensubstitusikan nilai variabel y ke dalam persamaan (5) seperti berikut</p>
         <div className="overflow-x-auto">
           <div className="row justify-content-center mx-0" style={{ minWidth: '800px' }}>
             <div className=" text-end" style={{ width: '100px' }}>
@@ -377,8 +377,8 @@ export default function MetodePenyelesaianSPLTV2() {
           </div>
         </div>
       </div>
-      <div ref={section3} className={`${isBlurred3 ? 'blur' : ''}`}>
-        <p>4. Setelah mengetahui nilai variabel y dan z pada langkah sebelumnya, kita dapat mensubstitusikan nilai tersebut ke dalam salah satu persamaan (1), (2), atau (3). Misalkan substitusi ke persamaan (3), sehingga</p>
+      <div className={`${isBlurred3 ? 'blur' : ''}`}>
+        <p ref={section3}>4. Setelah mengetahui nilai variabel y dan z pada langkah sebelumnya, kita dapat mensubstitusikan nilai tersebut ke dalam salah satu persamaan (1), (2), atau (3). Misalkan substitusi ke persamaan (3), sehingga</p>
         <div className="overflow-x-auto">
           <div className="row justify-content-center mx-0" style={{ minWidth: '750px' }}>
             <div className=" text-end" style={{ width: '350px' }}>

@@ -191,8 +191,8 @@ export default function PenggunaanSPLTV() {
         </div>
         <Tips>kedua ruas dibagi dengan 2</Tips>
       </div>
-      <div ref={section} className={`${isBlurred ? 'blur' : ''}`}>
-        <p>Eliminasi variabel x pada persamaan (1) dan (3)</p>
+      <div className={`${isBlurred ? 'blur' : ''}`}>
+        <p ref={section}>Eliminasi variabel x pada persamaan (1) dan (3)</p>
         <div className="overflow-x-auto">
           <div className="row justify-content-center mx-0" style={{ minWidth: '800px' }}>
             <div className="" style={{ width: '200px' }}>
@@ -225,8 +225,8 @@ export default function PenggunaanSPLTV() {
           </div>
         </div>
       </div>
-      <div ref={section2} className={`${isBlurred2 ? 'blur' : ''}`}>
-        <p>Substitusikan nilai variabel z atau persamaan (4) ke persamaan (5), sehingga</p>
+      <div className={`${isBlurred2 ? 'blur' : ''}`}>
+        <p ref={section2}>Substitusikan nilai variabel z atau persamaan (4) ke persamaan (5), sehingga</p>
         <div className="overflow-x-auto">
           <div className="row justify-content-center mx-0" style={{ minWidth: '350px' }}>
             <div className=" text-end" style={{ width: '100px' }}>
@@ -273,8 +273,8 @@ export default function PenggunaanSPLTV() {
           </div>
         </div>
       </div>
-      <div ref={section3} className={`${isBlurred3 ? 'blur' : ''}`}>
-        <p>Setelah kita mengetahui nilai variabel x dan z, kita dapat mensubstitusikannya ke salah satu persamaan (1), (2), atau (3) untuk mengetahui nilai variabel y. Di sini kita substitusikan ke persamaan (1), maka</p>
+      <div className={`${isBlurred3 ? 'blur' : ''}`}>
+        <p ref={section3}>Setelah kita mengetahui nilai variabel x dan z, kita dapat mensubstitusikannya ke salah satu persamaan (1), (2), atau (3) untuk mengetahui nilai variabel y. Di sini kita substitusikan ke persamaan (1), maka</p>
         <div className="overflow-x-auto">
           <div className="row justify-content-center mx-0" style={{ minWidth: '250px' }}>
             <div className=" text-end" style={{ width: '100px' }}>
