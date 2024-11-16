@@ -20,12 +20,17 @@ import MetodePenyelesaianSubstitusi from './pages/SubjectMatter/MetodePenyelesai
 import MetodePenyelesaianCampuran from './pages/SubjectMatter/MetodePenyelesaianCampuran.jsx';
 import PenggunaanSPLTV from './pages/SubjectMatter/PenggunaanSPLTV.jsx';
 import PenggunaanSPLTV2 from './pages/SubjectMatter/PenggunaanSPLTV2.jsx';
-import PengantarSPLTV1 from './pages/Exercise/PengantarSPLTV1.jsx';
-import PengantarSPLTV2 from './pages/Exercise/PengantarSPLTV2.jsx';
-import PengantarSPLTV3 from './pages/Exercise/PengantarSPLTV3.jsx';
 import AuthorizedRoute from './components/AuthorizedRoutes.jsx';
 import AccessDenied from './pages/403.jsx';
 import FormativeTest from './pages/FormativeTest.jsx';
+import LatsolPengantarSPLTV1 from './pages/Exercise/PengantarSPLTV1.jsx';
+import LatsolPengantarSPLTV2 from './pages/Exercise/PengantarSPLTV2.jsx';
+import LatsolPengantarSPLTV3 from './pages/Exercise/PengantarSPLTV3.jsx';
+import LatsolMetodePenyelesaianSPLTV1 from './pages/Exercise/MetodePenyelesaianSPLTV1.jsx';
+import LatsolMetodePenyelesaianSPLTV2 from './pages/Exercise/MetodePenyelesaianSPLTV2.jsx';
+import LatsolMetodePenyelesaianSPLTV3 from './pages/Exercise/MetodePenyelesaianSPLTV3.jsx';
+import LatsolPenggunaanSPLTV1 from './pages/Exercise/PenggunaanSPLTV1.jsx';
+// import LatsolPenggunaanSPLTV2 from './pages/Exercise/PenggunaanSPLTV2.jsx';
 
 const router = createBrowserRouter([
   {
@@ -95,16 +100,36 @@ const router = createBrowserRouter([
   },
   {
     path: '/latihan-soal/pengantar-spltv/1-unsur-pada-spltv',
-    element: <AuthorizedRoute element={<PengantarSPLTV1 />} requiredKey="UnsurPadaSPLTV" />,
+    element: <AuthorizedRoute element={<LatsolPengantarSPLTV1 />} requiredKey="UnsurPadaSPLTV" />,
   },
   {
     path: '/latihan-soal/pengantar-spltv/2-bentuk-umum-spltv',
-    element: <AuthorizedRoute element={<PengantarSPLTV2 />} requiredKey="BentukUmumSPLTV" />,
+    element: <AuthorizedRoute element={<LatsolPengantarSPLTV2 />} requiredKey="BentukUmumSPLTV" />,
   },
   {
     path: '/latihan-soal/pengantar-spltv/3-bentuk-umum-spltv',
-    element: <AuthorizedRoute element={<PengantarSPLTV3 />} requiredKey="BentukUmumSPLTV2" />,
+    element: <AuthorizedRoute element={<LatsolPengantarSPLTV3 />} requiredKey="BentukUmumSPLTV2" />,
   },
+  {
+    path: '/latihan-soal/metode-penyelesaian-spltv/1-dengan-metode-eliminasi',
+    element: <AuthorizedRoute element={<LatsolMetodePenyelesaianSPLTV1 />} requiredKey="MetodePenyelesaianEliminasi" />,
+  },
+  {
+    path: '/latihan-soal/metode-penyelesaian-spltv/2-dengan-metode-substitusi',
+    element: <AuthorizedRoute element={<LatsolMetodePenyelesaianSPLTV2 />} requiredKey="MetodePenyelesaianSubstitusi" />,
+  },
+  {
+    path: '/latihan-soal/metode-penyelesaian-spltv/3-dengan-metode-campuran',
+    element: <AuthorizedRoute element={<LatsolMetodePenyelesaianSPLTV3 />} requiredKey="MetodePenyelesaianCampuran" />,
+  },
+  {
+    path: '/latihan-soal/penggunaan-spltv/1',
+    element: <AuthorizedRoute element={<LatsolPenggunaanSPLTV1 />} requiredKey="PenggunaanSPLTV" />,
+  },
+  // {
+  //   path: '/latihan-soal/penggunaan-spltv/2',
+  //   element: <AuthorizedRoute element={<LatsolPenggunaanSPLTV2 />} requiredKey="PenggunaanSPLTV2" />,
+  // },
 ]);
 
 createRoot(document.getElementById('root')).render(

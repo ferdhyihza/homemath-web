@@ -70,7 +70,7 @@ export default function MetodePenyelesaianCampuran() {
       setInputValues(savedStatus.values);
       setInputStatuses(savedStatus.statuses);
       // Tentukan apakah kelas blur harus dihapus berdasarkan status validasi
-      const allValid = savedStatus.statuses.input40 && savedStatus.statuses.input41 && savedStatus.statuses.input42;
+      const allValid = savedStatus.statuses.input39 && savedStatus.statuses.input40 && savedStatus.statuses.input41 && savedStatus.statuses.input42;
       setIsBlurred(!allValid);
       const allValid2 = savedStatus.statuses.input43 && savedStatus.statuses.input44;
       setIsBlurred2(!allValid2);
@@ -183,7 +183,7 @@ export default function MetodePenyelesaianCampuran() {
     localStorage.setItem('inputStatuses', JSON.stringify(updatedStatus));
 
     // Periksa apakah semua input sudah valid
-    const allValid = updatedStatus.statuses.input40 && updatedStatus.statuses.input41 && updatedStatus.statuses.input42;
+    const allValid = updatedStatus.statuses.input39 && updatedStatus.statuses.input40 && updatedStatus.statuses.input41 && updatedStatus.statuses.input42;
     setIsBlurred(!allValid); // Hapus kelas blur jika semua input valid
     const allValid2 = updatedStatus.statuses.input43 && updatedStatus.statuses.input44;
     setIsBlurred2(!allValid2);

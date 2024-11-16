@@ -13,7 +13,7 @@ export default function Exercise() {
   const [isMetodePenyelesaianCampuranDone, setIsMetodePenyelesaianCampuranDone] = useState(false);
 
   const [isPenggunaanSPLTVDone, setIsPenggunaanSPLTVDone] = useState(false);
-  const [isPenggunaanSPLTV2Done, setIsPenggunaanSPLTV2Done] = useState(false);
+  // const [isPenggunaanSPLTV2Done, setIsPenggunaanSPLTV2Done] = useState(false);
 
   useEffect(() => {
     const sessionData = JSON.parse(localStorage.getItem('sessionData'));
@@ -41,9 +41,9 @@ export default function Exercise() {
     if (sessionData?.PenggunaanSPLTV) {
       setIsPenggunaanSPLTVDone(true);
     }
-    if (sessionData?.PenggunaanSPLTV2) {
-      setIsPenggunaanSPLTV2Done(true);
-    }
+    // if (sessionData?.PenggunaanSPLTV2) {
+    //   setIsPenggunaanSPLTV2Done(true);
+    // }
   }, []);
 
   return (
@@ -63,23 +63,23 @@ export default function Exercise() {
             Bentuk Umum SPLTV: <br />
             Menyusun Sistem Persamaan Linear Tiga Variabel
           </ExerciseCard>
-          <ExerciseCard className={isMetodePenyelesaianEliminasiDone ? '' : 'disabled text-secondary'} title="Metode Penyelesaian SPLTV Latihan Soal 1" link="">
-            Penyelesaian SPLTV dengan Metode Eliminasi
-          </ExerciseCard>
         </div>
         <div className="col-sm-6">
-          <ExerciseCard className={isMetodePenyelesaianSubstitusiDone ? '' : 'disabled text-secondary'} title="Metode Penyelesaian SPLTV Latihan Soal 2" link="">
+          <ExerciseCard className={isMetodePenyelesaianEliminasiDone ? '' : 'disabled text-secondary'} title="Metode Penyelesaian SPLTV Latihan Soal 1" link="metode-penyelesaian-spltv/1-dengan-metode-eliminasi">
+            Penyelesaian SPLTV dengan Metode Eliminasi
+          </ExerciseCard>
+          <ExerciseCard className={isMetodePenyelesaianSubstitusiDone ? '' : 'disabled text-secondary'} title="Metode Penyelesaian SPLTV Latihan Soal 2" link="metode-penyelesaian-spltv/2-dengan-metode-substitusi">
             Penyelesaian SPLTV dengan Metode Substitusi
           </ExerciseCard>
-          <ExerciseCard className={isMetodePenyelesaianCampuranDone ? '' : 'disabled text-secondary'} title="Metode Penyelesaian SPLTV Latihan Soal 3" link="">
+          <ExerciseCard className={isMetodePenyelesaianCampuranDone ? '' : 'disabled text-secondary'} title="Metode Penyelesaian SPLTV Latihan Soal 3" link="metode-penyelesaian-spltv/3-dengan-metode-campuran">
             Penyelesaian SPLTV dengan Metode Campuran (Eliminasi & Substitusi)
           </ExerciseCard>
-          <ExerciseCard className={isPenggunaanSPLTVDone ? '' : 'disabled text-secondary'} title="Penggunaan SPLTV Latihan Soal 1" link="">
+          <ExerciseCard className={isPenggunaanSPLTVDone ? '' : 'disabled text-secondary'} title="Penggunaan SPLTV Latihan Soal 1" link="penggunaan-spltv/1">
             Penggunaan SPLTV Latihan 1
           </ExerciseCard>
-          <ExerciseCard className={isPenggunaanSPLTV2Done ? '' : 'disabled text-secondary'} title="Penggunaan SPLTV Latihan Soal 2" link="">
+          {/* <ExerciseCard className={isPenggunaanSPLTV2Done ? '' : 'disabled text-secondary'} title="Penggunaan SPLTV Latihan Soal 2" link="penggunaan-spltv/2">
             Penggunaan SPLTV Latihan 2
-          </ExerciseCard>
+          </ExerciseCard> */}
         </div>
       </div>
     </Main>

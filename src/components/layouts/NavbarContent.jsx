@@ -89,7 +89,7 @@ export default function NavbarContent() {
                 </Link>
               ) : (
                 <a type="button" className={`nav-link text-light `} data-bs-toggle="modal" data-bs-target={`#modalAlert`}>
-                  <img src="../icon/icon-tes-formatif.png" width={32} alt="icon-tes-formatif" className="me-2" /> Tes Formatif
+                  <img src="../../icon/icon-tes-formatif.png" width={32} alt="icon-tes-formatif" className="me-2" /> Tes Formatif
                 </a>
               )}
             </li>
