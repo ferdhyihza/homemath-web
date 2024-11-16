@@ -1,15 +1,30 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import NextButton from '../components/buttons/NextButton';
 import '../styles/Home.css';
 import Main from '../components/layouts/Main';
 import Footer from '../components/layouts/Footer';
+import PetunjukPenggunaan from '../components/layouts/PetunjukPenggunaan';
+import { useEffect, useRef } from 'react';
 
 export default function Home() {
   const sessionData = JSON.parse(localStorage.getItem('sessionData') || '{}');
   const isDoTest = sessionData?.PenggunaanSPLTV2;
+
+  const petunjukPenggunaanSection = useRef(null);
+  const location = useLocation();
+  const query = location.search;
+  const cleanQuery = query.startsWith('?') ? query.substring(1) : query;
+  const isPetunjuk = cleanQuery === 'petunjuk-penggunaan';
+
+  useEffect(() => {
+    if (isPetunjuk && petunjukPenggunaanSection.current) {
+      petunjukPenggunaanSection.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  }, [isPetunjuk]);
+
   return (
     <Main>
-      <section className=" bg-darkblue rounded-4" id="hero">
+      <section className=" bg-darkblue rounded-4 mb-4" id="hero">
         <div className="row p-4 flex-sm-row-reverse justify-content-center justify-content-sm-between">
           <div id="hero-image" className="col-sm-4 mb-3 mb-sm-0 row d-none d-sm-flex" style={{ height: '300px' }}>
             <div className="col-8">
@@ -61,6 +76,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <div ref={petunjukPenggunaanSection}></div>
+      <PetunjukPenggunaan />
       <Footer />
     </Main>
   );

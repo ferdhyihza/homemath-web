@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="bg-darkblue mt-4 rounded-top-4 p-4">
+    <footer className="bg-darkblue rounded-top-4 p-4">
       <div className="d-flex justify-content-between mb-4">
         <h4 className=" fw-bold" href="#" id="navbar-title">
           HOMEMATH

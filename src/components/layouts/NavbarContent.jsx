@@ -96,7 +96,7 @@ export default function NavbarContent() {
           </ul>
         </div>
         <li className="ps-5 ms-3 pb-5">
-          <Link to="/" className="nav-link fw-medium text-light ">
+          <Link to="/?petunjuk-penggunaan" smooth={true} duration={500} className="nav-link fw-medium text-light ">
             <img src="../../icon/icon-petunjuk.png" width={32} alt="icon petunjuk penggunaan" className="me-2" /> Petunjuk Penggunaan
           </Link>
         </li>
