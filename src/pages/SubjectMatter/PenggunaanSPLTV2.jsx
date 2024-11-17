@@ -144,13 +144,15 @@ export default function PenggunaanSPLTV2() {
         Penggunaan SPLTV <span className="text-muted fw-medium ms-sm-2 fs-5">Pada Kehidupan Sehari-hari</span>
       </h3>
       <p>
-        <b>Sudahkah memahami untuk ap akita mempelajari SPLTV?</b> <br />
+        <b>Sudahkah memahami untuk apa kita mempelajari SPLTV?</b> <br />
         Untuk melatih kalian menerjemahkan soal cerita ke dalam bentuk sistem persamaan linear, mari kita coba lagi contoh berikut ini!
       </p>
-      <figure className="text-center">
-        <img className="img-fluid" src="../img/ilustrasi-pengantar-spltv.png" alt="video ilustrasi" />
-        <figcaption className="fst-italic fw-light">Ilustrasi [video]</figcaption>
-      </figure>
+      <div className="d-flex justify-content-center">
+        <figure className="text-center w-25">
+          <img className="img-fluid" src="/img/emas.jpg" alt="gambar gelang" />
+          <figcaption className="fst-italic fw-light">gambar gelang</figcaption>
+        </figure>
+      </div>
       <p>
         Rania memiliki beberapa gelang emas, silver, dan rose gold. Jumlah berat seluruh gelang Rania adalah 32 gram. Berat gelang rose gold adalah setengah dari dua kali berat gelang emas ditambah berat gelang silver. Berat gelang emas
         ditambah dengan dua kali berat gelang silver dan ditambah lagi dengan berat gelang rose gold adalah 40 gram. Maka, berat masing-masing gelang Rania adalah ...
