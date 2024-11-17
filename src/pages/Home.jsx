@@ -28,10 +28,10 @@ export default function Home() {
         <div className="row p-4 flex-sm-row-reverse justify-content-center justify-content-sm-between">
           <div id="hero-image" className="col-sm-4 mb-3 mb-sm-0 row d-none d-sm-flex" style={{ height: '300px' }}>
             <div className="col-8">
-              <img className="rounded-4 img-fluid w-100 h-100 object-fit-cover" src="hero1.png" alt="" />
+              <img className="rounded-4 img-fluid w-100 h-100 object-fit-cover" src="/img/hero1.png" alt="hero image 1" />
             </div>
             <div className="col-4">
-              <img className="rounded-4 img-fluid w-100 h-100 object-fit-cover" src="hero2.png" alt="" />
+              <img className="rounded-4 img-fluid w-100 h-100 object-fit-cover" src="/img/hero2.png" alt="hero image 2" />
             </div>
           </div>
           <div className="col-sm-8 pe-sm-4 d-flex flex-column jusify-content-center justify-content-sm-between">
