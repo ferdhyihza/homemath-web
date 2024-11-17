@@ -134,8 +134,8 @@ export default function PenggunaanSPLTV() {
         dengan jumlah ketiga angkanya kemudian dijumlahkan dengan 13. Berapa besar nilai bilangan tersebut?
       </p>
       <figure className="text-center">
-        <img className="img-fluid" src="../img/ilustrasi-pengantar-spltv.png" alt="video ilustrasi" />
-        <figcaption className="fst-italic fw-light">Ilustrasi [video]</figcaption>
+        <img className="img-fluid" src="/img/variabel.png" alt="video ilustrasi" style={{ maxWidth: '144px' }} />
+        {/* <figcaption className="fst-italic fw-light">Ilustrasi [video]</figcaption> */}
       </figure>
       <p>
         <b>Penyelesaian:</b> <br />
