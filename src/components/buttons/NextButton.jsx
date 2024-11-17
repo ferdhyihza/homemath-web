@@ -23,6 +23,11 @@ export default function NextButton(props) {
                     <h5 className="fw-bold mb-2">Wow keren!</h5>
                     {props.end ? (
                       <p className="">Kamu telah mempelajari seluruh materi. Terakhir, mari coba kerjakan tes formatif berikut untuk mengetahui pemahamanmu terhadap SPLTV</p>
+                    ) : props.latsol ? (
+                      <p className="">
+                        Kamu sudah selesai mengerjakan latihan soal {props.children} <br />
+                        Yuk lanjut ke latihan soal selanjutnya!
+                      </p>
                     ) : (
                       <p className="">
                         Kamu sudah selesai mempelajari materi {props.children} <br />

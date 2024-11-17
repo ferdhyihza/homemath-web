@@ -448,7 +448,9 @@ export default function MetodePenyelesaianSPLTV2() {
       <div ref={section4} className={`${isBlurred4 ? 'blur' : ''}`}>
         <p>5. Sehingga kita ketahui nilai variabel x = 88, variabel y = 91, dan variabel z = 90.</p>
         <div className="d-flex justify-content-center py-4">
-          <NextButton link="/latihan-soal" />
+          <NextButton latsol={true} link="/latihan-soal">
+            Penyelesaian SPLTV dengan Metode Substitusi
+          </NextButton>
         </div>
       </div>
     </Main>

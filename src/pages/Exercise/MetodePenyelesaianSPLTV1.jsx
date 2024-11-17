@@ -376,7 +376,9 @@ export default function MetodePenyelesaianSPLTV1() {
         <p>Sehingga, ketiga siswa yaitu Ilham, Yaqin, dan Ulay memiliki nilai rata-rata mata pelajaran Matematika adalah 88, nilai rata-rata mata pelajaran Bahasa Indonesia adalah 91, dan nilai rata-rata mata pelajaran 90.</p>
 
         <div className="d-flex justify-content-center py-4">
-          <NextButton link="/latihan-soal" />
+          <NextButton latsol={true} link="/latihan-soal">
+            Penyelesaian SPLTV dengan Metode Eliminasi
+          </NextButton>
         </div>
       </div>
     </Main>

@@ -306,7 +306,9 @@ export default function PengantarSPLTV3() {
       </div>
 
       <div className={`${isBlurred2 ? 'blur' : ''} d-flex justify-content-center py-4`}>
-        <NextButton link="/latihan-soal" />
+        <NextButton latsol={true} link="/latihan-soal">
+          Bentuk Umum SPLTV: Menyusun Sistem Persamaan Linear Tiga Variabel
+        </NextButton>
       </div>
     </Main>
   );

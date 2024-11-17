@@ -274,7 +274,9 @@ export default function PenggunaanSPLTV1() {
         <p>5. Maka, kita telah mengetahu bahwa nilai variabel a = 4, b = 5, dan c = 3. Jadi, berat tepung yang dibeli oleh Hanifah masing masing adalah, tepung terigu 4 kg, tepung sagu 5 kg, dan tepung kanji 3 kg.</p>
 
         <div className="d-flex justify-content-center py-4">
-          <NextButton link="/latihan-soal" />
+          <NextButton latsol={true} link="/latihan-soal">
+            Penggunaan SPLTV
+          </NextButton>
         </div>
       </div>
     </Main>
