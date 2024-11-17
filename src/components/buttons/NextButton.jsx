@@ -19,7 +19,7 @@ export default function NextButton(props) {
               <div className="modal-content rounded-4">
                 <div className="modal-body text-center bg-lightblue rounded-top-4">
                   <div className="bg-blue-subtle text-black p-2 rounded-4">
-                    <img src="/icon/icon-benar.png" alt="icon salah" className="py-3" />
+                    <img src="/icon/task.gif" width={72} alt="icon done" className="my-3 rounded-4" />
                     <h5 className="fw-bold mb-2">Wow keren!</h5>
                     <p className="">
                       Kamu sudah selesai mempelajari materi {props.children} <br />
