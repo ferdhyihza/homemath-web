@@ -383,7 +383,7 @@ export default function BentukUmumSPLTV2() {
 
       <div className={`${isBlurred2 ? 'blur' : ''} d-flex justify-content-center py-4`}>
         <NextButton confirmation={sessionData?.BentukUmumSPLTV2} link={from ? '/materi' : '/materi/metode-penyelesaian-spltv'}>
-          Bentuk Umum SPLTV 2
+          Pengantar SPLTV
         </NextButton>
       </div>
     </Main>

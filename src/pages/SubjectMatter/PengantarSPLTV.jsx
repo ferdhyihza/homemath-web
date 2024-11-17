@@ -58,9 +58,7 @@ export default function PengantarSPLTV() {
       </p>
 
       <div className="d-flex justify-content-center py-4">
-        <NextButton confirmation={sessionData?.PengantarSPLTV} link={'/materi/unsur-pada-spltv' + (from ? '?from=materi' : '')}>
-          Pengantar SPLTV
-        </NextButton>
+        <NextButton link={'/materi/unsur-pada-spltv' + (from ? '?from=materi' : '')}></NextButton>
       </div>
     </Main>
   );

@@ -283,9 +283,7 @@ export default function UnsurPadaSPLTV() {
       {isModalBenarKoefisienOpen && <ModalBenar jenis="Koefisien">Yuk lanjut ke pembelajaran selanjutnya...</ModalBenar>}
 
       <div ref={nextButtonSection} className={`d-flex justify-content-center py-4 ${removeBlurNextButton ? '' : 'blur'}`}>
-        <NextButton confirmation={sessionData?.UnsurPadaSPLTV} link={`/materi/bentuk-umum-spltv` + (from ? '?from=materi' : '')}>
-          Unsur pada SPLTV
-        </NextButton>
+        <NextButton link={`/materi/bentuk-umum-spltv` + (from ? '?from=materi' : '')}></NextButton>
       </div>
     </Main>
   );

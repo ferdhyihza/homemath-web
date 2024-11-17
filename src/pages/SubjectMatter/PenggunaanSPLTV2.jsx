@@ -358,8 +358,8 @@ export default function PenggunaanSPLTV2() {
         </p>
 
         <div className="d-flex justify-content-center py-4">
-          <NextButton confirmation={sessionData?.PenggunaanSPLTV2} link={from ? '/materi' : '/tes-formatif'}>
-            Penggunaan SPLTV 2
+          <NextButton confirmation={sessionData?.PenggunaanSPLTV2} end={true} link={from ? '/materi' : '/tes-formatif'}>
+            Tes Formatif
           </NextButton>
         </div>
       </div>

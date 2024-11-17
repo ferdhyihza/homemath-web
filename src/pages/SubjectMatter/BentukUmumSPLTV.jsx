@@ -141,9 +141,7 @@ export default function BentukUmumSPLTV() {
       </ModalSalah>
 
       <div ref={nextButtonSection} className={`d-flex justify-content-center py-4 ${removeBlurNextButton ? '' : 'blur'}`}>
-        <NextButton confirmation={sessionData.BentukUmumSPLTV} link={`/materi/bentuk-umum-spltv-2` + (from ? '?from=materi' : '')}>
-          Bentuk Umum SPLTV
-        </NextButton>
+        <NextButton link={`/materi/bentuk-umum-spltv-2` + (from ? '?from=materi' : '')}></NextButton>
       </div>
     </Main>
   );
