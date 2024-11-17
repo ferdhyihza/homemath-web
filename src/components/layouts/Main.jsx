@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import Navbar from './Navbar';
 import { useLocation } from 'react-router-dom';
 import Quotes from './Quotes';
@@ -21,11 +22,13 @@ export default function Main(props) {
           <Navbar />
         </div>
       </div>
-      <div className="main container pt-4 overflow-x-visible">
-        {/* eslint-disable-next-line react/prop-types */}
-        {props.children}
-        {/* <div className="pt-4"></div> */}
-        {memoizedQuotes}
+      <div className={props.className}>
+        <div className="main container pt-4 overflow-x-visible">
+          {/* eslint-disable-next-line react/prop-types */}
+          {props.children}
+          {/* <div className="pt-4"></div> */}
+          {memoizedQuotes}
+        </div>
       </div>
       <ModalAlertTesFormatif />
     </>

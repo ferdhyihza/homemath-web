@@ -33,6 +33,12 @@ body {
   background-color: #142237;
 }
 
+a.bg-darkblue:hover {
+  color: #fff;
+  background-color: #142237e8;
+  /* filter: brightness(90%); */
+}
+
 .bg-blue-subtle {
   background-color: #cbddec;
 }
@@ -118,4 +124,19 @@ body {
 .disabled {
   pointer-events: none;
   user-select: none;
+}
+
+.btn-outline-darkblue {
+  background-color: #f3f6fa !important;
+  color: #142237 !important;
+}
+
+.btn-outline-darkblue:hover {
+  background-color: #f3f6fa !important;
+}
+
+.btn-outline-darkblue:active {
+  border: 1px solid #142237 !important;
+  background-color: #142237 !important;
+  color: #f3f6fa !important;
 }
