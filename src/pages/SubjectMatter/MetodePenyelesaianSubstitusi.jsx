@@ -66,7 +66,8 @@ export default function MetodePenyelesaianSubstitusi() {
   const section5 = useRef(null);
   const section6 = useRef(null);
 
-  const sessionData = JSON.parse(localStorage.getItem('sessionData'));
+  const [sessionData] = useState(JSON.parse(localStorage.getItem('sessionData')));
+
   // Efek untuk memuat status dan nilai dari localStorage ketika komponen pertama kali dimuat
   useEffect(() => {
     const savedStatus = JSON.parse(localStorage.getItem('inputStatuses'));

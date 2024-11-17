@@ -40,8 +40,8 @@ export default function MetodePenyelesaianEliminasi() {
   const section2 = useRef(null);
   const section3 = useRef(null);
   const section4 = useRef(null);
+  const [sessionData] = useState(JSON.parse(localStorage.getItem('sessionData')));
 
-  const sessionData = JSON.parse(localStorage.getItem('sessionData'));
   // Efek untuk memuat status dan nilai dari localStorage ketika komponen pertama kali dimuat
   useEffect(() => {
     const savedStatus = JSON.parse(localStorage.getItem('inputStatuses'));

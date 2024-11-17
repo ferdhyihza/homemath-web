@@ -39,7 +39,8 @@ export default function PenggunaanSPLTV2() {
   const section4 = useRef(null);
   const section5 = useRef(null);
 
-  const sessionData = JSON.parse(localStorage.getItem('sessionData'));
+  const [sessionData] = useState(JSON.parse(localStorage.getItem('sessionData')));
+
   // Efek untuk memuat status dan nilai dari localStorage ketika komponen pertama kali dimuat
   useEffect(() => {
     const savedStatus = JSON.parse(localStorage.getItem('inputStatuses'));
