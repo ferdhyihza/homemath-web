@@ -70,16 +70,16 @@ export default function SubjectMatter() {
   return (
     <Main>
       <h3 className="fw-bold pb-4 my-1">Materi</h3>
-      <SubjectMatterCard number="01" title="Pengantar SPLTV" link="pengantar-spltv" progress={progressPengantarSPLTV}>
+      <SubjectMatterCard number="01" title="Pengantar SPLTV" link="pengantar-spltv?from=materi" progress={progressPengantarSPLTV}>
         <li>
           <span>
-            <Link to="pengantar-spltv">Pengantar SPLTV </Link>
+            <Link to="pengantar-spltv?from=materi">Pengantar SPLTV </Link>
           </span>
         </li>
         <li>
           {isPengantarSPLTVDone ? (
             <span>
-              <Link to="unsur-pada-spltv">Unsur pada SPLTV</Link>{' '}
+              <Link to="unsur-pada-spltv?from=materi">Unsur pada SPLTV</Link>{' '}
             </span>
           ) : (
             <span className="text-secondary fw-light">Unsur pada SPLTV</span>
@@ -88,23 +88,27 @@ export default function SubjectMatter() {
         <li>
           {isUnsurPadaSPLTVDone ? (
             <span>
-              <Link to="bentuk-umum-spltv">Bentuk Umum SPLTV </Link>{' '}
+              <Link to="bentuk-umum-spltv?from=materi">Bentuk Umum SPLTV </Link>{' '}
             </span>
           ) : (
             <span className="text-secondary fw-light">Bentuk Umum SPLTV</span>
           )}
         </li>
       </SubjectMatterCard>
-      <SubjectMatterCard number="02" title="Metode Penyelesaian SPLTV" link="metode-penyelesaian-spltv" progress={progressMetodePenyelesaianSPLTV} className={isBentukUmumSPLTV2Done ? '' : 'disabled text-secondary'}>
-        <li>{isBentukUmumSPLTV2Done ? <Link to="metode-penyelesaian-spltv">Macam-macam Metode Penyelesaian SPLTV</Link> : <span className="text-secondary fw-light">Macam-macam Metode Penyelesaian SPLTV</span>}</li>
-        <li>{isMetodePenyelesaianSPLTVDone ? <Link to="metode-penyelesaian-spltv/eliminasi">Metode Eliminasi</Link> : <span className="text-secondary fw-light">Metode Eliminasi</span>}</li>
-        <li>{isMetodePenyelesaianEliminasiDone ? <Link to="metode-penyelesaian-spltv/substitusi">Metode Substitusi</Link> : <span className="text-secondary fw-light">Metode Substitusi</span>}</li>
+      <SubjectMatterCard number="02" title="Metode Penyelesaian SPLTV" link="metode-penyelesaian-spltv?from=materi" progress={progressMetodePenyelesaianSPLTV} className={isBentukUmumSPLTV2Done ? '' : 'disabled text-secondary'}>
+        <li>{isBentukUmumSPLTV2Done ? <Link to="metode-penyelesaian-spltv?from=materi">Macam-macam Metode Penyelesaian SPLTV</Link> : <span className="text-secondary fw-light">Macam-macam Metode Penyelesaian SPLTV</span>}</li>
+        <li>{isMetodePenyelesaianSPLTVDone ? <Link to="metode-penyelesaian-spltv/eliminasi?from=materi">Metode Eliminasi</Link> : <span className="text-secondary fw-light">Metode Eliminasi</span>}</li>
+        <li>{isMetodePenyelesaianEliminasiDone ? <Link to="metode-penyelesaian-spltv/substitusi?from=materi">Metode Substitusi</Link> : <span className="text-secondary fw-light">Metode Substitusi</span>}</li>
         <li>
-          {isMetodePenyelesaianSubstitusiDone ? <Link to="metode-penyelesaian-spltv/campuran">Metode Campuran (Eliminasi & Substitusi)</Link> : <span className="text-secondary fw-light">Metode Campuran (Eliminasi & Substitusi)</span>}
+          {isMetodePenyelesaianSubstitusiDone ? (
+            <Link to="metode-penyelesaian-spltv/campuran?from=materi">Metode Campuran (Eliminasi & Substitusi)</Link>
+          ) : (
+            <span className="text-secondary fw-light">Metode Campuran (Eliminasi & Substitusi)</span>
+          )}
         </li>
       </SubjectMatterCard>
-      <SubjectMatterCard number="03" title="Penggunaan SPLTV pada Kehidupan Sehari-hari" link="penggunaan-spltv" progress={progressPenggunaanSPLTV} className={isMetodePenyelesaianCampuranDone ? '' : 'disabled text-secondary'}>
-        <li>{isMetodePenyelesaianCampuranDone ? <Link to="penggunaan-spltv">Untuk apa kita mempelajari SPLTV?</Link> : <span className="text-secondary fw-light">Untuk apa kita mempelajari SPLTV?</span>}</li>
+      <SubjectMatterCard number="03" title="Penggunaan SPLTV pada Kehidupan Sehari-hari" link="penggunaan-spltv?from=materi" progress={progressPenggunaanSPLTV} className={isMetodePenyelesaianCampuranDone ? '' : 'disabled text-secondary'}>
+        <li>{isMetodePenyelesaianCampuranDone ? <Link to="penggunaan-spltv?from=materi">Untuk apa kita mempelajari SPLTV?</Link> : <span className="text-secondary fw-light">Untuk apa kita mempelajari SPLTV?</span>}</li>
       </SubjectMatterCard>
       <h3 className="fw-bold py-3">Lainnya</h3>
       <div className="row mb-2">

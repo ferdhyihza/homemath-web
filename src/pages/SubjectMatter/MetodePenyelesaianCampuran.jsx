@@ -1,9 +1,13 @@
+import { useSearchParams } from 'react-router-dom';
 import NextButton from '../../components/buttons/NextButton';
 import Main from '../../components/layouts/Main';
 import Tips from '../../components/Tips';
 import { useEffect, useRef, useState } from 'react';
 
 export default function MetodePenyelesaianCampuran() {
+  const [searchParams] = useSearchParams();
+  const from = searchParams.get('from') == 'materi';
+
   const [inputValues, setInputValues] = useState({
     input39: '',
     input40: '',
@@ -667,7 +671,7 @@ export default function MetodePenyelesaianCampuran() {
         </p>
 
         <div className="d-flex justify-content-center py-4">
-          <NextButton link="/materi/penggunaan-spltv" />
+          <NextButton link={from ? '/materi' : '/materi/penggunaan-spltv'} />
         </div>
       </div>
     </Main>

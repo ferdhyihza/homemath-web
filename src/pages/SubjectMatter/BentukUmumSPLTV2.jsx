@@ -2,8 +2,12 @@ import { useEffect, useRef, useState } from 'react';
 import NextButton from '../../components/buttons/NextButton';
 import Main from '../../components/layouts/Main';
 import Tips from '../../components/Tips';
+import { useSearchParams } from 'react-router-dom';
 
 export default function BentukUmumSPLTV2() {
+  const [searchParams] = useSearchParams();
+  const from = searchParams.get('from') == 'materi';
+
   const [inputValues, setInputValues] = useState({
     input1: '',
     input2: '',
@@ -379,7 +383,7 @@ export default function BentukUmumSPLTV2() {
       </div>
 
       <div className={`${isBlurred2 ? 'blur' : ''} d-flex justify-content-center py-4`}>
-        <NextButton link="/materi/metode-penyelesaian-spltv" />
+        <NextButton link={from ? '/materi' : '/materi/metode-penyelesaian-spltv'} />
       </div>
     </Main>
   );

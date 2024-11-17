@@ -1,8 +1,12 @@
 import { useEffect } from 'react';
 import NextButton from '../../components/buttons/NextButton';
 import Main from '../../components/layouts/Main';
+import { useSearchParams } from 'react-router-dom';
 
 export default function PengantarSPLTV() {
+  const [searchParams] = useSearchParams();
+  const from = searchParams.get('from') == 'materi';
+
   useEffect(() => {
     const sessionData = JSON.parse(localStorage.getItem('sessionData'));
 
@@ -54,7 +58,7 @@ export default function PengantarSPLTV() {
       </p>
 
       <div className="d-flex justify-content-center py-4">
-        <NextButton link="/materi/unsur-pada-spltv" />
+        <NextButton link={'/materi/unsur-pada-spltv' + (from ? '?from=materi' : '')} />
       </div>
     </Main>
   );

@@ -2,8 +2,12 @@ import { useEffect, useRef, useState } from 'react';
 import NextButton from '../../components/buttons/NextButton';
 import Main from '../../components/layouts/Main';
 import Tips from '../../components/Tips';
+import { useSearchParams } from 'react-router-dom';
 
 export default function PenggunaanSPLTV2() {
+  const [searchParams] = useSearchParams();
+  const from = searchParams.get('from') == 'materi';
+
   const [inputValues, setInputValues] = useState({
     input65: '',
     input66: '',
@@ -353,7 +357,7 @@ export default function PenggunaanSPLTV2() {
         </p>
 
         <div className="d-flex justify-content-center py-4">
-          <NextButton link="/tes-formatif" />
+          <NextButton link={from ? '/materi' : '/tes-formatif'} />
         </div>
       </div>
     </Main>

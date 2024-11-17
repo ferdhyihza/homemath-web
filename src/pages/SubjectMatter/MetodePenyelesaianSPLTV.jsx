@@ -1,8 +1,12 @@
 import { useEffect } from 'react';
 import NextButton from '../../components/buttons/NextButton';
 import Main from '../../components/layouts/Main';
+import { useSearchParams } from 'react-router-dom';
 
 export default function MetodePenyelesaianSPLTV() {
+  const [searchParams] = useSearchParams();
+  const from = searchParams.get('from') == 'materi';
+
   useEffect(() => {
     const sessionData = JSON.parse(localStorage.getItem('sessionData'));
 
@@ -42,7 +46,7 @@ export default function MetodePenyelesaianSPLTV() {
       <p>Untuk lebih jelasnya, akan dijabarkan pada pembelajaran berikut ini.</p>
 
       <div className="d-flex justify-content-center py-4">
-        <NextButton link="/materi/metode-penyelesaian-spltv/eliminasi" />
+        <NextButton link={`/materi/metode-penyelesaian-spltv/eliminasi` + (from ? '?from=materi' : '')} />
       </div>
     </Main>
   );

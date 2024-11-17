@@ -1,9 +1,13 @@
+import { useSearchParams } from 'react-router-dom';
 import NextButton from '../../components/buttons/NextButton';
 import Main from '../../components/layouts/Main';
 import Tips from '../../components/Tips';
 import { useEffect, useRef, useState } from 'react';
 
 export default function PenggunaanSPLTV() {
+  const [searchParams] = useSearchParams();
+  const from = searchParams.get('from') == 'materi';
+
   const [inputValues, setInputValues] = useState({
     input61: '',
     input62: '',
@@ -317,7 +321,7 @@ export default function PenggunaanSPLTV() {
         <p>Setelah kita menyelesaikan langkah-langkah tersebut, kita telah mengetahui nilai variabel x=3,y=4, dan z=9. Jadi, bilangan tersebut adalah 349.</p>
 
         <div className="d-flex justify-content-center py-4">
-          <NextButton link="/materi/penggunaan-spltv-2" />
+          <NextButton link={`/materi/penggunaan-spltv-2` + (from ? '?from=materi' : '')} />
         </div>
       </div>
     </Main>

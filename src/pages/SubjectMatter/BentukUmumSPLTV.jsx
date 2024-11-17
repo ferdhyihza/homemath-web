@@ -5,8 +5,12 @@ import NextButton from '../../components/buttons/NextButton';
 import Main from '../../components/layouts/Main';
 import ModalBenar from '../../components/modals/ModalBenar';
 import ModalSalah from '../../components/modals/ModalSalah';
+import { useSearchParams } from 'react-router-dom';
 
 export default function BentukUmumSPLTV() {
+  const [searchParams] = useSearchParams();
+  const from = searchParams.get('from') == 'materi';
+
   const [removeBlurNextButton, setRemoveBlurNextButton] = useState(false);
   const [isModalBenarOpen, setIsModalBenarOpen] = useState(false);
 
@@ -137,7 +141,7 @@ export default function BentukUmumSPLTV() {
       </ModalSalah>
 
       <div ref={nextButtonSection} className={`d-flex justify-content-center py-4 ${removeBlurNextButton ? '' : 'blur'}`}>
-        <NextButton link="/materi/bentuk-umum-spltv-2" />
+        <NextButton link={`/materi/bentuk-umum-spltv-2` + (from ? '?from=materi' : '')} />
       </div>
     </Main>
   );
