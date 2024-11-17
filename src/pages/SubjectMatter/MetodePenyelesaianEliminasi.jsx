@@ -436,7 +436,7 @@ export default function MetodePenyelesaianEliminasi() {
         </p>
 
         <div className="d-flex justify-content-center py-4">
-          <NextButton link={`/materi/metode-penyelesaian-spltv/substitusi` + (from ? '?from=materi' : '')} />
+          <NextButton link={`/materi/metode-penyelesaian-spltv/substitusi` + (from ? '?from=materi' : '')}>Penyelesaian SPLTV dengan Metode Eliminasi</NextButton>
         </div>
       </div>
     </Main>

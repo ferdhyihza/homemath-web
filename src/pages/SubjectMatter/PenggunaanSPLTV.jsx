@@ -321,7 +321,7 @@ export default function PenggunaanSPLTV() {
         <p>Setelah kita menyelesaikan langkah-langkah tersebut, kita telah mengetahui nilai variabel x=3,y=4, dan z=9. Jadi, bilangan tersebut adalah 349.</p>
 
         <div className="d-flex justify-content-center py-4">
-          <NextButton link={`/materi/penggunaan-spltv-2` + (from ? '?from=materi' : '')} />
+          <NextButton link={`/materi/penggunaan-spltv-2` + (from ? '?from=materi' : '')}>Penggunaan SPLTV</NextButton>
         </div>
       </div>
     </Main>

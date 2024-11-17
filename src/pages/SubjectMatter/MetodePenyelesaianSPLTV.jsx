@@ -46,7 +46,7 @@ export default function MetodePenyelesaianSPLTV() {
       <p>Untuk lebih jelasnya, akan dijabarkan pada pembelajaran berikut ini.</p>
 
       <div className="d-flex justify-content-center py-4">
-        <NextButton link={`/materi/metode-penyelesaian-spltv/eliminasi` + (from ? '?from=materi' : '')} />
+        <NextButton link={`/materi/metode-penyelesaian-spltv/eliminasi` + (from ? '?from=materi' : '')}>Macam-macam Metode Penyelesaian SPLTV</NextButton>
       </div>
     </Main>
   );

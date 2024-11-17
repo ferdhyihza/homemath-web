@@ -760,7 +760,7 @@ export default function MetodePenyelesaianSubstitusi() {
         </p>
 
         <div className="d-flex justify-content-center py-4">
-          <NextButton link={`/materi/metode-penyelesaian-spltv/campuran` + (from ? '?from=materi' : '')} />
+          <NextButton link={`/materi/metode-penyelesaian-spltv/campuran` + (from ? '?from=materi' : '')}>Penyelesaian SPLTV dengan Metode Substitusi</NextButton>
         </div>
       </div>
     </Main>

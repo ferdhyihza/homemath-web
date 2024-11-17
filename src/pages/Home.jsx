@@ -52,7 +52,7 @@ export default function Home() {
         <div className="px-5 pt-0 py-4">
           <div className="row p-sm-4 py-4 menu-wrapper rounded-4 justify-content-around gap-2">
             <div className="col-12 col-sm-auto text-center">
-              <NextButton link="/peta-konsep" />
+              <NextButton link="/peta-konsep"></NextButton>
             </div>
             <Link to="/peta-konsep" className="col py-2 rounded-1 mx-3 menu d-flex justify-content-start justify-content-sm-center align-items-center">
               <img src="../icon/icon-peta-konsep.png" width={32} alt="icon-peta-konsep" className="me-1" />

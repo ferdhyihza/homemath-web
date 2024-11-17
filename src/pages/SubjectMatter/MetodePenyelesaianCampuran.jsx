@@ -671,7 +671,7 @@ export default function MetodePenyelesaianCampuran() {
         </p>
 
         <div className="d-flex justify-content-center py-4">
-          <NextButton link={from ? '/materi' : '/materi/penggunaan-spltv'} />
+          <NextButton link={from ? '/materi' : '/materi/penggunaan-spltv'}>Penyelesaian SPLTV dengan Metode Campuran</NextButton>
         </div>
       </div>
     </Main>
