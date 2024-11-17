@@ -6,7 +6,7 @@ export default function Footer() {
           HOMEMATH
         </h4>
         <div className="d-flex">
-          <img className="me-2" src="/avatar-icon.png" style={{ width: '40px', height: '40px' }} alt="" />
+          <img className="me-2" src="/icon/avatar-icon.png" style={{ width: '40px', height: '40px' }} alt="" />
           <div className="d-none d-md-flex flex-column justify-content-center">
             <h6 className="mb-0 fw-bold">Betty Agustina</h6>
             <p className="mb-0" style={{ fontSize: '14px' }}>
