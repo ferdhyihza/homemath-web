@@ -41,6 +41,7 @@ export default function MetodePenyelesaianEliminasi() {
   const section3 = useRef(null);
   const section4 = useRef(null);
 
+  const sessionData = JSON.parse(localStorage.getItem('sessionData'));
   // Efek untuk memuat status dan nilai dari localStorage ketika komponen pertama kali dimuat
   useEffect(() => {
     const savedStatus = JSON.parse(localStorage.getItem('inputStatuses'));
@@ -58,7 +59,6 @@ export default function MetodePenyelesaianEliminasi() {
       setIsBlurred4(!allValid4);
     }
 
-    const sessionData = JSON.parse(localStorage.getItem('sessionData'));
     if (!isBlurred && !isBlurred2 && !isBlurred3 && !isBlurred4 && sessionData?.MetodePenyelesaianEliminasi) {
       return;
     } else {
@@ -80,7 +80,7 @@ export default function MetodePenyelesaianEliminasi() {
         localStorage.setItem('sessionData', JSON.stringify(newSessionData));
       }
     }
-  }, [isBlurred, isBlurred2, isBlurred3, isBlurred4]);
+  }, [isBlurred, isBlurred2, isBlurred3, isBlurred4, sessionData]);
 
   // Fungsi untuk menangani perubahan pada input
   const handleChange = (inputName, event) => {
@@ -436,7 +436,9 @@ export default function MetodePenyelesaianEliminasi() {
         </p>
 
         <div className="d-flex justify-content-center py-4">
-          <NextButton link={`/materi/metode-penyelesaian-spltv/substitusi` + (from ? '?from=materi' : '')}>Penyelesaian SPLTV dengan Metode Eliminasi</NextButton>
+          <NextButton confirmation={sessionData?.MetodePenyelesaianEliminasi} link={`/materi/metode-penyelesaian-spltv/substitusi` + (from ? '?from=materi' : '')}>
+            Penyelesaian SPLTV dengan Metode Eliminasi
+          </NextButton>
         </div>
       </div>
     </Main>

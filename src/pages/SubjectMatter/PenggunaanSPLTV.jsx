@@ -29,6 +29,7 @@ export default function PenggunaanSPLTV() {
   const section3 = useRef(null);
   const section4 = useRef(null);
 
+  const sessionData = JSON.parse(localStorage.getItem('sessionData'));
   // Efek untuk memuat status dan nilai dari localStorage ketika komponen pertama kali dimuat
   useEffect(() => {
     const savedStatus = JSON.parse(localStorage.getItem('inputStatuses'));
@@ -46,7 +47,6 @@ export default function PenggunaanSPLTV() {
       setIsBlurred4(!allValid4);
     }
 
-    const sessionData = JSON.parse(localStorage.getItem('sessionData'));
     if (!isBlurred && !isBlurred2 && !isBlurred3 && !isBlurred4 && sessionData?.PenggunaanSPLTV) {
       return;
     } else {
@@ -68,7 +68,7 @@ export default function PenggunaanSPLTV() {
         localStorage.setItem('sessionData', JSON.stringify(newSessionData));
       }
     }
-  }, [isBlurred, isBlurred2, isBlurred3, isBlurred4]);
+  }, [isBlurred, isBlurred2, isBlurred3, isBlurred4, sessionData]);
 
   // Fungsi untuk menangani perubahan pada input
   const handleChange = (inputName, event) => {
@@ -321,7 +321,9 @@ export default function PenggunaanSPLTV() {
         <p>Setelah kita menyelesaikan langkah-langkah tersebut, kita telah mengetahui nilai variabel x=3,y=4, dan z=9. Jadi, bilangan tersebut adalah 349.</p>
 
         <div className="d-flex justify-content-center py-4">
-          <NextButton link={`/materi/penggunaan-spltv-2` + (from ? '?from=materi' : '')}>Penggunaan SPLTV</NextButton>
+          <NextButton confirmation={sessionData?.PenggunaanSPLTV} link={`/materi/penggunaan-spltv-2` + (from ? '?from=materi' : '')}>
+            Penggunaan SPLTV
+          </NextButton>
         </div>
       </div>
     </Main>

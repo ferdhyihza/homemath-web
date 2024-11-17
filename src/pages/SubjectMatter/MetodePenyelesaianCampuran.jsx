@@ -67,6 +67,7 @@ export default function MetodePenyelesaianCampuran() {
   const section4 = useRef(null);
   const section5 = useRef(null);
 
+  const sessionData = JSON.parse(localStorage.getItem('sessionData'));
   // Efek untuk memuat status dan nilai dari localStorage ketika komponen pertama kali dimuat
   useEffect(() => {
     const savedStatus = JSON.parse(localStorage.getItem('inputStatuses'));
@@ -87,7 +88,6 @@ export default function MetodePenyelesaianCampuran() {
       setIsBlurred5(!allValid5);
     }
 
-    const sessionData = JSON.parse(localStorage.getItem('sessionData'));
     if (!isBlurred && !isBlurred2 && !isBlurred3 && !isBlurred4 && !isBlurred5 && sessionData?.MetodePenyelesaianCampuran) {
       return;
     } else {
@@ -112,7 +112,7 @@ export default function MetodePenyelesaianCampuran() {
         localStorage.setItem('sessionData', JSON.stringify(newSessionData));
       }
     }
-  }, [isBlurred, isBlurred2, isBlurred3, isBlurred4, isBlurred5]);
+  }, [isBlurred, isBlurred2, isBlurred3, isBlurred4, isBlurred5, sessionData]);
 
   // Fungsi untuk menangani perubahan pada input
   const handleChange = (inputName, event) => {
@@ -671,7 +671,9 @@ export default function MetodePenyelesaianCampuran() {
         </p>
 
         <div className="d-flex justify-content-center py-4">
-          <NextButton link={from ? '/materi' : '/materi/penggunaan-spltv'}>Penyelesaian SPLTV dengan Metode Campuran</NextButton>
+          <NextButton confirmation={sessionData?.MetodePenyelesaianCampuran} link={from ? '/materi' : '/materi/penggunaan-spltv'}>
+            Penyelesaian SPLTV dengan Metode Campuran
+          </NextButton>
         </div>
       </div>
     </Main>

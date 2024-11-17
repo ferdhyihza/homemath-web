@@ -63,6 +63,7 @@ export default function UnsurPadaSPLTV() {
     }
   };
 
+  const sessionData = JSON.parse(localStorage.getItem('sessionData'));
   useEffect(() => {
     if (isKonstantaSectionFocus && konstantaSection.current) {
       konstantaSection.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
@@ -72,8 +73,6 @@ export default function UnsurPadaSPLTV() {
       koefisienSection.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
       setIsKoefisienSectionFocus(false); // reset ke false setelah autoscroll
     }
-
-    const sessionData = JSON.parse(localStorage.getItem('sessionData'));
 
     if (isNextButtonSectionFocus && sessionData?.UnsurPadaSPLTV) {
       return;
@@ -88,7 +87,7 @@ export default function UnsurPadaSPLTV() {
       }
     }
     handleButtonClick(); // Check condition on component mount
-  }, [isKonstantaSectionFocus, isKoefisienSectionFocus, isNextButtonSectionFocus]);
+  }, [isKonstantaSectionFocus, isKoefisienSectionFocus, isNextButtonSectionFocus, sessionData]);
 
   return (
     <Main>
@@ -284,7 +283,9 @@ export default function UnsurPadaSPLTV() {
       {isModalBenarKoefisienOpen && <ModalBenar jenis="Koefisien">Yuk lanjut ke pembelajaran selanjutnya...</ModalBenar>}
 
       <div ref={nextButtonSection} className={`d-flex justify-content-center py-4 ${removeBlurNextButton ? '' : 'blur'}`}>
-        <NextButton link={`/materi/bentuk-umum-spltv` + (from ? '?from=materi' : '')}>Unsur pada SPLTV</NextButton>
+        <NextButton confirmation={sessionData?.UnsurPadaSPLTV} link={`/materi/bentuk-umum-spltv` + (from ? '?from=materi' : '')}>
+          Unsur pada SPLTV
+        </NextButton>
       </div>
     </Main>
   );

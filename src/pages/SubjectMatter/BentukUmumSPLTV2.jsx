@@ -31,6 +31,7 @@ export default function BentukUmumSPLTV2() {
   const section = useRef(null);
   const section2 = useRef(null);
 
+  const sessionData = JSON.parse(localStorage.getItem('sessionData'));
   // Efek untuk memuat status dan nilai dari localStorage ketika komponen pertama kali dimuat
   useEffect(() => {
     const savedStatus = JSON.parse(localStorage.getItem('inputStatuses'));
@@ -43,8 +44,6 @@ export default function BentukUmumSPLTV2() {
       const allValid2 = savedStatus.statuses.input4 && savedStatus.statuses.input5 && savedStatus.statuses.input6 && savedStatus.statuses.input7;
       setIsBlurred2(!allValid2);
     }
-
-    const sessionData = JSON.parse(localStorage.getItem('sessionData'));
 
     if (!isBlurred && !isBlurred2 && sessionData?.BentukUmumSPLTV2) {
       return;
@@ -61,7 +60,7 @@ export default function BentukUmumSPLTV2() {
         localStorage.setItem('sessionData', JSON.stringify(newSessionData));
       }
     }
-  }, [isBlurred, isBlurred2]);
+  }, [isBlurred, isBlurred2, sessionData]);
 
   // Fungsi untuk menangani perubahan pada input
   const handleChange = (inputName, event) => {
@@ -383,7 +382,9 @@ export default function BentukUmumSPLTV2() {
       </div>
 
       <div className={`${isBlurred2 ? 'blur' : ''} d-flex justify-content-center py-4`}>
-        <NextButton link={from ? '/materi' : '/materi/metode-penyelesaian-spltv'}>Bentuk Umum SPLTV 2</NextButton>
+        <NextButton confirmation={sessionData?.BentukUmumSPLTV2} link={from ? '/materi' : '/materi/metode-penyelesaian-spltv'}>
+          Bentuk Umum SPLTV 2
+        </NextButton>
       </div>
     </Main>
   );

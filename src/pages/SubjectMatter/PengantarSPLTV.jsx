@@ -7,16 +7,16 @@ export default function PengantarSPLTV() {
   const [searchParams] = useSearchParams();
   const from = searchParams.get('from') == 'materi';
 
-  useEffect(() => {
-    const sessionData = JSON.parse(localStorage.getItem('sessionData'));
+  const sessionData = JSON.parse(localStorage.getItem('sessionData'));
 
+  useEffect(() => {
     if (sessionData?.PengantarSPLTV) return;
     const newSessionData = {
       ...sessionData,
       PengantarSPLTV: true,
     };
     localStorage.setItem('sessionData', JSON.stringify(newSessionData));
-  }, []);
+  }, [sessionData]);
 
   return (
     <Main>
@@ -58,7 +58,9 @@ export default function PengantarSPLTV() {
       </p>
 
       <div className="d-flex justify-content-center py-4">
-        <NextButton link={'/materi/unsur-pada-spltv' + (from ? '?from=materi' : '')}>Pengantar SPLTV</NextButton>
+        <NextButton confirmation={sessionData?.PengantarSPLTV} link={'/materi/unsur-pada-spltv' + (from ? '?from=materi' : '')}>
+          Pengantar SPLTV
+        </NextButton>
       </div>
     </Main>
   );

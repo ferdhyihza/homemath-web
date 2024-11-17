@@ -12,7 +12,7 @@ export default function NextButton(props) {
 
   return (
     <>
-      {props.children ? (
+      {props.children && !props.confirmation ? (
         <>
           <div className="modal fade" id={`modalNextButton`} tabIndex="-1" aria-labelledby="modalNextButtonLabel" aria-hidden="true">
             <div className="modal-dialog modal-lg modal-dialog-centered">

@@ -39,6 +39,7 @@ export default function PenggunaanSPLTV2() {
   const section4 = useRef(null);
   const section5 = useRef(null);
 
+  const sessionData = JSON.parse(localStorage.getItem('sessionData'));
   // Efek untuk memuat status dan nilai dari localStorage ketika komponen pertama kali dimuat
   useEffect(() => {
     const savedStatus = JSON.parse(localStorage.getItem('inputStatuses'));
@@ -57,7 +58,6 @@ export default function PenggunaanSPLTV2() {
       const allValid5 = savedStatus.statuses.input69 && savedStatus.statuses.input70 && savedStatus.statuses.input71 && savedStatus.statuses.input72;
       setIsBlurred5(!allValid5);
 
-      const sessionData = JSON.parse(localStorage.getItem('sessionData'));
       if (!isBlurred && !isBlurred2 && !isBlurred3 && !isBlurred4 && !isBlurred5 && sessionData?.PenggunaanSPLTV2) {
         return;
       } else {
@@ -83,7 +83,7 @@ export default function PenggunaanSPLTV2() {
         }
       }
     }
-  }, [isBlurred, isBlurred2, isBlurred3, isBlurred4, isBlurred5]);
+  }, [isBlurred, isBlurred2, isBlurred3, isBlurred4, isBlurred5, sessionData]);
 
   // Fungsi untuk menangani perubahan pada input
   const handleChange = (inputName, event) => {
@@ -357,7 +357,9 @@ export default function PenggunaanSPLTV2() {
         </p>
 
         <div className="d-flex justify-content-center py-4">
-          <NextButton link={from ? '/materi' : '/tes-formatif'}>Penggunaan SPLTV 2</NextButton>
+          <NextButton confirmation={sessionData?.PenggunaanSPLTV2} link={from ? '/materi' : '/tes-formatif'}>
+            Penggunaan SPLTV 2
+          </NextButton>
         </div>
       </div>
     </Main>

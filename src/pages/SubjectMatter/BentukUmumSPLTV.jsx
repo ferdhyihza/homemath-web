@@ -31,8 +31,8 @@ export default function BentukUmumSPLTV() {
     if (shouldOpenModalBenar) setIsModalBenarOpen(true);
   };
 
+  const sessionData = JSON.parse(localStorage.getItem('sessionData'));
   useEffect(() => {
-    const sessionData = JSON.parse(localStorage.getItem('sessionData'));
     if (isNextButtonSectionFocus && nextButtonSection.current && !sessionData.BentukUmumSPLTV) {
       nextButtonSection.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
       setIsNextButtonSectionFocus(false); // reset ke false setelah autoscroll
@@ -43,7 +43,7 @@ export default function BentukUmumSPLTV() {
       localStorage.setItem('sessionData', JSON.stringify(newSessionData));
     }
     handleButtonClick(); // Check condition on component mount
-  }, [isNextButtonSectionFocus]);
+  }, [isNextButtonSectionFocus, sessionData]);
 
   return (
     <Main>
@@ -141,7 +141,9 @@ export default function BentukUmumSPLTV() {
       </ModalSalah>
 
       <div ref={nextButtonSection} className={`d-flex justify-content-center py-4 ${removeBlurNextButton ? '' : 'blur'}`}>
-        <NextButton link={`/materi/bentuk-umum-spltv-2` + (from ? '?from=materi' : '')}>Bentuk Umum SPLTV</NextButton>
+        <NextButton confirmation={sessionData.BentukUmumSPLTV} link={`/materi/bentuk-umum-spltv-2` + (from ? '?from=materi' : '')}>
+          Bentuk Umum SPLTV
+        </NextButton>
       </div>
     </Main>
   );
