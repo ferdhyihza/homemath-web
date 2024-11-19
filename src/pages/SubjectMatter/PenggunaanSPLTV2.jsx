@@ -6,7 +6,7 @@ import { useSearchParams } from 'react-router-dom';
 
 export default function PenggunaanSPLTV2() {
   const [searchParams] = useSearchParams();
-  const from = searchParams.get('from') == 'materi';
+  const fromMateri = searchParams.get('from') == 'materi';
 
   const [inputValues, setInputValues] = useState({
     input65: '',
@@ -358,7 +358,7 @@ export default function PenggunaanSPLTV2() {
         </p>
 
         <div className="d-flex justify-content-center py-4">
-          <NextButton confirmation={sessionData?.PenggunaanSPLTV2} end={true} link={from ? '/materi' : '/tes-formatif'}>
+          <NextButton confirmation={sessionData?.PenggunaanSPLTV2} backToSubjectMatter={fromMateri && sessionData?.PenggunaanSPLTV2} goToFormativeTest={true} link={fromMateri && sessionData?.PenggunaanSPLTV2 ? '/materi' : '/tes-formatif'}>
             Tes Formatif
           </NextButton>
         </div>

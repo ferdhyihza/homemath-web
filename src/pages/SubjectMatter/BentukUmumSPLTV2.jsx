@@ -6,7 +6,7 @@ import { useSearchParams } from 'react-router-dom';
 
 export default function BentukUmumSPLTV2() {
   const [searchParams] = useSearchParams();
-  const from = searchParams.get('from') == 'materi';
+  const fromMateri = searchParams.get('from') == 'materi';
 
   const [inputValues, setInputValues] = useState({
     input1: '',
@@ -382,7 +382,7 @@ export default function BentukUmumSPLTV2() {
       </div>
 
       <div className={`${isBlurred2 ? 'blur' : ''} d-flex justify-content-center py-4`}>
-        <NextButton confirmation={sessionData?.BentukUmumSPLTV2} link={from ? '/materi' : '/materi/metode-penyelesaian-spltv'}>
+        <NextButton confirmation={sessionData?.BentukUmumSPLTV2} backToSubjectMatter={fromMateri} link={fromMateri ? '/materi' : '/materi/metode-penyelesaian-spltv'}>
           Pengantar SPLTV
         </NextButton>
       </div>

@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import { Link } from 'react-router-dom';
+import { Link, useSearchParams } from 'react-router-dom';
 import { Modal, Tooltip, OverlayTrigger } from 'react-bootstrap';
 import { useState } from 'react';
 
@@ -9,9 +9,12 @@ export default function NextButton(props) {
   const handleClose = () => setShow(false); // nutup modal
   const handleShow = () => setShow(true); // buka modal
 
-  const renderTooltip = props => (
-    <Tooltip id="button-tooltip" {...props}>
-      Lanjut ke halaman berikutnya
+  const [searchParams] = useSearchParams();
+  const fromMateri = searchParams.get('from') == 'materi';
+
+  const renderTooltip = props2 => (
+    <Tooltip id="button-tooltip" {...props2}>
+      {props.backToSubjectMatter ? 'Kembali ke daftar materi' : props.goToFormativeTest ? 'Lanjut ke tes formatif' : 'Lanjut ke halaman berikutnya'}
     </Tooltip>
   );
 
@@ -24,7 +27,7 @@ export default function NextButton(props) {
               <div className="bg-blue-subtle text-black p-2 rounded-4">
                 <img src="/icon/task.gif" width={72} alt="icon done" className="my-3 ps-1 bg-white rounded-4" />
                 <h5 className="fw-bold mb-2">Wow keren!</h5>
-                {props.end ? (
+                {props.goToFormativeTest ? (
                   <p className="">Kamu telah mempelajari seluruh materi. Terakhir, mari coba kerjakan tes formatif berikut untuk mengetahui pemahamanmu terhadap SPLTV</p>
                 ) : props.latsol ? (
                   <p className="">

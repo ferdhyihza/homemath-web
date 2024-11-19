@@ -6,7 +6,7 @@ import { useEffect, useRef, useState } from 'react';
 
 export default function MetodePenyelesaianCampuran() {
   const [searchParams] = useSearchParams();
-  const from = searchParams.get('from') == 'materi';
+  const fromMateri = searchParams.get('from') == 'materi';
 
   const [inputValues, setInputValues] = useState({
     input39: '',
@@ -671,7 +671,7 @@ export default function MetodePenyelesaianCampuran() {
         </p>
 
         <div className="d-flex justify-content-center py-4">
-          <NextButton confirmation={sessionData?.MetodePenyelesaianCampuran} link={from ? '/materi' : '/materi/penggunaan-spltv'}>
+          <NextButton confirmation={sessionData?.MetodePenyelesaianCampuran} backToSubjectMatter={fromMateri} link={fromMateri ? '/materi' : '/materi/penggunaan-spltv'}>
             Penyelesaian SPLTV dengan Metode Campuran
           </NextButton>
         </div>
