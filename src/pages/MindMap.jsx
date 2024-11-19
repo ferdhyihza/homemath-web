@@ -7,10 +7,10 @@ export default function MindMap() {
       <h3 className="fw-bold pb-4 my-1">Peta Konsep Materi</h3>
       <img src="/img/peta-konsep.png" alt="Gambar Peta Konsep Materi" className="img-fluid w-100 border p-4 rounded-3 mb-5" />
       <div className="d-flex gap-2 align-items-center mb-4">
-        <img src="/icon/icon-tujuan-pembelajaran.png" width={48} height={48} alt="" />
+        <img src="/icon/icon-tujuan-pembelajaran.png" width={56} height={56} alt="" />
         <div>
-          <h3 className="fw-bold">Capaian dan Tujuan Pembelajaran</h3>
-          <p className="mb-0">Sistem Persamaan Linear Tiga Variabel (SPLTV)</p>
+          <h3 className="fw-bold mb-1">Capaian dan Tujuan Pembelajaran</h3>
+          <p className="mb-0 d-none d-sm-block">Sistem Persamaan Linear Tiga Variabel (SPLTV)</p>
         </div>
       </div>
       <div className="mb-4">

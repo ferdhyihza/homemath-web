@@ -284,7 +284,7 @@ export default function PenggunaanSPLTV() {
             <div className=" text-end" style={{ width: '100px' }}>
               <p>x + y + z</p>
               <p>3 + y + 9</p>
-              <p>31 + y</p>
+              <p>12 + y</p>
               <p>y</p>
               <p className="pt-2">y</p>
             </div>
@@ -318,7 +318,7 @@ export default function PenggunaanSPLTV() {
         </div>
       </div>
       <div ref={section4} className={`${isBlurred4 ? 'blur' : ''}`}>
-        <p>Setelah kita menyelesaikan langkah-langkah tersebut, kita telah mengetahui nilai variabel x=3,y=4, dan z=9. Jadi, bilangan tersebut adalah 349.</p>
+        <p>Setelah kita menyelesaikan langkah-langkah tersebut, kita telah mengetahui nilai variabel x = 3, y = 5, dan z = 9. Jadi, bilangan tersebut adalah 349.</p>
 
         <div className="d-flex justify-content-center py-4">
           <NextButton link={`/materi/penggunaan-spltv-2` + (from ? '?from=materi' : '')}></NextButton>

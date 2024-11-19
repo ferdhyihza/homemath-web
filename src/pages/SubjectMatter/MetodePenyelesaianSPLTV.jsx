@@ -29,7 +29,7 @@ export default function MetodePenyelesaianSPLTV() {
       </p>
       <p>
         Hampir mirip dengan Sistem Persamaan Linear Dua Variabel (SPLDV) yang dapat menggunakan metode eliminasi dan substitusi, pada penyelesaian SPLTV terdapat tiga alternatif metode penyelesaian, yaitu metode eliminaasi, substitusi, dan
-        metode campuran (eliminasi dan subtirusi). Untuk lebih jelasnya, yuk simak dan ikuti pembelajaran berikut!
+        metode campuran (eliminasi dan subtitusi). Untuk lebih jelasnya, yuk simak dan ikuti pembelajaran berikut!
       </p>
       <p>
         <b> Metode Eliminasi</b> <br />

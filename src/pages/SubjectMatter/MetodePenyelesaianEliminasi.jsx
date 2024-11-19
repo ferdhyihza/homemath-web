@@ -226,7 +226,7 @@ export default function MetodePenyelesaianEliminasi() {
         </div>
       </div>
       <div className={`${isBlurred ? 'blur' : ''}`}>
-        <p ref={section}>3. Dari langkah sebelumnya, kita mendapatkan dua persamaan baru, ya itu persamaan (4) dan (5) yang menyisakan dua variabel y dan z. Kita akan melakukan eliminasi pada kedua persamaan tersebut.</p>
+        <p ref={section}>3. Dari langkah sebelumnya, kita mendapatkan dua persamaan baru, yaitu persamaan (4) dan (5) yang menyisakan dua variabel y dan z. Kita akan melakukan eliminasi pada kedua persamaan tersebut.</p>
         <div className="overflow-x-auto">
           <div className="row justify-content-center mx-0" style={{ minWidth: '550px' }}>
             <div className="" style={{ width: '250px' }}>
@@ -260,8 +260,8 @@ export default function MetodePenyelesaianEliminasi() {
                   onChange={e => handleChange('input10', e)}
                 />
               </div>
-              <p className="d-inline-block fst-italic text-muted" style={{ textAlign: 'center', fontSize: '12px' }}>
-                kedua ruas dibagi dengan -55 untuk mengetahui nilai z
+              <p className="fst-italic text-muted" style={{ textAlign: 'center', fontSize: '12px' }}>
+                nilai variabel z
               </p>
             </div>
           </div>
@@ -312,8 +312,8 @@ export default function MetodePenyelesaianEliminasi() {
                   onChange={e => handleChange('input12', e)}
                 />
               </div>
-              <p className="d-inline-block fst-italic text-muted" style={{ textAlign: 'center', fontSize: '12px' }}>
-                kedua ruas dibagi dengan 55 untuk mengetahui nilai y
+              <p className="ps-4 fst-italic text-muted" style={{ textAlign: 'center', fontSize: '12px' }}>
+                nilai variabel y
               </p>
             </div>
           </div>
@@ -414,7 +414,7 @@ export default function MetodePenyelesaianEliminasi() {
                   onChange={e => handleChange('input17', e)}
                 />
                 <p className="mb-0 fst-italic text-muted" style={{ fontSize: '12px' }}>
-                  kedua ruas dibagi dengan 4 untuk mengetahui nilai x
+                  nilai variabel x
                 </p>
               </div>
             </div>

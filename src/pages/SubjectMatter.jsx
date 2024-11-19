@@ -73,55 +73,109 @@ export default function SubjectMatter() {
       <SubjectMatterCard number="01" title="Pengantar SPLTV" link="pengantar-spltv?from=materi" progress={progressPengantarSPLTV}>
         <li>
           <span>
-            <Link to="pengantar-spltv?from=materi">Pengantar SPLTV </Link>
+            <Link to="pengantar-spltv?from=materi" style={{ fontSize: '14px' }}>
+              Pengantar SPLTV{' '}
+            </Link>
           </span>
         </li>
         <li>
           {isPengantarSPLTVDone ? (
             <span>
-              <Link to="unsur-pada-spltv?from=materi">Unsur pada SPLTV</Link>{' '}
+              <Link to="unsur-pada-spltv?from=materi" style={{ fontSize: '14px' }}>
+                Unsur pada SPLTV
+              </Link>{' '}
             </span>
           ) : (
-            <span className="text-secondary fw-light">Unsur pada SPLTV</span>
+            <span className="text-secondary fw-light" style={{ fontSize: '14px' }}>
+              Unsur pada SPLTV
+            </span>
           )}
         </li>
         <li>
           {isUnsurPadaSPLTVDone ? (
             <span>
-              <Link to="bentuk-umum-spltv?from=materi">Bentuk Umum SPLTV </Link>{' '}
+              <Link to="bentuk-umum-spltv?from=materi" style={{ fontSize: '14px' }}>
+                Bentuk Umum SPLTV{' '}
+              </Link>{' '}
             </span>
           ) : (
-            <span className="text-secondary fw-light">Bentuk Umum SPLTV</span>
+            <span className="text-secondary fw-light" style={{ fontSize: '14px' }}>
+              Bentuk Umum SPLTV
+            </span>
           )}
         </li>
       </SubjectMatterCard>
       <SubjectMatterCard number="02" title="Metode Penyelesaian SPLTV" link="metode-penyelesaian-spltv?from=materi" progress={progressMetodePenyelesaianSPLTV} className={isBentukUmumSPLTV2Done ? '' : 'disabled text-secondary'}>
-        <li>{isBentukUmumSPLTV2Done ? <Link to="metode-penyelesaian-spltv?from=materi">Macam-macam Metode Penyelesaian SPLTV</Link> : <span className="text-secondary fw-light">Macam-macam Metode Penyelesaian SPLTV</span>}</li>
-        <li>{isMetodePenyelesaianSPLTVDone ? <Link to="metode-penyelesaian-spltv/eliminasi?from=materi">Metode Eliminasi</Link> : <span className="text-secondary fw-light">Metode Eliminasi</span>}</li>
-        <li>{isMetodePenyelesaianEliminasiDone ? <Link to="metode-penyelesaian-spltv/substitusi?from=materi">Metode Substitusi</Link> : <span className="text-secondary fw-light">Metode Substitusi</span>}</li>
+        <li>
+          {isBentukUmumSPLTV2Done ? (
+            <Link to="metode-penyelesaian-spltv?from=materi" style={{ fontSize: '14px' }}>
+              Macam-macam Metode Penyelesaian SPLTV
+            </Link>
+          ) : (
+            <span className="text-secondary fw-light" style={{ fontSize: '14px' }}>
+              Macam-macam Metode Penyelesaian SPLTV
+            </span>
+          )}
+        </li>
+        <li>
+          {isMetodePenyelesaianSPLTVDone ? (
+            <Link to="metode-penyelesaian-spltv/eliminasi?from=materi" style={{ fontSize: '14px' }}>
+              Metode Eliminasi
+            </Link>
+          ) : (
+            <span className="text-secondary fw-light" style={{ fontSize: '14px' }}>
+              Metode Eliminasi
+            </span>
+          )}
+        </li>
+        <li>
+          {isMetodePenyelesaianEliminasiDone ? (
+            <Link to="metode-penyelesaian-spltv/substitusi?from=materi" style={{ fontSize: '14px' }}>
+              Metode Substitusi
+            </Link>
+          ) : (
+            <span className="text-secondary fw-light" style={{ fontSize: '14px' }}>
+              Metode Substitusi
+            </span>
+          )}
+        </li>
         <li>
           {isMetodePenyelesaianSubstitusiDone ? (
-            <Link to="metode-penyelesaian-spltv/campuran?from=materi">Metode Campuran (Eliminasi & Substitusi)</Link>
+            <Link to="metode-penyelesaian-spltv/campuran?from=materi" style={{ fontSize: '14px' }}>
+              Metode Campuran (Eliminasi & Substitusi)
+            </Link>
           ) : (
-            <span className="text-secondary fw-light">Metode Campuran (Eliminasi & Substitusi)</span>
+            <span className="text-secondary fw-light" style={{ fontSize: '14px' }}>
+              Metode Campuran (Eliminasi & Substitusi)
+            </span>
           )}
         </li>
       </SubjectMatterCard>
       <SubjectMatterCard number="03" title="Penggunaan SPLTV pada Kehidupan Sehari-hari" link="penggunaan-spltv?from=materi" progress={progressPenggunaanSPLTV} className={isMetodePenyelesaianCampuranDone ? '' : 'disabled text-secondary'}>
-        <li>{isMetodePenyelesaianCampuranDone ? <Link to="penggunaan-spltv?from=materi">Untuk apa kita mempelajari SPLTV?</Link> : <span className="text-secondary fw-light">Untuk apa kita mempelajari SPLTV?</span>}</li>
+        <li>
+          {isMetodePenyelesaianCampuranDone ? (
+            <Link to="penggunaan-spltv?from=materi" style={{ fontSize: '14px' }}>
+              Untuk apa kita mempelajari SPLTV?
+            </Link>
+          ) : (
+            <span className="text-secondary fw-light" style={{ fontSize: '14px' }}>
+              Untuk apa kita mempelajari SPLTV?
+            </span>
+          )}
+        </li>
       </SubjectMatterCard>
       <h3 className="fw-bold py-3">Lainnya</h3>
       <div className="row mb-2">
         <div className="col-sm-6">
           <SubjectMatterCard title="Latihan Soal" link="/latihan-soal">
-            <li>Latihan Soal Materi 1</li>
-            <li>Latihan Soal Materi 2</li>
-            <li>Latihan Soal Materi 3</li>
+            <li style={{ fontSize: '14px' }}>Latihan Soal Materi 1</li>
+            <li style={{ fontSize: '14px' }}>Latihan Soal Materi 2</li>
+            <li style={{ fontSize: '14px' }}>Latihan Soal Materi 3</li>
           </SubjectMatterCard>
         </div>
         <div className="col-sm-6">
           <SubjectMatterCard title="Tes Formatif" link="/tes-formatif" className={isPenggunaanSPLTV2Done ? '' : 'disabled text-secondary'}>
-            <li>Kerjakan tes berikut sebagai evaluasi pemahamanmu terhadap SPLTV</li>
+            <li style={{ fontSize: '14px' }}>Kerjakan tes berikut sebagai evaluasi pemahamanmu terhadap SPLTV</li>
           </SubjectMatterCard>
         </div>
       </div>

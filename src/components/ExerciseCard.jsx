@@ -9,7 +9,9 @@ export default function ExerciseCard(props) {
           <h5 className="fw-bold p-2 d-none d-sm-inline-block hover-underline">{props.title}</h5>
           <h6 className="fw-bold p-2 d-inline-block d-sm-none hover-underline">{props.title}</h6> {/* mobile version */}
           <hr className="mt-0 mb-2" />
-          <p className="p-2 mb-0 fw-medium">{props.children}</p>
+          <p className="p-2 mb-0 fw-medium" style={{ fontSize: '14px' }}>
+            {props.children}
+          </p>
         </div>
       </Link>
     </>

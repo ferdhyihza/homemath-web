@@ -219,7 +219,7 @@ export default function MetodePenyelesaianSubstitusi() {
         </div>
       </div>
       <p className="fw-bold">Langkah penyelesaian dengan metode substitusi:</p>
-      <p>1. Pilih salah satu variabel yang ingin dinyatakan ke dalam dua variabel lainnya. Misalnya kita menyatakan x pada persamaan (2) ke dalam variabel y dan z.</p>
+      <p>1. Pilih salah satu variabel yang ingin dinyatakan ke dalam dua variabel lainnya. Misalnya kita menyatakan variabel x pada persamaan (2) ke dalam variabel y dan z.</p>
       <div className="overflow-x-auto">
         <div className="row justify-content-center mx-0" style={{ minWidth: '450px' }}>
           <div className="text-end" style={{ width: '150px' }}>
@@ -679,7 +679,7 @@ export default function MetodePenyelesaianSubstitusi() {
 
       <div className={`${isBlurred5 ? 'blur' : ''}`}>
         <p ref={section5}>
-          6. Dari langkah-langkah di atas, kita telah mengetahui besar nilai variabel y dan z. Untuk mengetahui besar nilai variabel x, langkah terakhir adalah menyubstitusikan nilai variabel y dan z ke persamaan (1), (2), atau (3).
+          6. Dari langkah-langkah di atas, kita telah mengetahui besar nilai variabel y dan z. Untuk mengetahui besar nilai variabel x, langkah terakhir adalah mensubstitusikan nilai variabel y dan z ke persamaan (1), (2), atau (3).
           Misalnya kita akan substitusi ke persamaan (2)
         </p>
         <p>
