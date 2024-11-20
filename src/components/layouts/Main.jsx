@@ -44,7 +44,6 @@ export default function Main(props) {
       </div>
       <div className={props.className}>
         <div className="main container pt-4 overflow-x-visible">
-          {/* eslint-disable-next-line react/prop-types */}
           {props.children}
           {/* <div className="pt-4"></div> */}
           {memoizedQuotes}
