@@ -168,9 +168,7 @@ export default function SubjectMatter() {
       <div className="row mb-2">
         <div className="col-sm-6">
           <SubjectMatterCard title="Latihan Soal" link="/latihan-soal">
-            <li style={{ fontSize: '14px' }}>Latihan Soal Materi 1</li>
-            <li style={{ fontSize: '14px' }}>Latihan Soal Materi 2</li>
-            <li style={{ fontSize: '14px' }}>Latihan Soal Materi 3</li>
+            <li style={{ fontSize: '14px' }}>Kerjakan latihan soal untuk mengasah kemampuanmu</li>
           </SubjectMatterCard>
         </div>
         <div className="col-sm-6">

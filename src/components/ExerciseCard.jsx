@@ -5,6 +5,14 @@ export default function ExerciseCard(props) {
   return (
     <>
       <Link to={props.link} className={`${props.className} border d-flex rounded-3 mb-4 p-2 materi`}>
+        {props.number && (
+          <div className="number px-3 py-2 fs-1 text-center d-flex flex-column align-items-center justify-content-center">
+            <h6 className="mb-0" style={{ fontSize: '14px' }}>
+              Materi
+            </h6>
+            0{props.number}
+          </div>
+        )}
         <div className="content p-2 w-100">
           <h5 className="fw-bold p-2 d-none d-sm-inline-block hover-underline">{props.title}</h5>
           <h6 className="fw-bold p-2 d-inline-block d-sm-none hover-underline">{props.title}</h6> {/* mobile version */}

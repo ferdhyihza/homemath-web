@@ -15,9 +15,9 @@ export default function NavbarContent() {
       <div className="row w-100 align-items-center justify-content-between">
         <div className="col-4">
           {/* Toggler */}
-          <button className="btn px-3 bg-darkblue" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions" aria-label="Toggle navigation">
+          <button className="btn px-3 pt-1 pb-2 bg-darkblue" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions" aria-label="Toggle navigation">
             {/* <span className="navbar-toggler-icon"></span> */}
-            <i className="bi bi-chevron-right"></i>
+            <i className="bi bi-list fs-5"></i>
           </button>
         </div>
         <div className="col-4 px-0 text-center d-flex justify-content-center">
