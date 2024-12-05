@@ -1,26 +1,33 @@
 import { useEffect, useRef, useState } from 'react';
 import NextButton from '../../components/buttons/NextButton';
 import Main from '../../components/layouts/Main';
-import Tips from '../../components/Tips';
 
 export default function PengantarSPLTV3() {
   const [inputValues, setInputValues] = useState({
     input1l: '',
     input2l: '',
     input3l: '',
-    input4l: '',
-    input5l: '',
-    input6l: '',
-    input7l: '',
+    inputt1l: '',
+    inputt2l: '',
+    inputt3l: '',
+    inputt4l: '',
+    inputt5l: '',
+    inputt6l: '',
+    inputt7l: '',
+    inputt8l: '',
   });
   const [inputStatuses, setInputStatuses] = useState({
     input1l: false,
     input2l: false,
     input3l: false,
-    input4l: false,
-    input5l: false,
-    input6l: false,
-    input7l: false,
+    inputt1l: false,
+    inputt2l: false,
+    inputt3l: false,
+    inputt4l: false,
+    inputt5l: false,
+    inputt6l: false,
+    inputt7l: false,
+    inputt8l: false,
   });
   const [isBlurred, setIsBlurred] = useState(true); // Status untuk kelas blur
   const [isBlurred2, setIsBlurred2] = useState(true);
@@ -60,13 +67,21 @@ export default function PengantarSPLTV3() {
       isValid = true;
     } else if (inputName === 'input3l' && value === 'z') {
       isValid = true;
-    } else if (inputName === 'input4l' && value.replace(/\./g, '') == '269') {
+    } else if (inputName === 'inputt1l' && value.replace(/\./g, '') == '1') {
       isValid = true;
-    } else if (inputName === 'input5l' && value == '1') {
+    } else if (inputName === 'inputt2l' && value.replace(/\./g, '') == '1') {
       isValid = true;
-    } else if (inputName === 'input6l' && value == '1') {
+    } else if (inputName === 'inputt3l' && value.replace(/\./g, '') == '1') {
       isValid = true;
-    } else if (inputName === 'input7l' && value.replace(/\./g, '') == '87') {
+    } else if (inputName === 'inputt4l' && value.replace(/\./g, '') == '269') {
+      isValid = true;
+    } else if (inputName === 'inputt5l' && value.replace(/\./g, '') == '1') {
+      isValid = true;
+    } else if (inputName === 'inputt6l' && value.replace(/\./g, '') == '-1') {
+      isValid = true;
+    } else if (inputName === 'inputt7l' && value.replace(/\./g, '') == '1') {
+      isValid = true;
+    } else if (inputName === 'inputt8l' && value.replace(/\./g, '') == '87') {
       isValid = true;
     }
 
@@ -93,30 +108,26 @@ export default function PengantarSPLTV3() {
     // Periksa apakah semua input sudah valid
     const allValid = updatedStatuses.input1l && updatedStatuses.input2l && updatedStatuses.input3l;
     setIsBlurred(!allValid); // Hapus kelas blur jika semua input valid
-    const allValid2 = updatedStatuses.input4l && updatedStatuses.input5l && updatedStatuses.input6l && updatedStatuses.input7l;
+    const allValid2 =
+      updatedStatuses.inputt1l && updatedStatuses.inputt2l && updatedStatuses.inputt3l && updatedStatuses.inputt4l && updatedStatuses.inputt5l && updatedStatuses.inputt6l && updatedStatuses.inputt7l && updatedStatuses.inputt8l;
     setIsBlurred2(!allValid2);
   };
 
   return (
     <Main>
       <h3 className="fw-bold pb-4 my-1">
-        Pengantar SPLTV Latihan Soal 3 <span className="text-muted fw-medium ms-sm-2 fs-5">Bentuk Umum SPLTV: Menyusun Sistem Persamaan Linear Tiga Variabel</span>
+        Pengantar SPLTV Latihan Soal 3 <span className="text-muted fw-medium ms-sm-2 fs-5">Menyusun Sistem Persamaan Linear Tiga Variabel</span>
       </h3>
-
       <p>
-        Menjelang pendaftaran mahasiswa baru, beberapa sekolah mulai merilis daftar siswa yang eligible untuk mendaftar melalui jalur SNBP. Ilham, Yaqin, dan Ulay merupakan tiga siswa salah satu sekolah di Blitar yang dapat mendaftar
-        melalui jalur SNBP. Nilai rata-rata mata pelajaran Matematika, Bahasa Indonesia, dan Bahasa Inggris selama 5 semester dari ketiga siswa tersebut sama, dan dideskripsikan dengan keterangan sebagai berikut.
+        Menjelang pendaftaran mahasiswa baru, beberapa sekolah mulai merilis daftar siswa yang <i>eligible</i> untuk mendaftar melalui jalur SNBP. Ilham, Yaqin, dan Ulay merupakan tiga siswa salah satu sekolah di Blitar yang dapat mendaftar
+        melalui jalur SNBP. Nilai rata-rata dari mata pelajaran Matematika, Bahasa Indonesia, dan Bahasa Inggris selama 5 semester dari ketiga siswa tersebut dideskripsikan dengan keterangan sebagai berikut.
       </p>
       <ul className="list-group mb-2">
-        <li className="list-group-item">
-          2 kali nilai rata-rata mata pelajaran Matematika Ilham dijumlahkan dengan nilai rata-rata mata pelajaran Bahasa Indonesia Ilham kemudian dikurangi dengan nilai rata-rata mata pelajaran Bahasa Inggris Ilham adalah 177
-        </li>
-        <li className="list-group-item">
-          Nilai rata-rata mata pelajaran Matematika Yaqin dijumlahkan dengan nilai rata-rata mata pelajaran Bahasa Indonesia Yaqin dan dijumlahkan lagi dengan nilai rata-rata mata pelajaran Bahasa Inggris Yaqin adalah 269
-        </li>
-        <li className="list-group-item">Nilai rata-rata mata pelajaran Matematika Ulay dikurangi dengan nilai rata-rata Bahasa Indonesia Ulay kemudian dijumlahkan dengan nilai rata-rata mata pelajaran Bahasa Inggris adalah 87</li>
+        <li className="list-group-item">2 kali nilai rata-rata Matematika Ilham dijumlahkan dengan nilai rata-rata Matematika Yaqin kemudian dikurangi dengan nilai rata-rata Matematika Ulay adalah 177</li>
+        <li className="list-group-item">Nilai rata-rata Bahasa Indonesia Ilham dijumlahkan dengan nilai rata-rata Bahasa Indonesia Yaqin dan dijumlahkan lagi dengan nilai rata-rata Bahasa indonesia Ulay adalah 269</li>
+        <li className="list-group-item">Nilai rata-rata Bahasa Inggris Ilham dikurangi dengan nilai rata-rata Bahasa Inggris Yaqin kemudian dijumlahkan dengan nilai rata-rata Bahasa Inggris Ulay adalah 87</li>
       </ul>
-      <p>Berdasarkan informasi tersebut, berapakah nilai rata-rata masing-masing mata pelajaran ketiga siswa tersebut?</p>
+      <p>Berdasarkan informasi tersebut, bagaimana model persamaan linear yang dapat kita susun?</p>
       <p>
         <b>Penyelesaian:</b> <br />
         Di sini kita akan berlatih menentukan variabel terlebih dahulu. Ingat, nilai rata-rata setiap mata pelajaran ketiga siswa tersebut sama, sehingga dari informasi yang disebutkan, kita bisa memisalkan nilai rata-ratanya menjadi
@@ -124,8 +135,7 @@ export default function PengantarSPLTV3() {
       </p>
 
       <p className="text-center fst-italic my-4">
-        Lengkapi kotak kosong berikut dengan variabel yang mewakili nilai rata-rata mata pelajaran Matematika adalah x, variabel yang mewakili nilai rata-rata mata pelajaran Bahasa Indonesia adalah y, dan variabel yang mewakili nilai
-        rata-rata mata pelajaran Bahasa Inggris adalah z
+        Lengkapi kotak kosong berikut dengan variabel yang mewakili nilai rata-rata Ilham adalah x, variabel yang mewakili nilai rata-rata Yaqin adalah y, dan variabel yang mewakili nilai rata-rata Ulay adalah z
       </p>
       <div className="d-flex justify-content-center gap-3 align-items-center my-4">
         <input
@@ -137,7 +147,7 @@ export default function PengantarSPLTV3() {
           onChange={e => handleChange('input1l', e)}
         />
         <p className="bg-blue-subtle p-1 rounded-2 mb-0">sebagai</p>
-        <p className="bg-darkblue mb-0 p-2 px-3 fw-light rounded-2">nilai rata-rata mata pelajaran Matematika</p>
+        <p className="bg-darkblue mb-0 p-2 px-3 fw-light rounded-2">nilai rata-rata Ilham</p>
       </div>
       <div className="d-flex justify-content-center gap-3 align-items-center my-4">
         <input
@@ -149,7 +159,7 @@ export default function PengantarSPLTV3() {
           onChange={e => handleChange('input2l', e)}
         />
         <p className="bg-blue-subtle p-1 rounded-2 mb-0">sebagai</p>
-        <p className="bg-darkblue mb-0 p-2 px-3 fw-light rounded-2">nilai rata-rata mata pelajaran Bahasa Indonesia</p>
+        <p className="bg-darkblue mb-0 p-2 px-3 fw-light rounded-2">nilai rata-rata Yaqin</p>
       </div>
       <div className="d-flex justify-content-center gap-3 align-items-center my-4">
         <input
@@ -161,128 +171,117 @@ export default function PengantarSPLTV3() {
           onChange={e => handleChange('input3l', e)}
         />
         <p className="bg-blue-subtle p-1 rounded-2 mb-0">sebagai</p>
-        <p className="bg-darkblue mb-0 p-2 px-3 fw-light rounded-2">nilai rata-rata mata pelajaran Bahasa Inggris</p>
+        <p className="bg-darkblue mb-0 p-2 px-3 fw-light rounded-2">nilai rata-rata Ulay</p>
       </div>
       <div className={`${isBlurred ? 'blur' : ''}`}>
-        <p ref={section}>
-          Karena kita sudah memisalkan <b>nilai rata-rata tiap mata pelajaran</b> tersebut sebagai <b>variabel</b> tertentu, selanjutnya kita dapat menentukan besaran koefisien dan konstanta untuk melengkapi persamaannya.
-        </p>
-
-        <ul className="list-group mb-2">
-          <li className="list-group-item">
-            2 kali nilai rata-rata mata pelajaran Matematika Ilham dijumlahkan dengan nilai rata-rata mata pelajaran Bahasa Indonesia Ilham kemudian dikurangi dengan nilai rata-rata mata pelajaran Bahasa Inggris Ilham adalah 177 <br />
-            <b className="d-none d-sm-block">Kalimat tersebut bisa kita ubah menjadi 2x + y - z = 177</b>
-            <b className="d-block d-sm-none">
-              Kalimat tersebut bisa kita ubah menjadi: <br /> 2x + y - z = 177
-            </b>
-          </li>
-          <li className="list-group-item">
-            Nilai rata-rata mata pelajaran Matematika Yaqin dijumlahkan dengan nilai rata-rata mata pelajaran Bahasa Indonesia Yaqin dan dijumlahkan lagi dengan nilai rata-rata mata pelajaran Bahasa Inggris Yaqin adalah 269 <br />
-            <b className="d-none d-sm-block">Kalimat tersebut bisa kita ubah menjadi x + y + z = 269</b>
-            <b className="d-block d-sm-none">
-              Kalimat tersebut bisa kita ubah menjadi: <br /> x + y + z = 269
-            </b>
-          </li>
-          <li className="list-group-item">
-            Nilai rata-rata mata pelajaran Matematika Ulay dikurangi dengan nilai rata-rata Bahasa Indonesia Ulay kemudian dijumlahkan dengan nilai rata-rata mata pelajaran Bahasa Inggris adalah 87 <br />
-            <b className="d-none d-sm-block">Kalimat tersebut bisa kita ubah menjadi x - y + z = 87</b>
-            <b className="d-block d-sm-none">
-              Kalimat tersebut bisa kita ubah menjadi: <br /> x - y + z = 87
-            </b>
-          </li>
-        </ul>
-
-        <p>Coba susun persamaan tersebut pada kolom di bawah ini!</p>
-
-        <p className="text-center mt-4 mb-1">
-          Informasi nilai rata-rata milik <b>Ilham</b> pada poin pertama akan kita jadikan <b>sebagai persamaan 1</b>
-        </p>
-        <div className="row justify-content-center align-items-center mb-4 gap-1">
-          <div className="col-5 col-sm-3 text-center p-2 border border-2 border-blue rounded-2 ">2x + y - z</div>
-          <div className="col-1 justify-content-center d-flex justify-content-center p-0">
-            <p className="bg-blue-subtle  text-center py-1 px-2 rounded-2 mb-0">=</p>
-          </div>
-          <div className="col-5 col-sm-3 text-center p-2 border border-2 border-blue rounded-2 ">177</div>
-        </div>
-
-        <p className="text-center mt-4 mb-1">
-          Informasi nilai rata-rata milik <b>Yaqin</b> pada poin pertama akan kita jadikan <b>sebagai persamaan 2</b>
-        </p>
-        <div className="row justify-content-center align-items-start mb-2 gap-1">
-          <div className="col-5 col-sm-3 text-center p-2 border border-2 border-blue rounded-2 ">x + y + z</div>
-          <div className="col-1 justify-content-center d-flex justify-content-center p-0">
-            <p className="bg-blue-subtle  text-center py-1 px-2 rounded-2 mb-0 mt-2">=</p>
-          </div>
-          <div className="col-5 col-sm-3 px-0">
-            <div
-              className={`text-center p-2 border border-2 border-blue rounded-2 ${inputStatuses.input4l ? 'border-success bg-success-subtle disabled' : ''} ${
-                inputValues.input4l && !inputStatuses.input4l ? 'border-danger bg-danger-subtle' : ''
-              }`}
-            >
-              <input
-                className={`border-0 w-100  ${inputStatuses.input4l ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.input4l && !inputStatuses.input4l ? 'border-danger bg-danger-subtle' : ''}`}
-                type="text"
-                placeholder="..."
-                style={{ textAlign: 'center' }}
-                value={inputValues.input4l}
-                onChange={e => handleChange('input4l', e)}
-              />
-            </div>
-            <Tips>isikan konstanta yang diketahui</Tips>
-          </div>
-        </div>
-
-        <p className="text-center mt-4 mb-1">
-          Informasi nilai rata-rata milik <b>Ulay</b> pada poin pertama akan kita jadikan <b>sebagai persamaan 3</b>
-        </p>
-        <div className="row justify-content-center align-items-start mb-4 gap-1">
-          <div className="col-5 col-sm-3 px-0 text-center ">
-            <div
-              className={`d-flex p-2 border border-2 border-blue rounded-2 align-items-center justify-content-center ${inputStatuses.input5l || inputStatuses.input6l ? 'border-success bg-success-subtle' : ''} ${
-                (inputValues.input5l && !inputStatuses.input5l) || (inputValues.input6l && !inputStatuses.input6l) ? 'border-danger bg-danger-subtle' : ''
-              } ${inputStatuses.input5l && inputStatuses.input6l ? 'disabled' : ''}`}
-            >
-              <input
-                className={`border-1 rounded-1 mx-1 px-0  ${inputStatuses.input5l ? 'border-success bg-success-subtle' : ''} ${inputValues.input5l && !inputStatuses.input5l ? 'border-danger bg-danger-subtle ' : ''}`}
-                type="text"
-                placeholder="..."
-                style={{ textAlign: 'center', width: '32px' }}
-                value={inputValues.input5l}
-                onChange={e => handleChange('input5l', e)}
-              />
-              <span>x - y +</span>
-              <input
-                className={`border-1 rounded-1 mx-1 px-0  ${inputStatuses.input6l ? 'border-success bg-success-subtle' : ''} ${inputValues.input6l && !inputStatuses.input6l ? 'border-danger bg-danger-subtle ' : ''}`}
-                type="text"
-                placeholder="..."
-                style={{ textAlign: 'center', width: '32px' }}
-                value={inputValues.input6l}
-                onChange={e => handleChange('input6l', e)}
-              />
-              <span>z</span>
-            </div>
-            <Tips>isikan koefisien yang diketahui</Tips>
-          </div>
-          <div className="col-1 justify-content-center d-flex justify-content-center p-0">
-            <p className="bg-blue-subtle  text-center py-1 px-2 rounded-2 mb-0 mt-2">=</p>
-          </div>
-          <div className="col-5 col-sm-3 px-0">
-            <div
-              className={`text-center p-2 border border-2 border-blue rounded-2 ${inputStatuses.input7l ? 'border-success bg-success-subtle disabled' : ''} ${
-                inputValues.input7l && !inputStatuses.input7l ? 'border-danger bg-danger-subtle' : ''
-              }`}
-            >
-              <input
-                className={`border-0 w-100  ${inputStatuses.input7l ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.input7l && !inputStatuses.input7l ? 'border-danger bg-danger-subtle' : ''}`}
-                type="text"
-                placeholder="..."
-                style={{ textAlign: 'center' }}
-                value={inputValues.input7l}
-                onChange={e => handleChange('input7l', e)}
-              />
-            </div>
-            <Tips>isikan konstanta yang diketahui</Tips>
-          </div>
+        <p ref={section}>Untuk memudahkan kalian, kita bisa menyusunnya dalam bentuk tabel seperti berikut.</p>
+        <div className="overflow-x-auto">
+          <table className="table table-bordered text-center align-middle">
+            <thead>
+              <tr className="align-middle">
+                <th>Mata Pelajaran</th>
+                <th>Nilai rata-rata Ilham (x)</th>
+                <th>Nilai rata-rata Yaqin (y)</th>
+                <th>Nilai rata-rata Ulay (z)</th>
+                <th>Total</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Matematika</td>
+                <td>2</td>
+                <td>1</td>
+                <td>-1</td>
+                <td>177</td>
+              </tr>
+              <tr>
+                <td>Bahasa Indonesia</td>
+                <td>
+                  <input
+                    className={`form-control d-inline-block ${inputStatuses.inputt1l ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.inputt1l && !inputStatuses.inputt1l ? 'border-danger bg-danger-subtle' : ''}`}
+                    type="text"
+                    placeholder="..."
+                    style={{ textAlign: 'center', width: '48px' }}
+                    value={inputValues.inputt1l}
+                    onChange={e => handleChange('inputt1l', e)}
+                  />
+                </td>
+                <td>
+                  <input
+                    className={`form-control d-inline-block ${inputStatuses.inputt2l ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.inputt2l && !inputStatuses.inputt2l ? 'border-danger bg-danger-subtle' : ''}`}
+                    type="text"
+                    placeholder="..."
+                    style={{ textAlign: 'center', width: '48px' }}
+                    value={inputValues.inputt2l}
+                    onChange={e => handleChange('inputt2l', e)}
+                  />
+                </td>
+                <td>
+                  <input
+                    className={`form-control d-inline-block ${inputStatuses.inputt3l ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.inputt3l && !inputStatuses.inputt3l ? 'border-danger bg-danger-subtle' : ''}`}
+                    type="text"
+                    placeholder="..."
+                    style={{ textAlign: 'center', width: '48px' }}
+                    value={inputValues.inputt3l}
+                    onChange={e => handleChange('inputt3l', e)}
+                  />
+                </td>
+                <td>
+                  <input
+                    className={`form-control d-inline-block ${inputStatuses.inputt4l ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.inputt4l && !inputStatuses.inputt4l ? 'border-danger bg-danger-subtle' : ''}`}
+                    type="text"
+                    placeholder="..."
+                    style={{ textAlign: 'center', width: '96px' }}
+                    value={inputValues.inputt4l}
+                    onChange={e => handleChange('inputt4l', e)}
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>Bahasa Inggris</td>
+                <td>
+                  <input
+                    className={`form-control d-inline-block ${inputStatuses.inputt5l ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.inputt5l && !inputStatuses.inputt5l ? 'border-danger bg-danger-subtle' : ''}`}
+                    type="text"
+                    placeholder="..."
+                    style={{ textAlign: 'center', width: '48px' }}
+                    value={inputValues.inputt5l}
+                    onChange={e => handleChange('inputt5l', e)}
+                  />
+                </td>
+                <td>
+                  <input
+                    className={`form-control d-inline-block ${inputStatuses.inputt6l ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.inputt6l && !inputStatuses.inputt6l ? 'border-danger bg-danger-subtle' : ''}`}
+                    type="text"
+                    placeholder="..."
+                    style={{ textAlign: 'center', width: '48px' }}
+                    value={inputValues.inputt6l}
+                    onChange={e => handleChange('inputt6l', e)}
+                  />
+                </td>
+                <td>
+                  <input
+                    className={`form-control d-inline-block ${inputStatuses.inputt7l ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.inputt7l && !inputStatuses.inputt7l ? 'border-danger bg-danger-subtle' : ''}`}
+                    type="text"
+                    placeholder="..."
+                    style={{ textAlign: 'center', width: '48px' }}
+                    value={inputValues.inputt7l}
+                    onChange={e => handleChange('inputt7l', e)}
+                  />
+                </td>
+                <td>
+                  <input
+                    className={`form-control d-inline-block ${inputStatuses.inputt8l ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.inputt8l && !inputStatuses.inputt8l ? 'border-danger bg-danger-subtle' : ''}`}
+                    type="text"
+                    placeholder="..."
+                    style={{ textAlign: 'center', width: '96px' }}
+                    value={inputValues.inputt8l}
+                    onChange={e => handleChange('inputt8l', e)}
+                  />
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
       <div ref={section2} className={`${isBlurred2 ? 'blur' : ''}`}>
@@ -307,7 +306,7 @@ export default function PengantarSPLTV3() {
 
       <div className={`${isBlurred2 ? 'blur' : ''} d-flex justify-content-center py-4`}>
         <NextButton latsol={true} link="/latihan-soal">
-          Bentuk Umum SPLTV: Menyusun Sistem Persamaan Linear Tiga Variabel
+          Menyusun Sistem Persamaan Linear Tiga Variabel
         </NextButton>
       </div>
     </Main>

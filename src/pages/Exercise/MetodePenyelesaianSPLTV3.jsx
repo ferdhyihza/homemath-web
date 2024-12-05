@@ -152,7 +152,8 @@ export default function MetodePenyelesaianSPLTV3() {
       <p>
         <b>Penyelesaian:</b>
       </p>
-      <p>1. Langkah pertama, kita akan menggunakan metode eliminasi untuk mengeliminasi salah satu variabel dari salah satu persamaan tersebut. Misalnya variabel x dan z pada persamaan (2) dan (3).</p>
+      <p>1. Langkah pertama, kita akan menggunakan metode eliminasi untuk mengeliminasi salah satu variabel dari salah satu persamaan tersebut.</p>
+      <p className="fw-light">Misalnya variabel x dan z pada persamaan (2) dan (3) dengan mengurangi kedua persamana tersebut. Sehingga,</p>
       <div className="overflow-x-auto">
         <div className="row justify-content-center mx-0" style={{ minWidth: '200px' }}>
           <div className="" style={{ width: '200px' }}>
@@ -199,15 +200,28 @@ export default function MetodePenyelesaianSPLTV3() {
                 />
               </div>
             </div>
-            <p className="ps-4 ms-3 pt-1">y = 182 / 2</p>
+            <div className="ps-4 ms-1 d-flex gap-2 align-items-center">
+              <div className="d-inline-block">
+                <p className="border-bottom border-black mb-0 d-inline-block">2y</p>
+                <p className="text-center mb-0">2</p>
+              </div>
+              <span>=</span>
+              <div className="d-inline-block">
+                <p className="border-bottom border-black mb-0 d-inline-block">182</p>
+                <p className="text-center mb-0">2</p>
+              </div>
+            </div>
             <p className="ps-4 ms-3 pt-1">y = 91</p>
           </div>
         </div>
       </div>
       <div className={`${isBlurred ? 'blur' : ''}`}>
         <p ref={section}>
-          2. Karena kita telah mengetahui nilai variabel y pada langkah pertama, kita dapat melakukan eliminasi pada persamaan yang menyisakan dua variabel, namun pastikan terdapat variabel y pada persamaan baru yang terbentuk. Misalnya
-          kita akan mengeliminasi persamaan (1) dan (3). Sehingga,
+          2. Karena kita telah mengetahui nilai variabel y pada langkah pertama, kita dapat melakukan eliminasi pada persamaan yang menyisakan dua variabel, namun pastikan terdapat variabel y pada persamaan baru yang terbentuk.
+        </p>
+        <p className="fw-light">
+          Misalnya kita akan mengeliminasi variabel x pada persamaan (1) dan (3) dengan mengurangi kedua persamaan tersebut. Terlebih dahulu kita kalikan persamaan (1) dengan 1, dan persamaan (3) dengan 2 agar koefisien variabel x habis
+          dikurangi. Sehingga,
         </p>
         <div className="overflow-x-auto">
           <div className="row justify-content-center mx-0" style={{ minWidth: ' 500px' }}>
@@ -216,8 +230,12 @@ export default function MetodePenyelesaianSPLTV3() {
               <p>x - y + z = 87</p>
             </div>
             <div className=" text-center " style={{ width: '100px' }}>
-              <p className="">| ×1 |</p>
-              <p className="">| ×2 |</p>
+              <p className="">
+                | <b>×1</b> |
+              </p>
+              <p className="">
+                | <b>×2</b> |
+              </p>
             </div>
             <div className="" style={{ width: '250px' }}>
               <p>2x + y - z = 177</p>
@@ -245,6 +263,17 @@ export default function MetodePenyelesaianSPLTV3() {
                   />
                 </div>
                 <Tips>hasil eliminasi pada kedua ruas</Tips>
+              </div>
+              <div className="ps-4 ms-4 d-flex gap-2 align-items-center">
+                <div className="d-inline-block">
+                  <p className="border-bottom border-black mb-0 d-inline-block">3y - 3z</p>
+                  <p className="text-center mb-0">3</p>
+                </div>
+                <span>=</span>
+                <div className="d-inline-block">
+                  <p className="border-bottom border-black mb-0 d-inline-block">3</p>
+                  <p className="text-center mb-0">3</p>
+                </div>
               </div>
               <div className="d-flex gap-1">
                 <p className="ps-5 ms-4">y - z = 1</p>
@@ -281,7 +310,8 @@ export default function MetodePenyelesaianSPLTV3() {
                   />
                 </div>
               </div>
-              <div className="d-flex justify-content-end">
+              <div className="d-flex align-items-center gap-2 justify-content-end">
+                <span>91 - 91</span>
                 <input
                   className={`form-control ${inputStatuses.input49l ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.input49l && !inputStatuses.input49l ? 'border-danger bg-danger-subtle' : ''}`}
                   type="text"
@@ -291,14 +321,16 @@ export default function MetodePenyelesaianSPLTV3() {
                   onChange={e => handleChange('input49l', e)}
                 />
               </div>
-              <p className="mb-2 pt-2 mt-1">- z</p>
-              <p className="mb-2 pt-2 mt-1">z</p>
+              <p className="mb-2 pt-2 mt-1">-z</p>
+              <p className="mb-2 pt-2 mt-1">-z(-1)</p>
+              <p className="mb-2">z</p>
             </div>
             <div className=" text-center px-0" style={{ width: '50px' }}>
               <p className="mb-2">=</p>
               <p className="pt-1">=</p>
               <p className="pt-2">=</p>
               <p className="pt-1">=</p>
+              <p className="mb-2">=</p>
               <p className="">=</p>
             </div>
             <div className="" style={{ width: '350px' }}>
@@ -324,6 +356,7 @@ export default function MetodePenyelesaianSPLTV3() {
                       value={inputValues.input50l}
                       onChange={e => handleChange('input50l', e)}
                     />
+                    <span></span>
                   </div>
                 </div>
                 <Tips>kedua ruas dikurangi dengan 91</Tips>
@@ -339,9 +372,8 @@ export default function MetodePenyelesaianSPLTV3() {
                 />
                 <Tips>hasil operasi pengurangan sebelumnya</Tips>
               </div>
-              <div className="d-flex mb-2 gap-2 align-items-center">
-                <p className="mb-0">90</p>
-              </div>
+              <p className="mb-2">90(-1)</p>
+              <p className="mb-2">90</p>
             </div>
           </div>
         </div>
@@ -380,7 +412,7 @@ export default function MetodePenyelesaianSPLTV3() {
                 </div>
               </div>
               <p>x - 1</p>
-              <p className="pt-1">x</p>
+              <p className="pt-1">x - 1 + 1</p>
               <p className="">x</p>
             </div>
             <div className=" text-center" style={{ width: '50px' }}>

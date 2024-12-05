@@ -91,29 +91,31 @@ export default function UnsurPadaSPLTV() {
 
   return (
     <Main>
-      <h3 className="fw-bold pb-4 my-1">Unsur pada SPLTV</h3>
+      <h3 className="fw-bold pb-4 my-1">Unsur pada PLTV</h3>
       <p>
         Mari kita ingat sejenak, unsur-unsur yang terdapat pada sistem persamaan linear. <br />
         <b>Masih ingatkah unsur apa saja yang ada pada persamaan linear?</b>
       </p>
       <p>Jika sudah lupa, coba simak penjelasan berikut.</p>
+      <p className="bg-darkblue px-2 py-1 fw-bold mb-2 d-inline-block rounded-3">Variabel</p>
       <p>
-        <b>Variabel</b> <br />
-        Merupakan simbol atau huruf suatu nilai yang besarnya belum diketahui secara pasti. Variabel biasanya dilambangkan dengan huruf x,y,z atau lain sebagainya. Diberikan 2x+3y=7. Pada persamaan tersebut, yang merupakan variabel adalah x
-        dan y.
+        Merupakan simbol atau huruf suatu nilai yang besarnya belum diketahui secara pasti. Variabel biasanya dilambangkan dengan huruf x, y, z atau lain sebagainya. <br />
+        Contoh: <br /> - Diberikan 2x + 3y = 7. Pada persamaan tersebut, yang merupakan variabel adalah x dan y. <br /> - Diberikan a - b + 2c = 2. Pada persamaan tersebut, a, b, dan c merupakan variabel.
       </p>
+      <p className="bg-darkblue px-2 py-1 fw-bold mb-2 d-inline-block rounded-3">Koefisien</p>
       <p>
-        <b>Koefisien</b> <br />
-        Koefisien merupakan suatu bilangan yang menjelaskan banyaknya jumlah variabel. Contohnya 2x+3y=7. Pada contoh persamaan tersebut, yang merupakan koefisien adalah 2 dan 3.
+        Koefisien merupakan suatu bilangan yang menjelaskan banyaknya jumlah variabel. <br /> Contoh: <br /> - Diberikan 2x + 3y = 7. Pada contoh persamaan tersebut, yang merupakan koefisien adalah 2 dan 3. <br /> - Diberikan 3p = 4q + 5 +
+        r. Pada persamaan tersebut, 3, 4, dan 1 merupakan koefisien.
       </p>
+      <p className="bg-darkblue px-2 py-1 fw-bold mb-2 d-inline-block rounded-3">Konstanta</p>
       <p>
-        <b>Konstanta</b> <br />
-        Konstanta merupakan nilai tetap atau konstan yang tidak diikuti oleh variabel di belakangnya. Pada persamaan 2x+3y=7, angka 7 merupakan konstanta dari persamaan tersebut.
+        Konstanta merupakan nilai tetap atau konstan yang tidak diikuti oleh variabel di belakangnya. <br /> Contoh: <br /> - Diberikan 2x + 3y = 7. Pada persamaan tersebut, angka 7 merupakan konstanta. <br /> - Diberikan 10 - 2j - 3k = l.
+        Pada persamaan tersebut, 10 merupakan konstanta.
       </p>
       <p>Untuk membantu kalian mengingat kembali unsur-unsur di atas, coba lakukan kegiatan berikut ini.</p>
       <p>
         Diberikan persamaan: <br />
-        2x + 3y = 7 &ensp; ...(1) <br />
+        2h - 7 = 3i &ensp; ...(1) <br />
         5x + y = 11 &ensp; ...(2) <br />
         Mana saja yang merupakan variabel, konstanta, dan koefisien?
       </p>
@@ -127,19 +129,19 @@ export default function UnsurPadaSPLTV() {
                 2
               </ModalSalahButton>
               <ModalBenarButton onButtonClick={handleButtonClick} id="button2" jenis="Variabel">
-                x
+                h
               </ModalBenarButton>
-              <button className="disabled px-1 m-1 py-sm-2 px-sm-3">+</button>
+              <button className="disabled px-1 m-1 py-sm-2 px-sm-3">-</button>
+              <ModalSalahButton id="button5" jenis="Variabel">
+                7
+              </ModalSalahButton>
+              <button className="disabled px-1 m-1 py-sm-2 px-sm-3">=</button>
               <ModalSalahButton id="button3" jenis="Variabel">
                 3
               </ModalSalahButton>
               <ModalBenarButton onButtonClick={handleButtonClick} id="button4" jenis="Variabel">
-                y
+                i
               </ModalBenarButton>
-              <button className="disabled px-1 m-1 py-sm-2 px-sm-3">=</button>
-              <ModalSalahButton id="button5" jenis="Variabel">
-                7
-              </ModalSalahButton>
             </div>
           </div>
           <div className="col-sm-6 text-sm-end px-0">
@@ -182,19 +184,19 @@ export default function UnsurPadaSPLTV() {
                 2
               </ModalSalahButton>
               <ModalSalahButton id="button12" jenis="Konstanta">
-                x
+                h
               </ModalSalahButton>
-              <button className="disabled px-1 m-1 py-sm-2 px-sm-3">+</button>
+              <button className="disabled px-1 m-1 py-sm-2 px-sm-3">-</button>
+              <ModalBenarButton onButtonClick={handleButtonClick} id="button15" jenis="Konstanta">
+                7
+              </ModalBenarButton>
+              <button className="disabled px-1 m-1 py-sm-2 px-sm-3">=</button>
               <ModalSalahButton id="button13" jenis="Konstanta">
                 3
               </ModalSalahButton>
               <ModalSalahButton id="button14" jenis="Konstanta">
-                y
+                i
               </ModalSalahButton>
-              <button className="disabled px-1 m-1 py-sm-2 px-sm-3">=</button>
-              <ModalBenarButton onButtonClick={handleButtonClick} id="button15" jenis="Konstanta">
-                7
-              </ModalBenarButton>
             </div>
           </div>
           <div className="col-sm-6 text-sm-end px-0">
@@ -237,18 +239,18 @@ export default function UnsurPadaSPLTV() {
                 2
               </ModalBenarButton>
               <ModalSalahButton id="button22" jenis="Koefisien">
-                x
+                h
               </ModalSalahButton>
-              <button className="disabled px-1 m-1 py-sm-2 px-sm-3">+</button>
+              <button className="disabled px-1 m-1 py-sm-2 px-sm-3">-</button>
+              <ModalSalahButton id="button25" jenis="Koefisien">
+                7
+              </ModalSalahButton>
+              <button className="disabled px-1 m-1 py-sm-2 px-sm-3">=</button>
               <ModalBenarButton onButtonClick={handleButtonClick} id="button23" jenis="Koefisien">
                 3
               </ModalBenarButton>
               <ModalSalahButton id="button24" jenis="Koefisien">
-                y
-              </ModalSalahButton>
-              <button className="disabled px-1 m-1 py-sm-2 px-sm-3">=</button>
-              <ModalSalahButton id="button25" jenis="Koefisien">
-                7
+                i
               </ModalSalahButton>
             </div>
           </div>

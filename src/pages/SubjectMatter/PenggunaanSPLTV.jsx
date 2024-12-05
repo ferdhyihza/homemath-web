@@ -13,17 +13,53 @@ export default function PenggunaanSPLTV() {
     input62: '',
     input63: '',
     input64: '',
+    inputr7: '',
+    inputr8: '',
+    inputr9: '',
+    inputr10: '',
+    inputr11: '',
+    inputr12: '',
+    inputr13: '',
+    inputr14: '',
+    inputr15: '',
+    inputr16: '',
+    inputr17: '',
+    inputr18: '',
+    inputr19: '',
+    inputr20: '',
+    inputr21: '',
+    inputr22: '',
+    inputr23: '',
   });
   const [inputStatuses, setInputStatuses] = useState({
     input61: false,
     input62: false,
     input63: false,
     input64: false,
+    inputr7: false,
+    inputr8: false,
+    inputr9: false,
+    inputr10: false,
+    inputr11: false,
+    inputr12: false,
+    inputr13: false,
+    inputr14: false,
+    inputr15: false,
+    inputr16: false,
+    inputr17: false,
+    inputr18: false,
+    inputr19: false,
+    inputr20: false,
+    inputr21: false,
+    inputr22: false,
+    inputr23: false,
   });
+  const [isBlurred0, setIsBlurred0] = useState(true);
   const [isBlurred, setIsBlurred] = useState(true); // Status untuk kelas blur
   const [isBlurred2, setIsBlurred2] = useState(true);
   const [isBlurred3, setIsBlurred3] = useState(true);
   const [isBlurred4, setIsBlurred4] = useState(true);
+  const section0 = useRef(null);
   const section = useRef(null);
   const section2 = useRef(null);
   const section3 = useRef(null);
@@ -37,19 +73,37 @@ export default function PenggunaanSPLTV() {
       setInputValues(savedStatus.values);
       setInputStatuses(savedStatus.statuses);
       // Tentukan apakah kelas blur harus dihapus berdasarkan status validasi
+      const allValid0 = savedStatus.statuses.inputr7 && savedStatus.statuses.inputr8 && savedStatus.statuses.inputr9;
+      setIsBlurred0(!allValid0);
       const allValid = savedStatus.statuses.input61;
       setIsBlurred(!allValid);
-      const allValid2 = savedStatus.statuses.input62;
+      const allValid2 = savedStatus.statuses.input62 && savedStatus.statuses.inputr10 && savedStatus.statuses.inputr11;
       setIsBlurred2(!allValid2);
-      const allValid3 = savedStatus.statuses.input63;
+      const allValid3 =
+        savedStatus.statuses.input63 &&
+        savedStatus.statuses.inputr12 &&
+        savedStatus.statuses.inputr13 &&
+        savedStatus.statuses.inputr14 &&
+        savedStatus.statuses.inputr15 &&
+        savedStatus.statuses.inputr16 &&
+        savedStatus.statuses.inputr17 &&
+        savedStatus.statuses.inputr18 &&
+        savedStatus.statuses.inputr19 &&
+        savedStatus.statuses.inputr20 &&
+        savedStatus.statuses.inputr21 &&
+        savedStatus.statuses.inputr22 &&
+        savedStatus.statuses.inputr23;
       setIsBlurred3(!allValid3);
       const allValid4 = savedStatus.statuses.input64;
       setIsBlurred4(!allValid4);
     }
 
-    if (!isBlurred && !isBlurred2 && !isBlurred3 && !isBlurred4 && sessionData?.PenggunaanSPLTV) {
+    if (!isBlurred0 && !isBlurred && !isBlurred2 && !isBlurred3 && !isBlurred4 && sessionData?.PenggunaanSPLTV) {
       return;
     } else {
+      if (!isBlurred0 && section0.current) {
+        section0.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
       if (!isBlurred && section.current) {
         section.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
       }
@@ -68,7 +122,7 @@ export default function PenggunaanSPLTV() {
         localStorage.setItem('sessionData', JSON.stringify(newSessionData));
       }
     }
-  }, [isBlurred, isBlurred2, isBlurred3, isBlurred4, sessionData]);
+  }, [isBlurred0, isBlurred, isBlurred2, isBlurred3, isBlurred4, sessionData]);
 
   // Fungsi untuk menangani perubahan pada input
   const handleChange = (inputName, event) => {
@@ -82,7 +136,41 @@ export default function PenggunaanSPLTV() {
       isValid = true;
     } else if (inputName === 'input63' && value.replace(/\.|\s/g, '') == '3') {
       isValid = true;
-    } else if (inputName === 'input64' && value.replace(/\.|\s/g, '') == '5') {
+    } else if (inputName === 'input64' && value.replace(/\.|\s/g, '') == '4') {
+      isValid = true;
+    } else if (inputName === 'inputr7' && value.replace(/\.|\s/g, '') == 'x+y+z=16') {
+      isValid = true;
+    } else if (inputName === 'inputr8' && value.replace(/\.|\s/g, '') == 'x+y-z=-2') {
+      isValid = true;
+    } else if (inputName === 'inputr9' && value.replace(/\.|\s/g, '') == '79x-11y-20z=13') {
+      isValid = true;
+    } else if (inputName === 'inputr10' && value.replace(/\.|\s/g, '') == '176') {
+      isValid = true;
+    } else if (inputName === 'inputr11' && value.replace(/\.|\s/g, '') == '90x') {
+      isValid = true;
+    } else if (inputName === 'inputr12' && value.replace(/\.|\s/g, '') == '90x') {
+      isValid = true;
+    } else if (inputName === 'inputr13' && value.replace(/\.|\s/g, '') == '90x') {
+      isValid = true;
+    } else if (inputName === 'inputr14' && value.replace(/\.|\s/g, '') == '90x') {
+      isValid = true;
+    } else if (inputName === 'inputr15' && value.replace(/\.|\s/g, '') == '90x') {
+      isValid = true;
+    } else if (inputName === 'inputr16' && value.replace(/\.|\s/g, '') == '90x') {
+      isValid = true;
+    } else if (inputName === 'inputr17' && value.replace(/\.|\s/g, '') == '189') {
+      isValid = true;
+    } else if (inputName === 'inputr18' && value.replace(/\.|\s/g, '') == '189') {
+      isValid = true;
+    } else if (inputName === 'inputr19' && value.replace(/\.|\s/g, '') == '189') {
+      isValid = true;
+    } else if (inputName === 'inputr20' && value.replace(/\.|\s/g, '') == '189+81') {
+      isValid = true;
+    } else if (inputName === 'inputr21' && value.replace(/\.|\s/g, '') == '270') {
+      isValid = true;
+    } else if (inputName === 'inputr22' && value.replace(/\.|\s/g, '') == '270') {
+      isValid = true;
+    } else if (inputName === 'inputr23' && value.replace(/\.|\s/g, '') == '90') {
       isValid = true;
     }
 
@@ -107,11 +195,26 @@ export default function PenggunaanSPLTV() {
     localStorage.setItem('inputStatuses', JSON.stringify(updatedStatus));
 
     // Periksa apakah semua input sudah valid
+    const allValid0 = updatedStatus.statuses.inputr7 && updatedStatus.statuses.inputr8 && updatedStatus.statuses.inputr9;
+    setIsBlurred0(!allValid0);
     const allValid = updatedStatus.statuses.input61;
     setIsBlurred(!allValid); // Hapus kelas blur jika semua input valid
-    const allValid2 = updatedStatus.statuses.input62;
+    const allValid2 = updatedStatus.statuses.input62 && updatedStatus.statuses.inputr10 && updatedStatus.statuses.inputr11;
     setIsBlurred2(!allValid2);
-    const allValid3 = updatedStatus.statuses.input63;
+    const allValid3 =
+      updatedStatus.statuses.input63 &&
+      updatedStatus.statuses.inputr12 &&
+      updatedStatus.statuses.inputr13 &&
+      updatedStatus.statuses.inputr14 &&
+      updatedStatus.statuses.inputr15 &&
+      updatedStatus.statuses.inputr16 &&
+      updatedStatus.statuses.inputr17 &&
+      updatedStatus.statuses.inputr18 &&
+      updatedStatus.statuses.inputr19 &&
+      updatedStatus.statuses.inputr20 &&
+      updatedStatus.statuses.inputr21 &&
+      updatedStatus.statuses.inputr22 &&
+      updatedStatus.statuses.inputr23;
     setIsBlurred3(!allValid3);
     const allValid4 = updatedStatus.statuses.input64;
     setIsBlurred4(!allValid4);
@@ -130,24 +233,25 @@ export default function PenggunaanSPLTV() {
       </p>
       <p>
         <b> Perhatikan contoh berikut ini!</b> <br />
-        Terdapat bilangan yang terdiri dari tiga angka. Jumlah ketiga angka tersebut adalah 16. Angka pertama dijumlahkan dengan angka kedua nilainya sama dengan angka ketiga dikurangi dua. Besar nilai bilangan tersebut adalah 21 dikali
-        dengan jumlah ketiga angkanya kemudian dijumlahkan dengan 13. Berapa besar nilai bilangan tersebut?
+        Naura menemukan tiga benda di atas meja ruang kelas, dadu, kelereng, dan bidak catur. Terdapat catatan informasi mengenai berat ketiga benda tersebut dalam satuan Newton. Informasi mengatakan jumlah berat ketiga benda tersebut
+        adalah 16. Berat dadu dijumlahkan dengan berat kelereng sama dengan berat bidak catur dikurangi dua. 79 kali berat dadu dikurangi 11 kali berat kelereng dan dikurangi lagi dengan 20 kali berat bidak catur sama dengan 13. Berapa
+        berat masing-masing benda tersebut?
       </p>
       <figure className="text-center">
-        <img className="img-fluid" src="/img/variabel.png" alt="video ilustrasi" style={{ maxWidth: '144px' }} />
+        <img className="img-fluid" src="/img/penggunaan-spltv.png" alt="video ilustrasi" style={{ maxWidth: '144px' }} />
         {/* <figcaption className="fst-italic fw-light">Ilustrasi [video]</figcaption> */}
       </figure>
       <p>
         <b>Penyelesaian:</b> <br />
-        Berdasarkan pernyataan tersebut, kita dapat mengidentifikasi: <br />
-        1. Misalkan bilangan tersebut adalah xyz, maka x menempati nilai ratusan, y menempati nilai puluhan, dan z menempati nilai satuan. Sehingga dapat kita dapat menuliskannya dengan 100x+10y+z <br />
-        2. Jumlah ketiga angkanya adalah 16, sehingga x+y+z=16 <br />
-        3. Angka pertama dijumlahkan dengan angka kedua nilainya sama dengan angka ketiga dikurangi dua, sehingga x+y=z-2 <br />
-        4. Besar nilai bilangan tersebut adalah 21 dikali dengan jumlah ketiga angkanya kemudian dijumlahkan dengan 13, sehingga 21(x+y+z)+13=100x+10y+z
+        Kita susun terlebih dahulu informasi yang didapatkan sebagai berikut. <br />
+        1. Terdapat tiga benda, dadu, kelereng, dan bidak catur yang ingin diketahui masing-masing beratnya. Sehingga dapat kita misalkan berat ketiga benda tersebut menjadi variabel. Misalkan berat dadu adalah x, berat kelereng adalah y,
+        dan berat bidak catur adalah z. <br />
+        2. Jumlah berat ketiga benda tersebut adalah 16. Sehingga x + y + z = 16. <br />
+        3. Berat dadu dijumlahkan dengan berat kelereng sama dengan berat bidak catur dikurangi dua. Sehingga x + y = z - 2. <br />
+        4. 79 kali berat dadu dikurangi 11 kali berat kelereng dan dikurangi lagi dengan 20 kali berat bidak catur sama dengan 13. Sehingga 79x - 11y - 20z = 13.
       </p>
       <p>
-        Berdasarkan keempat identifikasi yang kita susun, <br />
-        diketahui: <br />
+        Berdasarkan informasi di atas, kita telah mendapatkan tiga persamaan linear, yaitu <br />
       </p>
       <p>
         Persamaan 1 <br />x + y + z = 16 &emsp;&emsp;&emsp;............(1)
@@ -158,45 +262,88 @@ export default function PenggunaanSPLTV() {
       </p>
       <p>
         Persamaan 3 <br />
-        21(x + y + z) + 13 = 100x + 10y + z <br />
-        ⇔ 21x + 21y + 21z + 13 = 100x + 10y + z <br />
-        ⇔ 21x - 100x + 21y - 10y + 21z - z = -13 <br />
-        ⇔ -79x + 11y + 20z = -13 <br />⇔ 79x - 11y - 20z = 13 &emsp;&emsp;&emsp;............(3)
+        79x - 11y - 20z = 13 &emsp;&emsp;&emsp;............(3)
       </p>
       <p>
         Kita telah mendapatkan tiga persamaan linear, yaitu <br />
-        x + y + z = 16 &emsp;&emsp;&emsp;............(1)
-        <br />
-        x + y - z = -2 &emsp;&emsp;&emsp;............(2)
-        <br />
-        79x - 11y - 20z = 13 &emsp;&emsp;&emsp;............(3)
-      </p>
-      <p>Untuk menyelesaikannya, kita dapat menggunakan tiga metode yang telah kalian pelajari. Di sini akan dicontohkan alternatif penyelesaian dengan metode campuran (eliminiasi dan substitusi).</p>
-      <p>
-        <b>Langkahnya adalah sebagai berikut</b> <br />
-        <em>yuk lengkapi kolom rumpang pada setiap langkahnya untuk membantu mengasah kemampuan kalian</em>
-      </p>
-      <p>Eliminasi variabel x pada persamaan (1) dan (2)</p>
-      <p className="mb-0">x + y + z = 16</p>
-      <p className="d-inline-block mb-1 pe-5 pb-1 border-bottom border-black kurang position-relative">x + y - z = -2</p>
-      <p className="mb-0 ps-4 ms-2">2z = 18</p>
-      <div className="d-inline-block mb-2">
-        <div className="d-flex gap-2 align-items-center">
-          <p className="mb-0 ps-4 ms-3">z =</p>
+        <span>
           <input
+            className={`form-control my-1 d-inline-block ${inputStatuses.inputr7 ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.inputr7 && !inputStatuses.inputr7 ? 'border-danger bg-danger-subtle' : ''}`}
             type="text"
-            className={`form-control ${inputStatuses.input61 ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.input61 && !inputStatuses.input61 ? 'border-danger bg-danger-subtle' : ''}`}
             placeholder="..."
-            style={{ width: '48px', textAlign: 'center' }}
-            value={inputValues.input61}
-            onChange={e => handleChange('input61', e)}
+            style={{ textAlign: 'center', width: '200px' }}
+            value={inputValues.inputr7}
+            onChange={e => handleChange('inputr7', e)}
           />
-          <p className="mb-0 ">............(4)</p>
+        </span>
+        &emsp;&emsp;&emsp;............(1)
+        <br />
+        <span>
+          <input
+            className={`form-control my-1 d-inline-block ${inputStatuses.inputr8 ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.inputr8 && !inputStatuses.inputr8 ? 'border-danger bg-danger-subtle' : ''}`}
+            type="text"
+            placeholder="..."
+            style={{ textAlign: 'center', width: '200px' }}
+            value={inputValues.inputr8}
+            onChange={e => handleChange('inputr8', e)}
+          />
+        </span>
+        &emsp;&emsp;&emsp;............(2)
+        <br />
+        <span>
+          <input
+            className={`form-control my-1 d-inline-block ${inputStatuses.inputr9 ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.inputr9 && !inputStatuses.inputr9 ? 'border-danger bg-danger-subtle' : ''}`}
+            type="text"
+            placeholder="..."
+            style={{ textAlign: 'center', width: '200px' }}
+            value={inputValues.inputr9}
+            onChange={e => handleChange('inputr9', e)}
+          />
+        </span>
+        &emsp;&emsp;&emsp;............(3)
+      </p>
+      <div className={`${isBlurred0 ? 'blur' : ''}`}>
+        <p ref={section0}>Untuk menyelesaikannya, kita dapat menggunakan tiga metode yang telah kalian pelajari. Di sini akan dicontohkan alternatif penyelesaian dengan metode campuran (eliminiasi dan substitusi).</p>
+        <p>
+          <b>Langkahnya adalah sebagai berikut</b> <br />
+          <em>yuk lengkapi kolom rumpang pada setiap langkahnya untuk membantu mengasah kemampuan kalian</em>
+        </p>
+        <p>1. Eliminasi variabel x pada persamaan (1) dan (2) dengan mengurangi persamaan (1) dengan persamaan (2). Sehingga,</p>
+        <p className="mb-0">x + y + z = 16</p>
+        <p className="d-inline-block mb-1 pe-5 pb-1 border-bottom border-black kurang position-relative">x + y - z = -2</p>
+        <p className="mb-0 ps-4 ms-2">2z = 18</p>
+        <div className="d-flex ps-4 ms-2 gap-2">
+          <div className="d-inline-block">
+            <p className="border-bottom border-black mb-0 d-inline-block">2z</p>
+            <p className="text-center mb-0">2</p>
+          </div>
+          <span>=</span>
+          <div className="d-inline-block">
+            <p className="border-bottom border-black mb-0 d-inline-block">18</p>
+            <p className="text-center mb-0">2</p>
+          </div>
         </div>
-        <Tips>kedua ruas dibagi dengan 2</Tips>
+        <div className="d-inline-block mb-2">
+          <div className="d-flex gap-2 align-items-center">
+            <p className="mb-0 ps-4 ms-3">z =</p>
+            <input
+              type="text"
+              className={`form-control ${inputStatuses.input61 ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.input61 && !inputStatuses.input61 ? 'border-danger bg-danger-subtle' : ''}`}
+              placeholder="..."
+              style={{ width: '48px', textAlign: 'center' }}
+              value={inputValues.input61}
+              onChange={e => handleChange('input61', e)}
+            />
+            <p className="mb-0 ">............(4)</p>
+          </div>
+          <Tips>kedua ruas dibagi dengan 2</Tips>
+        </div>
       </div>
       <div className={`${isBlurred ? 'blur' : ''}`}>
-        <p ref={section}>Eliminasi variabel x pada persamaan (1) dan (3)</p>
+        <p ref={section}>
+          2. Eliminasi variabel x pada persamaan (1) dan (3) dengan menjumlahkan persamaan (1) dengan persamaan (3). Namun, terlebih dahulu kita kalikan persamaan (1) dengan 11 dan kalikan persamaan (3) dengan 1 agar koefisien variabel x
+          habis dijumlahkan. Sehingga,
+        </p>
         <div className="overflow-x-auto">
           <div className="row justify-content-center mx-0" style={{ minWidth: '800px' }}>
             <div className="" style={{ width: '200px' }}>
@@ -204,15 +351,43 @@ export default function PenggunaanSPLTV() {
               <p>79x - 11y - 20z = 13</p>
             </div>
             <div className=" text-center" style={{ width: '100px' }}>
-              <p>| ×11 |</p>
-              <p>| ×1 |</p>
+              <p>
+                | <b>×11</b> |
+              </p>
+              <p>
+                | <b>×1</b> |
+              </p>
             </div>
             <div className="" style={{ width: '500px' }}>
-              <p>11x + 11y + 11z = 176</p>
+              <p className="mb-1">
+                11x + 11y + 11z ={' '}
+                <span>
+                  <input
+                    className={`form-control d-inline-block ${inputStatuses.inputr10 ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.inputr10 && !inputStatuses.inputr10 ? 'border-danger bg-danger-subtle' : ''}`}
+                    type="text"
+                    placeholder="..."
+                    style={{ textAlign: 'center', width: '48px' }}
+                    value={inputValues.inputr10}
+                    onChange={e => handleChange('inputr10', e)}
+                  />
+                </span>
+              </p>
               <p className="d-inline-block mb-1 pb-3 border-bottom border-black tambah position-relative pe-5">79x - 11y - 20z = 13</p>
-              <div className="d-flex gap-2 align-items-center">
+              <div className="d-flex mt-2 gap-2 align-items-center">
                 <div className="d-flex gap-2 align-items-center">
-                  <p className="mb-0 ps-4 ms-3">90x - 9z =</p>
+                  <p className="mb-0 ps-4 ms-3">
+                    <span>
+                      <input
+                        className={`form-control d-inline-block ${inputStatuses.inputr11 ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.inputr11 && !inputStatuses.inputr11 ? 'border-danger bg-danger-subtle' : ''}`}
+                        type="text"
+                        placeholder="..."
+                        style={{ textAlign: 'center', width: '64px' }}
+                        value={inputValues.inputr11}
+                        onChange={e => handleChange('inputr11', e)}
+                      />
+                    </span>{' '}
+                    - 9z =
+                  </p>
                   <input
                     type="text"
                     className={`form-control ${inputStatuses.input62 ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.input62 && !inputStatuses.input62 ? 'border-danger bg-danger-subtle' : ''}`}
@@ -230,35 +405,174 @@ export default function PenggunaanSPLTV() {
         </div>
       </div>
       <div className={`${isBlurred2 ? 'blur' : ''}`}>
-        <p ref={section2}>Substitusikan nilai variabel z atau persamaan (4) ke persamaan (5), sehingga</p>
+        <p ref={section2}>3. Selanjutnya, kita bisa mensubstitusikan nilai variabel z atau persamaan (4) ke dalam persamaan (5), sehingga</p>
         <div className="overflow-x-auto">
-          <div className="row justify-content-center mx-0" style={{ minWidth: '350px' }}>
-            <div className=" text-end" style={{ width: '100px' }}>
-              <p>90x - 9z</p>
-              <p>90x - 9(9)</p>
-              <p>90x - 81</p>
-              <p>90x</p>
-              <p>90x</p>
-              <p className="pt-2">x</p>
-              <p className="pt-2">x</p>
+          <div className="row justify-content-center mx-0" style={{ minWidth: '400px' }}>
+            <div className=" text-end" style={{ width: '150px' }}>
+              <p className="mb-2">
+                <span>
+                  <input
+                    className={`form-control d-inline-block ${inputStatuses.inputr12 ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.inputr12 && !inputStatuses.inputr12 ? 'border-danger bg-danger-subtle' : ''}`}
+                    type="text"
+                    placeholder="..."
+                    style={{ textAlign: 'center', width: '64px' }}
+                    value={inputValues.inputr12}
+                    onChange={e => handleChange('inputr12', e)}
+                  />
+                </span>{' '}
+                - 9z
+              </p>
+              <p className="mb-2">
+                <span>
+                  <input
+                    className={`form-control d-inline-block ${inputStatuses.inputr13 ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.inputr13 && !inputStatuses.inputr13 ? 'border-danger bg-danger-subtle' : ''}`}
+                    type="text"
+                    placeholder="..."
+                    style={{ textAlign: 'center', width: '64px' }}
+                    value={inputValues.inputr13}
+                    onChange={e => handleChange('inputr13', e)}
+                  />
+                </span>{' '}
+                - 9(9)
+              </p>
+              <p className="mb-2">
+                <span>
+                  <input
+                    className={`form-control d-inline-block ${inputStatuses.inputr14 ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.inputr14 && !inputStatuses.inputr14 ? 'border-danger bg-danger-subtle' : ''}`}
+                    type="text"
+                    placeholder="..."
+                    style={{ textAlign: 'center', width: '64px' }}
+                    value={inputValues.inputr14}
+                    onChange={e => handleChange('inputr14', e)}
+                  />
+                </span>{' '}
+                - 81
+              </p>
+              <p className="mb-2">
+                <span>
+                  <input
+                    className={`form-control d-inline-block ${inputStatuses.inputr15 ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.inputr15 && !inputStatuses.inputr15 ? 'border-danger bg-danger-subtle' : ''}`}
+                    type="text"
+                    placeholder="..."
+                    style={{ textAlign: 'center', width: '64px' }}
+                    value={inputValues.inputr15}
+                    onChange={e => handleChange('inputr15', e)}
+                  />
+                </span>
+                <span> - 81 + 81</span>
+              </p>
+              <p className="mb-2">
+                <span>
+                  <input
+                    className={`form-control d-inline-block ${inputStatuses.inputr16 ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.inputr16 && !inputStatuses.inputr16 ? 'border-danger bg-danger-subtle' : ''}`}
+                    type="text"
+                    placeholder="..."
+                    style={{ textAlign: 'center', width: '64px' }}
+                    value={inputValues.inputr16}
+                    onChange={e => handleChange('inputr16', e)}
+                  />
+                </span>
+              </p>
+              <div className="d-inline-block pt-4">
+                <p className="border-bottom border-black mb-0 d-inline-block">90x</p>
+                <p className="text-center">90</p>
+              </div>
+              <p className="pt-3">x</p>
             </div>
             <div className=" text-center" style={{ width: '50px' }}>
-              <p>=</p>
-              <p>=</p>
-              <p>=</p>
-              <p>=</p>
-              <p>=</p>
-              <p className="pt-2">=</p>
-              <p className="pt-2">=</p>
+              <p className="mb-4 mt-1">=</p>
+              <p className="mb-3 pb-1">=</p>
+              <p className="mb-4">=</p>
+              <p className="mb-4">=</p>
+              <p className="mb-4">=</p>
+              <p className="pt-4">=</p>
+              <p className="pt-4 mt-4">=</p>
             </div>
             <div className="" style={{ width: '200px' }}>
-              <p>189</p>
-              <p>189</p>
-              <p>189</p>
-              <p>189 - 81</p>
-              <p>270</p>
-              <p className="mb-0 d-inline-block border-bottom border-black">270</p>
-              <p className="mb-0">&nbsp;&nbsp;90</p>
+              <p className="mb-2">
+                <span>
+                  <input
+                    className={`form-control d-inline-block ${inputStatuses.inputr17 ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.inputr17 && !inputStatuses.inputr17 ? 'border-danger bg-danger-subtle' : ''}`}
+                    type="text"
+                    placeholder="..."
+                    style={{ textAlign: 'center', width: '64px' }}
+                    value={inputValues.inputr17}
+                    onChange={e => handleChange('inputr17', e)}
+                  />
+                </span>
+              </p>
+              <p className="mb-2">
+                <span>
+                  <input
+                    className={`form-control d-inline-block ${inputStatuses.inputr18 ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.inputr18 && !inputStatuses.inputr18 ? 'border-danger bg-danger-subtle' : ''}`}
+                    type="text"
+                    placeholder="..."
+                    style={{ textAlign: 'center', width: '64px' }}
+                    value={inputValues.inputr18}
+                    onChange={e => handleChange('inputr18', e)}
+                  />
+                </span>
+              </p>
+              <p className="mb-2">
+                <span>
+                  <input
+                    className={`form-control d-inline-block ${inputStatuses.inputr19 ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.inputr19 && !inputStatuses.inputr19 ? 'border-danger bg-danger-subtle' : ''}`}
+                    type="text"
+                    placeholder="..."
+                    style={{ textAlign: 'center', width: '64px' }}
+                    value={inputValues.inputr19}
+                    onChange={e => handleChange('inputr19', e)}
+                  />
+                </span>
+              </p>
+              <p className="mb-2">
+                <span>
+                  <input
+                    className={`form-control d-inline-block ${inputStatuses.inputr20 ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.inputr20 && !inputStatuses.inputr20 ? 'border-danger bg-danger-subtle' : ''}`}
+                    type="text"
+                    placeholder="..."
+                    style={{ textAlign: 'center', width: '128px' }}
+                    value={inputValues.inputr20}
+                    onChange={e => handleChange('inputr20', e)}
+                  />
+                </span>
+              </p>
+              <p className="mb-2">
+                <span>
+                  <input
+                    className={`form-control d-inline-block ${inputStatuses.inputr21 ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.inputr21 && !inputStatuses.inputr21 ? 'border-danger bg-danger-subtle' : ''}`}
+                    type="text"
+                    placeholder="..."
+                    style={{ textAlign: 'center', width: '64px' }}
+                    value={inputValues.inputr21}
+                    onChange={e => handleChange('inputr21', e)}
+                  />
+                </span>
+              </p>
+              <p className="mb-2 pb-2 d-inline-block border-bottom border-black">
+                <span>
+                  <input
+                    className={`form-control d-inline-block ${inputStatuses.inputr22 ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.inputr22 && !inputStatuses.inputr22 ? 'border-danger bg-danger-subtle' : ''}`}
+                    type="text"
+                    placeholder="..."
+                    style={{ textAlign: 'center', width: '64px' }}
+                    value={inputValues.inputr22}
+                    onChange={e => handleChange('inputr22', e)}
+                  />
+                </span>
+              </p>
+              <p className="mb-2">
+                <span>
+                  <input
+                    className={`form-control d-inline-block ${inputStatuses.inputr23 ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.inputr23 && !inputStatuses.inputr23 ? 'border-danger bg-danger-subtle' : ''}`}
+                    type="text"
+                    placeholder="..."
+                    style={{ textAlign: 'center', width: '64px' }}
+                    value={inputValues.inputr23}
+                    onChange={e => handleChange('inputr23', e)}
+                  />
+                </span>
+              </p>
               <div className="d-inline-block mb-2">
                 <div className="d-flex gap-2 align-items-center">
                   <input
@@ -278,14 +592,16 @@ export default function PenggunaanSPLTV() {
         </div>
       </div>
       <div className={`${isBlurred3 ? 'blur' : ''}`}>
-        <p ref={section3}>Setelah kita mengetahui nilai variabel x dan z, kita dapat mensubstitusikannya ke salah satu persamaan (1), (2), atau (3) untuk mengetahui nilai variabel y. Di sini kita substitusikan ke persamaan (1), maka</p>
+        <p ref={section3}>
+          4. Setelah kita mengetahui nilai variabel x dan z, kita dapat mensubstitusikannya ke salah satu persamaan (1), (2), atau (3) untuk mengetahui nilai variabel y. Di sini kita coba substitusikan ke persamaan (1), maka
+        </p>
         <div className="overflow-x-auto">
           <div className="row justify-content-center mx-0" style={{ minWidth: '250px' }}>
             <div className=" text-end" style={{ width: '100px' }}>
               <p>x + y + z</p>
               <p>3 + y + 9</p>
               <p>12 + y</p>
-              <p>y</p>
+              <p>12 - 12 + y</p>
               <p className="pt-2">y</p>
             </div>
             <div className=" text-center" style={{ width: '50px' }}>
@@ -299,7 +615,7 @@ export default function PenggunaanSPLTV() {
               <p>16</p>
               <p>16</p>
               <p>16</p>
-              <p>16 - 11</p>
+              <p>16 - 12</p>
               <div className="d-inline-block mb-2">
                 <div className="d-flex gap-2 align-items-center">
                   <input
@@ -318,8 +634,8 @@ export default function PenggunaanSPLTV() {
         </div>
       </div>
       <div ref={section4} className={`${isBlurred4 ? 'blur' : ''}`}>
-        <p>Setelah kita menyelesaikan langkah-langkah tersebut, kita telah mengetahui nilai variabel x = 3, y = 5, dan z = 9. Jadi, bilangan tersebut adalah 349.</p>
-
+        <p>5. Setelah kita menyelesaikan langkah-langkah tersebut, kita telah mengetahui nilai variabel x = 3, y = 4, dan z = 9.</p>
+        <p>Ingat kembali bahwa berat dadu adalah x, berat kelereng adalah y, dan berat bidak catur adalah z. Jadi, berat dadu adalah 3 Newton, berat kelereng adalah 4 Newton, dan berat bidak catur adalah 9 Newton.</p>
         <div className="d-flex justify-content-center py-4">
           <NextButton link={`/materi/penggunaan-spltv-2` + (from ? '?from=materi' : '')}></NextButton>
         </div>

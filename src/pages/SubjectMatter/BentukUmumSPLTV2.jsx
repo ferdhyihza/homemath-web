@@ -16,6 +16,12 @@ export default function BentukUmumSPLTV2() {
     input5: '',
     input6: '',
     input7: '',
+    inputt1: '',
+    inputt2: '',
+    inputt3: '',
+    inputt4: '',
+    inputt5: '',
+    inputt6: '',
   });
   const [inputStatuses, setInputStatuses] = useState({
     input1: false,
@@ -25,9 +31,17 @@ export default function BentukUmumSPLTV2() {
     input5: false,
     input6: false,
     input7: false,
+    inputt1: false,
+    inputt2: false,
+    inputt3: false,
+    inputt4: false,
+    inputt5: false,
+    inputt6: false,
   });
+  const [isBlurred0, setIsBlurred0] = useState(true);
   const [isBlurred, setIsBlurred] = useState(true); // Status untuk kelas blur
   const [isBlurred2, setIsBlurred2] = useState(true);
+  const section0 = useRef(null);
   const section = useRef(null);
   const section2 = useRef(null);
   const [sessionData] = useState(JSON.parse(localStorage.getItem('sessionData')));
@@ -39,15 +53,20 @@ export default function BentukUmumSPLTV2() {
       setInputValues(savedStatus.values);
       setInputStatuses(savedStatus.statuses);
       // Tentukan apakah kelas blur harus dihapus berdasarkan status validasi
+      const allValid0 = savedStatus.statuses.inputt1 && savedStatus.statuses.inputt2 && savedStatus.statuses.inputt3 && savedStatus.statuses.inputt4 && savedStatus.statuses.inputt5 && savedStatus.statuses.inputt6;
+      setIsBlurred0(!allValid0);
       const allValid = savedStatus.statuses.input1 && savedStatus.statuses.input2 && savedStatus.statuses.input3;
       setIsBlurred(!allValid);
       const allValid2 = savedStatus.statuses.input4 && savedStatus.statuses.input5 && savedStatus.statuses.input6 && savedStatus.statuses.input7;
       setIsBlurred2(!allValid2);
     }
 
-    if (!isBlurred && !isBlurred2 && sessionData?.BentukUmumSPLTV2) {
+    if (!isBlurred0 && !isBlurred && !isBlurred2 && sessionData?.BentukUmumSPLTV2) {
       return;
     } else {
+      if (!isBlurred0 && section0.current) {
+        section0.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
       if (!isBlurred && section.current) {
         section.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
       }
@@ -60,7 +79,7 @@ export default function BentukUmumSPLTV2() {
         localStorage.setItem('sessionData', JSON.stringify(newSessionData));
       }
     }
-  }, [isBlurred, isBlurred2, sessionData]);
+  }, [isBlurred0, isBlurred, isBlurred2, sessionData]);
 
   // Fungsi untuk menangani perubahan pada input
   const handleChange = (inputName, event) => {
@@ -81,6 +100,18 @@ export default function BentukUmumSPLTV2() {
     } else if (inputName === 'input6' && value == '7') {
       isValid = true;
     } else if (inputName === 'input7' && value.replace(/\./g, '') == '19700000') {
+      isValid = true;
+    } else if (inputName === 'inputt1' && value.replace(/\./g, '') == '20700000') {
+      isValid = true;
+    } else if (inputName === 'inputt2' && value.replace(/\./g, '') == '5') {
+      isValid = true;
+    } else if (inputName === 'inputt3' && value.replace(/\./g, '') == '24000000') {
+      isValid = true;
+    } else if (inputName === 'inputt4' && value.replace(/\./g, '') == '2') {
+      isValid = true;
+    } else if (inputName === 'inputt5' && value.replace(/\./g, '') == '7') {
+      isValid = true;
+    } else if (inputName === 'inputt6' && value.replace(/\./g, '') == '19700000') {
       isValid = true;
     }
 
@@ -105,6 +136,8 @@ export default function BentukUmumSPLTV2() {
     localStorage.setItem('inputStatuses', JSON.stringify(updatedStatus));
 
     // Periksa apakah semua input sudah valid
+    const allValid0 = updatedStatus.statuses.inputt1 && updatedStatus.statuses.inputt2 && updatedStatus.statuses.inputt3 && updatedStatus.statuses.inputt4 && updatedStatus.statuses.inputt5 && updatedStatus.statuses.inputt6;
+    setIsBlurred0(!allValid0);
     const allValid = updatedStatuses.input1 && updatedStatuses.input2 && updatedStatuses.input3;
     setIsBlurred(!allValid); // Hapus kelas blur jika semua input valid
     const allValid2 = updatedStatuses.input4 && updatedStatuses.input5 && updatedStatuses.input6 && updatedStatuses.input7;
@@ -153,130 +186,165 @@ export default function BentukUmumSPLTV2() {
       </p>
       <p>
         <b>Yuk coba ilustrasi berikut!</b> <br />
-        Mari kita misalkan setiap gulung warna kain sebagai variabel yang ingin kita ketahui nilainya.
+        Untuk memudahkan kalian, kita bisa menyusunnya dalam bentuk tabel seperti berikut.
       </p>
-      <p className="text-center fst-italic my-4">Lengkapi kotak kosong berikut dengan variabel yang mewakili harga satu gulung kain warna putih adalah x, warna abu-abu adalah y, dan warna cokelat adalah z</p>
-      <div className="d-flex justify-content-center gap-3 align-items-center my-4">
-        <input
-          className={`form-control ${inputStatuses.input1 ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.input1 && !inputStatuses.input1 ? 'border-danger bg-danger-subtle' : ''}`}
-          type="text"
-          placeholder="..."
-          style={{ textAlign: 'center', width: '50px' }}
-          value={inputValues.input1}
-          onChange={e => handleChange('input1', e)}
-        />
-        <p className="bg-blue-subtle p-1 rounded-2 mb-0">sebagai</p>
-        <p className="bg-darkblue mb-0 p-2 px-3 fw-light rounded-2">
-          Harga satu gulung kain <br />
-          warna putih
-        </p>
+      <div className="overflow-x-auto">
+        <table className="table table-bordered text-center align-middle">
+          <thead>
+            <tr className="align-middle">
+              <th>Konveksi</th>
+              <th>Banyak kain warna putih (gulung)</th>
+              <th>Banyak kain warna abu-abu (gulung)</th>
+              <th>Banyak kain warna cokelat (gulung)</th>
+              <th>Biaya yang dibutuhkan</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Konveksi Roshima</td>
+              <td>4</td>
+              <td>6</td>
+              <td>3</td>
+              <td>
+                Rp {''}
+                <input
+                  className={`form-control d-inline-block ${inputStatuses.inputt1 ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.inputt1 && !inputStatuses.inputt1 ? 'border-danger bg-danger-subtle' : ''}`}
+                  type="text"
+                  placeholder="..."
+                  style={{ textAlign: 'center', width: '128px' }}
+                  value={inputValues.inputt1}
+                  onChange={e => handleChange('inputt1', e)}
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>SM Bordir</td>
+              <td>
+                <input
+                  className={`form-control d-inline-block ${inputStatuses.inputt2 ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.inputt2 && !inputStatuses.inputt2 ? 'border-danger bg-danger-subtle' : ''}`}
+                  type="text"
+                  placeholder="..."
+                  style={{ textAlign: 'center', width: '48px' }}
+                  value={inputValues.inputt2}
+                  onChange={e => handleChange('inputt2', e)}
+                />
+              </td>
+              <td>5</td>
+              <td>5</td>
+              <td>
+                Rp {''}
+                <input
+                  className={`form-control d-inline-block ${inputStatuses.inputt3 ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.inputt3 && !inputStatuses.inputt3 ? 'border-danger bg-danger-subtle' : ''}`}
+                  type="text"
+                  placeholder="..."
+                  style={{ textAlign: 'center', width: '128px' }}
+                  value={inputValues.inputt3}
+                  onChange={e => handleChange('inputt3', e)}
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>Sportees</td>
+              <td>
+                <input
+                  className={`form-control d-inline-block ${inputStatuses.inputt4 ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.inputt4 && !inputStatuses.inputt4 ? 'border-danger bg-danger-subtle' : ''}`}
+                  type="text"
+                  placeholder="..."
+                  style={{ textAlign: 'center', width: '48px' }}
+                  value={inputValues.inputt4}
+                  onChange={e => handleChange('inputt4', e)}
+                />
+              </td>
+              <td>3</td>
+              <td>
+                <input
+                  className={`form-control d-inline-block ${inputStatuses.inputt5 ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.inputt5 && !inputStatuses.inputt5 ? 'border-danger bg-danger-subtle' : ''}`}
+                  type="text"
+                  placeholder="..."
+                  style={{ textAlign: 'center', width: '48px' }}
+                  value={inputValues.inputt5}
+                  onChange={e => handleChange('inputt5', e)}
+                />
+              </td>
+              <td>
+                Rp {''}
+                <input
+                  className={`form-control d-inline-block ${inputStatuses.inputt6 ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.inputt6 && !inputStatuses.inputt6 ? 'border-danger bg-danger-subtle' : ''}`}
+                  type="text"
+                  placeholder="..."
+                  style={{ textAlign: 'center', width: '128px' }}
+                  value={inputValues.inputt6}
+                  onChange={e => handleChange('inputt6', e)}
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>Konveksi Berkarya</td>
+              <td>?</td>
+              <td>?</td>
+              <td>?</td>
+              <td style={{ backgroundColor: '#D9D9D9' }}></td>
+            </tr>
+          </tbody>
+        </table>
       </div>
-      <div className="d-flex justify-content-center gap-3 align-items-center my-4">
-        <input
-          className={`form-control ${inputStatuses.input2 ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.input2 && !inputStatuses.input2 ? 'border-danger bg-danger-subtle' : ''}`}
-          type="text"
-          placeholder="..."
-          style={{ textAlign: 'center', width: '50px' }}
-          value={inputValues.input2}
-          onChange={e => handleChange('input2', e)}
-        />
-        <p className="bg-blue-subtle p-1 rounded-2 mb-0">sebagai</p>
-        <p className="bg-darkblue mb-0 p-2 px-3 fw-light rounded-2">
-          Harga satu gulung kain <br />
-          warna abu-abu
-        </p>
-      </div>
-      <div className="d-flex justify-content-center gap-3 align-items-center my-4">
-        <input
-          className={`form-control ${inputStatuses.input3 ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.input3 && !inputStatuses.input3 ? 'border-danger bg-danger-subtle' : ''}`}
-          type="text"
-          placeholder="..."
-          style={{ textAlign: 'center', width: '50px' }}
-          value={inputValues.input3}
-          onChange={e => handleChange('input3', e)}
-        />
-        <p className="bg-blue-subtle p-1 rounded-2 mb-0">sebagai</p>
-        <p className="bg-darkblue mb-0 p-2 px-3 fw-light rounded-2">
-          Harga satu gulung kain <br />
-          warna cokelat
-        </p>
+      <div className={`${isBlurred0 ? 'blur' : ''}`}>
+        <p ref={section0}>Dengan melihat tabel tersebut, kita dapat memisalkan setiap gulung warna kain sebagai variabel yang ingin kita ketahui nilainya.</p>
+        <p className="text-center fst-italic my-4">Lengkapi kotak kosong berikut dengan variabel yang mewakili harga satu gulung kain warna putih adalah x, warna abu-abu adalah y, dan warna cokelat adalah z</p>
+        <div className="d-flex justify-content-center gap-3 align-items-center my-4">
+          <input
+            className={`form-control ${inputStatuses.input1 ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.input1 && !inputStatuses.input1 ? 'border-danger bg-danger-subtle' : ''}`}
+            type="text"
+            placeholder="..."
+            style={{ textAlign: 'center', width: '50px' }}
+            value={inputValues.input1}
+            onChange={e => handleChange('input1', e)}
+          />
+          <p className="bg-blue-subtle p-1 rounded-2 mb-0">sebagai</p>
+          <p className="bg-darkblue mb-0 p-2 px-3 fw-light rounded-2">
+            Harga satu gulung kain <br />
+            warna putih
+          </p>
+        </div>
+        <div className="d-flex justify-content-center gap-3 align-items-center my-4">
+          <input
+            className={`form-control ${inputStatuses.input2 ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.input2 && !inputStatuses.input2 ? 'border-danger bg-danger-subtle' : ''}`}
+            type="text"
+            placeholder="..."
+            style={{ textAlign: 'center', width: '50px' }}
+            value={inputValues.input2}
+            onChange={e => handleChange('input2', e)}
+          />
+          <p className="bg-blue-subtle p-1 rounded-2 mb-0">sebagai</p>
+          <p className="bg-darkblue mb-0 p-2 px-3 fw-light rounded-2">
+            Harga satu gulung kain <br />
+            warna abu-abu
+          </p>
+        </div>
+        <div className="d-flex justify-content-center gap-3 align-items-center my-4">
+          <input
+            className={`form-control ${inputStatuses.input3 ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.input3 && !inputStatuses.input3 ? 'border-danger bg-danger-subtle' : ''}`}
+            type="text"
+            placeholder="..."
+            style={{ textAlign: 'center', width: '50px' }}
+            value={inputValues.input3}
+            onChange={e => handleChange('input3', e)}
+          />
+          <p className="bg-blue-subtle p-1 rounded-2 mb-0">sebagai</p>
+          <p className="bg-darkblue mb-0 p-2 px-3 fw-light rounded-2">
+            Harga satu gulung kain <br />
+            warna cokelat
+          </p>
+        </div>
       </div>
       <div className={`${isBlurred ? 'blur' : ''}`}>
         <p ref={section}>Selanjutnya, kita dapat menentukan besaran koefisien dan konstanta untuk melengkapi persamaan tersebut.</p>
-        <ul className="list-group mb-2">
-          <li className="list-group-item">
-            Konveksi Roshima menghabiskan Rp20.700.000 untuk membeli:{' '}
-            <span className="d-inline d-sm-none">
-              <br />
-            </span>
-            <b>(20.700.000 merupakan konstanta) </b>
-            <br />• 4 gulung kain warna putih
-            <span className="d-inline d-sm-none">
-              <br />
-            </span>
-            <b className="ms-2 ps-1 ms-sm-0">(4 merupakan koefisien)</b>
-            <br />• 6 gulung kain warna abu-abu
-            <span className="d-inline d-sm-none">
-              <br />
-            </span>
-            <b className="ms-2 ps-1 ms-sm-0">(6 merupakan koefisien)</b>
-            <br />• 3 gulung kain warna cokelat
-            <span className="d-inline d-sm-none">
-              <br />
-            </span>
-            <b className="ms-2 ps-1 ms-sm-0">(3 merupakan koefisien)</b>
-          </li>
-          <li className="list-group-item">
-            Sedangkan SM Bordir menghabiskan Rp24.000.000 untuk membeli:{' '}
-            <span className="d-inline d-sm-none">
-              <br />
-            </span>
-            <b>(24.000.000 merupakan konstanta)</b>
-            <br />• 5 gulung kain warna putih
-            <span className="d-inline d-sm-none">
-              <br />
-            </span>
-            <b className="ms-2 ps-1 ms-sm-0">(5 merupakan koefisien)</b>
-            <br />• 5 gulung kain warna abu-abu
-            <span className="d-inline d-sm-none">
-              <br />
-            </span>
-            <b className="ms-2 ps-1 ms-sm-0">(5 merupakan koefisien)</b>
-            <br />• 5 gulung kain warna cokelat
-            <span className="d-inline d-sm-none">
-              <br />
-            </span>
-            <b className="ms-2 ps-1 ms-sm-0">(5 merupakan koefisien)</b>
-          </li>
-          <li className="list-group-item">
-            Konveksi ketiga, yaitu Sportees menghabiskan Rp19.700.000 untuk membeli:{' '}
-            <span className="d-inline d-sm-none">
-              <br />
-            </span>
-            <b>(19.700.000 merupakan konstanta)</b>
-            <br />• 2 gulung kain warna putih
-            <span className="d-inline d-sm-none">
-              <br />
-            </span>
-            <b className="ms-2 ps-1 ms-sm-0">(2 merupakan koefisien)</b>
-            <br />• 3 gulung kain warna abu-abu
-            <span className="d-inline d-sm-none">
-              <br />
-            </span>
-            <b className="ms-2 ps-1 ms-sm-0">(3 merupakan koefisien)</b>
-            <br />• 7 gulung kain warna cokelat
-            <span className="d-inline d-sm-none">
-              <br />
-            </span>
-            <b className="ms-2 ps-1 ms-sm-0">(7 merupakan koefisien)</b>
-          </li>
-        </ul>
+        <p>Coba perhatikan kembali tabel yang kita susun. Banyak gulungan kain yang dibeli oleh setiap konveksi merupakan koefisien dan biaya yang dibutuhkan merupakan konstanta.</p>
         <p>
-          Berdasarkan informasi di atas, kita telah mengetahui mana yang merupakan koefisien dan konstanta untuk kita ubah menjadi persamaan linear. Setelah mengetahui variabel dan koefisiennya,
-          <b> yuk ikuti bagaimana menyusunnya menjadi SPLTV yang dapat kita selesaikan dengan kegiatan berikut!</b>
+          Jadi, kita telah mengetahui mana yang merupakan koefisien dan konstanta untuk kita ubah menjadi persamaan linear. <b>Yuk kita coba menyusunnya menjadi SPLTV yang dapat kita selesaikan dengan kegiatan berikut!</b>
         </p>
 
-        <p className="text-center mt-4 mb-1">Misalkan uang yang dihabiskan oleh konveksi Roshima menjadi persamaan (1), maka</p>
+        <p className="text-center mt-4 mb-1">Misalkan informasi dari konveksi Roshima menjadi persamaan (1), maka</p>
         <div className="row justify-content-center align-items-center mb-4 gap-1">
           <div className="col-5 col-sm-3 text-center p-2 border border-2 border-blue rounded-2 ">4x + 6y + 3z</div>
           <div className="col-1 justify-content-center d-flex justify-content-center p-0">
@@ -285,7 +353,7 @@ export default function BentukUmumSPLTV2() {
           <div className="col-5 col-sm-3 text-center p-2 border border-2 border-blue rounded-2 ">20.700.000</div>
         </div>
 
-        <p className="text-center mt-4 mb-1">Misalkan uang yang dihabiskan oleh konveksi SM Bordir menjadi persamaan (2), maka</p>
+        <p className="text-center mt-4 mb-1">Misalkan informasi dari SM Bordir menjadi persamaan (2), maka</p>
         <div className="row justify-content-center align-items-start mb-2 gap-1">
           <div className="col-5 col-sm-3 text-center p-2 border border-2 border-blue rounded-2 ">5x + 5y + 5z</div>
           <div className="col-1 justify-content-center d-flex justify-content-center p-0">
@@ -310,7 +378,7 @@ export default function BentukUmumSPLTV2() {
           </div>
         </div>
 
-        <p className="text-center mt-4 mb-1">Misalkan uang yang dihabiskan oleh konveksi SM Bordir menjadi persamaan (3), maka</p>
+        <p className="text-center mt-4 mb-1">Misalkan informasi dari Sportees menjadi persamaan (3), maka</p>
         <div className="row justify-content-center align-items-start mb-4 gap-1">
           <div className="col-5 col-sm-3 px-0 text-center ">
             <div

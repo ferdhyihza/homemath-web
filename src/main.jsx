@@ -59,7 +59,7 @@ const router = createBrowserRouter([
     element: <PengantarSPLTV />,
   },
   {
-    path: '/materi/unsur-pada-spltv',
+    path: '/materi/unsur-pada-pltv',
     element: <AuthorizedRoute element={<UnsurPadaSPLTV />} requiredKey="PengantarSPLTV" />,
   },
   {
@@ -99,7 +99,7 @@ const router = createBrowserRouter([
     element: <AuthorizedRoute element={<FormativeTest />} requiredKey="PenggunaanSPLTV2" />,
   },
   {
-    path: '/latihan-soal/pengantar-spltv/1-unsur-pada-spltv',
+    path: '/latihan-soal/pengantar-spltv/1-unsur-pada-pltv',
     element: <AuthorizedRoute element={<LatsolPengantarSPLTV1 />} requiredKey="UnsurPadaSPLTV" />,
   },
   {

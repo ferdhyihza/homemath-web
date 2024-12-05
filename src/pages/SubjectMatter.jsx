@@ -81,13 +81,13 @@ export default function SubjectMatter() {
         <li>
           {isPengantarSPLTVDone ? (
             <span>
-              <Link to="unsur-pada-spltv?from=materi" style={{ fontSize: '14px' }}>
-                Unsur pada SPLTV
+              <Link to="unsur-pada-pltv?from=materi" style={{ fontSize: '14px' }}>
+                Unsur pada PLTV
               </Link>{' '}
             </span>
           ) : (
             <span className="text-secondary fw-light" style={{ fontSize: '14px' }}>
-              Unsur pada SPLTV
+              Unsur pada PLTV
             </span>
           )}
         </li>

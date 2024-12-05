@@ -111,6 +111,13 @@ a.bg-darkblue:hover {
   right: -16px;
 }
 
+.z::after {
+  content: 'z';
+  position: absolute;
+  bottom: -10px;
+  right: -16px;
+}
+
 .blur {
   filter: blur(4px);
   user-select: none;

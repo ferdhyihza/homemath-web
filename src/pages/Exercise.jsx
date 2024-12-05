@@ -48,38 +48,39 @@ export default function Exercise() {
 
   return (
     <Main>
-      <h3 className="fw-bold pb-4 my-1">Latihan Soal</h3>
       <div className="row">
         <div className="col-sm-6">
-          <ExerciseCard number="1" className={isUnsurPadaSPLTVDone ? '' : 'disabled text-secondary'} title="Pengantar SPLTV Latihan Soal 1" link="pengantar-spltv/1-unsur-pada-spltv">
-            Unsur pada SPLTV: <br />
+          <h3 className="fw-bold pb-4 my-1">Latihan Soal Materi 1</h3>
+          <ExerciseCard number="1" className={isUnsurPadaSPLTVDone ? '' : 'disabled text-secondary'} title="Pengantar SPLTV" link="pengantar-spltv/1-unsur-pada-pltv">
             Menentukan variabel, koefisien, dan konstanta
           </ExerciseCard>
-          <ExerciseCard number="1" className={isBentukUmumSPLTVDone ? '' : 'disabled text-secondary'} title="Pengantar SPLTV Latihan Soal 2" link="pengantar-spltv/2-bentuk-umum-spltv">
-            Bentuk Umum SPLTV: <br />
-            Menentukan variabel, koefisien, dan konstanta
+          <ExerciseCard number="2" className={isBentukUmumSPLTVDone ? '' : 'disabled text-secondary'} title="Pengantar SPLTV" link="pengantar-spltv/2-bentuk-umum-spltv">
+            Menentukan Persamaan Linear Tiga Variabel
           </ExerciseCard>
-          <ExerciseCard number="1" className={isBentukUmumSPLTV2Done ? '' : 'disabled text-secondary'} title="Pengantar SPLTV Latihan Soal 3" link="pengantar-spltv/3-bentuk-umum-spltv">
-            Bentuk Umum SPLTV: <br />
+          <ExerciseCard number="3" className={isBentukUmumSPLTV2Done ? '' : 'disabled text-secondary'} title="Pengantar SPLTV" link="pengantar-spltv/3-bentuk-umum-spltv">
             Menyusun Sistem Persamaan Linear Tiga Variabel
           </ExerciseCard>
         </div>
         <div className="col-sm-6">
-          <ExerciseCard number="2" className={isMetodePenyelesaianEliminasiDone ? '' : 'disabled text-secondary'} title="Metode Penyelesaian SPLTV Latihan Soal 1" link="metode-penyelesaian-spltv/1-dengan-metode-eliminasi">
-            Penyelesaian SPLTV dengan Metode Eliminasi
+          <h3 className="fw-bold pb-4 my-1">Latihan Soal Materi 2</h3>
+          <ExerciseCard number="1" className={isMetodePenyelesaianEliminasiDone ? '' : 'disabled text-secondary'} title="Metode Penyelesaian SPLTV " link="metode-penyelesaian-spltv/1-dengan-metode-eliminasi">
+            Metode Eliminasi
           </ExerciseCard>
-          <ExerciseCard number="2" className={isMetodePenyelesaianSubstitusiDone ? '' : 'disabled text-secondary'} title="Metode Penyelesaian SPLTV Latihan Soal 2" link="metode-penyelesaian-spltv/2-dengan-metode-substitusi">
-            Penyelesaian SPLTV dengan Metode Substitusi
+          <ExerciseCard number="2" className={isMetodePenyelesaianSubstitusiDone ? '' : 'disabled text-secondary'} title="Metode Penyelesaian SPLTV" link="metode-penyelesaian-spltv/2-dengan-metode-substitusi">
+            Metode Substitusi
           </ExerciseCard>
-          <ExerciseCard number="2" className={isMetodePenyelesaianCampuranDone ? '' : 'disabled text-secondary'} title="Metode Penyelesaian SPLTV Latihan Soal 3" link="metode-penyelesaian-spltv/3-dengan-metode-campuran">
-            Penyelesaian SPLTV dengan Metode Campuran (Eliminasi & Substitusi)
-          </ExerciseCard>
-          <ExerciseCard number="3" className={isPenggunaanSPLTVDone ? '' : 'disabled text-secondary'} title="Penggunaan SPLTV Latihan Soal 1" link="penggunaan-spltv/1">
-            Penggunaan SPLTV Latihan 1
+          <ExerciseCard number="3" className={isMetodePenyelesaianCampuranDone ? '' : 'disabled text-secondary'} title=" Metode Penyelesaian SPLTV" link="metode-penyelesaian-spltv/3-dengan-metode-campuran">
+            Metode Campuran (Eliminasi & Substitusi)
           </ExerciseCard>
           {/* <ExerciseCard className={isPenggunaanSPLTV2Done ? '' : 'disabled text-secondary'} title="Penggunaan SPLTV Latihan Soal 2" link="penggunaan-spltv/2">
             Penggunaan SPLTV Latihan 2
           </ExerciseCard> */}
+        </div>
+        <div className="col-sm-6">
+          <h3 className="fw-bold pb-4 my-1">Latihan Soal Materi 3</h3>
+          <ExerciseCard number="1" className={isPenggunaanSPLTVDone ? '' : 'disabled text-secondary'} title="Penggunaan SPLTV" link="penggunaan-spltv/1">
+            Pada Kehidupan Sehari-hari
+          </ExerciseCard>
         </div>
       </div>
     </Main>

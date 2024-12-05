@@ -5,7 +5,15 @@ export default function MindMap() {
   return (
     <Main>
       <h3 className="fw-bold pb-4 my-1">Peta Konsep Materi</h3>
-      <img src="/img/peta-konsep.png" alt="Gambar Peta Konsep Materi" className="img-fluid w-100 border p-4 rounded-3 mb-5" />
+      <p>
+        Pada jenjang pendidikan sebelumnya, kalian telah mempelajari materi mengenai Persamaan linear. Terdapat beberapa jenis persamaan linear seperti persamaan linear satu variabel, persamaan linear dua variabel, dan persamaan linear tiga
+        variabel. Jika kalian telah mempelajari Sistem Persamaan Linear Dua Variabel (SPLDV), pada pembelajaran kali ini kalian akan mempelajari mengenai Sistem Persamaan Linear Tiga Variabel atau SPLTV. Apa saja yang akan kalian pelajari?
+        Coba perhatikan peta konsep berikut.
+      </p>
+      <div className="d-flex justify-content-center">
+        <img src="/img/peta-konsep.png" alt="Gambar Peta Konsep Materi" className="img-fluid w-100 d-block d-sm-none border p-4 rounded-3 mb-5" />
+        <img src="/img/peta-konsep.png" alt="Gambar Peta Konsep Materi" className="img-fluid w-50 d-none d-sm-block border p-4 rounded-3 mb-5" />
+      </div>
       <div className="d-flex gap-2 align-items-center mb-4">
         <img src="/icon/icon-tujuan-pembelajaran.png" width={56} height={56} alt="" />
         <div>

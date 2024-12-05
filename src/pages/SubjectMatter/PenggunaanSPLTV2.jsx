@@ -183,7 +183,7 @@ export default function PenggunaanSPLTV2() {
         . Misalkan <br />
         Berat gelang emas = e <br />
         Berat gelang silver = s <br />
-        Berat gelang rose gold = r ½
+        Berat gelang rose gold = r
       </p>
       <div className={isBlurred ? 'blur' : ''}>
         <p ref={section}>
@@ -235,8 +235,12 @@ export default function PenggunaanSPLTV2() {
               <p>2e - 2r + s = 0</p>
             </div>
             <div className=" text-center" style={{ width: '100px' }}>
-              <p>| ×2 |</p>
-              <p>| ×1 |</p>
+              <p>
+                | <b>×2</b> |
+              </p>
+              <p>
+                | <b>×1</b> |
+              </p>
             </div>
             <div className="" style={{ width: '300px' }}>
               <p>2e + 2s + 2r = 64</p>
@@ -252,6 +256,10 @@ export default function PenggunaanSPLTV2() {
         <p className="d-inline-block mb-1 pb-3 border-bottom border-black kurang position-relative pe-5">e + 2s + r = 40</p>
         <p className="ps-4 ms-2 pt-2">- s = -8 </p>
         <div className="d-flex gap-2 align-items-center mb-2">
+          <p className="ps-2 mb-0">- s (-1) = -8 (-1) </p>
+          <Tips>kedua ruas dibagi dengan -1</Tips>
+        </div>
+        <div className="d-flex gap-2 align-items-center mb-2">
           <p className="ps-4 ms-3 mb-0">s = </p>
           <input
             type="text"
@@ -261,7 +269,6 @@ export default function PenggunaanSPLTV2() {
             value={inputValues.input67}
             onChange={e => handleChange('input67', e)}
           />
-          <Tips>kedua ruas dibagi dengan -1</Tips>
         </div>
       </div>
 
@@ -269,8 +276,19 @@ export default function PenggunaanSPLTV2() {
         <p ref={section3}>Substitusi nilai variabel s ke persamaan (4)</p>
         <p>4r - s = 64</p>
         <p>4r - 8 = 64</p>
-        <p className="ps-4">4r = 64 + 8</p>
-        <p className="ps-4">4r = 72</p>
+        <p className="">4r -8 + 8 = 64 + 8</p>
+        <p className="ps-4 mb-2">4r = 72</p>
+        <div className="d-flex ms-3 gap-2 align-items-center">
+          <div className="d-inline-block">
+            <p className="border-bottom border-black mb-0 d-inline-block">4r</p>
+            <p className="text-center mb-0">4</p>
+          </div>
+          <span> = </span>
+          <div className="d-inline-block">
+            <p className="border-bottom border-black mb-0 d-inline-block">72</p>
+            <p className="text-center mb-0">4</p>
+          </div>
+        </div>
         <div className="d-flex gap-2 align-items-center mb-2">
           <p className="ps-4 ms-2 mb-0">r = </p>
           <input
@@ -334,6 +352,7 @@ export default function PenggunaanSPLTV2() {
         <div className="d-inline-block mb-2">
           <Tips>hasil penjumlahan nilai variabel s dan r</Tips>
         </div>
+        <p className="mb-2">e + 26 - 26 = 32 - 26</p>
         <div className="d-flex gap-2 align-items-center mb-2">
           <p className=" mb-0">e = </p>
           <input

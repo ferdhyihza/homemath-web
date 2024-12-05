@@ -22,9 +22,13 @@ export default function PengantarSPLTV() {
     <Main>
       <h3 className="fw-bold pb-4 my-1">Pengantar SPLTV</h3>
       <p>Untuk mempelajari tentang Sistem Persamaan Linear Tiga Variabel (SPLTV), tentunya kita harus mengenal terlebih dahulu bentuk dari sistem persamaan linear tersebut. Coba kita perhatikan cerita berikut!</p>
-      <div className="d-flex flex-column flex-sm-row justify-content-center gap-lg-3 gap-1">
-        <img className="" src="../../img/ilustrasi-pengantar-spltv-2.png" alt="Gambar ilustrasi pembelian kain di toko oleh beberapa konveksi" />
-        <img className=" " src="../../img/ilustrasi-pengantar-spltv.png" alt="Gambar ilustrasi pembelian kain di toko oleh beberapa konveksi" />
+      <div className="row mb-3 justify-content-center gap-lg-3 gap-1">
+        <div className="col-5 col-sm-3 text-end">
+          <img className="img-fluid" src="../../img/ilustrasi-pengantar-spltv.png" alt="Gambar ilustrasi pembelian kain di toko oleh beberapa konveksi" />
+        </div>
+        <div className="col-5 col-sm-3">
+          <img className="img-fluid" src="../../img/ilustrasi-pengantar-spltv-2.png" alt="Gambar ilustrasi pembelian kain di Konveksi Berkarya" />
+        </div>
       </div>
       <p className="text-center mt-2 fst-italic">Ilustrasi pembelian kain di toko oleh beberapa konveksi</p>
       <p>
@@ -58,7 +62,7 @@ export default function PengantarSPLTV() {
       </p>
 
       <div className="d-flex justify-content-center py-4">
-        <NextButton link={'/materi/unsur-pada-spltv' + (from ? '?from=materi' : '')}></NextButton>
+        <NextButton link={'/materi/unsur-pada-pltv' + (from ? '?from=materi' : '')}></NextButton>
       </div>
     </Main>
   );

@@ -37,11 +37,11 @@ export default function NavbarContent() {
             </div>
           ) : (
             <div className="d-flex justify-content-end gap-sm-2">
-              <img className="" src="/icon/avatar-icon.png" style={{ width: '40px', height: '40px' }} alt="" />
+              <img className="" src="/icon/logo-sekolah.png" style={{ width: '40px', height: '40px' }} alt="" />
               <div className="d-none d-md-flex flex-column justify-content-center">
-                <h6 className="mb-0 fw-bold">Betty Agustina</h6>
+                <h6 className="mb-0 fw-bold">MAN Kota Blitar</h6>
                 <p className="mb-0" style={{ fontSize: '14px' }}>
-                  Tadris Matematika
+                  Sukorejo, Blitar
                 </p>
               </div>
             </div>

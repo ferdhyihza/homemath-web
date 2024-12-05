@@ -140,8 +140,11 @@ export default function BentukUmumSPLTV() {
         <b>Konstanta</b> merupakan nilai tetap yang tidak diikuti oleh variabel di belakangnya
       </ModalSalah>
 
-      <div ref={nextButtonSection} className={`d-flex justify-content-center py-4 ${removeBlurNextButton ? '' : 'blur'}`}>
-        <NextButton link={`/materi/bentuk-umum-spltv-2` + (from ? '?from=materi' : '')}></NextButton>
+      <div className={`${removeBlurNextButton ? '' : 'blur'}`} ref={nextButtonSection}>
+        <p>Bagaimana, mudah bukan mengidentifikasinya? Jika kalian sudah memahami unsur-unsur dan bentuk umum SPLTV, akan mudah untuk mempelajari tahap selanjutnya</p>
+        <div className="d-flex justify-content-center py-4">
+          <NextButton link={`/materi/bentuk-umum-spltv-2` + (from ? '?from=materi' : '')}></NextButton>
+        </div>
       </div>
     </Main>
   );

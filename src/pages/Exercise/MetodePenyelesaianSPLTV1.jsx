@@ -128,25 +128,58 @@ export default function MetodePenyelesaianSPLTV1() {
         Metode Penyelesaian SPLTV Latihan Soal 1 <span className="text-muted fw-medium ms-sm-2 fs-5">Penyelesaian SPLTV dengan Metode Eliminasi</span>
       </h3>
       <p>
-        Menjelang pendaftaran mahasiswa baru, beberapa sekolah mulai merilis daftar siswa yang eligible untuk mendaftar melalui jalur SNBP. Ilham, Yaqin, dan Ulay merupakan tiga siswa salah satu sekolah di Blitar yang dapat mendaftar
-        melalui jalur SNBP. Nilai rata-rata mata pelajaran Matematika, Bahasa Indonesia, dan Bahasa Inggris selama 5 semester dari ketiga siswa tersebut sama, dan dideskripsikan dengan keterangan sebagai berikut.
+        Menjelang pendaftaran mahasiswa baru, beberapa sekolah mulai merilis daftar siswa yang <i>eligible</i> untuk mendaftar melalui jalur SNBP. Ilham, Yaqin, dan Ulay merupakan tiga siswa salah satu sekolah di Blitar yang dapat mendaftar
+        melalui jalur SNBP. Nilai rata-rata dari mata pelajaran Matematika, Bahasa Indonesia, dan Bahasa Inggris selama 5 semester dari ketiga siswa tersebut dideskripsikan dengan keterangan sebagai berikut.
       </p>
       <ul className="list-group mb-2">
-        <li className="list-group-item">
-          2 kali nilai rata-rata mata pelajaran Matematika Ilham dijumlahkan dengan nilai rata-rata mata pelajaran Bahasa Indonesia Ilham kemudian dikurangi dengan nilai rata-rata mata pelajaran Bahasa Inggris Ilham adalah 177
-        </li>
-        <li className="list-group-item">
-          Nilai rata-rata mata pelajaran Matematika Yaqin dijumlahkan dengan nilai rata-rata mata pelajaran Bahasa Indonesia Yaqin dan dijumlahkan lagi dengan nilai rata-rata mata pelajaran Bahasa Inggris Yaqin adalah 269
-        </li>
-        <li className="list-group-item">Nilai rata-rata mata pelajaran Matematika Ulay dikurangi dengan nilai rata-rata Bahasa Indonesia Ulay kemudian dijumlahkan dengan nilai rata-rata mata pelajaran Bahasa Inggris adalah 87</li>
+        <li className="list-group-item">2 kali nilai rata-rata Matematika Ilham dijumlahkan dengan nilai rata-rata Matematika Yaqin kemudian dikurangi dengan nilai rata-rata Matematika Ulay adalah 177</li>
+        <li className="list-group-item">Nilai rata-rata Bahasa Indonesia Ilham dijumlahkan dengan nilai rata-rata Bahasa Indonesia Yaqin dan dijumlahkan lagi dengan nilai rata-rata Bahasa indonesia Ulay adalah 269</li>
+        <li className="list-group-item">Nilai rata-rata Bahasa Inggris Ilham dikurangi dengan nilai rata-rata Bahasa Inggris Yaqin kemudian dijumlahkan dengan nilai rata-rata Bahasa Inggris Ulay adalah 87</li>
       </ul>
-      <p>Berdasarkan informasi tersebut, berapakah nilai rata-rata masing-masing mata pelajaran ketiga siswa tersebut?</p>
+      <p>Berdasarkan informasi tersebut, berapa nilai rata-rata ketiga siswa tersebut?</p>
       <p>
         <b>Penyelesaian:</b>
       </p>
+      <p>Untuk memudahkan kalian, kita bisa menyusunnya dalam bentuk tabel seperti berikut.</p>
+      <div className="overflow-x-auto">
+        <table className="table table-bordered text-center align-middle">
+          <thead>
+            <tr className="align-middle">
+              <th>Mata Pelajaran</th>
+              <th>Nilai rata-rata Ilham (x)</th>
+              <th>Nilai rata-rata Yaqin (y)</th>
+              <th>Nilai rata-rata Ulay (z)</th>
+              <th>Total</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Matematika</td>
+              <td>2</td>
+              <td>1</td>
+              <td>-1</td>
+              <td>177</td>
+            </tr>
+            <tr>
+              <td>Bahasa Indonesia</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>269</td>
+            </tr>
+            <tr>
+              <td>Bahasa Inggris</td>
+              <td>1</td>
+              <td>-1</td>
+              <td>1</td>
+              <td>87</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
       <div className="d-flex justify-content-center mb-4">
         <div className="d-inline-block border border-blue rounded-2 border-2 p-2 px-4 text-center">
-          <p className="text-center">Kita telah merubah informasi atau cerita tersebut ke dalam bentuk SPLTV sebagai berikut</p>
+          <p className="text-center">Dengan demikian, kita telah mengubah informasi pada cerita tadi menjadi sebuah SPLTV yang dapat kita selesaikan, yaitu</p>
           <div className="d-flex justify-content-center mb-4">
             <div className="d-inline-block">
               <div className="d-flex justify-content-between gap-4">
@@ -166,10 +199,8 @@ export default function MetodePenyelesaianSPLTV1() {
         </div>
       </div>
 
-      <p>
-        1.Eliminasi salah satu variabel pada persamaan (1) dan (2), atau persamaan (2) dan (3), atau persamaan (1) dan (3) untuk membentuk persamaan linear dua variabel. Kali ini kita akan mencoba untuk mengeliminasi variabel y pada
-        persamaan (1) dan (2).
-      </p>
+      <p>1. Eliminasi salah satu variabel pada persamaan (1) dan (2), atau persamaan (2) dan (3), atau persamaan (1) dan (3) untuk membentuk persamaan linear dua variabel.</p>
+      <p className="fw-light">Kali ini kita akan mencoba untuk mengeliminasi variabel y pada persamaan (1) dan (2) dengan mengurangi kedua persamaan tersebut. Sehingga,</p>
       <div className="overflow-x-auto">
         <div className="row justify-content-center mx-0" style={{ minWidth: '200px' }}>
           <div className="" style={{ width: '200px' }}>
@@ -180,7 +211,7 @@ export default function MetodePenyelesaianSPLTV1() {
         </div>
       </div>
 
-      <p>2. Selanjutnya, kita dapat mengulangi langkah tersebut untuk mengeliminasi variabel y pada persamaan (2) dan (3) seperti berikut.</p>
+      <p>2. Selanjutnya, kita dapat mengulangi langkah tersebut untuk mengeliminasi variabel y pada persamaan (2) dan (3) dengan menjumlahkan kedua persamaan seperti berikut.</p>
       <div className="overflow-x-auto">
         <div className="row justify-content-center mx-0" style={{ minWidth: '350px' }}>
           <div className="" style={{ width: '350px' }}>
@@ -215,13 +246,25 @@ export default function MetodePenyelesaianSPLTV1() {
         </div>
       </div>
       <div className={`${isBlurred ? 'blur' : ''}`}>
-        <p ref={section}>3. Dari langkah sebelumnya, kita mendapatkan dua persamaan baru, ya itu persamaan (4) dan (5) yang menyisakan dua variabel x dan z. Kita akan melakukan eliminasi pada kedua persamaan tersebut.</p>
+        <p ref={section}>3. Dari langkah sebelumnya, kita mendapatkan dua persamaan baru, yaitu persamaan (4) dan (5) yang menyisakan dua variabel x dan z.</p>
+        <p className="fw-light">Kita akan melakukan eliminasi pada kedua persamaan tersebut dengan menjumlahkan keduanya. Sehingga,</p>
         <div className="overflow-x-auto">
           <div className="row justify-content-center mx-0" style={{ minWidth: '250px' }}>
             <div className="" style={{ width: '250px' }}>
               <p>x - 2z = -92</p>
               <p className="border-bottom d-inline-block border-black position-relative tambah pb-3">2x + 2z = 356</p>
               <p className="ps-4">3x = 264</p>
+              <div className="d-flex ms-3 ps-1 mb-2 gap-2 align-items-center">
+                <div className="d-inline-block">
+                  <p className="border-bottom border-black mb-0 d-inline-block">3x</p>
+                  <p className="text-center mb-0">3</p>
+                </div>
+                <span>=</span>
+                <div className="d-inline-block">
+                  <p className="border-bottom border-black mb-0 d-inline-block">264</p>
+                  <p className="text-center mb-0">3</p>
+                </div>
+              </div>
               <div>
                 <p className="ps-4 ms-3 d-inline-block">x =</p>
                 <input
@@ -242,7 +285,8 @@ export default function MetodePenyelesaianSPLTV1() {
       </div>
 
       <div className={`${isBlurred2 ? 'blur' : ''}`}>
-        <p ref={section2}>4. Dari langkah 3 kita mengetahui nilai x. Kemudian kita eliminasi lagi variabel lainnya, sehingga</p>
+        <p ref={section2}>4. Dari langkah 3 kita mengetahui nilai x. Kemudian kita eliminasi lagi variabel lainnya, dengan mengurangi persamaan (4) dengan persamaan (5).</p>
+        <p className="fw-light">Terlebih dahulu kita kalikan persamaan (4) dengan 2, dan persamaan (5) dengan 1 agar koefisien variabel x habis dikurangi. Sehingga,</p>
         <div className="overflow-x-auto">
           <div className="row justify-content-center mx-0" style={{ minWidth: '500px' }}>
             <div className="" style={{ width: '150px' }}>
@@ -250,9 +294,11 @@ export default function MetodePenyelesaianSPLTV1() {
               <p className="">2x + 2z = 356</p>
             </div>
             <div className="text-center px-0" style={{ width: '100px' }}>
-              <p className="d-inline-block">| ×</p>
+              <p className="d-inline-block">
+                | <b>×</b>
+              </p>
               <input
-                className={`form-control d-inline-block ${inputStatuses.input11l ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.input11l && !inputStatuses.input11l ? 'border-danger bg-danger-subtle' : ''}`}
+                className={`form-control fw-bold d-inline-block ${inputStatuses.input11l ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.input11l && !inputStatuses.input11l ? 'border-danger bg-danger-subtle' : ''}`}
                 type="text"
                 placeholder="..."
                 style={{ textAlign: 'center', width: '40px' }}
@@ -260,12 +306,25 @@ export default function MetodePenyelesaianSPLTV1() {
                 onChange={e => handleChange('input11l', e)}
               />
               <p className="d-inline-block ms-1"> |</p>
-              <p>| ×1 |</p>
+              <p>
+                | <b>×1</b> |
+              </p>
             </div>
             <div className="" style={{ width: '250px' }}>
               <p className="pt-2">2x - 4z = -184</p>
               <p className="border-bottom d-inline-block border-black position-relative kurang pb-3">2x + 2z = 356</p>
               <p className="ps-4">-6z = -540</p>
+              <div className="d-flex ms-3 ps-1 mb-2 gap-2 align-items-center">
+                <div className="d-inline-block">
+                  <p className="border-bottom border-black mb-0 d-inline-block">-6z</p>
+                  <p className="text-center mb-0">(-6)</p>
+                </div>
+                <span>=</span>
+                <div className="d-inline-block">
+                  <p className="border-bottom border-black mb-0 d-inline-block">-540</p>
+                  <p className="text-center mb-0">(-6)</p>
+                </div>
+              </div>
               <div>
                 <p className="ps-4 ms-3 d-inline-block">z =</p>
                 <input
@@ -278,7 +337,7 @@ export default function MetodePenyelesaianSPLTV1() {
                 />
               </div>
               <p className="d-inline-block fst-italic text-muted" style={{ textAlign: 'center', fontSize: '12px' }}>
-                kedua ruas dibagi dengan 6 untuk mengetahui nilai z
+                kedua ruas dibagi dengan -6 untuk mengetahui nilai z
               </p>
             </div>
           </div>
@@ -286,7 +345,9 @@ export default function MetodePenyelesaianSPLTV1() {
       </div>
 
       <div className={`${isBlurred3 ? 'blur' : ''}`}>
-        <p ref={section3}>5. Setelah kita melakukan eliminasi dan mendapatkan nilai dari variabel x dan z, maka nilai y dapat kita tentukan dari salah satu persamaan, misal persamaan (3), sehingga</p>
+        <p ref={section3}>
+          5. Setelah kita melakukan eliminasi dan mendapatkan nilai dari variabel x dan z, maka nilai y dapat kita tentukan dari mensubstitusikan nilai tersebut ke dalam salah satu persamaan, misal persamaan (3), sehingga
+        </p>
         <div className="overflow-x-auto">
           <div className="row justify-content-center mx-0" style={{ minWidth: '700px' }}>
             <div className=" text-end" style={{ width: '150px' }}>
@@ -295,16 +356,17 @@ export default function MetodePenyelesaianSPLTV1() {
               <p>-y + 178</p>
               <p className="mt-3 pt-1">-y + 178 - 178</p>
               <p className="mt-3 pt-1 mt-1">-y</p>
+              <p className="mt-3 pt-1 mt-1">-y (-1)</p>
               <p className="mt-4">y</p>
             </div>
             <div className=" text-center" style={{ width: '50px' }}>
               <p>=</p>
               <p>=</p>
               <p>=</p>
-
               <p className="mt-3 pt-1">=</p>
               <p className="mt-3 pt-2">=</p>
-              <p className="mt-3 pt-2">=</p>
+              <p className="mt-3 pt-1">=</p>
+              <p className="mt-3 pt-1">=</p>
             </div>
             <div className="" style={{ width: '500px' }}>
               <p>87</p>
@@ -334,7 +396,7 @@ export default function MetodePenyelesaianSPLTV1() {
                 </p>
               </div>
 
-              <div className="d-flex align-items-center gap-2 mb-2">
+              <div className="d-flex align-items-center gap-2 mb-2 pb-1">
                 <input
                   className={`form-control ${inputStatuses.input16l ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.input16l && !inputStatuses.input16l ? 'border-danger bg-danger-subtle' : ''}`}
                   type="text"
@@ -348,6 +410,7 @@ export default function MetodePenyelesaianSPLTV1() {
                   masukkan hasil operasi pengurangan tersebut
                 </p>
               </div>
+              <p>-91 (-1)</p>
               <div className="d-flex align-items-center gap-2">
                 <input
                   className={`form-control ${inputStatuses.input17l ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.input17l && !inputStatuses.input17l ? 'border-danger bg-danger-subtle' : ''}`}
@@ -358,7 +421,7 @@ export default function MetodePenyelesaianSPLTV1() {
                   onChange={e => handleChange('input17l', e)}
                 />
                 <p className="mb-0 fst-italic text-muted" style={{ fontSize: '12px' }}>
-                  kedua ruas dibagi dengan 1 untuk mengetahui nilai y
+                  kedua ruas dikali dengan -1 untuk mengetahui nilai y
                 </p>
               </div>
             </div>
@@ -369,11 +432,11 @@ export default function MetodePenyelesaianSPLTV1() {
       <div className={`${isBlurred4 ? 'blur' : ''}`}>
         <p ref={section4}>
           6. Sehingga kita ketahui nilai variabel x = 88, variabel y = 91, dan variabel z = 90. Kita ingat Kembali bahwa:
-          <br />• Variabel x mewakili nilai rata-rata mata pelajaran Matematika
-          <br />• Variabel y mewakili nilai rata-rata mata pelajaran Bahasa Indonesia
-          <br />• Variabel z mewakili nilai rata-rata mata pelajaran Bahasa Inggris
+          <br />• Variabel x mewakili nilai rata-rata Ilham
+          <br />• Variabel y mewakili nilai rata-rata Yaqin
+          <br />• Variabel z mewakili nilai rata-rata Ulay
         </p>
-        <p>Sehingga, ketiga siswa yaitu Ilham, Yaqin, dan Ulay memiliki nilai rata-rata mata pelajaran Matematika adalah 88, nilai rata-rata mata pelajaran Bahasa Indonesia adalah 91, dan nilai rata-rata mata pelajaran 90.</p>
+        <p>Jadi, nilai rata-rata Ilham adalah 88, nilai rata-rata Yaqin adalah 91, dan nilai rata-rata Ulay adalah 90.</p>
 
         <div className="d-flex justify-content-center py-4">
           <NextButton latsol={true} link="/latihan-soal">

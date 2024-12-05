@@ -75,7 +75,7 @@ export default function PengantarSPLTV1() {
   return (
     <Main>
       <h3 className="fw-bold pb-4 my-1">
-        Pengantar SPLTV Latihan Soal 1 <span className="text-muted fw-medium ms-sm-2 fs-5">Unsur pada SPLTV: Menentukan variabel, konstanta, dan koefisien</span>
+        Pengantar SPLTV Latihan Soal 1 <span className="text-muted fw-medium ms-sm-2 fs-5">Menentukan variabel, konstanta, dan koefisien</span>
       </h3>
       <div className="text-center mb-5">
         <p className="">Diberikan Persamaan</p>

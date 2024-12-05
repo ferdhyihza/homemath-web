@@ -107,34 +107,37 @@ export default function PenggunaanSPLTV1() {
       <h3 className="fw-bold pb-4 my-1">Penggunaan SPLTV Latihan Soal 1</h3>
       <p>
         <em> Perhatikan permasalahan berikut!</em> <br />
-        Hanifah membeli beberapa jenis tepung, tepung terigu, tepung sagu, dan tepung kanji. Jumlah berat seluruh tepung Hanifah adalah 12 kg. Berat tepung terigu dijumlahkan dengan dua kali berat tepung kanji sama dengan dua kali berat
-        tepung sagu. Berat tepung terigu dijumlahkan dengan dua kali berat tepung sagu dan dijumlahkan lagi dengan berat tepung kanji adalah 17 kg. Maka, berat masing-masing tepung terigu, sagu dan kanji yang dibeli Hanifah adalah…
+        Tiga ekor siput, sebut saja siput A, B, dan C bergerak pada sebuah lintasan. Dilakukan pengamatan terhadap pergerakan mereka, dalam waktu satu menit panjang lintasan yang dilalui ketiga siput tersebut jika dijumlahkan adalah 12 cm.
+        Pada percobaan lain, 2 kali panjang lintasan yang dilalui siput B sama dengan panjang lintasan siput A ditambah dengan 2 kali panjang lintasan siput C. Percobaan terakhir, panjang lintasan yang dilalui siput A dijumlahkan dengan 2
+        kali panjang lintasan yang dilalui siput B kemudian dijumlahkan lagi dengan panjang lintasan yang dilalui siput C adalah 17 cm. Berdasarkan informasi tersebut, panjang lintasan yang dapat dilalui oleh setiap siput dalam waktu satu
+        menit adalah…
       </p>
       <p>
         <b>Penyelesaian:</b> <br />
         Langkah pertama yang dapat kita lakukan adalah menentukan variabel. Misalkan
         <br />
-        Berat tepung terigu = a
+        Panjang lintasan yang ditempuh siput A = a
         <br />
-        Berat tepung sagu = b
+        Panjang lintasan yang ditempuh siput B = b
         <br />
-        Berat tepung kanji = c
+        Panjang lintasan yang ditempuh siput C = c
       </p>
       <p>
         <b>Diketahui:</b> <br />
       </p>
       <p>
-        Jumlah berat seluruh tepung adalah 32 gram, sehingga
+        Jumlah panjang lintasan yang ditempuh dalam waktu satu menit adalah 12 cm, sehingga
         <br />a + b + c = 12 &emsp;&emsp;&emsp;............(1)
       </p>
       <p>
-        Berat tepung terigu dijumlahkan dengan dua kali berat tepung kanji sama dengan dua kali berat tepung sagu, sehingga
+        2 kali panjang lintasan yang dilalui siput B sama dengan panjang lintasan siput A ditambah dengan 2 kali panjang lintasan siput C, sehingga
         <br />
-        a + 2c = 2b
+        2b = a + 2c
+        <br />⇔ 2b - a = a - a + 2c
         <br />⇔ a - 2b +2c = 0 &emsp;&emsp;&emsp;............(2)
       </p>
       <p>
-        Berat tepung terigu dijumlahkan dengan dua kali berat tepung sagu dan dijumlahkan lagi dengan berat tepung kanji adalah 17 kg, sehingga
+        Panjang lintasan yang dilalui siput A dijumlahkan dengan 2 kali panjang lintasan yang dilalui siput B kemudian dijumlahkan lagi dengan panjang lintasan yang dilalui siput C adalah 17 cm, sehingga
         <br />a + 2b + c = 17 &emsp;&emsp;&emsp;............(3)
       </p>
       <p>
@@ -145,7 +148,7 @@ export default function PenggunaanSPLTV1() {
         <br />a + 2b + c = 17 &emsp;&emsp;&emsp;............(3)
       </p>
       <p>Setelah kita mengubahnya dalam bentuk SPLTV, kita dapat menyelesaikannya dengan metode yang telah kita pelajari. Mari kita selesaikan dengan metode campuran (eliminasi & substitusi)</p>
-      <p>1. Eliminasi variabel a pada persamaan (1) dan (2)</p>
+      <p>1. Eliminasi variabel a pada persamaan (1) dan (2) dengan mengurangi kedua persamaan tersebut. Sehingga,</p>
       <div className="ps-4">
         <p className="mb-0">a + b + c = 12</p>
         <p className="d-inline-block mb-1 pe-3 pb-1 border-bottom border-black kurang position-relative">a - 2b +2c = 0</p>
@@ -172,6 +175,7 @@ export default function PenggunaanSPLTV1() {
               <p>a + b + c = 12</p>
               <p className="d-inline-block mb-1 pb-3 border-bottom border-black tambah position-relative pe-5">a + 2b + c = 17</p>
               <p className="mb-2 ps-4 ms-3">-b = -5</p>
+              <p className="mb-2 ps-3">-b(-1) = -5(-1)</p>
               <div className="d-flex gap-2 align-items-center">
                 <p className="mb-0 ps-4 ms-4">b =</p>
                 <input
@@ -195,11 +199,13 @@ export default function PenggunaanSPLTV1() {
               <p>3b - c =</p>
               <p>3(5) - c</p>
               <p>15 - c</p>
+              <p>15 - 15 -c</p>
               <p>-c</p>
-              <p>-c</p>
+              <p>-c(-1)</p>
               <p className="pt-2">c</p>
             </div>
             <div className=" text-center" style={{ width: '50px' }}>
+              <p>=</p>
               <p>=</p>
               <p>=</p>
               <p>=</p>
@@ -213,6 +219,7 @@ export default function PenggunaanSPLTV1() {
               <p>12</p>
               <p>12 - 15</p>
               <p>-3</p>
+              <p>-3(-1)</p>
               <div className="d-inline-block mb-2">
                 <div className="d-flex gap-2 align-items-center">
                   <input
@@ -231,7 +238,8 @@ export default function PenggunaanSPLTV1() {
       </div>
       <div className={`${isBlurred3 ? 'blur' : ''}`}>
         <p ref={section3}>
-          4. Kita telah mengetahui nilai variabel b dan c, maka kita bisa mensubstitusikan nilai tersebut ke persamaan pada SPLTV yang kita identifikasi untuk mengetahui nilai variabel a. Misalkan substitusi ke persamaan (1), sehingga
+          4. Dari hasil substitusi tersebut, kita telah mengetahui nilai variabel b dan c, maka kita bisa mensubstitusikan juga nilai tersebut ke persamaan pada SPLTV yang kita identifikasi untuk mengetahui nilai variabel a. Misalkan
+          substitusi nilai variabel b dan c ke persamaan (1), sehingga
         </p>
         <div className="overflow-x-auto">
           <div className="row justify-content-start ps-4 mx-0" style={{ minWidth: '250px' }}>
@@ -239,7 +247,7 @@ export default function PenggunaanSPLTV1() {
               <p>a + b + c</p>
               <p>a + 5 + 3</p>
               <p>a + 8</p>
-              <p>a</p>
+              <p>a + 8 - 8</p>
               <p className="pt-2">a</p>
             </div>
             <div className=" text-center" style={{ width: '50px' }}>
@@ -271,8 +279,7 @@ export default function PenggunaanSPLTV1() {
         </div>
       </div>
       <div ref={section4} className={`${isBlurred4 ? 'blur' : ''}`}>
-        <p>5. Maka, kita telah mengetahu bahwa nilai variabel a = 4, b = 5, dan c = 3. Jadi, berat tepung yang dibeli oleh Hanifah masing masing adalah, tepung terigu 4 kg, tepung sagu 5 kg, dan tepung kanji 3 kg.</p>
-
+        <p>5. Maka, kita telah mengetahu bahwa nilai variabel a = 4, b = 5, dan c = 3. Jadi, dalam waktu satu menit, siput A dapat menempuh panjang lintasan sejauh 4 cm, siput B sejauh 5 cm, dan siput C sejauh 3 cm.</p>
         <div className="d-flex justify-content-center py-4">
           <NextButton latsol={true} link="/latihan-soal">
             Penggunaan SPLTV

@@ -233,10 +233,15 @@ export default function MetodePenyelesaianCampuran() {
             <p className="pt-2">5x + 5y + 5z = 24.000.000</p>
           </div>
           <div className=" text-center px-0" style={{ width: '100px' }}>
-            <p className="pt-2">| ×5 |</p>
-            <p className="d-inline-block"> | ×</p>
+            <p className="pt-2">
+              | <b>×5</b> |
+            </p>
+            <p className="d-inline-block">
+              {' '}
+              | <b>×</b>
+            </p>
             <input
-              className={`form-control d-inline-block me-1 ${inputStatuses.input39 ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.input39 && !inputStatuses.input39 ? 'border-danger bg-danger-subtle' : ''}`}
+              className={`form-control fw-bold d-inline-block me-1 ${inputStatuses.input39 ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.input39 && !inputStatuses.input39 ? 'border-danger bg-danger-subtle' : ''}`}
               type="text"
               placeholder="..."
               style={{ textAlign: 'center', width: '40px' }}
@@ -306,8 +311,12 @@ export default function MetodePenyelesaianCampuran() {
               <p>2x + 3y + 7z = 19.700.000</p>
             </div>
             <div className=" text-center " style={{ width: '100px' }}>
-              <p className="">| ×2 |</p>
-              <p className="">| ×5 |</p>
+              <p className="">
+                | <b>×2</b> |
+              </p>
+              <p className="">
+                | <b>×5</b> |
+              </p>
             </div>
             <div className="" style={{ width: '350px' }}>
               <p>10x + 10y + 10z = 48.000.000</p>
@@ -374,8 +383,12 @@ export default function MetodePenyelesaianCampuran() {
               </div>
             </div>
             <div className=" text-center px-0" style={{ width: '100px' }}>
-              <p className="">| ×1 |</p>
-              <p className="pt-2">| ×2 |</p>
+              <p className="">
+                | <b>×1</b> |
+              </p>
+              <p className="pt-2">
+                | <b>×2</b> |
+              </p>
             </div>
             <div className="" style={{ width: '550px' }}>
               <p>10y - 5z = 7.500.000</p>
@@ -426,10 +439,25 @@ export default function MetodePenyelesaianCampuran() {
                 </div>
                 <Tips>hasil dari eliminasi pada kedua ruas</Tips>
               </div>
-              <div className="d-flex mb-2 gap-2 align-items-center">
+              <div className="d-flex ms-5 ps-2 mb-2 gap-2 align-items-center">
+                <div className="me-3">
+                  <p className=" mb-0 d-inline-block border-bottom border-black position-relative z">-55</p>
+                  <p className=" mb-0">-55</p>
+                </div>
+                <span>=</span>
+                <div className="">
+                  <p className=" mb-0 d-inline-block border-bottom border-black position-relative">-93.500.000</p>
+                  <p className=" mb-0 text-center">-55</p>
+                </div>
+                <Tips>
+                  kedua ruas dibagi dengan angka yang <br />
+                  dapat menyisakan variabel z saja
+                </Tips>
+              </div>
+              <div className="d-flex ms-5 mb-2 gap-2 align-items-center">
                 <div className="text-center">
                   <div className="d-flex gap-2 align-items-center">
-                    <span className="px-5">z</span>
+                    <span className="ps-5">z</span>
                     <span>=</span>
                     <input
                       className={`form-control ${inputStatuses.input51 ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.input51 && !inputStatuses.input51 ? 'border-danger bg-danger-subtle' : ''}`}
@@ -441,10 +469,7 @@ export default function MetodePenyelesaianCampuran() {
                     />
                   </div>
                 </div>
-                <Tips>
-                  kedua ruas dibagi dengan angka yang <br />
-                  dapat menyisakan variabel z saja
-                </Tips>
+                <Tips>diketahui nilai variabel z</Tips>
               </div>
             </div>
           </div>
@@ -508,8 +533,12 @@ export default function MetodePenyelesaianCampuran() {
               <p>10y - 8.500.000</p>
               <p>10y</p>
               <p>10y</p>
-              <p className="pt-2">y</p>
-              <p className="pt-3">y</p>
+              {/* <p className="pt-2">y</p> */}
+              <div className="d-inline-block">
+                <p className="border-bottom border-black mb-0 d-inline-block px-2">y</p>
+                <p className="text-center">10</p>
+              </div>
+              <p className="">y</p>
             </div>
             <div className=" text-center" style={{ width: '50px' }}>
               <p>=</p>
@@ -594,7 +623,10 @@ export default function MetodePenyelesaianCampuran() {
               <p>5x + 16.500.000</p>
               <p>5x</p>
               <p className="pt-2">5x</p>
-              <p className="pt-2">x</p>
+              <div className="d-inline-block">
+                <p className="border-bottom border-black mb-0 d-inline-block px-2">5x</p>
+                <p className="text-center mb-0">5</p>
+              </div>
               <p className="">x</p>
             </div>
             <div className=" text-center" style={{ width: '50px' }}>
@@ -605,7 +637,7 @@ export default function MetodePenyelesaianCampuran() {
               <p className="">=</p>
               <p className="pt-2">=</p>
               <p className="pt-2">=</p>
-              <p className="">=</p>
+              <p className="pt-1">=</p>
             </div>
             <div className="" style={{ width: '550px' }}>
               <div className="d-flex gap-5">
@@ -650,7 +682,10 @@ export default function MetodePenyelesaianCampuran() {
                 <span>/ 5</span>
                 <Tips>kedua ruas dibagi dengan 5</Tips>
               </div>
-              <p>1.500.000</p>
+              <div className="d-flex pt-1 align-items-center gap-2 mb-2">
+                <p className="mb-0">1.500.000</p>
+                <Tips>diketahui nilai variabel z</Tips>
+              </div>
             </div>
           </div>
         </div>

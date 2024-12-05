@@ -198,15 +198,20 @@ export default function MetodePenyelesaianSPLTV2() {
               />
               <p className="mb-0">+ 2y - 2z + y - z</p>
             </div>
-            <p className="pt-1">2y + y - 2z - z</p>
+            <p className="pt-1">174 - 174 + 2y + y - 2z - z</p>
             <p className="pt-2">3y - 3z</p>
+            <div className="d-inline-block">
+              <p className="border-bottom border-black mb-0 d-inline-block">3y - 3z</p>
+              <p className="text-center mb-0">3</p>
+            </div>
             <p className="pt-2">y - z</p>
           </div>
           <div className="text-center" style={{ width: '50px' }}>
             <p>=</p>
             <p>=</p>
             <p className="pt-2">=</p>
-            <p className="">=</p>
+            <p className="pt-1">=</p>
+            <p className="pt-2">=</p>
             <p className="pt-2">=</p>
             <p className="pt-2">=</p>
           </div>
@@ -229,6 +234,15 @@ export default function MetodePenyelesaianSPLTV2() {
               </p>
             </div>
             <p className="pt-2 mt-1">3</p>
+            <div className="d-flex gap-2 align-items-center">
+              <div className="d-inline-block">
+                <p className="border-bottom border-black mb-0 d-inline-block">3</p>
+                <p className="text-center mb-0">3</p>
+              </div>
+              <p className="d-inline-block mb-0 fst-italic text-muted" style={{ textAlign: 'center', fontSize: '12px' }}>
+                kedua ruas dibagi dengan 3
+              </p>
+            </div>
             <div className="d-flex gap-2 align-items-center mt-2">
               <div>
                 <input
@@ -242,9 +256,9 @@ export default function MetodePenyelesaianSPLTV2() {
               </div>
               ........... (5)
             </div>
-            <p className="d-inline-block ms-2 fst-italic text-muted" style={{ textAlign: 'center', fontSize: '12px' }}>
+            {/* <p className="d-inline-block ms-2 fst-italic text-muted" style={{ textAlign: 'center', fontSize: '12px' }}>
               kedua ruas dibagi dengan 3
-            </p>
+            </p> */}
           </div>
         </div>
       </div>
@@ -269,15 +283,18 @@ export default function MetodePenyelesaianSPLTV2() {
                 />
                 <p className="mb-0">+ y + y - z + z</p>
               </div>
-              <p className="pt-1">2y</p>
-              <p className="pt-2">2y</p>
+              <p className="pt-1">87 - 87 + 2y</p>
+              <div className="d-inline-block">
+                <p className="border-bottom border-black mb-0 d-inline-block">2y</p>
+                <p className="text-center mb-0">2</p>
+              </div>
               <p className="pt-2">y</p>
             </div>
             <div className="text-center" style={{ width: '50px' }}>
               <p>=</p>
               <p>=</p>
               <p className="pt-2">=</p>
-              <p className="">=</p>
+              <p className="pt-1">=</p>
               <p className="pt-2">=</p>
               <p className="pt-2">=</p>
             </div>
@@ -299,8 +316,16 @@ export default function MetodePenyelesaianSPLTV2() {
                   kedua ruas dikurangi dengan 87
                 </p>
               </div>
-              <p className="pt-2 mt-1">182</p>
-              <div className="d-flex gap-2 align-items-center mt-2">
+              <div className="d-flex gap-2 align-items-center">
+                <div className="d-inline-block pt-1">
+                  <p className="border-bottom border-black mb-0 d-inline-block">182</p>
+                  <p className="text-center mb-0">2</p>
+                </div>
+                <p className="d-inline-block mb-0 fst-italic text-muted" style={{ textAlign: 'center', fontSize: '12px' }}>
+                  kedua ruas dibagi dengan 2
+                </p>
+              </div>
+              <div className="d-flex gap-2 align-items-center mt-2 mb-2">
                 <input
                   className={`form-control ${inputStatuses.input23l ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.input23l && !inputStatuses.input23l ? 'border-danger bg-danger-subtle' : ''}`}
                   type="text"
@@ -310,9 +335,9 @@ export default function MetodePenyelesaianSPLTV2() {
                   onChange={e => handleChange('input23l', e)}
                 />
               </div>
-              <p className="d-inline-block ms-2 fst-italic text-muted" style={{ textAlign: 'center', fontSize: '12px' }}>
+              {/* <p className="d-inline-block ms-2 fst-italic text-muted" style={{ textAlign: 'center', fontSize: '12px' }}>
                 kedua ruas dibagi dengan 2
-              </p>
+              </p> */}
             </div>
           </div>
         </div>
@@ -325,12 +350,14 @@ export default function MetodePenyelesaianSPLTV2() {
             <div className=" text-end" style={{ width: '100px' }}>
               <p>y - z</p>
               <p className="pt-2">91 - z</p>
+              <p className="pt-2">91 - 91 - z</p>
               <p className="pt-2">-z</p>
-              <p className="pt-2">-z</p>
+              <p className="pt-2">-z(-1)</p>
               <p className="pt-2">z</p>
             </div>
             <div className=" text-center" style={{ width: '50px' }}>
               <p>=</p>
+              <p className="pt-2">=</p>
               <p className="pt-2">=</p>
               <p className="pt-2">=</p>
               <p className="pt-2">=</p>
@@ -371,7 +398,8 @@ export default function MetodePenyelesaianSPLTV2() {
                   onChange={e => handleChange('input26l', e)}
                 />
               </div>
-              <p className="pt-3">- 90</p>
+              <p className="pt-3">-90</p>
+              <p className="pt-2">-90(-1)</p>
               <p className="pt-2">90</p>
             </div>
           </div>
@@ -398,7 +426,7 @@ export default function MetodePenyelesaianSPLTV2() {
                   onChange={e => handleChange('input27l', e)}
                 />
               </div>
-              <p className="pt-3">x</p>
+              <p className="pt-3">x - 1 + 1</p>
               <p className="pt-1">x</p>
             </div>
             <div className=" text-center" style={{ width: '50px' }}>

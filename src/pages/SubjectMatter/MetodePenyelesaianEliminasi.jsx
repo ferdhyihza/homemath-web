@@ -160,9 +160,10 @@ export default function MetodePenyelesaianEliminasi() {
       </div>
 
       <p className="fw-bold">Langkah penyelesaian dengan metode eliminasi:</p>
-      <p>
-        1. Eliminasi salah satu variabel pada persamaan (1) dan (2), atau persamaan (2) dan (3), atau persamaan (1) dan (3) untuk membentuk persamaan linear dua variabel. Kali ini kita akan mencoba untuk mengeliminasi variabel x pada
-        persamaan (1) dan (2).
+      <p>1. Eliminasi salah satu variabel pada persamaan (1) dan (2), atau persamaan (2) dan (3), atau persamaan (1) dan (3) untuk membentuk persamaan linear dua variabel.</p>
+      <p className="fw-light">
+        Kita akan mencoba untuk mengeliminasi variabel x pada persamaan (1) dan (2) dengan mengurangi kedua persamaan tersebut, sehingga kita perlu mengalikan terlebih dahulu kedua persamaan agar koefisien variabel x dapat habis dikurangi.
+        Kita coba kalikan persamaan (1) dengan 5, dan kalikan persamaan (2) dengan 4. Sehingga,
       </p>
       <div className="overflow-x-auto">
         <div className="row justify-content-center mx-0" style={{ minWidth: '600px' }}>
@@ -171,8 +172,12 @@ export default function MetodePenyelesaianEliminasi() {
             <p>5x + 5y + 5z = 24.000.000</p>
           </div>
           <div className="text-center px-0" style={{ width: '50px' }}>
-            <p>| ×5 |</p>
-            <p>| ×4 |</p>
+            <p>
+              | <b>×5</b> |
+            </p>
+            <p>
+              | <b>×4</b> |
+            </p>
           </div>
           <div className="" style={{ width: '300px' }}>
             <p>20x + 30y + 15z = 103.500.000</p>
@@ -182,7 +187,8 @@ export default function MetodePenyelesaianEliminasi() {
         </div>
       </div>
 
-      <p>2. Selanjutnya, kita dapat mengulangi langkah tersebut untuk mengeliminasi variabel x pada persamaan (2) dan (3) seperti berikut.</p>
+      <p>2. Selanjutnya, kita dapat mengulangi langkah tersebut untuk mengeliminasi variabel x pada persamaan (2) dan (3).</p>
+      <p className="fw-light">Kali ini kita akan mengurangi kedua persamaan tersebut, persamaan (2) kita kalikan terlebih dahulu dengan 2 dan persamaan (3) kita kalikan dengan 5 agar koefisien variabel x dapat habis dikurangi. Sehingga,</p>
       <div className="overflow-x-auto">
         <div className="row justify-content-center mx-0" style={{ minWidth: '850px' }}>
           <div className="" style={{ width: '250px' }}>
@@ -190,8 +196,12 @@ export default function MetodePenyelesaianEliminasi() {
             <p>2x + 3y + 7z = 19.700.000</p>
           </div>
           <div className="px-0 text-center" style={{ width: '50px' }}>
-            <p className="mt-2 mb-2">| ×2 |</p>
-            <p>| ×5 |</p>
+            <p className="mt-2 mb-2">
+              | <b>×2</b> |
+            </p>
+            <p>
+              | <b>×5</b> |
+            </p>
           </div>
           <div className="" style={{ width: '550px' }}>
             <div className="d-flex align-items-center gap-2 mb-1">
@@ -225,8 +235,13 @@ export default function MetodePenyelesaianEliminasi() {
           </div>
         </div>
       </div>
+
       <div className={`${isBlurred ? 'blur' : ''}`}>
-        <p ref={section}>3. Dari langkah sebelumnya, kita mendapatkan dua persamaan baru, yaitu persamaan (4) dan (5) yang menyisakan dua variabel y dan z. Kita akan melakukan eliminasi pada kedua persamaan tersebut.</p>
+        <p ref={section}>3. Dari langkah sebelumnya, kita mendapatkan dua persamaan baru, yaitu persamaan (4) dan (5) yang menyisakan dua variabel y dan z.</p>
+        <p className="fw-light">
+          Kita akan melakukan eliminasi pada variabel y dengan menjumlahkan kedua persamaan tersebut. Sebelumnya, kita kalikan terlebih dahulu persamaan (4) dengan 1 dan persamaan (5) dengan 2 agar koefisien variabel y dapat habis
+          dijumlahkan. Sehingga,
+        </p>
         <div className="overflow-x-auto">
           <div className="row justify-content-center mx-0" style={{ minWidth: '550px' }}>
             <div className="" style={{ width: '250px' }}>
@@ -234,8 +249,12 @@ export default function MetodePenyelesaianEliminasi() {
               <p>-5y - 25z = -50.500.000</p>
             </div>
             <div className=" text-center px-0" style={{ width: '50px' }}>
-              <p>| ×1 |</p>
-              <p>| ×2 |</p>
+              <p>
+                | <b>×1</b> |
+              </p>
+              <p>
+                | <b>×2</b> |
+              </p>
             </div>
             <div className="" style={{ width: '250px' }}>
               <p>10y - 5z = 7.500.000</p>
@@ -269,7 +288,8 @@ export default function MetodePenyelesaianEliminasi() {
       </div>
 
       <div className={`${isBlurred2 ? 'blur' : ''}`}>
-        <p ref={section2}>4. Dari langkah 3 kita mengetahui nilai z. Kemudian kita akan mengeliminasi variabel y, sehingga</p>
+        <p ref={section2}>4. Selanjutnya, kita dapat melakukan eliminasi variabel z dengan mengurangi persamaan (4) dengan persamaan (5).</p>
+        <p className="fw-light">Sebelumnya, kita kalikan terlebih dahulu persamaan (4) dengan 5 dan persamaan (5) dengan 1 agar koefisien variabel z dapat habis dikurangi. Sehingga,</p>
         <div className="overflow-x-auto">
           <div className="row justify-content-center mx-0" style={{ minWidth: '600px' }}>
             <div className="" style={{ width: '250px' }}>
@@ -277,9 +297,11 @@ export default function MetodePenyelesaianEliminasi() {
               <p>-5y - 25z = -50.500.000</p>
             </div>
             <div className="text-center px-0" style={{ width: '100px' }}>
-              <p className="d-inline-block">| ×</p>
+              <p className="d-inline-block">
+                | <b>×</b>
+              </p>
               <input
-                className={`form-control d-inline-block ${inputStatuses.input11 ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.input11 && !inputStatuses.input11 ? 'border-danger bg-danger-subtle' : ''}`}
+                className={`form-control fw-bold d-inline-block ${inputStatuses.input11 ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.input11 && !inputStatuses.input11 ? 'border-danger bg-danger-subtle' : ''}`}
                 type="text"
                 placeholder="..."
                 style={{ textAlign: 'center', width: '40px' }}
@@ -287,7 +309,9 @@ export default function MetodePenyelesaianEliminasi() {
                 onChange={e => handleChange('input11', e)}
               />
               <p className="d-inline-block ms-1"> |</p>
-              <p>| ×1 |</p>
+              <p>
+                | <b>×1</b> |
+              </p>
             </div>
             <div className="" style={{ width: '250px' }}>
               <p>50y - 25z = 37.500.000</p>
@@ -321,7 +345,8 @@ export default function MetodePenyelesaianEliminasi() {
       </div>
 
       <div className={`${isBlurred3 ? 'blur' : ''}`}>
-        <p ref={section3}>5. Setelah kita melakukan eliminasi dan mendapatkan nilai dari variabel z dan y, maka nilai x dapat kita tentukan dari salah satu persamaan, misal persamaan (1), sehingga</p>
+        <p ref={section3}>5. Setelah kita melakukan eliminasi dan mengetahui besar nilai dari variabel z dan y.</p>
+        <p className="fw-light">Selanjutnya, nilai x dapat kita tentukan dengan mensubstitusikan besar nilai variabel z dan y ke dalam salah satu persamaan, misal persamaan (1). Sehingga,</p>
         <div className="overflow-x-auto">
           <div className="row justify-content-center mx-0" style={{ minWidth: '850px' }}>
             <div className=" text-end" style={{ width: '300px' }}>
@@ -423,7 +448,7 @@ export default function MetodePenyelesaianEliminasi() {
       </div>
 
       <div className={`${isBlurred4 ? 'blur' : ''}`}>
-        <p ref={section4}>Jika teman-teman sudah menyelesaikan langkah-langkah di atas, kita mendapatkan nilai variabel x = 1.500.000, nilai variabel y = 1.600.000, dan nilai variabel z = 1.700.000.</p>
+        <p ref={section4}>6. Sehingga kita dapatkan nilai variabel x = 1.500.000, variabel y = 1.600.000 dan nilai variabel z = 1.700.000.</p>
         <p>
           Kita ingat kembali bahwa: <br />
           • Variabel x mewakili harga satu gulung kain warna putih <br />

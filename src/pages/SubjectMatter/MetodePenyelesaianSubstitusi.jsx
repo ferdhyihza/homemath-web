@@ -29,6 +29,12 @@ export default function MetodePenyelesaianSubstitusi() {
     input36: '',
     input37: '',
     input38: '',
+    inputr1: '',
+    inputr2: '',
+    inputr3: '',
+    inputr4: '',
+    inputr5: '',
+    inputr6: '',
   });
   const [inputStatuses, setInputStatuses] = useState({
     input18: false,
@@ -52,6 +58,12 @@ export default function MetodePenyelesaianSubstitusi() {
     input36: false,
     input37: false,
     input38: false,
+    inputr1: false,
+    inputr2: false,
+    inputr3: false,
+    inputr4: false,
+    inputr5: false,
+    inputr6: false,
   });
   const [isBlurred, setIsBlurred] = useState(true); // Status untuk kelas blur
   const [isBlurred2, setIsBlurred2] = useState(true);
@@ -59,12 +71,14 @@ export default function MetodePenyelesaianSubstitusi() {
   const [isBlurred4, setIsBlurred4] = useState(true);
   const [isBlurred5, setIsBlurred5] = useState(true);
   const [isBlurred6, setIsBlurred6] = useState(true);
+  const [isBlurred7, setIsBlurred7] = useState(true);
   const section = useRef(null);
   const section2 = useRef(null);
   const section3 = useRef(null);
   const section4 = useRef(null);
   const section5 = useRef(null);
   const section6 = useRef(null);
+  const section7 = useRef(null);
 
   const [sessionData] = useState(JSON.parse(localStorage.getItem('sessionData')));
 
@@ -87,9 +101,11 @@ export default function MetodePenyelesaianSubstitusi() {
       setIsBlurred5(!allValid5);
       const allValid6 = savedStatus.statuses.input37 && savedStatus.statuses.input38;
       setIsBlurred6(!allValid6);
+      const allValid7 = savedStatus.statuses.inputr1 && savedStatus.statuses.inputr2 && savedStatus.statuses.inputr3 && savedStatus.statuses.inputr4 && savedStatus.statuses.inputr5 && savedStatus.statuses.inputr6;
+      setIsBlurred7(!allValid7);
     }
 
-    if (!isBlurred && !isBlurred2 && !isBlurred3 && !isBlurred4 && !isBlurred5 && !isBlurred6 && sessionData?.MetodePenyelesaianSubstitusi) {
+    if (!isBlurred && !isBlurred2 && !isBlurred3 && !isBlurred4 && !isBlurred5 && !isBlurred6 && !isBlurred7 && sessionData?.MetodePenyelesaianSubstitusi) {
       return;
     } else {
       if (!isBlurred && section.current) {
@@ -109,6 +125,9 @@ export default function MetodePenyelesaianSubstitusi() {
       }
       if (!isBlurred6 && section6.current) {
         section6.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+      if (!isBlurred7 && section7.current) {
+        section7.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
         const newSessionData = {
           ...sessionData,
           MetodePenyelesaianSubstitusi: true,
@@ -116,7 +135,7 @@ export default function MetodePenyelesaianSubstitusi() {
         localStorage.setItem('sessionData', JSON.stringify(newSessionData));
       }
     }
-  }, [isBlurred, isBlurred2, isBlurred3, isBlurred4, isBlurred5, isBlurred6, sessionData]);
+  }, [isBlurred, isBlurred2, isBlurred3, isBlurred4, isBlurred5, isBlurred6, isBlurred7, sessionData]);
 
   // Fungsi untuk menangani perubahan pada input
   const handleChange = (inputName, event) => {
@@ -166,6 +185,18 @@ export default function MetodePenyelesaianSubstitusi() {
       isValid = true;
     } else if (inputName === 'input38' && value.replace(/\./g, '') == '1500000') {
       isValid = true;
+    } else if (inputName === 'inputr1' && value.replace(/\./g, '') == '1500000') {
+      isValid = true;
+    } else if (inputName === 'inputr2' && value.replace(/\./g, '') == '1600000') {
+      isValid = true;
+    } else if (inputName === 'inputr3' && value.replace(/\./g, '') == '1700000') {
+      isValid = true;
+    } else if (inputName === 'inputr4' && value.replace(/\./g, '') == '1500000') {
+      isValid = true;
+    } else if (inputName === 'inputr5' && value.replace(/\./g, '') == '1600000') {
+      isValid = true;
+    } else if (inputName === 'inputr6' && value.replace(/\./g, '') == '1700000') {
+      isValid = true;
     }
 
     // Update state untuk value dan status validasi input tertentu
@@ -201,6 +232,8 @@ export default function MetodePenyelesaianSubstitusi() {
     setIsBlurred5(!allValid5);
     const allValid6 = updatedStatus.statuses.input37 && updatedStatus.statuses.input38;
     setIsBlurred6(!allValid6);
+    const allValid7 = updatedStatus.statuses.inputr1 && updatedStatus.statuses.inputr2 && updatedStatus.statuses.inputr3 && updatedStatus.statuses.inputr4 && updatedStatus.statuses.inputr5 && updatedStatus.statuses.inputr6;
+    setIsBlurred7(!allValid7);
   };
 
   return (
@@ -458,13 +491,13 @@ export default function MetodePenyelesaianSubstitusi() {
         </div>
       </div>
       <div className={`${isBlurred3 ? 'blur' : ''}`}>
-        <p ref={section3}>4. Selanjutnya, kita dapat menyubtitusikan fungsi y atau persamaan (7) ke dalam persamaan (6)</p>
-        <p>
+        <p ref={section3}>4. Selanjutnya, kita dapat menyubtitusikan fungsi y atau persamaan (7) ke dalam persamaan (6), menjadi</p>
+        {/* <p>
           Persamaan (6) <br />
           y + 5z = 10.100.000 <br />
           Persamaan (7) <br />z = 2y - 1.500.000
         </p>
-        <p>sehingga,</p>
+        <p>sehingga,</p> */}
         <div className="overflow-x-auto">
           <div className="row justify-content-center mx-0" style={{ minWidth: '1000px' }}>
             <div className=" text-end" style={{ width: '450px' }}>
@@ -487,7 +520,11 @@ export default function MetodePenyelesaianSubstitusi() {
               </div>
               <p className="pt-3">11y</p>
               <p className="pt-1">11y</p>
-              <p className="pt-1">y</p>
+              {/* <p className="pt-2">11y / 11</p> */}
+              <div className="mt-3">
+                <p className="ms-4 mb-0 d-inline-block border-bottom border-black position-relative">11y</p>
+                <p className="ms-4 mb-0">11</p>
+              </div>
               <p className="pt-2">y</p>
             </div>
             <div className=" text-center" style={{ width: '50px' }}>
@@ -570,12 +607,12 @@ export default function MetodePenyelesaianSubstitusi() {
       </div>
 
       <div className={`${isBlurred4 ? 'blur' : ''}`}>
-        <p ref={section4}>5. Setelah kita mengetahui besar nilai variabel y, kita dapat mensubstitusikannya ke dalam persamaan (5), (6) atau (7) untuk mengetahui besar nilai variabel z. Misalnya substitusi ke persamaan (5)</p>
-        <p>
+        <p ref={section4}>5. Setelah kita mengetahui besar nilai variabel y, kita dapat mensubstitusikannya ke dalam persamaan (5), (6) atau (7) untuk mengetahui besar nilai variabel z. Misalnya substitusi ke persamaan (5), maka</p>
+        {/* <p>
           Persamaan (5) <br />
           2y - z = 1.500.000
         </p>
-        <p>sehingga, </p>
+        <p>sehingga, </p> */}
         <div className="overflow-x-auto">
           <div className="row justify-content-center mx-0" style={{ minWidth: '950px' }}>
             <div className=" text-end" style={{ width: '350px' }}>
@@ -617,11 +654,13 @@ export default function MetodePenyelesaianSubstitusi() {
               </div>
               <p className="pt-2">-z</p>
               <p className="pt-1">-z</p>
+              <p className="pt-2">-z (-1)</p>
               <p className="pt-1">z</p>
             </div>
             <div className=" text-center" style={{ width: '50px' }}>
               <p>=</p>
               <p className="">=</p>
+              <p className="pt-1">=</p>
               <p className="pt-1">=</p>
               <p className="pt-1">=</p>
               <p className="pt-1">=</p>
@@ -633,7 +672,6 @@ export default function MetodePenyelesaianSubstitusi() {
               <p className="pt-1 mb-2 pb-1">1.500.000</p>
               <div className="d-flex gap-2 align-items-center mb-2">
                 <p className="mb-0">1.500.000 - </p>
-
                 <input
                   className={`form-control ${inputStatuses.input34 ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.input34 && !inputStatuses.input34 ? 'border-danger bg-danger-subtle' : ''}`}
                   type="text"
@@ -642,7 +680,6 @@ export default function MetodePenyelesaianSubstitusi() {
                   value={inputValues.input34}
                   onChange={e => handleChange('input34', e)}
                 />
-
                 <p className="d-inline-block mb-0 fst-italic text-muted" style={{ textAlign: 'center', fontSize: '12px' }}>
                   kedua ruas dikurangi dengan hasil <br />
                   perkalian 2 dengan nilai variabel y
@@ -658,6 +695,12 @@ export default function MetodePenyelesaianSubstitusi() {
                   onChange={e => handleChange('input35', e)}
                 />
               </div>
+              <div className="d-flex gap-2 mb-3 pt-1 align-items-center">
+                <p className="mb-0">1.700.000 (-1)</p>
+                <p className="mb-0 d-inline-block mb-0 fst-italic text-muted" style={{ textAlign: 'center', fontSize: '12px' }}>
+                  kedua ruas dikali dengan -1
+                </p>
+              </div>
               <div className="d-flex gap-2 align-items-center">
                 <input
                   className={`form-control ${inputStatuses.input36 ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.input36 && !inputStatuses.input36 ? 'border-danger bg-danger-subtle' : ''}`}
@@ -667,9 +710,8 @@ export default function MetodePenyelesaianSubstitusi() {
                   value={inputValues.input36}
                   onChange={e => handleChange('input36', e)}
                 />
-
                 <p className="d-inline-block mb-0 fst-italic text-muted" style={{ textAlign: 'center', fontSize: '12px' }}>
-                  kedua ruas dibagi dengan -1
+                  didapatkan nilai variabel z
                 </p>
               </div>
             </div>
@@ -679,14 +721,14 @@ export default function MetodePenyelesaianSubstitusi() {
 
       <div className={`${isBlurred5 ? 'blur' : ''}`}>
         <p ref={section5}>
-          6. Dari langkah-langkah di atas, kita telah mengetahui besar nilai variabel y dan z. Untuk mengetahui besar nilai variabel x, langkah terakhir adalah mensubstitusikan nilai variabel y dan z ke persamaan (1), (2), atau (3).
-          Misalnya kita akan substitusi ke persamaan (2)
+          6. Dari langkah-langkah di atas, kita telah mengetahui besar nilai variabel y dan z. Untuk mengetahui besar nilai variabel x, langkah terakhir adalah menyubstitusikan nilai variabel y dan z ke persamaan (1), (2), atau (3).
+          Misalnya kita akan substitusi ke persamaan (2), sehingga
         </p>
-        <p>
+        {/* <p>
           Persamaan (2) <br />
           5x + 5y + 5z = 24.000.000
         </p>
-        <p>sehingga,</p>
+        <p>sehingga,</p> */}
         <div className="overflow-x-auto">
           <div className="row justify-content-center mx-0" style={{ minWidth: '700px' }}>
             <div className=" text-end" style={{ width: '300px' }}>
@@ -696,7 +738,11 @@ export default function MetodePenyelesaianSubstitusi() {
               <p>5x + 16.500.000</p>
               <p>5x</p>
               <p className="pt-1">5x</p>
-              <p className="pt-1">x</p>
+              <div className="mt-3">
+                <p className="ms-4 mb-0 d-inline-block border-bottom border-black position-relative x">5</p>
+                <p className="ms-4 mb-0">5</p>
+              </div>
+              <p className="pt-3">x</p>
             </div>
             <div className=" text-center" style={{ width: '50px' }}>
               <p>=</p>
@@ -705,7 +751,8 @@ export default function MetodePenyelesaianSubstitusi() {
               <p>=</p>
               <p>=</p>
               <p className="pt-1">=</p>
-              <p className="pt-1">=</p>
+              <p className="pt-2">=</p>
+              <p className="pt-3">=</p>
             </div>
             <div className="" style={{ width: '350px' }}>
               <p>24.000.000</p>
@@ -729,6 +776,15 @@ export default function MetodePenyelesaianSubstitusi() {
                 </p>
               </div>
               <div className="d-flex gap-2 align-items-center mb-2">
+                <div className="">
+                  <p className="mb-0 d-inline-block border-bottom border-black position-relative">7.500.000</p>
+                  <p className="mb-0 text-center">5</p>
+                </div>
+                <p className="d-inline-block mb-0 fst-italic text-muted" style={{ textAlign: 'center', fontSize: '12px' }}>
+                  kedua ruas dibagi dengan 5
+                </p>
+              </div>
+              <div className="d-flex gap-2 align-items-center mb-3">
                 <input
                   className={`form-control ${inputStatuses.input38 ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.input38 && !inputStatuses.input38 ? 'border-danger bg-danger-subtle' : ''}`}
                   type="text"
@@ -737,9 +793,8 @@ export default function MetodePenyelesaianSubstitusi() {
                   value={inputValues.input38}
                   onChange={e => handleChange('input38', e)}
                 />
-
                 <p className="d-inline-block mb-0 fst-italic text-muted" style={{ textAlign: 'center', fontSize: '12px' }}>
-                  kedua ruas dibagi dengan 5
+                  didapatkan nilai variabel x
                 </p>
               </div>
             </div>
@@ -748,19 +803,91 @@ export default function MetodePenyelesaianSubstitusi() {
       </div>
 
       <div className={`${isBlurred6 ? 'blur' : ''}`}>
-        <p ref={section6}>Dari seluruh langkah yang telah kita kerjakan tersebut, kita telah mengetahui besar nilai variabel x = 1.500.000, nilai variabel y = 1.600.000 dan nilai variabel z = 1.700.000.</p>
+        <p ref={section6}>
+          7. Dari seluruh langkah yang telah kita kerjakan tersebut, kita telah mengetahui besar nilai variabel x ={' '}
+          <span>
+            <input
+              className={`form-control d-inline-block ${inputStatuses.inputr1 ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.inputr1 && !inputStatuses.inputr1 ? 'border-danger bg-danger-subtle' : ''}`}
+              type="text"
+              placeholder="..."
+              style={{ textAlign: 'center', width: '124px' }}
+              value={inputValues.inputr1}
+              onChange={e => handleChange('inputr1', e)}
+            />
+          </span>
+          , nilai variabel y ={' '}
+          <span>
+            <input
+              className={`form-control d-inline-block ${inputStatuses.inputr2 ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.inputr2 && !inputStatuses.inputr2 ? 'border-danger bg-danger-subtle' : ''}`}
+              type="text"
+              placeholder="..."
+              style={{ textAlign: 'center', width: '124px' }}
+              value={inputValues.inputr2}
+              onChange={e => handleChange('inputr2', e)}
+            />
+          </span>{' '}
+          dan nilai variabel z ={' '}
+          <span>
+            <input
+              className={`form-control d-inline-block ${inputStatuses.inputr3 ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.inputr3 && !inputStatuses.inputr3 ? 'border-danger bg-danger-subtle' : ''}`}
+              type="text"
+              placeholder="..."
+              style={{ textAlign: 'center', width: '124px' }}
+              value={inputValues.inputr3}
+              onChange={e => handleChange('inputr3', e)}
+            />
+          </span>
+          .
+        </p>
         <p>
           Kita ingat kembali bahwa: <br />
           • variabel x mewakili harga satu gulung kain warna putih <br />
           • variabel y mewakili harga satu gulung kain warna abu-abu <br />• variabel z mewakili harga satu gulung kain warna cokelat
         </p>
-        <p>Jadi, harga satu gulung kain warna putih adalah Rp1.500.000, harga satu gulung kain warna abu-abu adalah Rp1.600.000, dan harga satu gulung kain warna cokelat adalah Rp1.700.000.</p>
+        <p>
+          Jadi, harga satu gulung kain warna putih adalah Rp{' '}
+          <span>
+            <input
+              className={`form-control d-inline-block ${inputStatuses.inputr4 ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.inputr4 && !inputStatuses.inputr4 ? 'border-danger bg-danger-subtle' : ''}`}
+              type="text"
+              placeholder="..."
+              style={{ textAlign: 'center', width: '124px' }}
+              value={inputValues.inputr4}
+              onChange={e => handleChange('inputr4', e)}
+            />
+          </span>
+          , harga satu gulung kain warna abu-abu adalah Rp{' '}
+          <span>
+            <input
+              className={`form-control d-inline-block ${inputStatuses.inputr5 ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.inputr5 && !inputStatuses.inputr5 ? 'border-danger bg-danger-subtle' : ''}`}
+              type="text"
+              placeholder="..."
+              style={{ textAlign: 'center', width: '124px' }}
+              value={inputValues.inputr5}
+              onChange={e => handleChange('inputr5', e)}
+            />
+          </span>
+          , dan harga satu gulung kain warna cokelat adalah Rp{' '}
+          <span>
+            <input
+              className={`form-control d-inline-block ${inputStatuses.inputr6 ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.inputr6 && !inputStatuses.inputr6 ? 'border-danger bg-danger-subtle' : ''}`}
+              type="text"
+              placeholder="..."
+              style={{ textAlign: 'center', width: '124px' }}
+              value={inputValues.inputr6}
+              onChange={e => handleChange('inputr6', e)}
+            />
+          </span>
+          .
+        </p>
         <p>
           <b> Bagaimana? Lebih mudah menggunakan metode eliminasi atau substitusi?</b> <br />
           Jika kalian ingin menggunakan cara yang lebih praktis atau cepat, kalian dapat menggunakan kedua metode tersebut secara bersamaan. Coba perhatikan alternatif penyelesaian berikut ini!
         </p>
+      </div>
 
-        <div className="d-flex justify-content-center py-4">
+      <div className={`${isBlurred7 ? 'blur' : ''}`}>
+        <div ref={section7} className="d-flex justify-content-center py-4">
           <NextButton confirmation={sessionData?.MetodePenyelesaianSubstitusi} link={`/materi/metode-penyelesaian-spltv/campuran` + (from ? '?from=materi' : '')}>
             Penyelesaian SPLTV dengan Metode Substitusi
           </NextButton>
