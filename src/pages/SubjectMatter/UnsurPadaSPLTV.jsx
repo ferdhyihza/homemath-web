@@ -115,7 +115,7 @@ export default function UnsurPadaSPLTV() {
       <p>Untuk membantu kalian mengingat kembali unsur-unsur di atas, coba lakukan kegiatan berikut ini.</p>
       <p>
         Diberikan persamaan: <br />
-        2h - 7 = 3i &ensp; ...(1) <br />
+        2h + (-7) = 3i &ensp; ...(1) <br />
         5x + y = 11 &ensp; ...(2) <br />
         Mana saja yang merupakan variabel, konstanta, dan koefisien?
       </p>
@@ -131,9 +131,9 @@ export default function UnsurPadaSPLTV() {
               <ModalBenarButton onButtonClick={handleButtonClick} id="button2" jenis="Variabel">
                 h
               </ModalBenarButton>
-              <button className="disabled px-1 m-1 py-sm-2 px-sm-3">-</button>
+              <button className="disabled px-1 m-1 py-sm-2 px-sm-3">+</button>
               <ModalSalahButton id="button5" jenis="Variabel">
-                7
+                (-7)
               </ModalSalahButton>
               <button className="disabled px-1 m-1 py-sm-2 px-sm-3">=</button>
               <ModalSalahButton id="button3" jenis="Variabel">
@@ -186,9 +186,9 @@ export default function UnsurPadaSPLTV() {
               <ModalSalahButton id="button12" jenis="Konstanta">
                 h
               </ModalSalahButton>
-              <button className="disabled px-1 m-1 py-sm-2 px-sm-3">-</button>
+              <button className="disabled px-1 m-1 py-sm-2 px-sm-3">+</button>
               <ModalBenarButton onButtonClick={handleButtonClick} id="button15" jenis="Konstanta">
-                7
+                (-7)
               </ModalBenarButton>
               <button className="disabled px-1 m-1 py-sm-2 px-sm-3">=</button>
               <ModalSalahButton id="button13" jenis="Konstanta">
@@ -241,9 +241,9 @@ export default function UnsurPadaSPLTV() {
               <ModalSalahButton id="button22" jenis="Koefisien">
                 h
               </ModalSalahButton>
-              <button className="disabled px-1 m-1 py-sm-2 px-sm-3">-</button>
+              <button className="disabled px-1 m-1 py-sm-2 px-sm-3">+</button>
               <ModalSalahButton id="button25" jenis="Koefisien">
-                7
+                (-7)
               </ModalSalahButton>
               <button className="disabled px-1 m-1 py-sm-2 px-sm-3">=</button>
               <ModalBenarButton onButtonClick={handleButtonClick} id="button23" jenis="Koefisien">

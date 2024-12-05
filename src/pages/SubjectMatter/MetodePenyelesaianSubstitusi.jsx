@@ -254,10 +254,10 @@ export default function MetodePenyelesaianSubstitusi() {
       <p className="fw-bold">Langkah penyelesaian dengan metode substitusi:</p>
       <p>1. Pilih salah satu variabel yang ingin dinyatakan ke dalam dua variabel lainnya. Misalnya kita menyatakan variabel x pada persamaan (2) ke dalam variabel y dan z.</p>
       <div className="overflow-x-auto">
-        <div className="row justify-content-center mx-0" style={{ minWidth: '450px' }}>
-          <div className="text-end" style={{ width: '150px' }}>
+        <div className="row justify-content-center mx-0" style={{ minWidth: '500px' }}>
+          <div className="text-end" style={{ width: '200px' }}>
             <p>5x + 5y + 5z</p>
-            <p>5x</p>
+            <p>5x + 5y + 5z - 5y - 5z</p>
             <div className="mt-2">
               <p className=" mb-0 d-inline-block border-bottom border-black position-relative x">5</p>
               <p className="">5</p>
@@ -305,7 +305,7 @@ export default function MetodePenyelesaianSubstitusi() {
               />
               <p className="mb-0">- 4y - 4z + 6y + 3z</p>
             </div>
-            <p className="pt-1">- 4y + 6y - 4z + 3z</p>
+            <p className="pt-1">- 4y + 6y - 4z + 3z - 19.200.000</p>
             <p className="pt-2">2y - z</p>
           </div>
           <div className="text-center" style={{ width: '50px' }}>
@@ -376,7 +376,7 @@ export default function MetodePenyelesaianSubstitusi() {
                 />
                 <p className="mb-0">- 2y - 2z + 3y + 7z</p>
               </div>
-              <p className="pt-1">- 2y + 3y - 2z + 7z</p>
+              <p className="pt-1">- 2y + 3y - 2z + 7z - 9.600.000</p>
               <p className="pt-2">y + 5z</p>
             </div>
             <div className="text-center" style={{ width: '50px' }}>
@@ -518,7 +518,7 @@ export default function MetodePenyelesaianSubstitusi() {
                   onChange={e => handleChange('input27', e)}
                 />
               </div>
-              <p className="pt-3">11y</p>
+              <p className="pt-3">11y - 7.500.000 + 7.500.000</p>
               <p className="pt-1">11y</p>
               {/* <p className="pt-2">11y / 11</p> */}
               <div className="mt-3">
@@ -652,7 +652,7 @@ export default function MetodePenyelesaianSubstitusi() {
 
                 <p className="mb-0">-z</p>
               </div>
-              <p className="pt-2">-z</p>
+              <p className="pt-2">3.200.000 - 3.200.000 - z</p>
               <p className="pt-1">-z</p>
               <p className="pt-2">-z (-1)</p>
               <p className="pt-1">z</p>
@@ -696,7 +696,7 @@ export default function MetodePenyelesaianSubstitusi() {
                 />
               </div>
               <div className="d-flex gap-2 mb-3 pt-1 align-items-center">
-                <p className="mb-0">1.700.000 (-1)</p>
+                <p className="mb-0">-1.700.000 (-1)</p>
                 <p className="mb-0 d-inline-block mb-0 fst-italic text-muted" style={{ textAlign: 'center', fontSize: '12px' }}>
                   kedua ruas dikali dengan -1
                 </p>
@@ -736,7 +736,7 @@ export default function MetodePenyelesaianSubstitusi() {
               <p>5x + 5(1.600.000) + 5(1.700.000)</p>
               <p>5x + 8.000.000 + 8.500.000</p>
               <p>5x + 16.500.000</p>
-              <p>5x</p>
+              <p>5x + 16.500.000 - 16.500.000</p>
               <p className="pt-1">5x</p>
               <div className="mt-3">
                 <p className="ms-4 mb-0 d-inline-block border-bottom border-black position-relative x">5</p>

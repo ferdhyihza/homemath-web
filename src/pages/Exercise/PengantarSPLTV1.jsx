@@ -119,7 +119,7 @@ export default function PengantarSPLTV1() {
               </ModalBenarButton>
               <button className="disabled px-1 m-1 py-sm-2 px-sm-3">+</button>
               <ModalSalahButton id="button8l" jenis="Variabel">
-                -3
+                (-3)
               </ModalSalahButton>
               <ModalBenarButton onButtonClick={handleButtonClick} id="button9l" jenis="Variabel">
                 k
@@ -174,7 +174,7 @@ export default function PengantarSPLTV1() {
               </ModalSalahButton>
               <button className="disabled px-1 m-1 py-sm-2 px-sm-3">+</button>
               <ModalSalahButton id="button18l" jenis="Konstanta">
-                -3
+                (-3)
               </ModalSalahButton>
               <ModalSalahButton id="button19l" jenis="Konstanta">
                 k
@@ -229,7 +229,7 @@ export default function PengantarSPLTV1() {
               </ModalSalahButton>
               <button className="disabled px-1 m-1 py-sm-2 px-sm-3">+</button>
               <ModalBenarButton onButtonClick={handleButtonClick} id="button28l" jenis="Koefisien">
-                -3
+                (-3)
               </ModalBenarButton>
               <ModalSalahButton id="button29l" jenis="Koefisien">
                 k
