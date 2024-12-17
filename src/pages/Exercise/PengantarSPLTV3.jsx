@@ -67,21 +67,21 @@ export default function PengantarSPLTV3() {
       isValid = true;
     } else if (inputName === 'input3l' && value === 'z') {
       isValid = true;
-    } else if (inputName === 'inputt1l' && value.replace(/\./g, '') == '1') {
+    } else if (inputName === 'inputt1l' && value.replace(/\.|\s/g, '') == '1') {
       isValid = true;
-    } else if (inputName === 'inputt2l' && value.replace(/\./g, '') == '1') {
+    } else if (inputName === 'inputt2l' && value.replace(/\.|\s/g, '') == '1') {
       isValid = true;
-    } else if (inputName === 'inputt3l' && value.replace(/\./g, '') == '1') {
+    } else if (inputName === 'inputt3l' && value.replace(/\.|\s/g, '') == '1') {
       isValid = true;
-    } else if (inputName === 'inputt4l' && value.replace(/\./g, '') == '269') {
+    } else if (inputName === 'inputt4l' && value.replace(/\.|\s/g, '') == '269') {
       isValid = true;
-    } else if (inputName === 'inputt5l' && value.replace(/\./g, '') == '1') {
+    } else if (inputName === 'inputt5l' && value.replace(/\.|\s/g, '') == '1') {
       isValid = true;
-    } else if (inputName === 'inputt6l' && value.replace(/\./g, '') == '-1') {
+    } else if (inputName === 'inputt6l' && value.replace(/\.|\s/g, '') == '-1') {
       isValid = true;
-    } else if (inputName === 'inputt7l' && value.replace(/\./g, '') == '1') {
+    } else if (inputName === 'inputt7l' && value.replace(/\.|\s/g, '') == '1') {
       isValid = true;
-    } else if (inputName === 'inputt8l' && value.replace(/\./g, '') == '87') {
+    } else if (inputName === 'inputt8l' && value.replace(/\.|\s/g, '') == '87') {
       isValid = true;
     }
 

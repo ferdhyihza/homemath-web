@@ -153,8 +153,8 @@ export default function PenggunaanSPLTV2() {
         Untuk melatih kalian menerjemahkan soal cerita ke dalam bentuk sistem persamaan linear, mari kita coba lagi contoh berikut ini!
       </p>
       <div className="d-flex justify-content-center">
-        <figure className="text-center w-25">
-          <img className="img-fluid" src="/img/emas.jpg" alt="gambar gelang" />
+        <figure className="text-center w-50">
+          <img className="img-fluid" src="/img/gelang.png" alt="gambar gelang" />
           <figcaption className="fst-italic fw-light">gambar gelang</figcaption>
         </figure>
       </div>

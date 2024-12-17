@@ -81,29 +81,29 @@ export default function MetodePenyelesaianSPLTV2() {
     let isValid = false;
 
     // Tentukan validasi berdasarkan nama input
-    if (inputName === 'input18l' && value.replace(/\./g, '') == '174') {
+    if (inputName === 'input18l' && value.replace(/\.|\s/g, '') == '62') {
       isValid = true;
-    } else if (inputName === 'input19l' && value.replace(/\./g, '') == '174') {
+    } else if (inputName === 'input19l' && value.replace(/\.|\s/g, '') == '62') {
       isValid = true;
-    } else if (inputName === 'input20l' && value.replace(/\./g, '') == '1') {
+    } else if (inputName === 'input20l' && value.replace(/\.|\s/g, '') == '-20') {
       isValid = true;
-    } else if (inputName === 'input21l' && value.replace(/\./g, '') == '87') {
+    } else if (inputName === 'input21l' && value.replace(/\.|\s/g, '') == '-155') {
       isValid = true;
-    } else if (inputName === 'input22l' && value.replace(/\./g, '') == '87') {
+    } else if (inputName === 'input22l' && value.replace(/\.|\s/g, '') == '155') {
       isValid = true;
-    } else if (inputName === 'input23l' && value.replace(/\./g, '') == '91') {
+    } else if (inputName === 'input23l' && value.replace(/\.|\s/g, '') == '144') {
       isValid = true;
-    } else if (inputName === 'input24l' && value.replace(/\./g, '') == '1') {
+    } else if (inputName === 'input24l' && value.replace(/\.|\s/g, '') == '-20') {
       isValid = true;
-    } else if (inputName === 'input25l' && value.replace(/\./g, '') == '1') {
+    } else if (inputName === 'input25l' && value.replace(/\.|\s/g, '') == '-20+3r') {
       isValid = true;
-    } else if (inputName === 'input26l' && value.replace(/\./g, '') == '91') {
+    } else if (inputName === 'input26l' && value.replace(/\.|\s/g, '') == '3r-20') {
       isValid = true;
-    } else if (inputName === 'input27l' && value.replace(/\./g, '') == '1') {
+    } else if (inputName === 'input27l' && value.replace(/\.|\s/g, '') == '24') {
       isValid = true;
-    } else if (inputName === 'input28l' && value.replace(/\./g, '') == '1') {
+    } else if (inputName === 'input28l' && value.replace(/\.|\s/g, '') == '24') {
       isValid = true;
-    } else if (inputName === 'input29l' && value.replace(/\./g, '') == '88') {
+    } else if (inputName === 'input29l' && value.replace(/\.|\s/g, '') == '7') {
       isValid = true;
     }
 
@@ -146,47 +146,72 @@ export default function MetodePenyelesaianSPLTV2() {
       <div className="d-flex justify-content-center mb-4">
         <div className="d-inline-block border border-blue rounded-2 border-2 p-2 px-4 text-center">
           <p className="text-center">Diberikan SPLTV sebagai berikut</p>
-          <p className="mb-1">2x + y - z = 177 &ensp; ...(1)</p>
-          <p className="mb-1">x + y + z = 269 &ensp; ...(2)</p>
-          <p className="mb-1">x - y + z = 87 &ensp; ...(3)</p>
+          <p className="mb-1">p + q + r = 31 &ensp; ...(1)</p>
+          <p className="mb-1">2p + 3q - r = 42 &ensp; ...(2)</p>
+          <p className="mb-1">-5p + q = -r - 11 &ensp; ...(3)</p>
         </div>
       </div>
       <p>
         <b>Penyelesaian:</b>
       </p>
-      <p>1. Pilih salah satu variabel yang ingin dinyatakan ke dalam dua variabel lainnya. Misalnya kita menyatakan x pada persamaan (3) ke dalam variabel y dan z.</p>
+      <p>1. Pertama, kita dapat merubah terlebih dahulu persamaan (3) menjadi,</p>
       <div className="overflow-x-auto">
-        <div className="row justify-content-center mx-0" style={{ minWidth: '400px' }}>
-          <div className="text-end" style={{ width: '150px' }}>
-            <p>x - y + z</p>
-            <p>x - y + y + z -z</p>
-            <p>x</p>
+        <div className="row justify-content-center mx-0" style={{ minWidth: '250px' }}>
+          <div className="text-end" style={{ width: '100px' }}>
+            <p>-5p + q</p>
+            <p>-5p + q + r</p>
+            <p>-5p + q + r</p>
           </div>
           <div className="text-center" style={{ width: '50px' }}>
             <p>=</p>
             <p>=</p>
             <p className="">=</p>
           </div>
-          <div className="" style={{ width: '200px' }}>
-            <p>87</p>
-            <p>87 + y - z</p>
-            <p>87 + y - z &ensp; .........(4)</p>
+          <div className="" style={{ width: '100px' }}>
+            <p>-r -11</p>
+            <p>-r + r - 11</p>
+            <p>-11</p>
+          </div>
+        </div>
+      </div>
+      <p>Sehingga kita dapatkan persamaan</p>
+      <p className="mb-1">p + q + r = 31 &ensp; ...(1)</p>
+      <p className="mb-1">2p + 3q - r = 42 &ensp; ...(2)</p>
+      <p className="">-5p + q + r = -11 &ensp; ...(3)</p>
+
+      <p>2. Pilih salah satu variabel yang ingin dinyatakan ke dalam dua variabel lainnya. Misalnya kita menyatakan p pada persamaan (1) ke dalam variabel q dan r.</p>
+      <div className="overflow-x-auto">
+        <div className="row justify-content-center mx-0" style={{ minWidth: '300px' }}>
+          <div className="text-end" style={{ width: '150px' }}>
+            <p>p + q + r</p>
+            <p>p + q - q + r - r</p>
+            <p>p</p>
+          </div>
+          <div className="text-center" style={{ width: '50px' }}>
+            <p>=</p>
+            <p>=</p>
+            <p className="">=</p>
+          </div>
+          <div className="" style={{ width: '100px' }}>
+            <p>31</p>
+            <p>31 - q - r</p>
+            <p>31 - q - r</p>
           </div>
         </div>
       </div>
 
-      <p>2. Variabel x telah kita nyatakan ke dalam variabel lainnya, menjadi persamaan (4). Langkah selanjutnya adalah kita substitusi persamaan (4) ke dua persamaan lainnya, sehingga.</p>
+      <p>3. Variabel p telah kita nyatakan ke dalam variabel lainnya, menjadi persamaan (4). Langkah selanjutnya adalah kita substitusi persamaan (4) ke dua persamaan lainnya, sehingga.</p>
       <p>
-        <i className="text-muted">(substitusi persamaan (4) ke persamaan (1))</i>
+        <i className="text-muted">(substitusi persamaan (4) ke persamaan (2))</i>
       </p>
       <div className="overflow-x-auto">
         <div className="row justify-content-center mx-0" style={{ minWidth: '750px' }}>
           <div className="text-end" style={{ width: '400px' }}>
-            <p>2x + y - z</p>
-            <p>2(87 + y - z) + y - z</p>
+            <p>2p + 3q - r</p>
+            <p>2(31 - q - r) + 3q - r</p>
             <div className="d-flex justify-content-end align-items-center gap-2 mb-2">
               <p className="mb-0 fst-italic text-muted" style={{ textAlign: 'center', fontSize: '12px' }}>
-                hasil perkalian 2 dengan 87
+                hasil perkalian 2 dengan 31
               </p>
               <input
                 className={`form-control ${inputStatuses.input18l ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.input18l && !inputStatuses.input18l ? 'border-danger bg-danger-subtle' : ''}`}
@@ -196,15 +221,15 @@ export default function MetodePenyelesaianSPLTV2() {
                 value={inputValues.input18l}
                 onChange={e => handleChange('input18l', e)}
               />
-              <p className="mb-0">+ 2y - 2z + y - z</p>
+              <p className="mb-0">- 2q - 2r + 3q - r</p>
             </div>
-            <p className="pt-1">174 - 174 + 2y + y - 2z - z</p>
-            <p className="pt-2">3y - 3z</p>
-            <div className="d-inline-block">
+            <p className="pt-1">62 + q - 3r</p>
+            <p className="pt-2">62 - 62 + q - 3r</p>
+            {/* <div className="d-inline-block">
               <p className="border-bottom border-black mb-0 d-inline-block">3y - 3z</p>
               <p className="text-center mb-0">3</p>
-            </div>
-            <p className="pt-2">y - z</p>
+            </div> */}
+            <p className="pt-2">q - 3r</p>
           </div>
           <div className="text-center" style={{ width: '50px' }}>
             <p>=</p>
@@ -213,14 +238,15 @@ export default function MetodePenyelesaianSPLTV2() {
             <p className="pt-1">=</p>
             <p className="pt-2">=</p>
             <p className="pt-2">=</p>
-            <p className="pt-2">=</p>
+            {/* <p className="pt-2">=</p> */}
           </div>
           <div className="" style={{ width: '300px' }}>
-            <p>177</p>
-            <p>177</p>
-            <p className="pt-2">177</p>
+            <p>42</p>
+            <p>42</p>
+            <p className="pt-2">42</p>
+            <p className="pt-1">42</p>
             <div className="d-flex gap-2 align-items-center">
-              <p className="mb-0">177 - </p>
+              <p className="mb-0">42 - </p>
               <input
                 className={`form-control ${inputStatuses.input19l ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.input19l && !inputStatuses.input19l ? 'border-danger bg-danger-subtle' : ''}`}
                 type="text"
@@ -230,11 +256,10 @@ export default function MetodePenyelesaianSPLTV2() {
                 onChange={e => handleChange('input19l', e)}
               />
               <p className="d-inline-block mb-0 fst-italic text-muted" style={{ textAlign: 'center', fontSize: '12px' }}>
-                kedua ruas dikurangi hasil <br /> perkalian 2 dengan 87
+                kedua ruas dikurangi hasil <br /> perkalian 2 dengan 31
               </p>
             </div>
-            <p className="pt-2 mt-1">3</p>
-            <div className="d-flex gap-2 align-items-center">
+            {/* <div className="d-flex gap-2 align-items-center">
               <div className="d-inline-block">
                 <p className="border-bottom border-black mb-0 d-inline-block">3</p>
                 <p className="text-center mb-0">3</p>
@@ -242,7 +267,7 @@ export default function MetodePenyelesaianSPLTV2() {
               <p className="d-inline-block mb-0 fst-italic text-muted" style={{ textAlign: 'center', fontSize: '12px' }}>
                 kedua ruas dibagi dengan 3
               </p>
-            </div>
+            </div> */}
             <div className="d-flex gap-2 align-items-center mt-2">
               <div>
                 <input
@@ -265,13 +290,13 @@ export default function MetodePenyelesaianSPLTV2() {
 
       <div className={`${isBlurred ? 'blur' : ''}`}>
         <p ref={section}>
-          <i className="text-muted">(substitusi persamaan (4) ke persamaan (2))</i>
+          <i className="text-muted">(substitusi persamaan (4) ke persamaan (3))</i>
         </p>
         <div className="overflow-x-auto">
-          <div className="row justify-content-center mx-0" style={{ minWidth: '600px' }}>
-            <div className="text-end" style={{ width: '200px' }}>
-              <p>x + y + z</p>
-              <p>(87 + y - z) + y + z</p>
+          <div className="row justify-content-center mx-0" style={{ minWidth: '650px' }}>
+            <div className="text-end" style={{ width: '250px' }}>
+              <p>-5p + q + r</p>
+              <p>-5(31 - q - r) + q + r</p>
               <div className="d-flex justify-content-end align-items-center gap-2 mb-2">
                 <input
                   className={`form-control ${inputStatuses.input21l ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.input21l && !inputStatuses.input21l ? 'border-danger bg-danger-subtle' : ''}`}
@@ -281,29 +306,31 @@ export default function MetodePenyelesaianSPLTV2() {
                   value={inputValues.input21l}
                   onChange={e => handleChange('input21l', e)}
                 />
-                <p className="mb-0">+ y + y - z + z</p>
+                <p className="mb-0">+ 5q + 5r + q + r</p>
               </div>
-              <p className="pt-1">87 - 87 + 2y</p>
-              <div className="d-inline-block">
+              <p className="pt-1">-155 + 6q + 6r</p>
+              <p className="pt-1">-155 + 155 + 6q + 6r</p>
+              {/* <div className="d-inline-block">
                 <p className="border-bottom border-black mb-0 d-inline-block">2y</p>
                 <p className="text-center mb-0">2</p>
-              </div>
-              <p className="pt-2">y</p>
+              </div> */}
+              <p className="pt-2">6q + 6r</p>
             </div>
             <div className="text-center" style={{ width: '50px' }}>
               <p>=</p>
               <p>=</p>
               <p className="pt-2">=</p>
               <p className="pt-1">=</p>
-              <p className="pt-2">=</p>
+              <p className="pt-1">=</p>
               <p className="pt-2">=</p>
             </div>
             <div className="" style={{ width: '350px' }}>
-              <p>269</p>
-              <p>269</p>
-              <p className="pt-2">269</p>
+              <p>-11</p>
+              <p>-11</p>
+              <p className="pt-2">-11</p>
+              <p className="pt-1">-11</p>
               <div className="d-flex gap-2 align-items-center">
-                <p className="mb-0">269 - </p>
+                <p className="mb-0">-11 + </p>
                 <input
                   className={`form-control ${inputStatuses.input22l ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.input22l && !inputStatuses.input22l ? 'border-danger bg-danger-subtle' : ''}`}
                   type="text"
@@ -313,10 +340,10 @@ export default function MetodePenyelesaianSPLTV2() {
                   onChange={e => handleChange('input22l', e)}
                 />
                 <p className="d-inline-block mb-0 fst-italic text-muted" style={{ textAlign: 'center', fontSize: '12px' }}>
-                  kedua ruas dikurangi dengan 87
+                  kedua ruas ditambah dengan 155
                 </p>
               </div>
-              <div className="d-flex gap-2 align-items-center">
+              {/* <div className="d-flex gap-2 align-items-center">
                 <div className="d-inline-block pt-1">
                   <p className="border-bottom border-black mb-0 d-inline-block">182</p>
                   <p className="text-center mb-0">2</p>
@@ -324,16 +351,19 @@ export default function MetodePenyelesaianSPLTV2() {
                 <p className="d-inline-block mb-0 fst-italic text-muted" style={{ textAlign: 'center', fontSize: '12px' }}>
                   kedua ruas dibagi dengan 2
                 </p>
-              </div>
-              <div className="d-flex gap-2 align-items-center mt-2 mb-2">
-                <input
-                  className={`form-control ${inputStatuses.input23l ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.input23l && !inputStatuses.input23l ? 'border-danger bg-danger-subtle' : ''}`}
-                  type="text"
-                  placeholder="..."
-                  style={{ textAlign: 'center', width: '64px' }}
-                  value={inputValues.input23l}
-                  onChange={e => handleChange('input23l', e)}
-                />
+              </div> */}
+              <div className="d-flex gap-2 align-items-center mt-2">
+                <div>
+                  <input
+                    className={`form-control ${inputStatuses.input23l ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.input23l && !inputStatuses.input23l ? 'border-danger bg-danger-subtle' : ''}`}
+                    type="text"
+                    placeholder="..."
+                    style={{ textAlign: 'center', width: '64px' }}
+                    value={inputValues.input23l}
+                    onChange={e => handleChange('input23l', e)}
+                  />
+                </div>
+                ........... (6)
               </div>
               {/* <p className="d-inline-block ms-2 fst-italic text-muted" style={{ textAlign: 'center', fontSize: '12px' }}>
                 kedua ruas dibagi dengan 2
@@ -344,22 +374,19 @@ export default function MetodePenyelesaianSPLTV2() {
       </div>
 
       <div className={`${isBlurred2 ? 'blur' : ''}`}>
-        <p ref={section2}>3. Dari langkah sebelumnya, kita mendapatkan persamaan (5) dan nilai variabel y. Sehingga, kita dapat langsung mensubstitusikan nilai variabel y ke dalam persamaan (5) seperti berikut</p>
+        <p ref={section2}>
+          4. Dari langkah sebelumnya, kita mendapatkan persamaan (5) dan (6). Selanjutnya, kita peril mengubah salah satu persamaan tersebut menjadi sebuah fungsi. Misalnya kita merubah persamaan (5) menjadi fungsi q atau kita nyatakan ke
+          dalam variabel q. Sehingga,
+        </p>
         <div className="overflow-x-auto">
           <div className="row justify-content-center mx-0" style={{ minWidth: '800px' }}>
             <div className=" text-end" style={{ width: '100px' }}>
-              <p>y - z</p>
-              <p className="pt-2">91 - z</p>
-              <p className="pt-2">91 - 91 - z</p>
-              <p className="pt-2">-z</p>
-              <p className="pt-2">-z(-1)</p>
-              <p className="pt-2">z</p>
+              <p>q - 3r</p>
+              <p className="pt-2">q - 3r + 3r</p>
+              <p className="pt-2">q</p>
             </div>
             <div className=" text-center" style={{ width: '50px' }}>
               <p>=</p>
-              <p className="pt-2">=</p>
-              <p className="pt-2">=</p>
-              <p className="pt-2">=</p>
               <p className="pt-2">=</p>
               <p className="pt-2">=</p>
             </div>
@@ -382,41 +409,107 @@ export default function MetodePenyelesaianSPLTV2() {
                   className={`form-control ${inputStatuses.input25l ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.input25l && !inputStatuses.input25l ? 'border-danger bg-danger-subtle' : ''}`}
                   type="text"
                   placeholder="..."
-                  style={{ textAlign: 'center', width: '64px' }}
+                  style={{ textAlign: 'center', width: '128px' }}
                   value={inputValues.input25l}
                   onChange={e => handleChange('input25l', e)}
                 />
               </div>
               <div className="d-flex gap-2 align-items-center mt-2">
-                <span>1 - </span>
                 <input
                   className={`form-control ${inputStatuses.input26l ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.input26l && !inputStatuses.input26l ? 'border-danger bg-danger-subtle' : ''}`}
                   type="text"
                   placeholder="..."
-                  style={{ textAlign: 'center', width: '64px' }}
+                  style={{ textAlign: 'center', width: '128px' }}
                   value={inputValues.input26l}
                   onChange={e => handleChange('input26l', e)}
                 />
               </div>
-              <p className="pt-3">-90</p>
-              <p className="pt-2">-90(-1)</p>
-              <p className="pt-2">90</p>
             </div>
           </div>
         </div>
       </div>
+
       <div className={`${isBlurred3 ? 'blur' : ''}`}>
-        <p ref={section3}>4. Setelah mengetahui nilai variabel y dan z pada langkah sebelumnya, kita dapat mensubstitusikan nilai tersebut ke dalam salah satu persamaan (1), (2), atau (3). Misalkan substitusi ke persamaan (3), sehingga</p>
+        <p ref={section3}>5. Selanjutnya, kita dapat mensubstitusikan fungsi q atau persamaan (7) ke dalam persamaan (6). Sehingga,</p>
+        <div className="overflow-x-auto">
+          <div className="row justify-content-center mx-0" style={{ minWidth: '300px' }}>
+            <div className=" text-end" style={{ width: '150px' }}>
+              <p>6q + 6r</p>
+              <p>6(3r - 20) + 6r</p>
+              <p>18r - 120 + 6r</p>
+              <p>24r - 120</p>
+              <p>24r - 120 + 120</p>
+              <p>24r</p>
+              <div className="d-inline-block pt-1">
+                <p className="border-bottom border-black mb-0 d-inline-block">24r</p>
+                <p className="text-center mb-0">24</p>
+              </div>
+              <p className="pt-1">r</p>
+            </div>
+            <div className=" text-center" style={{ width: '50px' }}>
+              <p>=</p>
+              <p>=</p>
+              <p>=</p>
+              <p>=</p>
+              <p>=</p>
+              <p>=</p>
+              <p className="pt-3">=</p>
+              <p>=</p>
+            </div>
+            <div className="" style={{ width: '100px' }}>
+              <p>144</p>
+              <p>144</p>
+              <p>144</p>
+              <p>144</p>
+              <p>144 + 120</p>
+              <p>264</p>
+              <div className="d-inline-block pt-1">
+                <p className="border-bottom border-black mb-0 d-inline-block">264</p>
+                <p className="text-center mb-0">24</p>
+              </div>
+              <p className="pt-1">11</p>
+            </div>
+          </div>
+        </div>
+
+        <p>6. Setelah kita mengetahui besar nilai variabel r, kita dapat mensubstitusikannya ke dalam persamaan (5), (6), atau (7) untuk mengetahui nilai variabel q. Misalnya kita substitusikan ke persamaan (5). Sehingga,</p>
+        <div className="overflow-x-auto">
+          <div className="row justify-content-center mx-0" style={{ minWidth: '300px' }}>
+            <div className=" text-end" style={{ width: '150px' }}>
+              <p>q - 3r</p>
+              <p>q - 3(11) + 6r</p>
+              <p>q - 33</p>
+              <p>q - 33 + 33</p>
+              <p>q</p>
+            </div>
+            <div className=" text-center" style={{ width: '50px' }}>
+              <p>=</p>
+              <p>=</p>
+              <p>=</p>
+              <p>=</p>
+              <p>=</p>
+            </div>
+            <div className="" style={{ width: '100px' }}>
+              <p>-20</p>
+              <p>-20</p>
+              <p>-20</p>
+              <p>-20 + 33</p>
+              <p>13</p>
+            </div>
+          </div>
+        </div>
+
+        <p>7. Kita telah mengetahui besar nilai variabel q dan r, sehingga kita dapat mensubstitusikannya ke persamaan (1), (2), atau (3) untuk mengetahui besar nilai variabel p. Misal substitusi ke persamaan (1). Maka,</p>
         <div className="overflow-x-auto">
           <div className="row justify-content-center mx-0" style={{ minWidth: '750px' }}>
             <div className=" text-end" style={{ width: '350px' }}>
-              <p>x - y + z</p>
-              <p>x - 91 + 90</p>
+              <p>p + q + r</p>
+              <p>p + 13 + 11</p>
               <div className="d-flex gap-2 align-items-center justify-content-end">
                 <p className="d-inline-block mb-0 fst-italic text-muted" style={{ textAlign: 'center', fontSize: '12px' }}>
-                  hasil penjumlahan -91 dengan 90
+                  hasil penjumlahan 13 dengan 11
                 </p>
-                <span>x - </span>
+                <span>p + </span>
                 <input
                   className={`form-control ${inputStatuses.input27l ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.input27l && !inputStatuses.input27l ? 'border-danger bg-danger-subtle' : ''}`}
                   type="text"
@@ -426,8 +519,8 @@ export default function MetodePenyelesaianSPLTV2() {
                   onChange={e => handleChange('input27l', e)}
                 />
               </div>
-              <p className="pt-3">x - 1 + 1</p>
-              <p className="pt-1">x</p>
+              <p className="pt-3">p + 24 - 24</p>
+              <p className="pt-1">p</p>
             </div>
             <div className=" text-center" style={{ width: '50px' }}>
               <p>=</p>
@@ -437,11 +530,11 @@ export default function MetodePenyelesaianSPLTV2() {
               <p className="pt-1">=</p>
             </div>
             <div className="" style={{ width: '350px' }}>
-              <p>87</p>
-              <p>87</p>
-              <p className="pt-2">87</p>
+              <p>31</p>
+              <p>31</p>
+              <p className="pt-2">31</p>
               <div className="d-flex gap-2 align-items-center mb-2">
-                <p className="mb-0">87 + </p>
+                <p className="mb-0">31 - </p>
                 <input
                   className={`form-control ${inputStatuses.input28l ? 'border-success bg-success-subtle disabled' : ''} ${inputValues.input28l && !inputStatuses.input28l ? 'border-danger bg-danger-subtle' : ''}`}
                   type="text"
@@ -451,8 +544,8 @@ export default function MetodePenyelesaianSPLTV2() {
                   onChange={e => handleChange('input28l', e)}
                 />
                 <p className="d-inline-block mb-0 fst-italic text-muted" style={{ textAlign: 'center', fontSize: '12px' }}>
-                  kedua ruas dijumlah dengan hasil <br />
-                  penjumlahan -91 dengan 90
+                  kedua ruas dikurangi dengan hasil <br />
+                  penjumlahan 13 dengan 11
                 </p>
               </div>
               <div className="d-flex gap-2 align-items-center mb-2">
@@ -474,7 +567,7 @@ export default function MetodePenyelesaianSPLTV2() {
       </div>
 
       <div ref={section4} className={`${isBlurred4 ? 'blur' : ''}`}>
-        <p>5. Sehingga kita ketahui nilai variabel x = 88, variabel y = 91, dan variabel z = 90.</p>
+        <p>8. Sehingga kita ketahui nilai variabel p = 7, variabel q = 13, dan variabel r = 11.</p>
         <div className="d-flex justify-content-center py-4">
           <NextButton latsol={true} link="/latihan-soal">
             Penyelesaian SPLTV dengan Metode Substitusi

@@ -71,23 +71,23 @@ export default function MetodePenyelesaianSPLTV1() {
     let isValid = false;
 
     // Tentukan validasi berdasarkan nama input
-    if (inputName === 'input8l' && value.replace(/\./g, '') == '269') {
+    if (inputName === 'input8l' && value.replace(/\.|\s/g, '') == '269') {
       isValid = true;
-    } else if (inputName === 'input9l' && value.replace(/\./g, '') == '356') {
+    } else if (inputName === 'input9l' && value.replace(/\.|\s/g, '') == '356') {
       isValid = true;
-    } else if (inputName === 'input10l' && value.replace(/\./g, '') == '88') {
+    } else if (inputName === 'input10l' && value.replace(/\.|\s/g, '') == '88') {
       isValid = true;
-    } else if (inputName === 'input11l' && value.replace(/\./g, '') == '2') {
+    } else if (inputName === 'input11l' && value.replace(/\.|\s/g, '') == '2') {
       isValid = true;
-    } else if (inputName === 'input12l' && value.replace(/\./g, '') == '90') {
+    } else if (inputName === 'input12l' && value.replace(/\.|\s/g, '') == '90') {
       isValid = true;
-    } else if (inputName === 'input13l' && value.replace(/\./g, '') == '87') {
+    } else if (inputName === 'input13l' && value.replace(/\.|\s/g, '') == '87') {
       isValid = true;
-    } else if (inputName === 'input14l' && value.replace(/\./g, '') == '178') {
+    } else if (inputName === 'input14l' && value.replace(/\.|\s/g, '') == '178') {
       isValid = true;
-    } else if (inputName === 'input16l' && value.replace(/\./g, '') == '-91') {
+    } else if (inputName === 'input16l' && value.replace(/\.|\s/g, '') == '-91') {
       isValid = true;
-    } else if (inputName === 'input17l' && value.replace(/\./g, '') == '91') {
+    } else if (inputName === 'input17l' && value.replace(/\.|\s/g, '') == '91') {
       isValid = true;
     }
 

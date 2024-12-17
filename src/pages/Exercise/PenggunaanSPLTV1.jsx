@@ -168,7 +168,7 @@ export default function PenggunaanSPLTV1() {
         </div>
       </div>
       <div className={`${isBlurred ? 'blur' : ''}`}>
-        <p ref={section}>2. Eliminasi variabel a dan c pada persamaan (1) dan (3)</p>
+        <p ref={section}>2. Eliminasi variabel a dan c pada persamaan (1) dan (3) dengan mengurangi kedua persamaan tersebut. Sehingga,</p>
         <div className="overflow-x-auto">
           <div className="row justify-content-start mb-2 ps-4 mx-0" style={{ minWidth: '200px' }}>
             <div className="" style={{ width: '200px' }}>
@@ -192,7 +192,7 @@ export default function PenggunaanSPLTV1() {
         </div>
       </div>
       <div className={`${isBlurred2 ? 'blur' : ''}`}>
-        <p ref={section2}>3. Dari langkah sebelumnya, kita mengetahui nilai variabel b, sehingga kita bisa melakukan substitusi nilai tersebut ke persamaan (4) seperti berikut</p>
+        <p ref={section2}>3. Dari langkah sebelumnya, kita telah mengetahui nilai variabel b, sehingga kita bisa melakukan substitusi nilai tersebut ke persamaan (4) seperti berikut</p>
         <div className="overflow-x-auto">
           <div className="row justify-content-start mb-2 ps-4 mx-0" style={{ minWidth: '300px' }}>
             <div className=" text-end" style={{ width: '100px' }}>
